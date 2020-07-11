@@ -4,6 +4,8 @@ import antd from "antd/dist/antd.css";
 
 const Styles = createGlobalStyle`
 
+    ${antd}
+
     body,
     html,
     a {
