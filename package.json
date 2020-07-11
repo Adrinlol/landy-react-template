@@ -1,6 +1,6 @@
 {
   "name": "cra-template-adrinlol",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "create-react-app",
@@ -11,6 +11,7 @@
     "react-hooks",
     "react-boilerplate"
   ],
+  "main": "template.json",
   "description": "CRA Template with already developed responsive components and funcionalities.",
   "repository": {
     "type": "git",
