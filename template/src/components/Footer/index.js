@@ -11,9 +11,6 @@ const Footer = () => {
     <Fragment>
       <S.Footer>
         <Container>
-          <S.LogoContainer>
-            {/* <SvgIcon src="biolearning-logo.svg" /> */}
-          </S.LogoContainer>
           <Row type="flex" justify="space-between">
             <Col lg={4} md={4} sm={12} xs={12}>
               <S.Title>Company</S.Title>

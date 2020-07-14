@@ -7,7 +7,7 @@ import * as S from "./styles";
 
 const MiddleBlock = (props) => {
   return (
-    <S.MiddleBlock last={props.last} id={props.id}>
+    <S.MiddleBlock last={props.last}>
       <Row type="flex" justify="center" align="middle">
         <Col lg={24} md={24} sm={24} xs={24}>
           <S.Title>{props.title}</S.Title>

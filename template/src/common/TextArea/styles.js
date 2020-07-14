@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-bottom: -0.625rem;
 `;
 
-export const Textarea = styled.textarea`
+export const TextArea = styled.textarea`
   width: 100%;
   border: 2px solid #596164;
   border-radius: 6px;

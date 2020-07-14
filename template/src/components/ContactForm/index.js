@@ -11,11 +11,11 @@ import validate from "./validationRules";
 
 import * as S from "./styles";
 
-const Contact = (props) => {
+const ContactForm = (props) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   return (
-    <S.ContactContainer id={props.id}>
+    <S.ContactContainer>
       <S.Contact>
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={12} md={11} sm={24} xs={24}>
@@ -88,4 +88,4 @@ const Contact = (props) => {
   );
 };
 
-export default Contact;
+export default ContactForm;

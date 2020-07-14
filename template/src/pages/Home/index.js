@@ -11,7 +11,7 @@ import TextArea from "../../common/TextArea";
 import Container from "../../common/Container";
 import SvgIcon from "../../common/SvgIcon";
 
-const Documentation = () => {
+const Home = () => {
   return (
     <Fragment>
       <ContentBlock
@@ -94,4 +94,4 @@ const Documentation = () => {
   );
 };
 
-export default Documentation;
+export default Home;

@@ -6,10 +6,10 @@ import Button from "../../../common/Button";
 
 import * as S from "./styles";
 
-const RightBlock = (props) => {
+const RightContentBlock = (props) => {
   return (
     <S.BackgroundColor>
-      <S.RightBlockContainer id={props.id}>
+      <S.RightBlockContainer>
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={10} md={24} sm={24} xs={24}>
             <S.NoImage>
@@ -31,4 +31,4 @@ const RightBlock = (props) => {
   );
 };
 
-export default RightBlock;
+export default RightContentBlock;

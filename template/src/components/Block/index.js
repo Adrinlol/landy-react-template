@@ -2,7 +2,7 @@ import React from "react";
 
 import * as S from "./styles";
 
-const UnderlineText = (props) => (
+const Block = (props) => (
   <S.Container {...props}>
     <S.Title>{props.title}</S.Title>
     {props.content ? (
@@ -15,4 +15,4 @@ const UnderlineText = (props) => (
   </S.Container>
 );
 
-export default UnderlineText;
+export default Block;

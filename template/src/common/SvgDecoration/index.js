@@ -2,6 +2,6 @@ import React from "react";
 
 import * as S from "./styles";
 
-const Decoration = (props) => <S.Decoration {...props} />;
+const SvgDecoration = (props) => <S.Decoration {...props} />;
 
-export default Decoration;
+export default SvgDecoration;

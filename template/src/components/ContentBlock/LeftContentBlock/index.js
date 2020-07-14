@@ -6,7 +6,7 @@ import * as S from "./styles";
 
 const LeftContentBlock = (props) => {
   return (
-    <S.LeftContentBlock id={props.id} margin={props.margin}>
+    <S.LeftContentBlock margin={props.margin}>
       <Row type="flex" justify="space-between" align="middle">
         <Col lg={14} md={16} sm={18} xs={18}>
           <S.IconContainer padding={props.padding}>
