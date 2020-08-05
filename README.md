@@ -1,6 +1,6 @@
 ## Demo
 
-https://create-react-app-adrinlol.netlify.app/
+https://landy-web.netlify.app/
 
 ## Usage
 
