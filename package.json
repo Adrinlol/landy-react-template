@@ -1,6 +1,6 @@
 {
   "name": "cra-template-adrinlol",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "keywords": [
     "react",
     "create-react-app",
@@ -9,10 +9,11 @@
     "react-router",
     "styled-components",
     "react-hooks",
-    "react-boilerplate"
+    "react-boilerplate",
+    "landing-page-template"
   ],
   "main": "template.json",
-  "description": "CRA Template with already developed responsive components and funcionalities.",
+  "description": "Responsive, multi-language CRA template landing page for startups and SaaS.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Adrinlol/create-react-app-adrinlol.git"
