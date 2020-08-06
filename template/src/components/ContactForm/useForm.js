@@ -10,7 +10,7 @@ const useForm = (validate) => {
   const openNotificationWithIcon = (type) => {
     notification[type]({
       message: "Success",
-      description: "Your message has been sent. We will contact you shortly!",
+      description: "Your message has been sent. We will contact you shortly!"
     });
   };
 
@@ -24,7 +24,7 @@ const useForm = (validate) => {
         .post(url, {
           ...values,
         })
-        .then((response) => {
+        .then(() => {
           setShouldSubmit(true);
         });
     } else {

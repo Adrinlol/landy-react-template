@@ -1,18 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { Fade } from "react-reveal";
 
 import * as S from "./styles";
 
-const Block = (props) => (
-  <S.Container {...props}>
-    <S.Title>{props.title}</S.Title>
-    {props.content ? (
-      <S.TextWrapper>
-        <S.Content>{props.content}</S.Content>
-      </S.TextWrapper>
-    ) : (
-      <S.Content>{props.content}</S.Content>
-    )}
-  </S.Container>
-);
+const Block = ({ title, content }) => {
+  const { t } = useTranslation();
+  return (
+    <S.Container>
+      <Fade left>
+        <S.Title>{t(title)}</S.Title>
+        <S.TextWrapper>
+          <S.Content>{t(content)}</S.Content>
+        </S.TextWrapper>
+      </Fade>
+    </S.Container>
+  );
+};
 
 export default Block;

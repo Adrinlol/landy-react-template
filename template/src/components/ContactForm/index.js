@@ -11,19 +11,18 @@ import validate from "./validationRules";
 
 import * as S from "./styles";
 
-const ContactForm = (props) => {
+const Contact = ({id, title, content}) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   return (
-    <S.ContactContainer>
+    <S.ContactContainer id={id}>
       <S.Contact>
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={12} md={11} sm={24} xs={24}>
             <Block
               padding={true}
-              title="Contact form"
-              content="As an example, we’ll settle on a regular option with three fields: name, email address, and message. 
-              This component is using error validations and Hooks, the only thing you'll have to edit is the API url."
+              title={title}
+              content={content}
             />
           </Col>
           <Col lg={12} md={12} sm={24} xs={24}>
@@ -88,4 +87,4 @@ const ContactForm = (props) => {
   );
 };
 
-export default ContactForm;
+export default Contact;
