@@ -1,3 +1,6 @@
+## create-react-app-adrinlol 
+Beautifully designed multi-language React.js template. Save weeks of time and build your landing page in minutes.
+
 ## Demo
 
 https://landy-web.netlify.app/
