@@ -22,7 +22,7 @@ npx create-react-app my-app --template adrinlol
 ## Features
 
 - VS Code support
-- Responsive, reusable UI components
+- Responsive, reusable UI components, that change depending on the provided props
 - Styling with styled-components and antd
 - Multi-language translation for your web app
 - Contact form written in React Hooks, with error validation
@@ -39,7 +39,7 @@ Licensed under the MIT license.
 [antd]: https://github.com/ant-design/ant-design
 [react-reveal]: https://github.com/rnosov/react-reveal
 [react-svg]: https://www.npmjs.com/package/react-svg
-[styled-componnets]: https://github.com/styled-components/styled-components
+[styled-componets]: https://github.com/styled-components/styled-components
 [i18next]: https://github.com/i18next/i18next
 
 <!-- prettier-ignore-end -->
