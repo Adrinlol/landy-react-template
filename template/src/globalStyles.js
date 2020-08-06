@@ -9,7 +9,7 @@ const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
 
@@ -32,7 +32,19 @@ const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        color: #0a1f44;
+        font-size: 2.575rem;
+        line-height: 3.0625rem;
+      
+        @media only screen and (max-width: 414px) {
+          font-size: 1.625rem;
+        }
+    }
+
+    p {
+        color: #505F98;
+        font-size: 1.125rem;
     }
 
     h1 {
@@ -42,20 +54,37 @@ const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
+        color: #505F98;
     }
     
     *:focus {
         outline: none;
     }
 
-    .about-us-image svg {
+    .about-block-image svg {
         text-align: center;
-        @media only screen and (max-width:414px) {
-            margin-top: 3rem;
-            width: 70%;
-            height: 70%;
-        }
     }
+
+    .ant-drawer-body {
+        display: flex;
+        flex-direction: column;
+        padding: 1.25rem;
+        text-align: left;
+        padding-top: 2.5rem;
+        padding-right: 2rem;
+    }
+    
+    .ant-select-selector {
+        background: #E7ECFF !important;
+        border: none !important;
+    }
+
+    .ant-select-selection-item {
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        color: #505F98;
+    }
+
 `;
 
 export default Styles;

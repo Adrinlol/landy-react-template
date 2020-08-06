@@ -1,26 +1,14 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-  background: #f8f9fb;
-  padding-top: 4rem;
+  padding: 5rem 0;
 `;
 
 export const Contact = styled.section`
-  padding: 1rem 0 4rem;
   position: relative;
   width: 100%;
   max-width: 1280px;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: center;
-  align-items: center;
   padding: ${(props) => (props.padding ? "8rem 0rem" : "")};
-  @media only screen and (max-width: 768px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 `;
 
 export const IconContainer = styled.div`

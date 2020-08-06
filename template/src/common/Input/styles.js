@@ -8,16 +8,16 @@ export const Container = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  border: 2px solid #596164;
+  border: 1px solid #505F98;
   outline: none;
   font-size: 0.875rem;
   padding: 1rem 1.25rem;
   transition: border-color 0.3s ease-in;
-  border-radius: 6px;
+  color: #000;
 
   &:focus,
   &:hover {
-    border-color: #ed6128;
+    border-color: #111B47;
   }
 `;
 
