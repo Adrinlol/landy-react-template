@@ -69,7 +69,10 @@ const Footer = () => {
               </S.CSite>
               <S.CSite>
                 This web application was created by
-                <S.Target href="https://github.com/Adrinlol/create-react-app-adrinlol" target="_blank">
+                <S.Target 
+                  style={{ display: "contents" }}
+                  href="https://github.com/Adrinlol/create-react-app-adrinlol" 
+                  target="_blank">
                    @Adrinlol
                 </S.Target>
               </S.CSite>
