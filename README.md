@@ -33,6 +33,12 @@ npx create-react-app my-app --template adrinlol
 - SVG manipulation
 - The whole content is managed by the JSON files
 
+## Special thanks
+
+<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/v2/undraw_social_20.png" alt="unDraw" width="400px" height="200px">
+
+[unDraw][unDraw] - A constantly updated design project with beautiful SVG images.
+
 ## License
 
 Licensed under the MIT license.
@@ -44,5 +50,6 @@ Licensed under the MIT license.
 [react-svg]: https://www.npmjs.com/package/react-svg
 [styled-componets]: https://github.com/styled-components/styled-components
 [i18next]: https://github.com/i18next/i18next
+[unDraw]: https://undraw.co/
 
 <!-- prettier-ignore-end -->
