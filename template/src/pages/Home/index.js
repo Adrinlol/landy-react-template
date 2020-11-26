@@ -4,6 +4,7 @@ import ContactFrom from "../../components/ContactForm";
 import ContentBlock from "../../components/ContentBlock";
 import MiddleBlock from "../../components/MiddleBlock";
 import Container from "../../common/Container";
+import ScrollToTop from "../../common/ScrollToTop";
 
 import Introduction from "../../content/introduction.json";
 import FirstBlock from "../../content/firstBlock.json";
@@ -15,13 +16,14 @@ import ContactBlock from "../../content/contactBlock.json";
 const Home = () => {
   return (
     <Container>
+      <ScrollToTop />
       <ContentBlock
         type="right"
         first="true"
         title={Introduction.title}
         content={Introduction.text}
         button={Introduction.button}
-        icon="intro.svg"
+        icon="developer.svg"
       />
       <MiddleBlock
         title={FirstBlock.title}
@@ -33,20 +35,20 @@ const Home = () => {
         title={SecondBlock.title}
         content={SecondBlock.text}
         section={SecondBlock.section}
-        icon="mobile.svg"
+        icon="graphs.svg"
       />
       <ContentBlock
         type="right"
         title={ThirdBlock.title}
-        content={FourthBlock.text}
-        icon="web.svg"
+        content={ThirdBlock.text}
+        icon="product-launch.svg"
       />
 
       <ContentBlock
         type="left"
         title={FourthBlock.title}
         content={FourthBlock.text}
-        icon="mention.svg"
+        icon="waving.svg"
       />
       <ContactFrom title={ContactBlock.title} content={ContactBlock.text} />
     </Container>
