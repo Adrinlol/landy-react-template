@@ -1,16 +1,16 @@
 {
   "title": "Light, Fast & Responsive",
-  "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
   "section": [
     {
-      "title": "Open Source React Template",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-      "icon": "shape.svg"
+      "title": "Why Antd?",
+      "content": "Ant Design is a React UI library that has a plethora of easy-to-use components that are useful for building elegant UI.",
+      "icon": "notes.svg"
     },
     {
-      "title": "Open Source React Template",
-      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-      "icon": "shape.svg"
+      "title": "Why styled-components?",
+      "content": "Styled Components gives you total control over your components, instead of using a multitude of conditional class names.",
+      "icon": "notes.svg"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
-  "title": "Introduce Your Product Quickly & Effectively",
-  "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+  "title": "Landing page template for developers & startups",
+  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
   "button": [
     {
-      "title": "Purchase"
+      "title": "Explore"
     },
     {
       "title": "Learn More",
