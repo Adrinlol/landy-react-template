@@ -4,7 +4,7 @@ export const Content = styled.p`
   margin-top: 1.5rem;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h6``;
 
 export const Container = styled.div`
   position: relative;

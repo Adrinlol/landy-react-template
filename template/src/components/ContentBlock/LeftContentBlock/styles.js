@@ -29,20 +29,19 @@ export const ServiceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-
 `;
 
 export const MinTitle = styled.h6`
   font-size: 1rem;
   line-height: 1rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 `;
 
 export const MinPara = styled.p`
   font-size: 0.75rem;
 `;
 
-export const ServiceItem = styled(Col) `
+export const ServiceItem = styled(Col)`
   margin: 2rem 0;
   position: relative;
-`
+`;

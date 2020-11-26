@@ -9,8 +9,8 @@ export const Container = styled.div`
 
 export const TextArea = styled.textarea`
   width: 100%;
-  border: 1px solid #505F98;
   outline: none;
+  border-radius: 8px;
   padding: 1rem 1.25rem;
   resize: none;
   font-size: 0.875rem;
@@ -19,6 +19,6 @@ export const TextArea = styled.textarea`
 
   &:focus,
   &:hover {
-    border-color: #111B47;
+    border-color: rgb(255, 130, 92);
   }
 `;

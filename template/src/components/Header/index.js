@@ -50,7 +50,7 @@ const Header = () => {
         <Row type="flex" justify="space-between" gutter={20}>
           <Col>
             <S.LogoContainer to="/">
-              <SvgIcon src="landy.svg" />
+              <SvgIcon src="logo.svg" />
             </S.LogoContainer>
           </Col>
           <S.NotHidden>
