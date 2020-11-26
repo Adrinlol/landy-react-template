@@ -1,11 +1,17 @@
-## create-react-app-adrinlol 
-Beautifully designed multi-language React.js template. Save weeks of time and build your landing page in minutes.
+## Free React landing page template
+![landy](https://user-images.githubusercontent.com/48876996/100373174-cd393880-3023-11eb-9fef-8acdf9733120.gif)
+
+Landy is a free React landing page template designed for developers and startups, who want to create a quick and professional landing page for their business or project.
+
+This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
 
 ## Demo
 
-https://landy-web.netlify.app/
+Check the live demo here 👉️ http://landy.website/
 
 ## Usage
+
+Use it for whatever you want, and be sure to reach out to me on Twitter if you have any questions, or build something cool with it.
 
 ### npx
 
@@ -24,20 +30,16 @@ npx create-react-app my-app --template adrinlol
 
 ## Features
 
-- VS Code support
 - Responsive, reusable UI components, that change depending on the provided props
 - Styling with styled-components and antd
-- Multi-language translation for your web app
-- Contact form written in React Hooks, with error validation
+- Multi-lingual support using i18next
+- Contact form written in React Hooks, with uncontrolled form validation to reduce any unnecessary performance penalty.
 - Ready to use declarative routing
-- SVG manipulation
-- The whole content is managed by the JSON files
+- All of the content is stored in the JSON files
 
 ## Special thanks
 
-<img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/v2/undraw_social_20.png" alt="unDraw" width="400px" height="200px">
-
-[unDraw][unDraw] - A constantly updated design project with beautiful SVG images.
+[whoooa][whoooa] - Use fantastic, handmade illustrations with easily changeable colors and different styles.
 
 ## License
 
@@ -50,6 +52,6 @@ Licensed under the MIT license.
 [react-svg]: https://www.npmjs.com/package/react-svg
 [styled-componets]: https://github.com/styled-components/styled-components
 [i18next]: https://github.com/i18next/i18next
-[unDraw]: https://undraw.co/
+[whoooa]: https://www.whoooa.rocks/
 
 <!-- prettier-ignore-end -->
