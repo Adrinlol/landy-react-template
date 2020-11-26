@@ -9,7 +9,7 @@ const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
     }
 
 
@@ -32,7 +32,7 @@ const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
         color: #0a1f44;
         font-size: 2.575rem;
         line-height: 3.0625rem;
@@ -43,7 +43,7 @@ const Styles = createGlobalStyle`
     }
 
     p {
-        color: #505F98;
+        color: #343D48;
         font-size: 1.125rem;
     }
 
@@ -54,7 +54,11 @@ const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #505F98;
+        color: #2E186A;
+
+        :hover {
+            color: rgb(255, 130, 92);
+        }
     }
     
     *:focus {
@@ -75,14 +79,20 @@ const Styles = createGlobalStyle`
     }
     
     .ant-select-selector {
-        background: #E7ECFF !important;
+        background-color: #FCFCFD !important; 
         border: none !important;
     }
 
-    .ant-select-selection-item {
-        font-size: 1rem;
-        font-family: 'Roboto', sans-serif;
-        color: #505F98;
+    .anticon.ant-notification-notice-icon-success {
+        color: rgb(255,130,92);
+    }
+
+    .ant-select-focused .ant-select-selector,
+    .ant-select-selector:focus,
+    .ant-select-selector:active,
+    .ant-select-open .ant-select-selector {
+        border-color: #d9d9d9 !important;
+        box-shadow: none !important;
     }
 
 `;
