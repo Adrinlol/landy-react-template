@@ -7,7 +7,7 @@ This React template comes with multi-lingual support, smooth animations, set of 
 
 ## Demo
 
-Check the live demo here 👉️ http://landy.website/
+Check the live demo here 👉️ https://landy.website/
 
 ## Usage
 
