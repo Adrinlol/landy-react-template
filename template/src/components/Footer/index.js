@@ -27,7 +27,7 @@ const Footer = () => {
                 <S.Large to="/">{t("Tell us everything")}</S.Large>
                 <S.Para>
                   {t(
-                    `Do you have any question regarding the project? Fell free to reach out.`
+                    `Do you have any question regarding the project? Feel free to reach out.`
                   )}
                 </S.Para>
                 <a href="mailto:l.qqbadze@gmail.com">
