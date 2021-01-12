@@ -8,11 +8,11 @@ This React template comes with multi-lingual support, smooth animations, set of 
 
 ## Demo
 
-Check the live demo here 👉️ http://landy.website/
+Check the live demo here 👉️ https://landy.website/
 
 ## Usage
 
-Use it for whatever you want, and be sure to reach out to me on Twitter if you have any questions, or build something cool with it.
+Use it for whatever you want, and be sure to reach out to me on [Twitter](https://twitter.com/Adrinlolx) if you have any questions, or build something cool with it.
 
 ### npx
 
