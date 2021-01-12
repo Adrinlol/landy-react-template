@@ -6,6 +6,12 @@ Landy is a free React landing page template designed for developers and startups
 
 This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
 
+
+
+## Google Lighthouse
+![1](https://user-images.githubusercontent.com/48876996/104335960-555c9a00-550d-11eb-8e94-4549637f72bd.PNG)
+
+
 ## Demo
 
 Check the live demo here 👉️ https://landy.website/
