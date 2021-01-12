@@ -28,7 +28,7 @@ npx create-react-app my-app --template adrinlol
 - [react-svg][react-svg]
 - [styled-componets][styled-componets]
 - [i18next][i18next]
-- [@loadable/component][loadable]
+- [@loadable/component][@loadable/component]
 
 ## Features
 
