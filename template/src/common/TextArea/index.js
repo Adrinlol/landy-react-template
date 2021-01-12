@@ -1,10 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import * as S from "./styles";
+import * as S from './styles';
 
-const TextArea = (props) => (
+const TextArea = ({ name, id, placeholder, onChange }) => (
   <S.Container>
-    <S.TextArea {...props} spellcheck="false" />
+    <label htmlFor={id}>{id}</label>
+    <S.TextArea
+      spellcheck="false"
+      placeholder={placeholder}
+      name={name}
+      onChange={onChange}
+    />
   </S.Container>
 );
 

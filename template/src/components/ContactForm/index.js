@@ -1,78 +1,71 @@
-import React from "react";
-import { Row, Col } from "antd";
-import Zoom from "react-reveal/Zoom";
+import React from 'react';
+import { Row, Col } from 'antd';
+import Zoom from 'react-reveal/Zoom';
+import loadable from '@loadable/component';
 
-import Input from "../../common/Input";
-import TextArea from "../../common/TextArea";
-import Block from "../Block";
-import Button from "../../common/Button";
-import useForm from "./useForm";
-import validate from "./validationRules";
+import useForm from './useForm';
+import validate from './validationRules';
+import * as S from './styles';
 
-import * as S from "./styles";
+const Block = loadable(() => import('../Block'));
+const Input = loadable(() => import('../../common/Input'));
+const Button = loadable(() => import('../../common/Button'));
+const TextArea = loadable(() => import('../../common/TextArea'));
 
-const Contact = ({id, title, content}) => {
+const Contact = ({ title, content }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
+  const ValidationType = ({ type }) => {
+    const ErrorMessage = errors[type];
+    return errors[type] ? (
+      <Zoom cascade>
+        <S.Span>{ErrorMessage}</S.Span>
+      </Zoom>
+    ) : (
+      <S.Span />
+    );
+  };
+
   return (
-    <S.ContactContainer id={id}>
+    <S.ContactContainer>
       <S.Contact>
         <Row type="flex" justify="space-between" align="middle">
-          <Col lg={12} md={11} sm={24} xs={24}>
-            <Block
-              padding={true}
-              title={title}
-              content={content}
-            />
+          <Col lg={12} md={11} sm={24}>
+            <Block padding={true} title={title} content={content} />
           </Col>
-          <Col lg={12} md={12} sm={24} xs={24}>
+          <Col lg={12} md={12} sm={24}>
             <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col lg={24} md={24} sm={24} xs={24}>
+              <Col span={24}>
                 <Input
                   type="text"
                   name="name"
-                  placeholder="Name"
-                  value={values.name || ""}
+                  id="Name"
+                  placeholder="Your Name"
+                  value={values.name || ''}
                   onChange={handleChange}
                 />
-                {errors.name ? (
-                  <Zoom cascade>
-                    <S.Span>Name is required</S.Span>
-                  </Zoom>
-                ) : (
-                  <S.Span />
-                )}{" "}
+                <ValidationType type="name" />
               </Col>
-              <Col lg={24} md={24} sm={24} xs={24}>
+              <Col span={24}>
                 <Input
                   type="text"
                   name="email"
-                  placeholder="Email"
-                  value={values.email || ""}
+                  id="Email"
+                  placeholder="Your Email"
+                  value={values.email || ''}
                   onChange={handleChange}
                 />
-                {errors.email ? (
-                  <Zoom cascade>
-                    <S.Span>Email is required</S.Span>
-                  </Zoom>
-                ) : (
-                  <S.Span />
-                )}{" "}
+                <ValidationType type="email" />
               </Col>
-              <Col lg={24} md={24} sm={24} xs={24}>
+              <Col span={24}>
                 <TextArea
                   placeholder="Your Message"
-                  value={values.message || ""}
+                  value={values.message || ''}
                   name="message"
+                  id="Message"
                   onChange={handleChange}
                 />
-                {errors.message ? (
-                  <Zoom cascade>
-                    <S.Span>Message is required</S.Span>
-                  </Zoom>
-                ) : (
-                  <S.Span />
-                )}{" "}
+                <ValidationType type="message" />
               </Col>
               <S.ButtonContainer>
                 <Button name="submit" type="submit">

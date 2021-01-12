@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MiddleBlock = styled.section`
   position: relative;
@@ -7,8 +7,6 @@ export const MiddleBlock = styled.section`
   display: flex;
   justify-content: center;
 `;
-
-export const Title = styled.h6``;
 
 export const Content = styled.p`
   padding: 0.75rem 0 0.75rem;

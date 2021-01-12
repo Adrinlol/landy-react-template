@@ -1,15 +1,14 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Fade } from "react-reveal";
+import React from 'react';
+import { withTranslation } from 'react-i18next';
+import { Fade } from 'react-reveal';
 
-import * as S from "./styles";
+import * as S from './styles';
 
-const Block = ({ title, content }) => {
-  const { t } = useTranslation();
+const Block = ({ title, content, t }) => {
   return (
     <S.Container>
       <Fade left>
-        <S.Title>{t(title)}</S.Title>
+        <h6>{t(title)}</h6>
         <S.TextWrapper>
           <S.Content>{t(content)}</S.Content>
         </S.TextWrapper>
@@ -18,4 +17,4 @@ const Block = ({ title, content }) => {
   );
 };
 
-export default Block;
+export default withTranslation()(Block);

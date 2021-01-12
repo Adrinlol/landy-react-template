@@ -1,10 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-
-import antd from "antd/dist/antd.css";
+import { createGlobalStyle } from 'styled-components';
 
 const Styles = createGlobalStyle`
-
-    ${antd}
 
     body,
     html,
@@ -57,7 +53,7 @@ const Styles = createGlobalStyle`
         color: #2E186A;
 
         :hover {
-            color: rgb(255, 130, 92);
+            color: #2e186a;
         }
     }
     
@@ -77,24 +73,11 @@ const Styles = createGlobalStyle`
         padding-top: 2.5rem;
         padding-right: 2rem;
     }
-    
-    .ant-select-selector {
-        background-color: #FCFCFD !important; 
-        border: none !important;
-    }
 
-    .anticon.ant-notification-notice-icon-success {
+    .anticon,
+    .ant-notification-notice-icon-success {
         color: rgb(255,130,92);
     }
-
-    .ant-select-focused .ant-select-selector,
-    .ant-select-selector:focus,
-    .ant-select-selector:active,
-    .ant-select-open .ant-select-selector {
-        border-color: #d9d9d9 !important;
-        box-shadow: none !important;
-    }
-
 `;
 
 export default Styles;

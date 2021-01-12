@@ -1,12 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import * as S from "./styles";
+import * as S from './styles';
 
-const Input = (props) => (
-  <S.Container>
-    <S.Input {...props} spellcheck="false" />
-    <S.Span>{props.error}</S.Span>
-  </S.Container>
-);
+const Input = ({ id, name, placeholder, onChange }) => {
+  return (
+    <S.Container>
+      <label htmlFor={id}>{id}</label>
+      <S.Input
+        spellcheck="false"
+        placeholder={placeholder}
+        name={name}
+        onChange={onChange}
+      />
+    </S.Container>
+  );
+};
 
 export default Input;

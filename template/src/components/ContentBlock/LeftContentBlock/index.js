@@ -1,14 +1,14 @@
-import React from "react";
-import { Row, Col } from "antd";
-import SvgIcon from "../../../common/SvgIcon";
-import { useTranslation } from "react-i18next";
-import { Slide } from "react-reveal";
+import React from 'react';
+import { Row, Col } from 'antd';
+import { withTranslation } from 'react-i18next';
+import { Slide } from 'react-reveal';
+import loadable from '@loadable/component';
 
-import * as S from "./styles";
+import * as S from './styles';
 
-const LeftContentBlock = ({ icon, title, content, section }) => {
-  const { t } = useTranslation();
+const SvgIcon = loadable(() => import('../../../common/SvgIcon'));
 
+const LeftContentBlock = ({ icon, title, content, section, t }) => {
   return (
     <S.LeftContentBlock>
       <Row type="flex" justify="space-between" align="middle">
@@ -20,15 +20,15 @@ const LeftContentBlock = ({ icon, title, content, section }) => {
         <Col lg={11} md={11} sm={12} xs={24}>
           <Slide right>
             <S.ContentWrapper>
-              <S.Title>{t(title)}</S.Title>
+              <h6>{t(title)}</h6>
               <S.Content>{t(content)}</S.Content>
               <S.ServiceWrapper>
                 <Row type="flex" justify="space-between">
                   {section &&
-                    typeof section === "object" &&
+                    typeof section === 'object' &&
                     section.map((item, id) => {
                       return (
-                        <Col key={id} lg={12} md={12} sm={12} xs={12}>
+                        <Col key={id} span={12}>
                           <SvgIcon src={item.icon} />
                           <S.MinTitle>{t(item.title)}</S.MinTitle>
                           <S.MinPara>{t(item.content)}</S.MinPara>
@@ -45,4 +45,4 @@ const LeftContentBlock = ({ icon, title, content, section }) => {
   );
 };
 
-export default LeftContentBlock;
+export default withTranslation()(LeftContentBlock);

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Col } from "antd";
+import styled from 'styled-components';
+import { Col } from 'antd';
 
 export const LeftContentBlock = styled.section`
   position: relative;
@@ -9,8 +9,6 @@ export const LeftContentBlock = styled.section`
     padding: 4rem 0 4rem;
   }
 `;
-
-export const Title = styled.h6``;
 
 export const Content = styled.p`
   margin: 1.5rem 0 2rem 0;

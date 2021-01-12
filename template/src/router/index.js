@@ -1,19 +1,19 @@
-import React, { Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Home from "../pages/Home";
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Home from '../pages/Home';
+
+import GlobalStyles from '../globalStyles';
 
 const Router = () => {
   return (
-    <Suspense>
+    <React.Fragment>
+      <GlobalStyles />
       <Header />
-      <Switch>
-        <Route exact path={"/"} component={Home} />
-      </Switch>
+      <Home />
       <Footer />
-    </Suspense>
+    </React.Fragment>
   );
 };
 

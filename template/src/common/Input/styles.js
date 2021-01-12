@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: inline-block;
@@ -20,12 +20,6 @@ export const Input = styled.input`
 
   &:focus,
   &:hover {
-    border-color: rgb(255, 130, 92);
+    border-color: #2e186a;
   }
-`;
-
-export const Span = styled.span`
-  display: block;
-  color: red;
-  margin-top: -4px;
 `;

@@ -1,29 +1,28 @@
-import React from "react";
-import { Row, Col } from "antd";
-import { useTranslation } from "react-i18next";
-import { Fade } from "react-reveal";
+import React from 'react';
+import { Row, Col } from 'antd';
+import { withTranslation } from 'react-i18next';
+import { Fade } from 'react-reveal';
+import loadable from '@loadable/component';
 
-import Button from "../../common/Button";
+import * as S from './styles';
 
-import * as S from "./styles";
+const Button = loadable(() => import('../../common/Button'));
 
-const MiddleBlock = ({ last, id, title, content, button }) => {
-  const { t } = useTranslation();
-
+const MiddleBlock = ({ title, content, button, t }) => {
   return (
-    <S.MiddleBlock last={last} id={id}>
+    <S.MiddleBlock>
       <Row type="flex" justify="center" align="middle">
         <Fade bottom>
           <S.ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <S.Title>{t(title)}</S.Title>
-              <S.Content last={last}>{t(content)}</S.Content>
+              <h6>{t(title)}</h6>
+              <S.Content>{t(content)}</S.Content>
               {button ? (
                 <Button name="submit" type="submit">
                   {t(button)}
                 </Button>
               ) : (
-                ""
+                ''
               )}
             </Col>
           </S.ContentWrapper>
@@ -33,4 +32,4 @@ const MiddleBlock = ({ last, id, title, content, button }) => {
   );
 };
 
-export default MiddleBlock;
+export default withTranslation()(MiddleBlock);

@@ -1,27 +1,26 @@
-import React from "react";
-import { Row, Col } from "antd";
-import { useTranslation } from "react-i18next";
-import { Slide } from "react-reveal";
+import React from 'react';
+import { Row, Col } from 'antd';
+import { withTranslation } from 'react-i18next';
+import { Slide } from 'react-reveal';
+import loadable from '@loadable/component';
 
-import SvgIcon from "../../../common/SvgIcon";
-import Button from "../../../common/Button";
+import * as S from './styles';
 
-import * as S from "./styles";
+const SvgIcon = loadable(() => import('../../../common/SvgIcon'));
+const Button = loadable(() => import('../../../common/Button'));
 
-const RightBlock = ({ last, first, title, content, button, icon }) => {
-  const { t } = useTranslation();
-
+const RightBlock = ({ title, content, button, icon, t }) => {
   return (
-    <S.RightBlockContainer last={last} first={first}>
+    <S.RightBlockContainer>
       <Row type="flex" justify="space-between" align="middle">
         <Col lg={11} md={11} sm={12} xs={24}>
           <Slide left>
             <S.ContentWrapper>
-              <S.Title>{t(title)}</S.Title>
+              <h6>{t(title)}</h6>
               <S.Content>{t(content)}</S.Content>
               <S.ButtonWrapper>
                 {button &&
-                  typeof button === "object" &&
+                  typeof button === 'object' &&
                   button.map((item, id) => {
                     return (
                       <Button key={id} color={item.color} width="true">
@@ -43,4 +42,4 @@ const RightBlock = ({ last, first, title, content, button, icon }) => {
   );
 };
 
-export default RightBlock;
+export default withTranslation()(RightBlock);

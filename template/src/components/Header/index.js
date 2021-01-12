@@ -1,19 +1,19 @@
-import React, { useState, Fragment } from "react";
-import { Row, Col, Drawer } from "antd";
-import { Link } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
-import { useTranslation } from "react-i18next";
+import React, { useState, Fragment } from 'react';
+import { Row, Col, Drawer } from 'antd';
+import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
+import { withTranslation } from 'react-i18next';
+import loadable from '@loadable/component';
 
-import SvgIcon from "../../common/SvgIcon";
-import Button from "../../common/Button";
+import * as S from './styles';
 
-import * as S from "./styles";
+const SvgIcon = loadable(() => import('../../common/SvgIcon'));
+const Button = loadable(() => import('../../common/Button'));
 
-const Header = () => {
+const Header = ({ t }) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
-  const { t } = useTranslation();
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -27,17 +27,17 @@ const Header = () => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall>
-          <Link to="/">{t("About")}</Link>
+          <Link to="/">{t('About')}</Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link to="/">{t("Mission")}</Link>
+          <Link to="/">{t('Mission')}</Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link to="/">{t("Product")}</Link>
+          <Link to="/">{t('Product')}</Link>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall style={{ width: "180px" }}>
+        <S.CustomNavLinkSmall style={{ width: '180px' }}>
           <Link to="/">
-            <Button>{t("Contact")}</Button>
+            <Button>{t('Contact')}</Button>
           </Link>
         </S.CustomNavLinkSmall>
       </Fragment>
@@ -48,15 +48,11 @@ const Header = () => {
     <S.Header>
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
-          <Col>
-            <S.LogoContainer to="/">
-              <SvgIcon src="logo.svg" />
-            </S.LogoContainer>
-          </Col>
+          <S.LogoContainer to="/" aria-label="homepage">
+            <SvgIcon src="logo.svg" />
+          </S.LogoContainer>
           <S.NotHidden>
-            <Col style={{ display: "flex", alignItems: "baseline" }}>
-              <MenuItem />
-            </Col>
+            <MenuItem />
           </S.NotHidden>
           <S.Burger onClick={showDrawer}>
             <S.Outline />
@@ -69,7 +65,7 @@ const Header = () => {
           unmountOnExit
         >
           <Drawer closable={false} visible={visible} onClose={onClose}>
-            <Col style={{ marginBottom: "2.5rem" }}>
+            <Col style={{ marginBottom: '2.5rem' }}>
               <S.Label onClick={onClose}>
                 <Col span={12}>
                   <S.Menu>Menu</S.Menu>
@@ -87,4 +83,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withTranslation()(Header);

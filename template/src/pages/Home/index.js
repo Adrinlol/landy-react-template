@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
+import loadable from '@loadable/component';
 
-import ContactFrom from "../../components/ContactForm";
-import ContentBlock from "../../components/ContentBlock";
-import MiddleBlock from "../../components/MiddleBlock";
-import Container from "../../common/Container";
-import ScrollToTop from "../../common/ScrollToTop";
+import Introduction from '../../content/introduction.json';
+import FirstBlock from '../../content/firstBlock.json';
+import SecondBlock from '../../content/secondBlock.json';
+import ThirdBlock from '../../content/thirdBlock.json';
+import FourthBlock from '../../content/fourthBlock.json';
+import ContactBlock from '../../content/contactBlock.json';
 
-import Introduction from "../../content/introduction.json";
-import FirstBlock from "../../content/firstBlock.json";
-import SecondBlock from "../../content/secondBlock.json";
-import ThirdBlock from "../../content/thirdBlock.json";
-import FourthBlock from "../../content/fourthBlock.json";
-import ContactBlock from "../../content/contactBlock.json";
+const ContactFrom = loadable(() => import('../../components/ContactForm'));
+const ContentBlock = loadable(() => import('../../components/ContentBlock'));
+const MiddleBlock = loadable(() => import('../../components/MiddleBlock'));
+const Container = loadable(() => import('../../common/Container'));
+const ScrollToTop = loadable(() => import('../../common/ScrollToTop'));
 
 const Home = () => {
   return (

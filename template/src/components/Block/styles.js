@@ -1,10 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Content = styled.p`
   margin-top: 1.5rem;
 `;
-
-export const Title = styled.h6``;
 
 export const Container = styled.div`
   position: relative;

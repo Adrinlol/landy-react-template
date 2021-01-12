@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
   padding: 5rem 0;
@@ -8,7 +8,6 @@ export const Contact = styled.section`
   position: relative;
   width: 100%;
   max-width: 1280px;
-  padding: ${(props) => (props.padding ? "8rem 0rem" : "")};
 `;
 
 export const IconContainer = styled.div`
@@ -28,7 +27,7 @@ export const FormGroup = styled.form`
 
 export const Span = styled.span`
   display: block;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
   color: rgb(255, 130, 92);
   height: 0.775rem;

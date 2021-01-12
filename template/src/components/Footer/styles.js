@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Footer = styled.footer`
   background: rgb(249, 250, 252);
@@ -26,19 +26,6 @@ export const NavLink = styled(Link)`
   &:focus {
     color: #15418e;
   }
-
-  &.active {
-    color: rgb(255, 130, 92);
-  }
-`;
-
-export const CSite = styled.p`
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  display: flex;
-  font-size: 14px;
-  color: rgba(15, 33, 55, 0.6);
-  text-align: inherit;
 `;
 
 export const Target = styled.a`
@@ -62,6 +49,7 @@ export const Extra = styled.section`
   padding-left: 25px;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 2rem;
 `;
 
 export const LogoContainer = styled.div`
@@ -87,8 +75,8 @@ export const Para = styled.div`
 export const Large = styled(Link)`
   font-size: 16px;
   color: rgba(2, 7, 62, 0.8);
-  text-align: ${(props) => (props.left ? "left" : "")};
-  padding: ${(props) => (props.left ? "0 10%" : "")};
+  text-align: ${(props) => (props.left ? 'left' : '')};
+  padding: ${(props) => (props.left ? '0 10%' : '')};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -97,10 +85,6 @@ export const Large = styled(Link)`
   margin-bottom: 0.625rem;
 
   &:hover {
-    color: rgb(255, 130, 92);
-  }
-
-  &.active {
     color: rgb(255, 130, 92);
   }
 `;
@@ -163,4 +147,24 @@ export const Language = styled.h4`
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
   }
+`;
+
+export const Label = styled.label`
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: 414px) {
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const LangSelect = styled.select`
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  background: rgb(249, 250, 252);
 `;
