@@ -1,6 +1,7 @@
 {
   "package": {
     "dependencies": {
+      "@loadable/component": "^5.14.1",
       "@testing-library/jest-dom": "^5.9.0",
       "@testing-library/react": "^10.2.1",
       "@testing-library/user-event": "^12.0.2",
@@ -8,7 +9,6 @@
       "react-svg": "^11.0.30",
       "antd": "^4.4.1",
       "web-vitals": "^0.2.2",
-      "react-loader-spinner": "^3.1.14",
       "react-router-dom": "^5.2.0",
       "react-reveal": "^1.2.2",
       "axios": "^0.19.2",
