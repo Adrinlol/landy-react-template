@@ -1,4 +1,5 @@
 ## Free React landing page template
+
 ![landy](https://user-images.githubusercontent.com/48876996/100373174-cd393880-3023-11eb-9fef-8acdf9733120.gif)
 
 Landy is a free React landing page template designed for developers and startups, who want to create a quick and professional landing page for their business or project.
@@ -27,6 +28,7 @@ npx create-react-app my-app --template adrinlol
 - [react-svg][react-svg]
 - [styled-componets][styled-componets]
 - [i18next][i18next]
+- [loadable][loadable]
 
 ## Features
 
@@ -52,6 +54,7 @@ Licensed under the MIT license.
 [react-svg]: https://www.npmjs.com/package/react-svg
 [styled-componets]: https://github.com/styled-components/styled-components
 [i18next]: https://github.com/i18next/i18next
+[loadable]: https://www.npmjs.com/package/@loadable/component
 [whoooa]: https://www.whoooa.rocks/
 
 <!-- prettier-ignore-end -->
