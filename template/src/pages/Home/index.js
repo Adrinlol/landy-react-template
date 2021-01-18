@@ -1,12 +1,12 @@
 import React from 'react';
 import loadable from '@loadable/component';
 
-import Introduction from '../../content/introduction.json';
-import FirstBlock from '../../content/firstBlock.json';
-import SecondBlock from '../../content/secondBlock.json';
-import ThirdBlock from '../../content/thirdBlock.json';
-import FourthBlock from '../../content/fourthBlock.json';
-import ContactBlock from '../../content/contactBlock.json';
+import IntroContent from '../../content/IntroContent.json';
+import MiddleBlockContent from '../../content/MiddleBlockContent.json';
+import AboutContent from '../../content/AboutContent.json';
+import MissionContent from '../../content/MissionContent.json';
+import ProductContent from '../../content/ProductContent.json';
+import ContactContent from '../../content/ContactContent.json';
 
 const ContactFrom = loadable(() => import('../../components/ContactForm'));
 const ContentBlock = loadable(() => import('../../components/ContentBlock'));
@@ -21,37 +21,45 @@ const Home = () => {
       <ContentBlock
         type="right"
         first="true"
-        title={Introduction.title}
-        content={Introduction.text}
-        button={Introduction.button}
+        title={IntroContent.title}
+        content={IntroContent.text}
+        button={IntroContent.button}
         icon="developer.svg"
+        id="intro"
       />
       <MiddleBlock
-        title={FirstBlock.title}
-        content={FirstBlock.text}
-        button={FirstBlock.button}
+        title={MiddleBlockContent.title}
+        content={MiddleBlockContent.text}
+        button={MiddleBlockContent.button}
       />
       <ContentBlock
         type="left"
-        title={SecondBlock.title}
-        content={SecondBlock.text}
-        section={SecondBlock.section}
+        title={AboutContent.title}
+        content={AboutContent.text}
+        section={AboutContent.section}
         icon="graphs.svg"
+        id="about"
       />
       <ContentBlock
         type="right"
-        title={ThirdBlock.title}
-        content={ThirdBlock.text}
+        title={MissionContent.title}
+        content={MissionContent.text}
         icon="product-launch.svg"
+        id="mission"
       />
 
       <ContentBlock
         type="left"
-        title={FourthBlock.title}
-        content={FourthBlock.text}
+        title={ProductContent.title}
+        content={ProductContent.text}
         icon="waving.svg"
+        id="product"
       />
-      <ContactFrom title={ContactBlock.title} content={ContactBlock.text} />
+      <ContactFrom
+        title={ContactContent.title}
+        content={ContactContent.text}
+        id="contact"
+      />
     </Container>
   );
 };
