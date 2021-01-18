@@ -9,6 +9,12 @@ import * as S from './styles';
 const Button = loadable(() => import('../../common/Button'));
 
 const MiddleBlock = ({ title, content, button, t }) => {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
   return (
     <S.MiddleBlock>
       <Row type="flex" justify="center" align="middle">
@@ -18,7 +24,11 @@ const MiddleBlock = ({ title, content, button, t }) => {
               <h6>{t(title)}</h6>
               <S.Content>{t(content)}</S.Content>
               {button ? (
-                <Button name="submit" type="submit">
+                <Button
+                  name="submit"
+                  type="submit"
+                  onClick={() => scrollTo('mission')}
+                >
                   {t(button)}
                 </Button>
               ) : (

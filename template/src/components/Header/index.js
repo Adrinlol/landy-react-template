@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react';
 import { Row, Col, Drawer } from 'antd';
-import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { withTranslation } from 'react-i18next';
 import loadable from '@loadable/component';
@@ -24,21 +23,31 @@ const Header = ({ t }) => {
   };
 
   const MenuItem = () => {
+    const scrollTo = (id) => {
+      const element = document.getElementById(id);
+      element.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setVisibility(false);
+    };
     return (
       <Fragment>
-        <S.CustomNavLinkSmall>
-          <Link to="/">{t('About')}</Link>
+        <S.CustomNavLinkSmall onClick={() => scrollTo('about')}>
+          <S.Span>{t('About')}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall>
-          <Link to="/">{t('Mission')}</Link>
+        <S.CustomNavLinkSmall onClick={() => scrollTo('mission')}>
+          <S.Span>{t('Mission')}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall>
-          <Link to="/">{t('Product')}</Link>
+        <S.CustomNavLinkSmall onClick={() => scrollTo('product')}>
+          <S.Span>{t('Product')}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall style={{ width: '180px' }}>
-          <Link to="/">
+        <S.CustomNavLinkSmall
+          style={{ width: '180px' }}
+          onClick={() => scrollTo('contact')}
+        >
+          <S.Span>
             <Button>{t('Contact')}</Button>
-          </Link>
+          </S.Span>
         </S.CustomNavLinkSmall>
       </Fragment>
     );

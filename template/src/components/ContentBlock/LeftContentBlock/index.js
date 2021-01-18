@@ -8,16 +8,16 @@ import * as S from './styles';
 
 const SvgIcon = loadable(() => import('../../../common/SvgIcon'));
 
-const LeftContentBlock = ({ icon, title, content, section, t }) => {
+const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
   return (
     <S.LeftContentBlock>
-      <Row type="flex" justify="space-between" align="middle">
+      <Row type="flex" justify="space-between" align="middle" id={id}>
         <Col lg={11} md={11} sm={12} xs={24}>
           <Slide left>
             <SvgIcon src={icon} className="about-block-image" />
           </Slide>
         </Col>
-        <Col lg={11} md={11} sm={12} xs={24}>
+        <Col lg={11} md={11} sm={11} xs={24}>
           <Slide right>
             <S.ContentWrapper>
               <h6>{t(title)}</h6>
@@ -28,7 +28,7 @@ const LeftContentBlock = ({ icon, title, content, section, t }) => {
                     typeof section === 'object' &&
                     section.map((item, id) => {
                       return (
-                        <Col key={id} span={12}>
+                        <Col key={id} span={11}>
                           <SvgIcon src={item.icon} />
                           <S.MinTitle>{t(item.title)}</S.MinTitle>
                           <S.MinPara>{t(item.content)}</S.MinPara>

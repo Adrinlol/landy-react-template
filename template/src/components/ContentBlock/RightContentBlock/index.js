@@ -9,11 +9,17 @@ import * as S from './styles';
 const SvgIcon = loadable(() => import('../../../common/SvgIcon'));
 const Button = loadable(() => import('../../../common/Button'));
 
-const RightBlock = ({ title, content, button, icon, t }) => {
+const RightBlock = ({ title, content, button, icon, t, id }) => {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
   return (
     <S.RightBlockContainer>
-      <Row type="flex" justify="space-between" align="middle">
-        <Col lg={11} md={11} sm={12} xs={24}>
+      <Row type="flex" justify="space-between" align="middle" id={id}>
+        <Col lg={11} md={11} sm={11} xs={24}>
           <Slide left>
             <S.ContentWrapper>
               <h6>{t(title)}</h6>
@@ -23,7 +29,12 @@ const RightBlock = ({ title, content, button, icon, t }) => {
                   typeof button === 'object' &&
                   button.map((item, id) => {
                     return (
-                      <Button key={id} color={item.color} width="true">
+                      <Button
+                        key={id}
+                        color={item.color}
+                        width="true"
+                        onClick={() => scrollTo('about')}
+                      >
                         {t(item.title)}
                       </Button>
                     );
