@@ -16,17 +16,24 @@ This React template comes with multi-lingual support, smooth animations, set of 
 
 Check the live demo here 👉️ https://landy.website/
 
-## Usage
 
-Use it for whatever you want, and be sure to reach out to me on [Twitter](https://twitter.com/Adrinlolx) if you have any questions, or build something cool with it.
+### Creating an App
+
+You’ll need to have Node 10.16.0 or later version on your local development machine (but it’s not required on the server). I recommend using the latest LTS version.
+
+To create a new app, you have to:
 
 ### npx
 
+Use the following command 
+
 ```sh
 npx create-react-app my-app --template adrinlol
+cd my-app
+npm start
 ```
 
-## Includes
+## What's included
 
 - [axios][axios]
 - [antd][antd]
@@ -36,18 +43,25 @@ npx create-react-app my-app --template adrinlol
 - [i18next][i18next]
 - [@loadable/component][@loadable/component]
 
-## Features
+## Quick Overview
 
-- Highly responsive and reusable UI components, that change depending on the provided props
-- Styling with styled-components and antd
-- Multi-lingual support using i18next
+Your project will have everything you need to build a modern single-page React app:
+
+- Fast and lightweight landing page template using React.
+- Highly responsive and reusable UI components, that change depending on the provided props.
+- Styling with styled-components and antd.
+- Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
+- Multi-lingual support using i18next.
 - Contact form written in React Hooks, with uncontrolled form validation to reduce any unnecessary performance penalty.
-- Ready to use declarative routing
-- All of the content is stored in the JSON files, so that the user can easily manage the content of the website
+- Content data in the JSON files, so that you can easily manage the content of the website.
 
 ## Special thanks
 
 [whoooa][whoooa] - Use fantastic, handmade illustrations with easily changeable colors and different styles.
+
+## Usage
+
+Use it for whatever you want, and be sure to reach out to me on [Twitter](https://twitter.com/Adrinlolx) if you have any questions, or build something cool with it.
 
 ## License
 
