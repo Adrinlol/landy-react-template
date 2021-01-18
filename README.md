@@ -38,12 +38,12 @@ npx create-react-app my-app --template adrinlol
 
 ## Features
 
-- Responsive, reusable UI components, that change depending on the provided props
+- Highly responsive and reusable UI components, that change depending on the provided props
 - Styling with styled-components and antd
 - Multi-lingual support using i18next
 - Contact form written in React Hooks, with uncontrolled form validation to reduce any unnecessary performance penalty.
 - Ready to use declarative routing
-- All of the content is stored in the JSON files
+- All of the content is stored in the JSON files, so that the user can easily manage the content of the website
 
 ## Special thanks
 
