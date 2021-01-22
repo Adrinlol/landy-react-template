@@ -1,21 +1,19 @@
 {
   "package": {
     "dependencies": {
-      "@loadable/component": "^5.14.1",
-      "@testing-library/jest-dom": "^5.9.0",
-      "@testing-library/react": "^10.2.1",
-      "@testing-library/user-event": "^12.0.2",
-      "styled-components": "^5.1.1",
-      "react-svg": "^11.0.30",
-      "antd": "^4.4.1",
-      "web-vitals": "^0.2.2",
+      "@testing-library/jest-dom": "^5.11.9",
+      "@testing-library/react": "^11.2.3",
+      "@testing-library/user-event": "^12.6.2",
+      "styled-components": "^5.2.1",
+      "antd": "^4.10.3",
+      "web-vitals": "^1.1.0",
       "react-router-dom": "^5.2.0",
       "react-reveal": "^1.2.2",
-      "axios": "^0.19.2",
-      "i18next": "^19.6.3",
-      "i18next-browser-languagedetector": "^5.0.0",
+      "axios": "^0.21.1",
+      "i18next": "^19.8.4",
+      "i18next-browser-languagedetector": "^6.0.1",
       "i18next-xhr-backend": "^3.2.2",
-      "react-i18next": "^11.7.0",
+      "react-i18next": "^11.8.5",
       "react-transition-group": "^4.4.1"
     }
   }
