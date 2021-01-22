@@ -1,6 +1,5 @@
-import React from "react";
-import { ReactSVG } from "react-svg";
-
-const SvgIcon = (props) => <ReactSVG {...props} src={`/img/svg/${props.src}`} />;
+const SvgIcon = ({ src, width, height }) => (
+  <img src={`/img/svg/${src}`} alt={src} with={width} height={height} />
+);
 
 export default SvgIcon;
