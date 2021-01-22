@@ -25,11 +25,17 @@ This React template comes with multi-lingual support, smooth animations, set of 
 Your project will have everything you need to build a modern single-page React app:
 
 - 🎁 **Modern** – Template created using the latest features of React (State management using Hooks, Code-Splitting to reduce the bundle size)
+
 - 🏷 **Responsive** – Highly responsive and reusable UI components, that change depending on the provided props
+
 - 🚀 **Fast** – Buttery smooth experience thanks to the implementation of best practices and no third party dependencies, resulting in <b>PERFECT</b> Google Lighthouse scores
+
 - 🌍 **Internationalization** - Prebuilt standalone file that works in every environment and doesn't require reloading the page to translate the content
+
 - 🛸 **Routing** - Each file inside the src/pages directory will generate its own route, so you don't have to manually handle the routing
+
 - 🤙 **Contact Form** - Contact form written in React Hooks, with uncontrolled form validation to reduce unnecessary performance penalty. You just need to provide the endpoint
+
 - ⚙️ **Maintenance** - All of the content is stored in the JSON files, so that you can easily manage the content of the website
 
 ## Google Lighthouse
