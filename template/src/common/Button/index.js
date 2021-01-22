@@ -1,7 +1,9 @@
-import React from "react";
-
 import * as S from "./styles";
 
-const Button = (props) => <S.Button {...props}>{props.children}</S.Button>;
+const Button = ({ color, width, children }) => (
+  <S.Button color={color} width={width}>
+    {children}
+  </S.Button>
+);
 
 export default Button;

@@ -1,18 +1,17 @@
-import React from 'react';
-import { Row, Col } from 'antd';
-import { withTranslation } from 'react-i18next';
-import { Fade } from 'react-reveal';
-import loadable from '@loadable/component';
+import { lazy } from "react";
+import { Row, Col } from "antd";
+import { withTranslation } from "react-i18next";
+import Fade from "react-reveal/Fade";
 
-import * as S from './styles';
+import * as S from "./styles";
 
-const Button = loadable(() => import('../../common/Button'));
+const Button = lazy(() => import("../../common/Button"));
 
 const MiddleBlock = ({ title, content, button, t }) => {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
   return (
@@ -27,12 +26,12 @@ const MiddleBlock = ({ title, content, button, t }) => {
                 <Button
                   name="submit"
                   type="submit"
-                  onClick={() => scrollTo('mission')}
+                  onClick={() => scrollTo("mission")}
                 >
                   {t(button)}
                 </Button>
               ) : (
-                ''
+                ""
               )}
             </Col>
           </S.ContentWrapper>

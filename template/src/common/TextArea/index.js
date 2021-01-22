@@ -1,7 +1,6 @@
-import React from 'react';
-import { withTranslation } from 'react-i18next';
+import { withTranslation } from "react-i18next";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 const TextArea = ({ name, id, placeholder, onChange, t }) => (
   <S.Container>
