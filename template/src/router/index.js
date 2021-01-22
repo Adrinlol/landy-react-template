@@ -1,19 +1,31 @@
-import React from 'react';
+import { lazy, Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Home from '../pages/Home';
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
-import GlobalStyles from '../globalStyles';
+import routes from "./config";
+import GlobalStyles from "../globalStyles";
 
 const Router = () => {
   return (
-    <React.Fragment>
+    <Suspense fallback={null}>
       <GlobalStyles />
       <Header />
-      <Home />
+      <Switch>
+        {routes.map((routeItem) => {
+          return (
+            <Route
+              key={routeItem.component}
+              path={routeItem.path}
+              exact={routeItem.exact}
+              component={lazy(() => import(`../pages/${routeItem.component}`))}
+            />
+          );
+        })}
+      </Switch>
       <Footer />
-    </React.Fragment>
+    </Suspense>
   );
 };
 
