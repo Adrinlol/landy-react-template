@@ -1,17 +1,17 @@
-import React from 'react';
-import { Row, Col } from 'antd';
-import Zoom from 'react-reveal/Zoom';
-import loadable from '@loadable/component';
-import { withTranslation } from 'react-i18next';
+import { lazy } from "react";
+import { Row, Col } from "antd";
+import Zoom from "react-reveal/Zoom";
+import { withTranslation } from "react-i18next";
 
-import useForm from './useForm';
-import validate from './validationRules';
-import * as S from './styles';
+import useForm from "./useForm";
+import validate from "./validationRules";
 
-const Block = loadable(() => import('../Block'));
-const Input = loadable(() => import('../../common/Input'));
-const Button = loadable(() => import('../../common/Button'));
-const TextArea = loadable(() => import('../../common/TextArea'));
+import * as S from "./styles";
+
+const Block = lazy(() => import("../Block"));
+const Input = lazy(() => import("../../common/Input"));
+const Button = lazy(() => import("../../common/Button"));
+const TextArea = lazy(() => import("../../common/TextArea"));
 
 const Contact = ({ title, content, id, t }) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
@@ -42,7 +42,7 @@ const Contact = ({ title, content, id, t }) => {
                   name="name"
                   id="Name"
                   placeholder="Your Name"
-                  value={values.name || ''}
+                  value={values.name || ""}
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
@@ -53,7 +53,7 @@ const Contact = ({ title, content, id, t }) => {
                   name="email"
                   id="Email"
                   placeholder="Your Email"
-                  value={values.email || ''}
+                  value={values.email || ""}
                   onChange={handleChange}
                 />
                 <ValidationType type="email" />
@@ -61,7 +61,7 @@ const Contact = ({ title, content, id, t }) => {
               <Col span={24}>
                 <TextArea
                   placeholder="Your Message"
-                  value={values.message || ''}
+                  value={values.message || ""}
                   name="message"
                   id="Message"
                   onChange={handleChange}
@@ -70,7 +70,7 @@ const Contact = ({ title, content, id, t }) => {
               </Col>
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
-                  {t('Submit')}
+                  {t("Submit")}
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>
