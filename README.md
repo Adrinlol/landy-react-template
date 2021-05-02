@@ -1,12 +1,10 @@
 ## Free React landing page template
 
-
 ![landy](https://user-images.githubusercontent.com/48876996/100373174-cd393880-3023-11eb-9fef-8acdf9733120.gif)
 
 [Landy][Landy] is a free React landing page template designed for developers and startups, who want to create a quick and professional landing page for their business or project.
 
 This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
-
 
 ## Table of contents
 
