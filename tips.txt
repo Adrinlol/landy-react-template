@@ -1,0 +1,3 @@
+https://www.freecodecamp.org/news/common-mistakes-react-developers-make-and-how-to-fix-them/
+
+common mistakes of react devs 
