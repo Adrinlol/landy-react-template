@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const RightBlockContainer = styled.section`
+export const RightBlockContainer = styled("section")`
   position: relative;
   padding: 10rem 0 8rem;
 
@@ -9,11 +9,11 @@ export const RightBlockContainer = styled.section`
   }
 `;
 
-export const Content = styled.p`
+export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled("div")`
   position: relative;
   max-width: 540px;
 
@@ -22,7 +22,7 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   max-width: 400px;

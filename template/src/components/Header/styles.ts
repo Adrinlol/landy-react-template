@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { MenuOutlined } from '@ant-design/icons';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { MenuOutlined } from "@ant-design/icons";
 
-export const Header = styled.header`
+export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
 `;
 
@@ -11,22 +11,12 @@ export const LogoContainer = styled(Link)`
   padding-top: 1rem;
 `;
 
-export const Container = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 1280px;
-  padding-right: 25px;
-  padding-left: 25px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
-export const NavLink = styled.div`
+export const NavLink = styled("div")`
   display: inline-block;
   text-align: center;
 `;
 
-export const CustomNavLink = styled.div`
+export const CustomNavLink = styled("div")`
   width: 203px;
   display: inline-block;
 
@@ -39,16 +29,16 @@ export const CustomNavLink = styled.div`
   }
 `;
 
-export const ContactWrapper = styled.div`
+export const ContactWrapper = styled("div")<any>`
   cursor: pointer;
-  width: ${(props) => (props.width ? '100%' : '110px')};
+  width: ${(p) => (p.width ? "100%" : "110px")};
   font-weight: 700;
   text-align: center;
   border-radius: 1.25rem;
   display: inline-block;
 `;
 
-export const Burger = styled.div`
+export const Burger = styled("div")`
   @media only screen and (max-width: 768px) {
     display: block !important;
   }
@@ -56,13 +46,13 @@ export const Burger = styled.div`
   display: none;
 `;
 
-export const NotHidden = styled.div`
+export const NotHidden = styled("div")`
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const Menu = styled.h5`
+export const Menu = styled("h5")`
   font-size: 1.37rem;
   margin-top: -0.45rem;
   padding: 0 1.56rem 0 0;
@@ -81,7 +71,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   }
 `;
 
-export const Label = styled.span`
+export const Label = styled("span")`
   font-size: 12px;
   font-weight: 500;
   color: #404041;
@@ -89,11 +79,20 @@ export const Label = styled.span`
   display: flex;
 `;
 
-export const Outline = styled(MenuOutlined)`
+export const Outline = styled(MenuOutlined)<any>`
   font-size: 22px;
-  padding-right: ${(props) => (props.padding ? '10px' : '')};
+  padding-right: ${(p) => (p.padding ? "10px" : "")};
 `;
 
-export const Span = styled.span`
+export const Span = styled("span")`
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgb(255, 130, 92);
+    text-underline-position: under;
+    text-decoration: rgb(255, 130, 92) wavy underline;
+  }
 `;

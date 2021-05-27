@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const MiddleBlock = styled.section`
+export const MiddleBlockSection = styled("section")`
   position: relative;
   padding: 7.5rem 0 3rem;
   text-align: center;
@@ -12,11 +12,11 @@ export const MiddleBlock = styled.section`
   }
 `;
 
-export const Content = styled.p`
+export const Content = styled("p")`
   padding: 0.75rem 0 0.75rem;
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled("div")`
   max-width: 570px;
 
   @media only screen and (max-width: 768px) {
