@@ -1,11 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-const Styles = createGlobalStyle`
+export const Styles = createGlobalStyle`
 
     body,
     html,
     a {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
 
@@ -22,15 +22,31 @@ const Styles = createGlobalStyle`
         color: #000;
     }
 
+    input,
+    textarea {
+        border-radius: 8px;
+        border: 0;
+        background: rgb(241, 242, 243);
+        transition: all 0.3s ease-in-out;  
+        outline: none;
+        width: 100%;  
+        padding: 1rem 1.25rem;
+
+        :focus-within {
+            background: none;
+            box-shadow: #2e186a 0px 0px 0px 1px;
+        }
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: 'Ubuntu', sans-serif;
-        color: #0a1f44;
-        font-size: 2.575rem;
+        font-family: 'Lora', serif;
+        color: #000;
+        font-size: 2.375rem;
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
@@ -39,7 +55,7 @@ const Styles = createGlobalStyle`
     }
 
     p {
-        color: #343D48;
+        color: #333;
         font-size: 1.125rem;
     }
 
@@ -79,5 +95,3 @@ const Styles = createGlobalStyle`
         color: rgb(255,130,92);
     }
 `;
-
-export default Styles;
