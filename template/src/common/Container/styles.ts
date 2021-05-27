@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const StyledContainer = styled("div")<any>`
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1184px;
   margin-right: auto;
   margin-left: auto;
-  padding: ${(props) => (props.padding ? "2.8rem" : "0 25px")};
+  padding: 0 60px;
   overflow: hidden;
-  border-top: ${(props) => (props.border ? "1px solid #CDD1D4" : "")};
+  border-top: ${(p) => (p.border ? "1px solid #CDD1D4" : "")};
 
   @media only screen and (max-width: 1024px) {
     max-width: 950px;
