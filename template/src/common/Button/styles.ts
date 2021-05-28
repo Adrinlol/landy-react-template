@@ -22,16 +22,4 @@ export const StyledButton = styled("button")<any>`
     border: 1px solid rgb(255, 130, 92);
     background-color: rgb(255, 130, 92);
   }
-
-  @media only screen and (max-width: 1024px) {
-    width: ${(p) => (p.fixedWidth ? "160px" : "100%")};
-  }
-
-  @media only screen and (max-width: 768px) {
-    width: ${(p) => (p.fixedWidth ? "140px" : "100%")};
-  }
-
-  @media only screen and (max-width: 480px) {
-    width: ${(p) => (p.fixedWidth ? "130px" : "100%")};
-  }
 `;

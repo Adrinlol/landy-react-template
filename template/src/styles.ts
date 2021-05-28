@@ -48,6 +48,10 @@ export const Styles = createGlobalStyle`
         color: #000;
         font-size: 2.375rem;
         line-height: 3.0625rem;
+
+        @media only screen and (max-width: 890px) {
+          font-size: 2rem;
+        }
       
         @media only screen and (max-width: 414px) {
           font-size: 1.625rem;
@@ -84,14 +88,11 @@ export const Styles = createGlobalStyle`
     .ant-drawer-body {
         display: flex;
         flex-direction: column;
-        padding: 1.25rem;
         text-align: left;
-        padding-top: 2.5rem;
-        padding-right: 2rem;
+        padding-top: 1.5rem;
     }
 
-    .anticon,
-    .ant-notification-notice-icon-success {
-        color: rgb(255,130,92);
+    .ant-drawer-content-wrapper {
+        width: 300px !important;
     }
 `;
