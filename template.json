@@ -14,7 +14,7 @@
       "react-i18next": "^11.8.5",
       "styled-components": "^5.2.1",
       "typescript": "^4.2.4",    
-      "react-awesome-reveal": "^3.7.1",
+      "react-awesome-reveal": "^3.7.1"
     }
   }
 }
