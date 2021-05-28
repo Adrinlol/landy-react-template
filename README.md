@@ -1,8 +1,8 @@
 ## Free React landing page template
 
-![landy](https://user-images.githubusercontent.com/48876996/100373174-cd393880-3023-11eb-9fef-8acdf9733120.gif)
+![landy](https://user-images.githubusercontent.com/48876996/119964629-74d6f980-bfba-11eb-8b29-9f8ddceb2a92.gif)
 
-[Landy][Landy] is a free React landing page template designed for developers and startups, who want to create a quick and professional landing page for their business or project.
+[Landy][Landy] is a free React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
 
 This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
 
@@ -26,9 +26,11 @@ Your project will have everything you need to build a modern single-page React a
 
 - 🎁 **Modern** – Template created using the latest features of React (State management using Hooks, Code-Splitting to reduce the bundle size)
 
-- 🏷 **Responsive** – Highly responsive and reusable UI components, that change depending on the provided props
+- 💻 **Responsive** – Highly responsive and reusable UI components, that change depending on the provided props
 
 - 🚀 **Fast** – Buttery smooth experience thanks to the implementation of best practices and no third party dependencies, resulting in <b>PERFECT</b> Google Lighthouse scores
+
+- 🏷 **TypeScript support** – Landy is written in TypeScript to improve the DX
 
 - 🌍 **Internationalization** - Prebuilt standalone file that works in every environment and doesn't require reloading the page to translate the content
 
@@ -40,7 +42,7 @@ Your project will have everything you need to build a modern single-page React a
 
 ## Google Lighthouse
 
-![1](https://user-images.githubusercontent.com/48876996/104335960-555c9a00-550d-11eb-8e94-4549637f72bd.PNG)
+![1](https://user-images.githubusercontent.com/48876996/119963618-5e7c6e00-bfb9-11eb-8c0e-d4fe48c314f8.PNG)
 
 [Google Lighthouse][Google Lighthouse] is an open-source, automated tool for measuring the quality of web pages. Google Lighthouse audits performance, accessibility and search engine optimization of web pages.
 
@@ -86,7 +88,7 @@ npm start
 
 - [axios][axios] - Promise based HTTP client for the browser and node.js
 - [antd][antd] - React UI library that contains a set of high quality components.
-- [react-reveal][react-reveal] - High performance animation library for React.
+- [react-awesome-reveal][react-awesome-reveal] - High performance animation library that adds reveal animations using the Intersection Observer API.
 - [styled-componets][styled-componets] - Variant on “CSS-in-JS”—which solves many of the problems with traditional CSS.
 - [i18next][i18next] - Internationalization-framework written in and for JavaScript.
 
@@ -105,7 +107,7 @@ Licensed under the MIT license.
 <!-- prettier-ignore-start -->
 [axios]: https://github.com/axios/axios
 [antd]: https://github.com/ant-design/ant-design
-[react-reveal]: https://github.com/rnosov/react-reveal
+[react-awesome-reveal]: https://www.npmjs.com/package/react-awesome-reveal
 [styled-componets]: https://github.com/styled-components/styled-components
 [i18next]: https://github.com/i18next/i18next
 [whoooa]: https://www.whoooa.rocks/
