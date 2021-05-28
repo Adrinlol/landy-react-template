@@ -33,8 +33,6 @@ export const Extra = styled("section")`
   background: rgb(241, 242, 243);
   position: relative;
   width: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 2rem;
@@ -113,16 +111,9 @@ export const FooterContainer = styled("div")`
     }
   }
 
-  @media screen and (max-width: 710px) {
-    padding: 2rem 0;
-    padding-right: 50%;
+  @media screen and (max-width: 769px) {
+    width: auto;
 
-    a {
-      padding-right: 1rem;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
     a:not(:last-child) {
       display: none;
     }

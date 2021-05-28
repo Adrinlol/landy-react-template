@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
-import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -18,8 +17,6 @@ import {
 } from "./styles";
 
 const Header = ({ t }: any) => {
-  const [isNavVisible] = useState(false);
-  const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -75,26 +72,19 @@ const Header = ({ t }: any) => {
             <Outline />
           </Burger>
         </Row>
-        <CSSTransition
-          in={!isSmallScreen || isNavVisible}
-          timeout={350}
-          classNames="NavAnimation"
-          unmountOnExit
-        >
-          <Drawer closable={false} visible={visible} onClose={onClose}>
-            <Col style={{ marginBottom: "2.5rem" }}>
-              <Label onClick={onClose}>
-                <Col span={12}>
-                  <Menu>Menu</Menu>
-                </Col>
-                <Col span={12}>
-                  <Outline padding="true" />
-                </Col>
-              </Label>
-            </Col>
-            <MenuItem />
-          </Drawer>
-        </CSSTransition>
+        <Drawer closable={false} visible={visible} onClose={onClose}>
+          <Col style={{ marginBottom: "2.5rem" }}>
+            <Label onClick={onClose}>
+              <Col span={12}>
+                <Menu>Menu</Menu>
+              </Col>
+              <Col span={12}>
+                <Outline />
+              </Col>
+            </Label>
+          </Col>
+          <MenuItem />
+        </Drawer>
       </Container>
     </HeaderSection>
   );
