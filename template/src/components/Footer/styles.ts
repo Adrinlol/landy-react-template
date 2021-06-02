@@ -7,9 +7,9 @@ export const FooterSection = styled("footer")`
 `;
 
 export const Title = styled("h4")`
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #000;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #18216d;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -44,14 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: rgba(2, 7, 62, 0.8);
+  color: #18216d;
   font-size: 14px;
   width: 70%;
 `;
 
 export const Large = styled(Link)<any>`
   font-size: 16px;
-  color: rgba(2, 7, 62, 0.8);
+  color: #000;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -59,6 +59,7 @@ export const Large = styled(Link)<any>`
   display: block;
   margin-bottom: 0.625rem;
   transition: all 0.3s ease-in-out;
+  max-width: max-content;
 
   &:hover {
     color: rgb(255, 130, 92);
@@ -68,9 +69,9 @@ export const Large = styled(Link)<any>`
 `;
 
 export const Chat = styled("p")`
-  color: rgba(2, 7, 62, 0.8);
-  max-width: 85px;
-  border-bottom: 1px solid rgba(2, 7, 62, 0.8);
+  color: #18216d;
+  max-width: fit-content;
+  border-bottom: 1px solid #18216d;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
@@ -103,12 +104,6 @@ export const FooterContainer = styled("div")`
       -ms-transform: scale(1.1);
       transform: scale(1.1);
     }
-
-    :last-child {
-      img {
-        border-radius: 100px;
-      }
-    }
   }
 
   @media screen and (max-width: 769px) {
@@ -132,9 +127,9 @@ export const FooterContainer = styled("div")`
 `;
 
 export const Language = styled("h4")`
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #000;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #18216d;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -142,11 +137,12 @@ export const Language = styled("h4")`
 `;
 
 export const Label = styled("label")`
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #000;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #18216d;
   display: block;
   margin-bottom: 2rem;
+  font-family: "Motiva Sans Bold", serif;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;

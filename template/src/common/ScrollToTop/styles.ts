@@ -10,7 +10,7 @@ export const ScrollUpContainer = styled("div")<any>`
   background: rgb(241, 242, 243);
   text-align: center;
   align-items: center;
-  border-radius: 100px;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
   visibility: ${(p) => (p.show ? "visible" : "hidden")};
   opacity: ${(p) => (p.show ? "1" : "0")};
