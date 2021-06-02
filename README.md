@@ -1,6 +1,6 @@
 ## Free React landing page template
 
-![landy](https://user-images.githubusercontent.com/48876996/119964629-74d6f980-bfba-11eb-8b29-9f8ddceb2a92.gif)
+![landy](https://d3lbwkmaao72si.cloudfront.net/8gbi%2Fpreview%2F39485816%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1622665919&Signature=Z6qP6LVN3Z4GpWyL23VVJZ~4bKp1tU9pyXwCrzkooLwJc0uh674DLPdx39iqeFBwFWbGy6cTK0t5aXoTrNjWS5h6Moo57UXLu-LXl3Es82Z4hW-wDFZRO0wYUrCenwhI-zOL7e1sPtccoUcxJuPZi~Ph3lro8-COrS1iVYZ1peE00ERLG4zGEX8UkNpMnkX1U0P3wyr8RgAA6qmboeN5WqeiZo0kf1shhXGc47HQsBnUldI6rFY~-zrFl6yYR1XI7HJR6bCH--Z~4kplir5BOuewF5oYO97vIMZHQ~-VUI2QKhVZ7~q2SVBKJ0ZEXzUXw6mKWlEmSITa3clKqPDQKA__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ)
 
 [Landy][Landy] is a free React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
 
@@ -42,7 +42,7 @@ Your project will have everything you need to build a modern single-page React a
 
 ## Google Lighthouse
 
-![1](https://user-images.githubusercontent.com/48876996/119963618-5e7c6e00-bfb9-11eb-8c0e-d4fe48c314f8.PNG)
+![1](https://d1pyv8le31wo0q.cloudfront.net/pbai%2Fpreview%2F39484357%2Fmain_full.png?response-content-disposition=inline%3Bfilename%3D%22main_full.png%22%3B&response-content-type=image%2Fpng&Expires=1622662758&Signature=f~wKtxd6gepwqijaJ4pYhh8CIM2narvX3UlhzouQTbOwr39HMzg3xHFaGcJhZ8~Gfwpcjj2jjm4X8~9eVDZXhBY23KrAQugdUhHA6AukdaRkG1lZs-f2FlvEeWjQlLikY5PQt~Uc6h8rES-MrfAfsvVqW~b2wb13BSY30x6ny~j9AN9BpblnRWQGUnMcp8HHa5GqJ6XTaoZcH4m8woYYOHuJBTAuOlJPsUYqu6kvQCMLquHxokGRW40-~7iYhGtIVy2NhHr0-hELsfpffMzkDBOXtQScZJCbNBNDDQJ7lKiZsEafVvYiiaTrbQmTpTXL1Km4Za04~yl-2aUD-k5kaw__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ)
 
 [Google Lighthouse][Google Lighthouse] is an open-source, automated tool for measuring the quality of web pages. Google Lighthouse audits performance, accessibility and search engine optimization of web pages.
 
