@@ -2,10 +2,23 @@ import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
 
+    @font-face {
+        font-family: "Motiva Sans Light";
+        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Motiva Sans Bold";
+        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-style: normal;
+    }
+
+
     body,
     html,
     a {
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Motiva Sans Light', sans-serif;
     }
 
 
@@ -19,12 +32,12 @@ export const Styles = createGlobalStyle`
     }
 
     a:hover {
-        color: #000;
+        color: #18216d;
     }
 
     input,
     textarea {
-        border-radius: 8px;
+        border-radius: 4px;
         border: 0;
         background: rgb(241, 242, 243);
         transition: all 0.3s ease-in-out;  
@@ -44,23 +57,24 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Lora', serif;
-        color: #000;
-        font-size: 2.375rem;
-        line-height: 3.0625rem;
+        font-family: 'Motiva Sans Bold', serif;
+        color: #18216d;
+        font-size: 56px;
+        line-height: 1.18;
 
         @media only screen and (max-width: 890px) {
-          font-size: 2rem;
+          font-size: 47px;
         }
       
         @media only screen and (max-width: 414px) {
-          font-size: 1.625rem;
+          font-size: 32px;
         }
     }
 
     p {
-        color: #333;
-        font-size: 1.125rem;
+        color: #18216d;
+        font-size: 21px;        
+        line-height: 1.41;
     }
 
     h1 {

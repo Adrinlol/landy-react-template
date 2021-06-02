@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import routes from "./config";
-import { Styles } from "../styles";
+import { Styles } from "../styles/styles";
 
 const Router = () => {
   return (
