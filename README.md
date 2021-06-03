@@ -42,7 +42,7 @@ Your project will have everything you need to build a modern single-page React a
 
 ## Google Lighthouse
 
-![1](https://d1pyv8le31wo0q.cloudfront.net/pbai%2Fpreview%2F39484357%2Fmain_full.png?response-content-disposition=inline%3Bfilename%3D%22main_full.png%22%3B&response-content-type=image%2Fpng&Expires=1622662758&Signature=f~wKtxd6gepwqijaJ4pYhh8CIM2narvX3UlhzouQTbOwr39HMzg3xHFaGcJhZ8~Gfwpcjj2jjm4X8~9eVDZXhBY23KrAQugdUhHA6AukdaRkG1lZs-f2FlvEeWjQlLikY5PQt~Uc6h8rES-MrfAfsvVqW~b2wb13BSY30x6ny~j9AN9BpblnRWQGUnMcp8HHa5GqJ6XTaoZcH4m8woYYOHuJBTAuOlJPsUYqu6kvQCMLquHxokGRW40-~7iYhGtIVy2NhHr0-hELsfpffMzkDBOXtQScZJCbNBNDDQJ7lKiZsEafVvYiiaTrbQmTpTXL1Km4Za04~yl-2aUD-k5kaw__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ)
+![1](https://d1pyv8le31wo0q.cloudfront.net/pbai%2Fpreview%2F39484357%2Fmain_full.png?response-content-disposition=inline%3Bfilename%3D%22main_full.png%22%3B&response-content-type=image%2Fpng&Expires=1622666067&Signature=SHmvEKIAX6zarNENCn4f6rSj2599nwLWfYDpYi1WC1XmT9yMgkB6DcQ0KQIlYqyWuk6FxZe770M3K~OsoUt3JBDUjN5nuEQDgB1WW-tvw9WAWzlb639tJ~VTouIeAv4xkL1~lHYq2I3KJRsbB8xxzJQ5eR7x5MrNLjpyYgwzS0G6gnyPcjlyHn4fBah~KcJzJtOLXF5hDPMdrJGtPVm~k8uWzSFS~cAWkn4Uus70WbTbYZjaR-d8N00O0XcUQ3M0W-RKYDaLZY24B7oTdVncvoR1qaZ5squ5KDylLf-pM46eYf4fDYW~v0EKgciQ6fI-d89AN3gcUKLMjl~jppy07Q__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ)
 
 [Google Lighthouse][Google Lighthouse] is an open-source, automated tool for measuring the quality of web pages. Google Lighthouse audits performance, accessibility and search engine optimization of web pages.
 
