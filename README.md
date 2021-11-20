@@ -2,7 +2,7 @@
 
 ![landy](https://user-images.githubusercontent.com/48876996/121569479-e179db80-ca31-11eb-8a48-9c3de9b142f3.gif)
 
-[Landy][Landy] is a free React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
+[Landy][Landy] is an open-source React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
 
 This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
 
