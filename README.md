@@ -65,7 +65,7 @@ Checks for best practices to ensure your site is discoverable.
 
 ## Demo
 
-Check the live demo here 👉️ https://landy.website/
+Check the live demo here 👉️ https://landy-web.netlify.app/
 
 
 ### Installation
