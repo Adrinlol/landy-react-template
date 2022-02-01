@@ -1,0 +1,15 @@
+{
+  "title": "Project Management as simple as possible, but not simple.",
+  "text": "Project management shouldn't be that complicated. We focus on giving you the features you need without the clutter!  ",
+  "button": [
+    {
+      "title": "Start a project now",
+      "scrollto": "contact"
+    },
+    {
+      "title": "Why collabrics?",
+      "color": "#fff",
+      "scrollto": "why1"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var locale = {
+  placeholder: 'समय का चयन करें',
+  rangePlaceholder: ['आरंभिक समय', 'अंत समय']
+};
+var _default = locale;
+exports["default"] = _default;

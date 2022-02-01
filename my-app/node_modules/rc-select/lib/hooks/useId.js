@@ -1,0 +1,54 @@
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = useId;
+exports.getUUID = getUUID;
+exports.isBrowserClient = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var React = _interopRequireWildcard(require("react"));
+
+var _canUseDom = _interopRequireDefault(require("rc-util/lib/Dom/canUseDom"));
+
+var uuid = 0;
+/** Is client side and not jsdom */
+
+var isBrowserClient = process.env.NODE_ENV !== 'test' && (0, _canUseDom.default)();
+/** Get unique id for accessibility usage */
+
+exports.isBrowserClient = isBrowserClient;
+
+function getUUID() {
+  var retId; // Test never reach
+
+  /* istanbul ignore if */
+
+  if (isBrowserClient) {
+    retId = uuid;
+    uuid += 1;
+  } else {
+    retId = 'TEST_OR_SSR';
+  }
+
+  return retId;
+}
+
+function useId(id) {
+  // Inner id for accessibility usage. Only work in client side
+  var _React$useState = React.useState(),
+      _React$useState2 = (0, _slicedToArray2.default)(_React$useState, 2),
+      innerId = _React$useState2[0],
+      setInnerId = _React$useState2[1];
+
+  React.useEffect(function () {
+    setInnerId("rc_select_".concat(getUUID()));
+  }, []);
+  return id || innerId;
+}

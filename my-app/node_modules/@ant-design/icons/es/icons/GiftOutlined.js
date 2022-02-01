@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import GiftOutlinedSvg from "@ant-design/icons-svg/es/asn/GiftOutlined";
+import AntdIcon from '../components/AntdIcon';
+
+var GiftOutlined = function GiftOutlined(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: GiftOutlinedSvg
+  }));
+};
+
+GiftOutlined.displayName = 'GiftOutlined';
+export default /*#__PURE__*/React.forwardRef(GiftOutlined);

@@ -1,0 +1,1 @@
+export var EXPAND_COLUMN = {};

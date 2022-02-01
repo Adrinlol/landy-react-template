@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import TabletTwoToneSvg from "@ant-design/icons-svg/es/asn/TabletTwoTone";
+import AntdIcon from '../components/AntdIcon';
+
+var TabletTwoTone = function TabletTwoTone(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: TabletTwoToneSvg
+  }));
+};
+
+TabletTwoTone.displayName = 'TabletTwoTone';
+export default /*#__PURE__*/React.forwardRef(TabletTwoTone);

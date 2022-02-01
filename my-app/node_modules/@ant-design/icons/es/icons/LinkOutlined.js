@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import LinkOutlinedSvg from "@ant-design/icons-svg/es/asn/LinkOutlined";
+import AntdIcon from '../components/AntdIcon';
+
+var LinkOutlined = function LinkOutlined(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: LinkOutlinedSvg
+  }));
+};
+
+LinkOutlined.displayName = 'LinkOutlined';
+export default /*#__PURE__*/React.forwardRef(LinkOutlined);

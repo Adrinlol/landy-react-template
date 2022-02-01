@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import PlusOutlinedSvg from "@ant-design/icons-svg/es/asn/PlusOutlined";
+import AntdIcon from '../components/AntdIcon';
+
+var PlusOutlined = function PlusOutlined(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: PlusOutlinedSvg
+  }));
+};
+
+PlusOutlined.displayName = 'PlusOutlined';
+export default /*#__PURE__*/React.forwardRef(PlusOutlined);

@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import MinusSquareOutlinedSvg from "@ant-design/icons-svg/es/asn/MinusSquareOutlined";
+import AntdIcon from '../components/AntdIcon';
+
+var MinusSquareOutlined = function MinusSquareOutlined(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: MinusSquareOutlinedSvg
+  }));
+};
+
+MinusSquareOutlined.displayName = 'MinusSquareOutlined';
+export default /*#__PURE__*/React.forwardRef(MinusSquareOutlined);

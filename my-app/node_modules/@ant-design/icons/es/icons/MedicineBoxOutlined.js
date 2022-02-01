@@ -1,0 +1,16 @@
+import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+import * as React from 'react';
+import MedicineBoxOutlinedSvg from "@ant-design/icons-svg/es/asn/MedicineBoxOutlined";
+import AntdIcon from '../components/AntdIcon';
+
+var MedicineBoxOutlined = function MedicineBoxOutlined(props, ref) {
+  return /*#__PURE__*/React.createElement(AntdIcon, _objectSpread(_objectSpread({}, props), {}, {
+    ref: ref,
+    icon: MedicineBoxOutlinedSvg
+  }));
+};
+
+MedicineBoxOutlined.displayName = 'MedicineBoxOutlined';
+export default /*#__PURE__*/React.forwardRef(MedicineBoxOutlined);
