@@ -27,5 +27,8 @@
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "dependencies": {
+    "npx": "^10.2.2"
+  }
 }

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 213.795 234.623">
+  <g id="notes" transform="translate(-0.602 -0.364)">
+    <g id="post_it_II" transform="translate(60)">
+      <rect id="Rectangle" width="131.196" height="131.196" transform="matrix(0.982, 0.191, -0.191, 0.982, 25.611, 0.364)" fill="#feba91"/>
+      <g id="lines_2_" transform="translate(29 42)">
+        <path id="Path" d="M.067,2.371A3,3,0,0,1,3.457.035L3.63.067l91.3,19.6a3,3,0,0,1-1.086,5.9l-.173-.032-91.3-19.6A3,3,0,0,1,.067,2.371Z" transform="translate(6.699 -2.401)" fill="#2e186a"/>
+        <path id="Path-2" data-name="Path" d="M.067,2.371A3,3,0,0,1,3.456.035L3.63.067l88.1,18.9a3,3,0,0,1-1.085,5.9l-.173-.032-88.1-18.9A3,3,0,0,1,.067,2.371Z" transform="translate(3.399 14.699)" fill="#2e186a"/>
+        <path id="Path-3" data-name="Path" d="M.068,2.371A3,3,0,0,1,3.457.035l.173.032,67.5,14.5a3,3,0,0,1-1.087,5.9l-.173-.032-67.5-14.5A3,3,0,0,1,.068,2.371Z" transform="translate(-2.301 32.199)" fill="#2e186a"/>
+      </g>
+    </g>
+    <g id="post_it_1_" transform="translate(0 58)">
+      <rect id="Rectangle-2" data-name="Rectangle" width="131.2" height="131.2" transform="translate(0.602 56.769) rotate(-23.609)" fill="#fe7624"/>
+      <g id="lines_3_" transform="translate(46 65)">
+        <path id="Path-4" data-name="Path" d="M58.561.226A3,3,0,0,1,61,5.7l-.161.072-56.7,23.3A3,3,0,0,1,1.7,23.6l.161-.072Z" transform="translate(-2.301 -3.001)" fill="#2e186a"/>
+        <path id="Path-5" data-name="Path" d="M28.463.225A3,3,0,0,1,30.9,5.705l-.161.072-26.6,10.9A3,3,0,0,1,1.7,11.2l.161-.072Z" transform="translate(9.199 29.899)" fill="#2e186a"/>
+      </g>
+      <path id="Path-6" data-name="Path" d="M1.4,19.4,0,26.6,50.3,7.9l39.1,82,7.1,1.3L53.4,0Z" transform="translate(69 0.3)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
