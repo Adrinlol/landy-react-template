@@ -160,10 +160,12 @@ const Footer = ({ t }: any) => {
                 href="https://medium.com/@lashakakabadze/"
                 src="medium.svg"
               />
-              <a href="https://www.buymeacoffee.com/adrinlol">
+              <a href="https://ko-fi.com/Y8Y7H8BNJ" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
+                  height="36"
+                  style={{ border: 0, height: 36 }}
+                  src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
+                  alt="Buy Me a Coffee at ko-fi.com"
                 />
               </a>
             </FooterContainer>

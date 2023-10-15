@@ -20,7 +20,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
   };
   return (
     <MiddleBlockSection>
-      <Slide direction="up">
+      <Slide direction="up" triggerOnce>
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
