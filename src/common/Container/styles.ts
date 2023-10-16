@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled("div")<any>`
+export const StyledContainer = styled("div")<{
+  border?: boolean;
+}>`
   position: relative;
   width: 100%;
   max-width: 1200px;

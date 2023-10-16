@@ -49,7 +49,7 @@ export const Para = styled("div")`
   width: 70%;
 `;
 
-export const Large = styled(Link)<any>`
+export const Large = styled(Link)`
   font-size: 16px;
   color: #000;
   cursor: pointer;
@@ -150,7 +150,7 @@ export const Label = styled("label")`
   }
 `;
 
-export const LanguageSwitch = styled("div")<any>`
+export const LanguageSwitch = styled("div")`
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 

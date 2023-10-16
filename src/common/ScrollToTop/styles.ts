@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const ScrollUpContainer = styled("div")<any>`
+export const ScrollUpContainer = styled("div")<{
+  show: boolean;
+}>`
   padding: 10px;
   position: fixed;
   right: 30px;
