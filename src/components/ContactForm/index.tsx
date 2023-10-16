@@ -11,15 +11,13 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(
-    validate
-  ) as any;
+  const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type];
+    const ErrorMessage = errors[type as keyof typeof errors];
     return (
       <Zoom direction="left">
-        <Span erros={errors[type]}>{ErrorMessage}</Span>
+        <Span>{ErrorMessage}</Span>
       </Zoom>
     );
   };

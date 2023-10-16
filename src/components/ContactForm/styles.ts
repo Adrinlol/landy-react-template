@@ -18,7 +18,7 @@ export const FormGroup = styled("form")`
   }
 `;
 
-export const Span = styled("span")<any>`
+export const Span = styled("span")`
   display: block;
   font-weight: 600;
   color: rgb(255, 130, 92);

@@ -17,7 +17,7 @@ const Home = () => {
     <Container>
       <ScrollToTop />
       <ContentBlock
-        type="right"
+        direction="right"
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
@@ -30,7 +30,7 @@ const Home = () => {
         button={MiddleBlockContent.button}
       />
       <ContentBlock
-        type="left"
+        direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
@@ -38,14 +38,14 @@ const Home = () => {
         id="about"
       />
       <ContentBlock
-        type="right"
+        direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
         icon="product-launch.svg"
         id="mission"
       />
       <ContentBlock
-        type="left"
+        direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
         icon="waving.svg"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
-import { withTranslation } from "react-i18next";
+import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
@@ -16,14 +16,10 @@ import {
   Span,
 } from "./styles";
 
-const Header = ({ t }: any) => {
+const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
 
-  const showDrawer = () => {
-    setVisibility(!visible);
-  };
-
-  const onClose = () => {
+  const toggleButton = () => {
     setVisibility(!visible);
   };
 
@@ -68,13 +64,13 @@ const Header = ({ t }: any) => {
           <NotHidden>
             <MenuItem />
           </NotHidden>
-          <Burger onClick={showDrawer}>
+          <Burger onClick={toggleButton}>
             <Outline />
           </Burger>
         </Row>
-        <Drawer closable={false} visible={visible} onClose={onClose}>
+        <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
-            <Label onClick={onClose}>
+            <Label onClick={toggleButton}>
               <Col span={12}>
                 <Menu>Menu</Menu>
               </Col>
