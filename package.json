@@ -9,7 +9,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.28",
     "antd": "^4.24.14",
-    "axios": "^0.21.4",
+    "axios": "^1.6.0",
     "i18next": "^19.9.2",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-xhr-backend": "^3.2.2",
