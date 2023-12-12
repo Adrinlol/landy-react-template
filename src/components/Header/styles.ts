@@ -59,7 +59,7 @@ export const Menu = styled("h5")`
 
 export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1.2rem;
-  color: #18216d;
+  color: #596e79;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
 

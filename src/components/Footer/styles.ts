@@ -9,7 +9,7 @@ export const FooterSection = styled("footer")`
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #596e79;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -25,12 +25,12 @@ export const NavLink = styled(Link)`
   &:hover,
   &:active,
   &:focus {
-    color: #15418e;
+    color: #c7b198;
   }
 `;
 
 export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
+  background: #dfd3c3;
   position: relative;
   width: 100%;
   margin-right: auto;
@@ -44,14 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
+  color: #596e79;
   font-size: 14px;
   width: 70%;
 `;
 
 export const Large = styled(Link)`
   font-size: 16px;
-  color: #000;
+  color: #596e79;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -62,16 +62,16 @@ export const Large = styled(Link)`
   max-width: max-content;
 
   &:hover {
-    color: rgb(255, 130, 92);
+    color: #c7b198;
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: #c7b198 underline;
   }
 `;
 
 export const Chat = styled("p")`
-  color: #18216d;
+  color: #c7b198;
   max-width: fit-content;
-  border-bottom: 1px solid #18216d;
+  border-bottom: 1px solid #c7b198;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
