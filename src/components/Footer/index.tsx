@@ -122,8 +122,8 @@ const Footer = ({ t }: { t: TFunction }) => {
                 <SvgIcon
                   src="logo.svg"
                   aria-label="homepage"
-                  width="200px"
-                  height="80px"
+                  width="300px"
+                  height="100px"
                 />
               </LogoContainer>
             </NavLink>

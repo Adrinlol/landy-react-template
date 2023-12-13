@@ -9,7 +9,7 @@ export const FooterSection = styled("footer")`
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #596e79;
+  color: #113946;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -44,14 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #596e79;
+  color: #113946;
   font-size: 14px;
   width: 70%;
 `;
 
 export const Large = styled(Link)`
   font-size: 16px;
-  color: #596e79;
+  color: #113946;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
