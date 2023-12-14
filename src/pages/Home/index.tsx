@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
+import ServicesContent from "../../content/ServicesContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
@@ -11,6 +11,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const ServiceBlock = lazy(() => import("../../components/ServiceBlock"));
 
 const Home = () => {
   return (
@@ -29,11 +30,20 @@ const Home = () => {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
-      <ContentBlock
+      <ServiceBlock
         direction="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
+        title={ServicesContent.title}
+        content={ServicesContent.text1}
+        content2={ServicesContent.text2}
+        content3={ServicesContent.text3}
+        content4={ServicesContent.text4}
+        content5={ServicesContent.text5}
+        content6={ServicesContent.text6}
+        content7={ServicesContent.text7}
+        content8={ServicesContent.text8}
+        content9={ServicesContent.text9}
+        content10={ServicesContent.text10}
+        content11={ServicesContent.text11}
         icon="skidsteer.png"
         id="about"
       />
