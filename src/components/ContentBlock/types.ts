@@ -12,10 +12,12 @@ export interface ContentBlockProps {
     | {
         title: string;
         color?: undefined;
+        scrollTo: string;
       }
     | {
         title: string;
         color: string;
+        scrollTo: string;
       }
   )[];
   t: TFunction;

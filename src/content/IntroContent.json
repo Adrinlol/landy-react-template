@@ -1,13 +1,15 @@
 {
   "title": "Professional Maintenance & Landscapes LLC",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "text": "Multi-Trade Remodeling and Hardscaping. Schedule a consulation at PMLscapes@gmail.com or 678-382-8164",
   "button": [
     {
-      "title": "Services"
+      "title": "Services",
+      "scrollTo": "services"
     },
     {
       "title": "Learn more",
-      "color": "#fff"
+      "color": "#fff",
+      "scrollTo": "media"
     }
   ]
 }

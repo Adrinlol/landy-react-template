@@ -45,14 +45,14 @@ const Home = () => {
         content10={ServicesContent.text10}
         content11={ServicesContent.text11}
         icon="skidsteer.png"
-        id="about"
+        id="services"
       />
       <ContentBlock
         direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
         icon="product-launch.svg"
-        id="mission"
+        id="media"
       />
       <ContentBlock
         direction="left"
