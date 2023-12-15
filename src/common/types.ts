@@ -18,6 +18,14 @@ export interface SvgIconProps {
   height: string;
 }
 
+export interface VideoProps {
+  style: string;
+  width: string;
+  height: string;
+  frameborder: string;
+  allowfullscreen: string;
+}
+
 export interface InputProps {
   name: string;
   placeholder: string;

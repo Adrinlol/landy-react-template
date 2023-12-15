@@ -2,7 +2,7 @@ import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import ServicesContent from "../../content/ServicesContent.json";
-import MissionContent from "../../content/MissionContent.json";
+import MediaContent from "../../content/MediaContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
@@ -11,6 +11,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const MediaBlock = lazy(() => import("../../components/MediaBlock"));
 const ServiceBlock = lazy(() => import("../../components/ServiceBlock"));
 
 const Home = () => {
@@ -50,11 +51,11 @@ const Home = () => {
         icon="skidsteer.png"
         id="services"
       />
-      <ContentBlock
+      <MediaBlock
         direction="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
+        title={MediaContent.title}
+        content={MediaContent.text}
+        icon="https://www.youtube.com/"
         id="media"
       />
       <ContentBlock
