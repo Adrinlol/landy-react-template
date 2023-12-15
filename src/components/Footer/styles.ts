@@ -61,11 +61,6 @@ export const Large = styled(Link)`
   transition: all 0.3s ease-in-out;
   max-width: max-content;
 
-  &:hover {
-    color: #c7b198;
-    text-underline-position: under;
-    text-decoration: #c7b198 underline;
-  }
 `;
 
 export const Chat = styled("p")`
@@ -91,10 +86,9 @@ export const FooterContainer = styled("div")`
   max-width: 510px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  transition: all 0.1s ease-in-out;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 0%; /* Adjust the gap between social icons */
 
   a {
     &:hover,
@@ -106,23 +100,9 @@ export const FooterContainer = styled("div")`
     }
   }
 
-  @media screen and (max-width: 769px) {
-    width: auto;
-
-    a:not(:last-child) {
-      display: none;
-    }
-  }
-
-  div {
-    cursor: pointer;
-    margin-right: 15px;
-    width: 25px;
-    height: 25px;
-
-    &:hover {
-      fill: rgb(255, 130, 92);
-    }
+  img {
+    width: 30%; /* Adjust the width to your desired size */
+    height: 30%; /* Adjust the height to your desired size */
   }
 `;
 
@@ -168,3 +148,16 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+
+export const LocationContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Adjust the gap between location items */
+`;
+
+export const LocationItem = styled("div")`
+  color: #113946;
+  font-size: 14px;
+  line-height: 1.2;
+`;
+
