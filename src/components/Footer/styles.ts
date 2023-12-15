@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: rgb(241, 242, 243);
+  background: #f0ece2;
   padding: 2.5rem 0;
 `;
 
@@ -69,7 +69,7 @@ export const Large = styled(Link)`
 `;
 
 export const Chat = styled("p")`
-  color: #c7b198;
+  color: #113946;
   max-width: fit-content;
   border-bottom: 1px solid #c7b198;
   cursor: pointer;
@@ -77,8 +77,8 @@ export const Chat = styled("p")`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
+    border-bottom: 1px solid #c7b198;
+    color: #c7b198;
   }
 `;
 
@@ -129,7 +129,7 @@ export const FooterContainer = styled("div")`
 export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #113946;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -139,7 +139,7 @@ export const Language = styled("h4")`
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #113946;
   display: block;
   margin-bottom: 2rem;
   font-family: "Motiva Sans Bold", serif;

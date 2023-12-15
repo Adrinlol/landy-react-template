@@ -1,6 +1,8 @@
 import { TFunction } from "react-i18next";
 export interface ContentBlockProps {
-  icon: string;
+  instagram: string;
+  facebook: string;
+  youtube: string;
   title: string;
   content: string;
   section?: {

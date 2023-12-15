@@ -12,6 +12,7 @@ const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const MediaBlock = lazy(() => import("../../components/MediaBlock"));
+const ImageBlock = lazy(() => import("../../components/ImageBlock"));
 const ServiceBlock = lazy(() => import("../../components/ServiceBlock"));
 
 const Home = () => {
@@ -55,14 +56,12 @@ const Home = () => {
         direction="right"
         title={MediaContent.title}
         content={MediaContent.text}
-        icon="https://www.youtube.com/"
+        instagram="instagram.png"
+        facebook="facebook.png"
+        youtube="youtube.png"
         id="media"
       />
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
+      <ImageBlock
         id="product"
       />
       <Contact
