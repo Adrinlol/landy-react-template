@@ -70,25 +70,6 @@ const Footer = ({ t }: { t: TFunction }) => {
               </LocationContainer>
             </Col>
             <Col lg={8} md={8} sm={12} xs={24}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-                <LanguageSwitchContainer>
-                  <LanguageSwitch onClick={() => handleChange("en")}>
-                    <SvgIcon
-                      src="united-states.svg"
-                      aria-label="homepage"
-                      width="30px"
-                      height="30px"
-                    />
-                  </LanguageSwitch>
-                  <LanguageSwitch onClick={() => handleChange("es")}>
-                    <SvgIcon
-                      src="spain.svg"
-                      aria-label="homepage"
-                      width="30px"
-                      height="30px"
-                    />
-                  </LanguageSwitch>
-                </LanguageSwitchContainer>
             </Col>
           </Row>
         </Container>

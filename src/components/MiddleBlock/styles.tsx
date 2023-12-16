@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Row } from "antd";
+import { SvgIcon } from "../../common/SvgIcon";
 
 export const MiddleBlockSection = styled("section")`
   position: relative;
@@ -28,4 +29,8 @@ export const ContentWrapper = styled("div")`
   @media only screen and (max-width: 768px) {
     max-width: 100%;
   }
+`;
+
+export const RoundedSvgIcon = styled(SvgIcon)`
+  border-radius: 50%;
 `;

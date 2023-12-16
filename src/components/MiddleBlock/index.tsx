@@ -15,6 +15,7 @@ interface MiddleBlockProps {
   t: TFunction;
 }
 
+
 const MiddleBlock = ({ title, p1, p2, p3, button, id, t }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -32,13 +33,13 @@ const MiddleBlock = ({ title, p1, p2, p3, button, id, t }: MiddleBlockProps) => 
           >
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-            <SvgIcon style = "border-radius: 50%" src={"aboutme.png"} width="35%" height="20%" />
+            <SvgIcon src={"aboutme.png"} width="35%" height="20%" style={{ borderRadius: "50%" }}/>
               <h6>{t(title)}</h6>
               <Content>{t(p1)}</Content>
               <Content>{t(p2)}</Content>
               <Content>{t(p3)}</Content>
               {button && (
-                <Button name="submit" onClick={() => scrollTo("media")}>
+                <Button name="submit" onClick={() => scrollTo("contact")}>
                   {t(button)}
                 </Button>
               )}
