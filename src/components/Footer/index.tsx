@@ -22,11 +22,8 @@ interface SocialLinkProps {
   src: string;
 }
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
 
+const Footer = ({ t }: { t: TFunction }) => {
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a

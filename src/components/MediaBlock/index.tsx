@@ -46,7 +46,7 @@ const MediaBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
-            <div><iframe width="100%" height="300px" src="https://www.youtube.com/embed/YMfZmnBmtmE?si=-FU11hae6sTO"></iframe></div>
+            <div><iframe title="Landscaping Services Video" width="100%" height="300px" src="https://www.youtube.com/embed/YMfZmnBmtmE?si=-FU11hae6sTO"></iframe></div>
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
