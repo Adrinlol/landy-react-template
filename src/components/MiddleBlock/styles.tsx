@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { Row } from "antd";
+import { SvgIcon } from "../../common/SvgIcon";
 
 export const MiddleBlockSection = styled("section")`
   position: relative;
-  padding: 7.5rem 0 3rem;
+  padding: 1rem 0 3rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -12,14 +14,23 @@ export const MiddleBlockSection = styled("section")`
   }
 `;
 
+export const StyledRow = styled(Row)`
+  flex-direction: ${({ direction }: { direction: string }) =>
+    direction === "left" ? "row" : "row-reverse"};
+`;
+
 export const Content = styled("p")`
   padding: 0.75rem 0 0.75rem;
 `;
 
 export const ContentWrapper = styled("div")`
-  max-width: 570px;
+  max-width: 800px;
 
   @media only screen and (max-width: 768px) {
     max-width: 100%;
   }
+`;
+
+export const RoundedSvgIcon = styled(SvgIcon)`
+  border-radius: 50%;
 `;

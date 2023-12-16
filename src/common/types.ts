@@ -15,6 +15,14 @@ export interface SvgIconProps {
   src: string;
   width: string;
   height: string;
+  style?: React.CSSProperties | undefined;
+}
+
+export interface SocialIconProps {
+  link: string;
+  src: string;
+  width: string;
+  height: string;
 }
 
 export interface InputProps {

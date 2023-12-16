@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: rgb(241, 242, 243);
+  background: #f0ece2;
   padding: 2.5rem 0;
 `;
 
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #113946;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -25,12 +25,12 @@ export const NavLink = styled(Link)`
   &:hover,
   &:active,
   &:focus {
-    color: #15418e;
+    color: #c7b198;
   }
 `;
 
 export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
+  background: #dfd3c3;
   position: relative;
   width: 100%;
   margin-right: auto;
@@ -44,14 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
+  color: #113946;
   font-size: 14px;
   width: 70%;
 `;
 
 export const Large = styled(Link)`
   font-size: 16px;
-  color: #000;
+  color: #113946;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -61,24 +61,19 @@ export const Large = styled(Link)`
   transition: all 0.3s ease-in-out;
   max-width: max-content;
 
-  &:hover {
-    color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
-  }
 `;
 
 export const Chat = styled("p")`
-  color: #18216d;
+  color: #113946;
   max-width: fit-content;
-  border-bottom: 1px solid #18216d;
+  border-bottom: 1px solid #c7b198;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
+    border-bottom: 1px solid #c7b198;
+    color: #c7b198;
   }
 `;
 
@@ -91,10 +86,9 @@ export const FooterContainer = styled("div")`
   max-width: 510px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  transition: all 0.1s ease-in-out;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 0%; /* Adjust the gap between social icons */
 
   a {
     &:hover,
@@ -106,30 +100,16 @@ export const FooterContainer = styled("div")`
     }
   }
 
-  @media screen and (max-width: 769px) {
-    width: auto;
-
-    a:not(:last-child) {
-      display: none;
-    }
-  }
-
-  div {
-    cursor: pointer;
-    margin-right: 15px;
-    width: 25px;
-    height: 25px;
-
-    &:hover {
-      fill: rgb(255, 130, 92);
-    }
+  img {
+    width: 30%; /* Adjust the width to your desired size */
+    height: 30%; /* Adjust the height to your desired size */
   }
 `;
 
 export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #113946;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -139,7 +119,7 @@ export const Language = styled("h4")`
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #113946;
   display: block;
   margin-bottom: 2rem;
   font-family: "Motiva Sans Bold", serif;
@@ -168,3 +148,16 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+
+export const LocationContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Adjust the gap between location items */
+`;
+
+export const LocationItem = styled("div")`
+  color: #113946;
+  font-size: 14px;
+  line-height: 1.2;
+`;
+
