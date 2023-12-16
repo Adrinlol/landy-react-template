@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './ImageSlider.css';
 
 export const ImageSlider: React.FC = () => {
   const [currentImage, setCurrentImage] = useState<number>(0);
-  const imageList: string[] = [
+  const imageList = useMemo(() => [
     '/img/svg/skidsteer.png',
     '/img/svg/IMG_3603.JPEG',
     '/img/svg/IMG_3601.JPEG',
@@ -23,7 +23,7 @@ export const ImageSlider: React.FC = () => {
     '/img/svg/IMG_4111.JPEG',
     '/img/svg/IMG_4164.jpg',
     '/img/svg/IMG_4166.jpg'
-  ];
+  ], []);
 
   useEffect(() => {
     const interval: NodeJS.Timeout = setInterval(() => {
@@ -45,7 +45,7 @@ export const ImageSlider: React.FC = () => {
     <div className="image-slider-container">
       <button className="prev-button" onClick={goToPrevious}>&lt;</button>
       
-      <img src={imageList[currentImage]} alt={`Image ${currentImage + 1}`} />
+      <img src={imageList[currentImage]} alt={`${currentImage + 1}`} />
       <button className="next-button" onClick={goToNext}>&gt;</button>
     </div>
   );
