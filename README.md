@@ -42,7 +42,7 @@ Your project will have everything you need to build a modern single-page React a
 
 - 🛸 **Routing** - Each file inside the src/pages directory will generate its own route, so you don't have to manually handle the routing
 
-- 🤙 **Contact Form** - Contact form written in React Hooks, with uncontrolled form validation to reduce unnecessary performance penalty. You just need to provide the endpoint
+- 🤙 **Contact Form** - Contact form written in React Hooks, with uncontrolled form validation to reduce unnecessary performance penalty. You just need to provide the endpoint. Refer the guide here https://www.freecodecamp.org/news/react-and-googlesheets/
 
 - ⚙️ **Maintenance** - All of the content is stored in the JSON files, so that you can easily manage the content of the website
 
