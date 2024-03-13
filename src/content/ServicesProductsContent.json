@@ -1,4 +1,16 @@
 {
-  "title": "Services & Products",
-  "text": "Raya services"
+  "title": "Services and Products",
+  "text": "If you offer a variety of services or products, organize them into categories for easy navigation. Each category can have a brief description and a link to view more details.",
+  "section": [
+    {
+      "title": "Construction",
+      "content": "How RAYA products can help Construction industry",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Retail and Distribution",
+      "content": "How RAYA products can help Retail and Distribution industry",
+      "icon": "notes.svg"
+    }
+  ]
 }
