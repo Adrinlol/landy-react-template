@@ -16,10 +16,12 @@ import {
   Span,
 } from "./styles";
 import {PngIcon} from "../../common/PngIcon";
+import {Link} from "react-router-dom";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
 
+  // const navigate = useNavigate();
   const toggleButton = () => {
     setVisibility(!visible);
   };
@@ -34,20 +36,25 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
+        {/*<CustomNavLinkSmall onClick={() => scrollTo("about")}>*/}
+        {/*  <Span>{t("About")}</Span>*/}
+        {/*</CustomNavLinkSmall>*/}
         <CustomNavLinkSmall onClick={() => scrollTo("services-products")}>
           <Span>{t("Services & Products")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("customer-support")}
-        >
-          <Span>
-            <Button>{t("Customer Support")}</Button>
-          </Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("faq")}>
+          <Span>{t("FAQs")}</Span>
         </CustomNavLinkSmall>
+        <Link to={"/support"}>
+          <CustomNavLinkSmall
+            style={{ width: "180px" }}
+            // onClick={() => navigate("/support")}
+          >
+            <Span>
+                <Button>{t("Customer Support")}</Button>
+            </Span>
+          </CustomNavLinkSmall>
+        </Link>
       </>
     );
   };
