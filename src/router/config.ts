@@ -1,11 +1,12 @@
+
 const routes = [
   {
-    path: ["/", "/home"],
+    path: "/",
     exact: true,
     component: "Home",
   },
   {
-      path: ["/support"],
+      path: "/support",
       exact: true,
       component: "Support"
   }
