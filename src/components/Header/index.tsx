@@ -15,6 +15,7 @@ import {
   Outline,
   Span,
 } from "./styles";
+import {PngIcon} from "../../common/PngIcon";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -56,9 +57,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <CustomNavLinkSmall>
-              <Span>{t("RAYA Solutions")}</Span>
-            </CustomNavLinkSmall>
+            <PngIcon src="logo.jpg" width="96px" height="96px"/>
           </LogoContainer>
           <NotHidden>
             <MenuItem />
