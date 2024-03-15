@@ -56,6 +56,7 @@ const ServicesProducts = () => {
             <MiddleBlock
                 title={CallToAction.title}
                 content={CallToAction.content}
+                button={CallToAction.button}
                 destination="contact"
                 destinationType="page"/>
             <MiddleBlock
