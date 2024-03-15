@@ -1,9 +1,9 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import ServicesProducts from "../../content/ServicesProductsContent.json";
-import FrequentlyAskedQuestions from "../../content/FaqContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import IntroContent from "../../content/HomePage/IntroContent.json";
+import About from "../../content/HomePage/AboutContent.json";
+import IndustrySolutions from "../../content/HomePage/IndustrySolutionsContent.json";
+import ServicesProducts from "../../content/HomePage/ServicesProductsContent.json";
+import FrequentlyAskedQuestions from "../../content/HomePage/FaqContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -31,11 +31,10 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
-      {/*<MiddleBlock*/}
-      {/*  title={MiddleBlockContent.title}*/}
-      {/*  content={MiddleBlockContent.text}*/}
-      {/*  button={MiddleBlockContent.button}*/}
-      {/*/>*/}
+      <MiddleBlock
+        title={About.title}
+        content={About.description}
+      />
       <ContentBlock
         direction="left"
         title={ServicesProducts.title}
@@ -44,6 +43,10 @@ const Home = () => {
         icon="product-launch.svg"
         id="services-products"
       />
+    <MiddleBlock
+        title={IndustrySolutions.title}
+        content={IndustrySolutions.description}
+        section={IndustrySolutions.solutions}/>
       {/*<ContentBlock*/}
       {/*  direction="right"*/}
       {/*  title={ServicesProducts.title}*/}
