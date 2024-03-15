@@ -5,7 +5,6 @@ import IndustrySolutions from "../../content/HomePage/IndustrySolutionsContent.j
 import ServicesProducts from "../../content/HomePage/ServicesProductsContent.json";
 import FrequentlyAskedQuestions from "../../content/HomePage/FaqContent.json";
 
-const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));

@@ -3,7 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
 import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
-import {MinPara, MinTitle, ServiceWrapper} from "../ContentBlock/styles";
+import {MinPara, MinTitle} from "../ContentBlock/styles";
 import {SvgIcon} from "../../common/SvgIcon";
 import {Link} from "react-router-dom";
 
@@ -76,8 +76,6 @@ const MiddleBlock = ({ title, content, button, destination, destinationType, sec
                 )}
           </Row>
         </Row>
-        {/*<ServiceWrapper>*/}
-        {/*</ServiceWrapper>*/}
       </Slide>
     </MiddleBlockSection>
   );
