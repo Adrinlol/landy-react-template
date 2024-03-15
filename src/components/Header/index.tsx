@@ -27,31 +27,33 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
-        {/*<CustomNavLinkSmall onClick={() => scrollTo("about")}>*/}
-        {/*  <Span>{t("About")}</Span>*/}
-        {/*</CustomNavLinkSmall>*/}
-        <CustomNavLinkSmall onClick={() => scrollTo("services-products")}>
-          <Span>{t("Services & Products")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("faq")}>
-          <Span>{t("FAQs")}</Span>
-        </CustomNavLinkSmall>
+        <Link to={"/services-products"}>
+          <CustomNavLinkSmall>
+            <Span>{t("Services & Products")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+
+        <Link to={"/pricing"}>
+          <CustomNavLinkSmall>
+            <Span>{t("Pricing")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+
         <Link to={"/support"}>
-          <CustomNavLinkSmall
-            style={{ width: "180px" }}
-            // onClick={() => navigate("/support")}
-          >
+          <CustomNavLinkSmall>
             <Span>
-                <Button>{t("Customer Support")}</Button>
+              <Span>{t("Customer Support")}</Span>
+            </Span>
+          </CustomNavLinkSmall>
+        </Link>
+
+        <Link to={"/contact"}>
+          <CustomNavLinkSmall
+              style={{ width: "180px" }}>
+            <Span>
+              <Button>{t("Contact Us")}</Button>
             </Span>
           </CustomNavLinkSmall>
         </Link>
