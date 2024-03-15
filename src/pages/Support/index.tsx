@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import ContactContent from "../../content/ContactContent.json";
+import ContactContent from "../../content/ContactPage/ContactContent.json";
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
 
