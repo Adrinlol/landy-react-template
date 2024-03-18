@@ -1,9 +1,9 @@
 import { withTranslation, TFunction } from "react-i18next";
-import { Container, TextWrapper, Content } from "../Block/styles";
+import { TextWrapper, Content } from "../Block/styles";
 import { Col, Row, Space } from "antd";
 import { lazy } from "react";
 import ImageCardLink from "../../components/ImageCardLink";
-
+import Container from "../../common/Container";
 
 import {
   ContentSection,
@@ -31,11 +31,10 @@ interface Props {
 const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
   return (
     <Container>
-      <p>Lorem ipsum dolor</p>
         <Space direction="vertical">
         <Row>
             <Space>
-            <Col>
+            <Col sm={24}>
                 <ImageCardLink
                     image="svgrepo_fb.svg"
                     link="https://www.facebook.com/RayaSolutionsPH"
@@ -43,7 +42,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="/RayaSolutionsPH"
                 />
             </Col>
-            <Col>
+            <Col sm={24} >
                 <ImageCardLink
                     image="svgrepo_instagram.svg"
                     link="https://www.instagram.com/solutionsraya/"
@@ -51,7 +50,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="/solutionsraya"
                 />
             </Col>
-            <Col>
+            <Col sm={24} >
                 <ImageCardLink
                     image="svgrepo_youtube.svg"
                     link="https://youtube.com/@RayaSolutionsPh"
@@ -84,10 +83,10 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
         </Space>
         <Row align="middle" justify="space-between">
     <Col lg={11} md={11} sm={11} xs={24}>
-        <span>
-        <p>{line1}, {line2}, {line3}</p>
+        <Space direction="vertical" >
+        <p>{line1}<br/>{line2}<br/>{line3}</p>
         <p>Weekdays @ 9:00AM – 6:00PM PhST</p>
-        </span>
+        </Space>
     </Col>
     <Col lg={11} md={11} sm={24} xs={24}>
         {/* Content for the second column containing the iframe */}
