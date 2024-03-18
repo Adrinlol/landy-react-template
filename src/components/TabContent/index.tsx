@@ -1,4 +1,4 @@
-import {Col, Row, Table, List, Divider, Flex, Card} from 'antd';
+import {Col, Row, Card, Table, List, Divider} from 'antd';
 import {Heading, SubHeading, TableTitle} from "./styles";
 import {Button} from "../../common/Button";
 import React from "react";
@@ -54,31 +54,26 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                             <Col xs={24} lg={colSpanFromItemsLength} xl={colSpanFromItemsLength} style={{
                                 marginBottom: "20px"
                             }}>
-                                <Card title={item.name} hoverable bordered style={{
-                                    height: "100%"
-                                }}>
-                                    <Flex vertical>
-                                        {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
-                                        {
-                                            <>
-                                                <Heading> Includes </Heading>
-                                                <List bordered size="small" dataSource={item.includedServices}
-                                                      renderItem={(item) => <List.Item>{item}</List.Item>}/>
-                                            </>
-                                        }
-                                        {typeof item.includedFeatures === "object" &&
-                                            <>
-                                                <Heading>Features</Heading>
-                                                <List bordered size="small" dataSource={item.includedFeatures}
-                                                      renderItem={(item) => <List.Item>{item}</List.Item>}/>
-                                            </>
-                                        }
+                                <Card title={item.name} hoverable>
+                                    {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
+                                    {
+                                        <>
+                                            <Heading> Includes </Heading>
+                                            <List bordered size="small" dataSource={item.includedServices}
+                                                  renderItem={(item) => <List.Item>{item}</List.Item>}/>
+                                        </>
+                                    }
+                                    {typeof item.includedFeatures === "object" &&
+                                        <>
+                                            <Divider/>
+                                            <Heading>Features</Heading>
+                                            <List bordered size="small" dataSource={item.includedFeatures}
+                                                  renderItem={(item) => <List.Item>{item}</List.Item>}/>
+                                        </>
+                                    }
                                     <Divider/>
-                                    <Flex vertical style={{ justifySelf: "flex-end" }}>
-                                        <SubHeading>{item.priceRange}</SubHeading>
-                                        <Button> Request Quotation </Button>
-                                    </Flex>
-                                    </Flex>
+                                    <SubHeading>{item.priceRange}</SubHeading>
+                                    <Button> Request Quotation </Button>
                                 </Card>
                             </Col>
                         )
@@ -86,7 +81,7 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                 }
 
             </Row>
-            <Row style={{ marginBottom: "20px" }}>
+            <Row gutter={16}>
                 {typeof itemsAddOns === "object" &&
                     (
                         <>
@@ -98,7 +93,8 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                                 <TableTitle>
                                     Add-on Deals to Cater Your Specialized Needs
                                 </TableTitle>
-                            )} pagination={false} dataSource={itemsAddOns} columns={addOnTableColumns}/>
+                            )}
+                                   pagination={false} dataSource={itemsAddOns} columns={addOnTableColumns}/>
                         </>
                     )
                 }
