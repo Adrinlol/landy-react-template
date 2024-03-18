@@ -32,42 +32,56 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
   return (
     <Container>
       <p>Lorem ipsum dolor</p>
+        <Space direction="vertical">
         <Row>
             <Space>
             <Col>
                 <ImageCardLink
                     image="svgrepo_fb.svg"
-                    link="https://www.facebook.com/"
+                    link="https://www.facebook.com/RayaSolutionsPH"
                     title="Facebook"
-                    subtitle="/raya"
+                    subtitle="/RayaSolutionsPH"
                 />
             </Col>
             <Col>
                 <ImageCardLink
-                    image="svrepo_twitter.svg"
-                    link="https://www.twitter.com/"
-                    title="Twitter"
-                    subtitle="/raya"
+                    image="svgrepo_instagram.svg"
+                    link="https://www.instagram.com/solutionsraya/"
+                    title="Instagram"
+                    subtitle="/solutionsraya"
                 />
             </Col>
+            <Col>
+                <ImageCardLink
+                    image="svgrepo_youtube.svg"
+                    link="https://youtube.com/@RayaSolutionsPh"
+                    title="Youtube"
+                    subtitle="/@RayaSolutionsPh"
+                />
+            </Col>
+            </Space>
+        </Row>
+        <Row>
+            <Space>
             <Col>
                 <ImageCardLink
                     image="svgrepo_phone.svg"
-                    link="tel:123456789"
+                    link="tel:09088180855"
                     title="Phone number"
-                    subtitle="(+63)9XXXXXXXXX"
+                    subtitle="(+63)908-818-0855"
                 />
             </Col>
             <Col>
                 <ImageCardLink
                     image="svgrepo_email.svg"
-                    link="mailto:example@example.com"
+                    link="mailto:developer@rayasolutionsph.com"
                     title="Email"
-                    subtitle="example@example.com"
+                    subtitle="developer@rayasolutionsph.com"
                 />
             </Col>
             </Space>
         </Row>
+        </Space>
         <Row align="middle" justify="space-between">
     <Col lg={11} md={11} sm={11} xs={24}>
         <span>
