@@ -30,7 +30,7 @@ const MiddleBlock = ({ title, content, button, destination, destinationType, sec
   };
   return (
     <MiddleBlockSection>
-      <Slide direction="up" triggerOnce>
+      <Slide triggerOnce>
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
