@@ -2,16 +2,14 @@ import {Link} from "react-router-dom";
 import { Card, Space } from "antd";
 
 import { SvgIcon } from "../../common/SvgIcon";
-import { Bold, Subtitle } from "./styles";
 
 interface Props {
     image: string;
     link: string,
-    title: string;
     subtitle: string;
 }
 
-const ImageCardLink = ({ image, link, title, subtitle }: Props) => {
+const ImageCardLink = ({ image, link, subtitle }: Props) => {
     return (
         <a href={link} target="_blank">
             <Card>

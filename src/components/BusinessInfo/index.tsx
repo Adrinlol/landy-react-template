@@ -1,22 +1,14 @@
-import { withTranslation, TFunction } from "react-i18next";
-import { TextWrapper, Content } from "../Block/styles";
+import { Content } from "../Block/styles";
 import { Col, Row, Space } from "antd";
 import { lazy } from "react";
 import ImageCardLink from "../../components/ImageCardLink";
 import Container from "../../common/Container";
 
 import {
-  ContentSection,
   ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
-  StyledRow,
-  ButtonWrapper,
 } from "../../components/ContentBlock/styles";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 interface Props {
   fb: string;
