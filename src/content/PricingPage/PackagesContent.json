@@ -1,0 +1,278 @@
+{
+    "microsoft365Deals": [
+      {
+        "name": "Starter Package",
+        "includedServices": ["Basic setup and configuration", "Training for up to 10 users", "1 month post-launch support"],
+        "priceRange": "₱499,000 - ₱1,000,000"
+      },
+      {
+        "name": "Standard Package",
+        "includedServices": ["Advanced configuration", "Training for up to 25 users", "Data migration support", "3 months post-launch support"],
+        "priceRange": "₱1,000,000 - ₱1,925,000"
+      },
+      {
+        "name": "Enterprise Package",
+        "includedServices": ["Comprehensive implementation", "Extensive customizations", "Training for an unlimited number of users", "Data migration", "6 months post-launch support"],
+        "priceRange": "₱1,925,000 - ₱3,850,000"
+      }],
+  "erpnextDeals": [
+    {
+      "name": "Basic Package",
+      "includedServices": ["Setup and configuration of core modules", "Basic training for staff", "1 month of support"],
+      "priceRange": "₱250,000 - ₱660,000"
+    },
+    {
+      "name": "Professional Package",
+      "includedServices": ["Extended setup including customizations", "Training for up to 20 users", "Data migration assistance", "3 months of support"],
+      "priceRange": "₱660,000 - ₱1,320,000"
+    },
+    {
+      "name": "Premium Package",
+      "includedServices": ["Full deployment with all modules", "Advanced customizations", "System integrations", "Comprehensive training for staff", "Data migration", "6 months of ongoing support"],
+      "priceRange": "₱1,320,000 - ₱2,640,000"
+    }
+  ],
+  "rayaERPDeals": {
+    "base": [
+      {
+        "name": "Basic Package",
+        "includedServices": ["Core setup and configuration", "Basic staff training", "1 month of support"],
+        "priceRange": "₱150,000 - ₱300,000"
+      },
+      {
+        "name": "Professional Package",
+        "includedServices": ["Extended setup with customizations", "Training for up to 20 users", "Data migration assistance", "3 months of support"],
+        "priceRange": "₱300,000 - ₱1,056,000"
+      },
+      {
+        "name": "Premium Package",
+        "includedServices": ["Full deployment including all modules", "Advanced customizations", "Comprehensive training for staff", "Data migration", "6 months of ongoing support"],
+        "priceRange": "₱1,056,000 - ₱3,112,000"
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Custom Module Development",
+        "description": "Development of custom modules tailored to unique business processes or requirements not covered by the standard ERP system functionalities.",
+        "pricingModel": "Quoted based on requirements."
+      },
+      {
+        "name": "Integration Services",
+        "description": "Integration of the ERP system with existing business applications (e.g., CRM, eCommerce platforms, external databases) for seamless data flow and operation.",
+        "pricingModel": "Basic (up to 3 integrations), Advanced (up to 10 integrations), Custom (10+ integrations)."
+      },
+      {
+        "name": "Advanced Reporting and Analytics",
+        "description": "Setup and customization of advanced reporting tools and dashboards to provide deeper insights into business performance metrics and KPIs.",
+        "pricingModel": "Per report/dashboard setup."
+      },
+      {
+        "name": "Cloud Hosting and Management",
+        "description": "Provision of cloud hosting solutions for the ERP system with ongoing management and maintenance to ensure high availability and security.",
+        "pricingModel": "Monthly subscription based on usage and support levels."
+      },
+      {
+        "name": "Continuous Improvement Package",
+        "description": "Ongoing analysis and recommendations for ERP system enhancements, including updates, optimizations, and new features implementation to adapt to changing business needs.",
+        "pricingModel": "Annual subscription."
+      },
+      {
+        "name": "Training Workshops and Webinars",
+        "description": "Customized training sessions for different levels of users (end-users, IT staff, managers) to maximize the ERP system's utility and adoption within the organization.",
+        "pricingModel": "Per session or bundled package rates."
+      },
+      {
+        "name": "Emergency Support Services",
+        "description": "Priority support services for critical issues, including direct access to senior technical support teams and faster response times.",
+        "pricingModel": "Tiered monthly subscription or on-demand."
+      },
+      {
+        "name": "Compliance and Security Audit",
+        "description": "Comprehensive review of the ERP system’s compliance with relevant industry standards and regulations, and implementation of security best practices.",
+        "pricingModel": "Quoted based on scope."
+      }
+    ]
+  },
+  "tailoredERP":{
+    "base": [
+      {
+        "name": "Entry-Level Package",
+        "target": "Startups and small businesses looking to automate core business functions.",
+        "includedServices": ["Basic ERP system setup with essential modules (e.g., Finance and Sales)", "User training for up to 5 users", "Basic data migration support", "2 weeks of post-launch support"],
+        "priceRange": "₱80,000 - ₱120,000"
+      },
+      {
+        "name": "Growth Package",
+        "target": "Small businesses ready to expand their ERP functionalities to support growth.",
+        "includedServices": [
+          "Core plus additional modules setup (e.g., Purchasing, Inventory Management)",
+          "Training for up to 10 users",
+          "Intermediate data migration",
+          "Basic customization",
+          "1 month of post-launch support"
+        ],
+        "priceRange": "₱100,000 - ₱150,000"
+      }],
+      "addOns": [
+        {
+          "name": "Cloud Hosting and Management",
+          "description": "Leverage cloud services for better scalability and accessibility, offered as a monthly subscription to reduce upfront costs."
+        },
+        {
+          "name": "Extended Support and Maintenance",
+          "description": "Offered as a monthly or annual subscription for ongoing support, updates, and troubleshooting beyond the initial period."
+        },
+        {
+          "name": "Custom Module Development",
+          "description": "Available upon request, with pricing based on the complexity and scope of development."
+        }
+      ]
+  },
+  "rayaPOS": {
+    "base": [
+      {
+        "name": "Entry-Level POS Package",
+        "target": "Very small businesses, startups, or those new to using POS systems.",
+        "includedFeatures": ["Basic POS software with essential sales processing features", "Inventory management", "Reporting capabilities"],
+        "includedServices": ["Basic setup and configuration", "Training for up to 2 users", "1 month of post-launch support"],
+        "priceRange": "₱50,000 - ₱75,000"
+      },
+      {
+        "name": "Standard POS Package",
+        "target": "Growing small businesses needing more functionality and flexibility.",
+        "includedFeatures": ["Advanced POS software with additional features such as customer management", "Employee management", "Loyalty programs"],
+        "includedServices": ["Advanced setup and configuration", "Data migration assistance", "Training for up to 5 users", "3 months of post-launch support"],
+        "priceRange": "₱75,000 - ₱100,000"
+      },
+      {
+        "name": "Complete Business POS Package",
+        "target": "Established small to medium-sized businesses looking for comprehensive POS solutions.",
+        "includedFeatures": ["Full-featured POS software with multi-store support", "Advanced inventory management", "Ecommerce integration", "Detailed analytics"],
+        "includedServices": ["Comprehensive setup and customization", "Integration with existing systems (e-commerce, accounting, etc.)", "Comprehensive training program", "6 months of post-launch support"],
+        "priceRange": "₱100,000 - ₱150,000"
+      }
+    ],
+    "addOns": [
+      {
+        "name": "Mobile POS Solutions",
+        "description": "For businesses requiring flexibility to make sales anywhere within the location."
+      },
+      {
+        "name": "Cloud-Based Data Management",
+        "description": "For easy access to sales data and analytics from anywhere, ensuring business continuity."
+      },
+      {
+        "name": "Extended Support and Maintenance",
+        "description": "Beyond the initial support period for software updates, troubleshooting, and hardware maintenance."
+      },
+      {
+        "name": "Additional Hardware",
+        "description": "Additional terminals, mobile scanners, and printers as the business grows."
+      }
+    ]
+  },
+  "rayaCRM": {
+    "base": [
+      {
+        "name": "Basic CRM Package",
+        "target": "Very small businesses or startups taking their first step into formal customer relationship management.",
+        "includedFeatures": ["Contact management", "Lead tracking", "Sales pipeline visualization", "Basic reporting tools"],
+        "includedServices": ["System setup", "Basic customization to align with local business practices", "Initial user training for up to 5 users", "1 month of post-launch support"],
+        "priceRange": "₱50,000 - ₱75,000"
+      },
+      {
+        "name": "Professional CRM Package",
+        "target": "Small businesses looking to deepen customer engagement and streamline sales processes.",
+        "includedFeatures": ["Advanced contact and lead management", "Email marketing integration", "Sales forecasting", "Custom reports", "Dashboards"],
+        "includedServices": ["Advanced system setup", "Data migration from existing systems", "Custom reports setup", "Training for up to 10 users", "3 months of post-launch support"],
+        "priceRange": "₱75,000 - ₱100,000"
+      },
+      {
+        "name": "Enterprise CRM Package",
+        "target": "Medium-sized businesses seeking a comprehensive CRM solution to support complex sales cycles and marketing strategies.",
+        "includedFeatures": ["Complete CRM functionalities including marketing automation", "Service and support modules", "Advanced analytics", "Integration capabilities with other business systems (ERP, POS, etc.)"],
+        "includedServices": ["Comprehensive system setup and customization", "Complex data migration", "API integrations", "Extensive user training", "6 months of post-launch support"],
+        "priceRange": "₱100,000 - ₱150,000"
+      }
+    ],
+    "addOns": [
+        {
+          "name": "Marketing Automation Module",
+          "description": "For businesses looking to automate and optimize their marketing efforts."
+        },
+        {
+          "name": "Customer Service & Support Module",
+          "description": "Adds capabilities for ticketing, service workflows, and customer feedback management."
+        },
+        {
+          "name": "Advanced Analytics & Business Intelligence",
+          "description": "For deeper insights into customer behavior, sales performance, and business forecasting."
+        },
+        {
+          "name": "Additional Training and Support",
+          "description": "Tailored training sessions for new features or additional staff, and extended support contracts."
+        }
+      ]
+  },
+  "rayaBPO": {
+    "base":[
+      {
+        "name": "ERP System Management Package",
+        "description": "For Businesses seeking to outsource the management of their ERP system to ensure efficiency, reliability, and optimization.",
+        "includedServices": [
+          "Complete ERP system administration and maintenance.",
+          "Regular system updates and backups.",
+          "User access management and security monitoring.",
+          "First-level support for all ERP-related queries and issues."
+        ],
+        "priceRange": "₱75,000 - ₱150,000 per month"
+      },
+      {
+        "name": "Financial Processes Outsourcing Package",
+        "description": "For Companies looking to outsource their financial operations managed within their ERP system, such as accounts payable/receivable, general ledger management, and financial reporting.",
+        "includedServices": [
+          "Transaction processing and bookkeeping.",
+          "Financial closing processes and reporting.",
+          "Compliance and audit support.",
+          "Financial analysis and insights."
+        ],
+        "priceRange": "₱100,000 - ₱200,000 per month, depending on transaction volume and complexity."
+      },
+      {
+        "name": "HR and Payroll Outsourcing Package",
+        "description": "For Organizations aiming to outsource their HR and payroll functions to streamline operations and ensure compliance with local regulations.",
+        "includedServices": [
+          "Payroll processing, including taxes, benefits, and deductions.",
+          "Employee data management within the ERP.",
+          "Recruitment, onboarding, and offboarding processes.",
+          "HR reports and analytics."
+        ],
+        "priceRange": "₱90,000 - ₱180,000 per month, based on the number of employees and service scope."
+      },
+      {
+        "name": "Supply Chain Management Outsourcing Package",
+        "description": "For Businesses seeking expertise in managing their supply chain operations through ERP systems to improve efficiency and reduce costs.",
+        "includedServices": [
+          "Inventory management and optimization.",
+          "Order processing and logistics coordination.",
+          "Supplier and procurement management.",
+          "Demand planning and forecasting."
+        ],
+        "priceRange": "₱120,000 - ₱250,000 per month, depending on the complexity of the supply chain."
+      }],
+    "addOns": [
+      {
+        "name": "Custom ERP Development and Integration",
+        "description": "For clients needing customization of their existing ERP system or integration with other software solutions."
+      },
+      {
+        "name": "Advanced Analytics and BI Services",
+        "description": "Offering deep insights into business operations through advanced analytics, reporting, and business intelligence services."
+      },
+      {
+        "name": "Strategic ERP Consulting",
+        "description": "High-level strategic consulting services to optimize ERP deployment and utilization for business growth and transformation."
+      }
+    ]
+  }
+}
