@@ -1,4 +1,4 @@
-import {Children, lazy} from "react";
+import {lazy} from "react";
 import Overview from "../../content/PricingPage/OverviewContent.json";
 import Packages from "../../content/PricingPage/PackagesContent.json";
 import {Tabs} from "antd";

@@ -1,12 +1,9 @@
 import {Col, Row, Card, Table, List, Divider} from 'antd';
-import MiddleBlock from "../MiddleBlock";
 import {Heading, SubHeading, TableTitle} from "./styles";
 import {Button} from "../../common/Button";
 import React from "react";
-import ContentBlock from "../ContentBlock";
-import {ContentWrapper, MiddleBlockSection} from "../MiddleBlock/styles";
+import {ContentWrapper} from "../MiddleBlock/styles";
 import {Content} from "../Block/styles";
-import {Slide} from "react-awesome-reveal";
 
 interface CardGridProps {
     items: {
@@ -40,7 +37,7 @@ const addOnTableColumns = [
     },
 ];
 
-const CardGrid = ({items, itemsAddOns} : CardGridProps) => {
+const TabContent = ({items, itemsAddOns} : CardGridProps) => {
     const colSpanFromItemsLength = items.length < 3 ? 12 : 8
     return (
         <>
@@ -106,4 +103,4 @@ const CardGrid = ({items, itemsAddOns} : CardGridProps) => {
     )
 }
 
-export default CardGrid;
+export default TabContent;

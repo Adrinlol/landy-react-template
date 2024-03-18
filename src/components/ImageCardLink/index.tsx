@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import { Card, Space } from "antd";
 
 import { SvgIcon } from "../../common/SvgIcon";
@@ -12,7 +11,7 @@ interface Props {
 
 const ImageCardLink = ({ image, link, title, subtitle }: Props) => {
     return (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
             <Card>
                 <span>
                     <Space>
