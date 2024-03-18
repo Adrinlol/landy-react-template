@@ -32,9 +32,8 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
   return (
     <Container>
         <Space direction="vertical">
-        <Row>
-            <Space>
-            <Col sm={24}>
+        <Row align="middle" justify="space-between" gutter={4}>
+            <Col xs={24} md={8}>
                 <ImageCardLink
                     image="svgrepo_fb.svg"
                     link="https://www.facebook.com/RayaSolutionsPH"
@@ -42,7 +41,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="/RayaSolutionsPH"
                 />
             </Col>
-            <Col sm={24} >
+            <Col xs={24} md={8} >
                 <ImageCardLink
                     image="svgrepo_instagram.svg"
                     link="https://www.instagram.com/solutionsraya/"
@@ -50,7 +49,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="/solutionsraya"
                 />
             </Col>
-            <Col sm={24} >
+            <Col xs={24} md={8} >
                 <ImageCardLink
                     image="svgrepo_youtube.svg"
                     link="https://youtube.com/@RayaSolutionsPh"
@@ -58,11 +57,9 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="/@RayaSolutionsPh"
                 />
             </Col>
-            </Space>
         </Row>
-        <Row>
-            <Space>
-            <Col>
+        <Row gutter={4} align="middle" justify="space-between">
+            <Col xs={24} md={12} >
                 <ImageCardLink
                     image="svgrepo_phone.svg"
                     link="tel:09088180855"
@@ -70,7 +67,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="(+63)908-818-0855"
                 />
             </Col>
-            <Col>
+            <Col xs={24} md={12} >
                 <ImageCardLink
                     image="svgrepo_email.svg"
                     link="mailto:developer@rayasolutionsph.com"
@@ -78,27 +75,24 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                     subtitle="developer@rayasolutionsph.com"
                 />
             </Col>
-            </Space>
         </Row>
-        </Space>
         <Row align="middle" justify="space-between">
-    <Col lg={11} md={11} sm={11} xs={24}>
-        <Space direction="vertical" >
-        <p>{line1}<br/>{line2}<br/>{line3}</p>
-        <p>Weekdays @ 9:00AM – 6:00PM PhST</p>
-        </Space>
-    </Col>
-    <Col lg={11} md={11} sm={24} xs={24}>
-        {/* Content for the second column containing the iframe */}
-        <ContentWrapper>
-            <Content>
-                <iframe width="100%" height={350}
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.06013327836992%2C14.588865828256386%2C121.0610988736153%2C14.589634162876383&amp;layer=mapnik"
-                />
-            </Content>
-        </ContentWrapper>
-    </Col>
-</Row>
+            <Col md={12} xs={24}>
+                {line1}<br/>
+                {line2}<br/>
+                {line3}
+            </Col>
+            <Col md={12} xs={24}>
+                {/* Content for the second column containing the iframe */}
+                <ContentWrapper>
+                    <Content>
+                        <iframe width="100%" height={350}
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=121.06013327836992%2C14.588865828256386%2C121.0610988736153%2C14.589634162876383&amp;layer=mapnik"
+                        />
+                    </Content>
+                </ContentWrapper>
+            </Col>
+        </Row>
         <Contact
             title="Got any questions?"
             content="We're here to help."
@@ -110,6 +104,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
             content="It'll help improve our services."
             id="feedback"
         />
+        </Space>
     </Container>
   );
 };
