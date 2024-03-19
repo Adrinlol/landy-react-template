@@ -1,4 +1,4 @@
-import { validateProps, feedbackProps } from "../../common/types";
+import { validateProps, feedbackProps, supportProps } from "../../common/types";
 
 export default function validate(values: validateProps) {
   let errors = {} as validateProps;
@@ -26,6 +26,27 @@ export function validateFeedback (values: feedbackProps) {
     if (!values.message) {
         errors.message = "Message is required";
     }
+    
+    return errors;
+}
+
+export function validateSupport (values: supportProps) {
+    let errors = {} as supportProps;
+    
+    if (!values.name) {
+        errors.name = "Name is required";
+      }
+      if (!values.email) {
+        errors.email = "Email address is required";
+      } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = "Email address is invalid";
+      }
+      if (!values.phone) {
+          errors.phone = "Phone number is invalid";
+      } // TODO: Create regex for contact.
+      if (!values.description) {
+        errors.description = "Description is required";
+      }
     
     return errors;
 }

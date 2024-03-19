@@ -45,3 +45,11 @@ export interface feedbackProps {
     name: string;
     message: string;
 }
+export interface supportProps {
+    name: string;
+    email: string;
+    phone: string;
+    category: string;
+    files: string;
+    description: string;
+}

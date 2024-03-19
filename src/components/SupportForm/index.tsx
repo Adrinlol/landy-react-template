@@ -2,8 +2,8 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
-import { useFeedbackForm } from "../../common/utils/useForm";
-import validateFeedback from "../../common/utils/validationRules";
+import { useSupportForm } from "../../common/utils/useForm";
+import validateSupport from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
@@ -11,7 +11,7 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useFeedbackForm(validateFeedback);
+  const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
@@ -44,16 +44,45 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="name" />
               </Col>
               <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ""}
-                  name="message"
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={values.email || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="message" />
+              </Col>
+              <ValidationType type="email" />
+              <Col span={24}>
+                <Input
+                  type="phone"
+                  name="phone"
+                  placeholder="Phone number"
+                  value={values.phone || ""}
+                  onChange={handleChange}
+                />
+              </Col>
+              <ValidationType type="phone" />
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="category"
+                  placeholder="Choose a category"
+                  value={values.category || ""}
+                  onChange={handleChange}
+                />
+              </Col>
+              <Col span={24}>
+                <TextArea
+                  placeholder="Describe your inquiry"
+                  value={values.description || ""}
+                  name="description"
+                  onChange={handleChange}
+                />
+                <ValidationType type="description" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Send")}</Button>
+                <Button name="submit">{t("Submit a ticket")}</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

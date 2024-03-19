@@ -1,15 +1,18 @@
 import { lazy } from "react";
-import ContactContent from "../../content/ContactPage/ContactContent.json";
-const Contact = lazy(() => import("../../components/ContactForm"));
+import SupportContent from "../../content/CustomerSupportPage/SupportContent.json";
+import Overview from "../../content/CustomerSupportPage/OverviewContent.json";
+const SupportForm = lazy(() => import("../../components/SupportForm"));
 const Container = lazy(() => import("../../common/Container"));
+const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 
 const Support = () => {
     return (
         <Container>
-        <Contact
-            title={ContactContent.title}
-            content={ContactContent.text}
-            id="contact"
+        <MiddleBlock title={Overview.title} content={Overview.description}/>
+        <SupportForm
+            title={SupportContent.title}
+            content={SupportContent.text}
+            id="support"
         />
         </Container>
         )
