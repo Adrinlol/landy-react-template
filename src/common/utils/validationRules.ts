@@ -1,4 +1,4 @@
-import { validateProps } from "../../common/types";
+import { validateProps, feedbackProps } from "../../common/types";
 
 export default function validate(values: validateProps) {
   let errors = {} as validateProps;
@@ -11,8 +11,21 @@ export default function validate(values: validateProps) {
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = "Email address is invalid";
   }
+  if (!values.subject) {
+      errors.subject = "Subject is required";
+  }
   if (!values.message) {
     errors.message = "Message is required";
   }
   return errors;
+}
+
+export function validateFeedback (values: feedbackProps) {
+    let errors = {} as feedbackProps;
+    
+    if (!values.message) {
+        errors.message = "Message is required";
+    }
+    
+    return errors;
 }

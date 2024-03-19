@@ -38,5 +38,10 @@ export interface InputProps {
 export interface validateProps {
   name: string;
   message: string;
+  subject: string;
   email: string;
+}
+export interface feedbackProps {
+    name: string;
+    message: string;
 }

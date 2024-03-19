@@ -27,7 +27,7 @@ interface Props {
   line2: string;
   line3: string;
 }
-
+// TODO: $evamp the code to use the props properly.
 const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
   return (
     <Container>
@@ -93,17 +93,6 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                 </ContentWrapper>
             </Col>
         </Row>
-        <Contact
-            title="Got any questions?"
-            content="We're here to help."
-            id="contact"
-        />
-        {/** Placeholder for feedback form **/}
-        <Contact
-            title="Give us some feedback"
-            content="It'll help improve our services."
-            id="feedback"
-        />
         </Space>
     </Container>
   );
