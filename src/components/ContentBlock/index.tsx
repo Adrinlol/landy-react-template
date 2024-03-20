@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import {Row, Col, Collapse, ConfigProvider, Card} from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -13,14 +13,17 @@ import {
   MinTitle,
   MinPara,
   StyledRow,
-  ButtonWrapper,
+  ButtonWrapper, MinDesc,
 } from "./styles";
+import {SubHeading} from "../TabContent/styles";
 
 const ContentBlock = ({
+  collapseItems,
   icon,
   title,
   content,
   section,
+  cardSection = false,
   button,
   t,
   id,
@@ -49,6 +52,42 @@ const ContentBlock = ({
             <ContentWrapper>
               <h6>{t(title)}</h6>
               <Content>{content}</Content>
+              {direction === "right" &&
+                  <>
+                    <ServiceWrapper>
+                      <Row justify="space-between">
+                        {typeof section === "object" &&
+                            section.map(
+                                (
+                                    item: {
+                                      title: string;
+                                      content: string;
+                                      icon: string;
+                                    },
+                                    id: number
+                                ) => {
+                                  return (
+                                      <Col key={id} xl={11} lg={11} xs={24}>
+                                        {item.icon !== "" && <SvgIcon
+                                            src={item.icon}
+                                            width="60px"
+                                            height="60px"
+                                        />}
+                                        {
+                                          cardSection &&
+                                              <Card bordered hoverable
+                                                    style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
+                                                <SubHeading> {t(item.title)}</SubHeading>
+                                              </Card>
+                                        }
+                                      </Col>
+                                  );
+                                }
+                            )}
+                      </Row>
+                    </ServiceWrapper>
+                </>
+              }
               {direction === "right" ? (
                 <ButtonWrapper>
                   {typeof button === "object" &&
@@ -72,6 +111,8 @@ const ContentBlock = ({
                       }
                     )}
                 </ButtonWrapper>
+
+
               ) : (
                 <ServiceWrapper>
                   <Row justify="space-between">
@@ -86,14 +127,22 @@ const ContentBlock = ({
                           id: number
                         ) => {
                           return (
-                            <Col key={id} span={11}>
-                              <SvgIcon
+                            <Col key={id} xl={11} lg={11} xs={24}>
+                              {item.icon !== "" && <SvgIcon
                                 src={item.icon}
                                 width="60px"
                                 height="60px"
-                              />
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
+                              />}
+                              {
+                                cardSection ?
+                                    <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
+                                      <SubHeading> {t(item.title)}</SubHeading>
+                                    </Card> :
+                                  <>
+                                    <MinTitle>{t(item.title)}</MinTitle>
+                                    <MinPara>{t(item.content)}</MinPara>
+                                  </>
+                              }
                             </Col>
                           );
                         }
@@ -103,6 +152,12 @@ const ContentBlock = ({
               )}
             </ContentWrapper>
           </Col>
+          {typeof collapseItems === "object" &&
+              <Collapse size="large" accordion items={collapseItems}
+                        style={{
+                          minWidth: "100%",
+                          }}/>
+          }
         </StyledRow>
       </Fade>
     </ContentSection>
