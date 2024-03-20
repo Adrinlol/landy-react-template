@@ -41,7 +41,7 @@ const ServicesProducts = () => {
                 icon="product-launch.svg"
                 title={ProductCategories.title}
                 content={ProductCategories.description}
-                section={ProductCategories.categories}
+                // section={ProductCategories.categories}
                 id="product-categories"/>
             <ContentBlock
                 direction="left"
@@ -70,7 +70,7 @@ const ServicesProducts = () => {
                 cardSection={false}
                 title={Faq.title}
                 content={Faq.description}
-                section={Faq.questions}
+                // section={Faq.questions}
                 icon=""
                 id="faq"/>
         </Container>
