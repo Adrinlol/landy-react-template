@@ -1,12 +1,13 @@
-import { lazy } from "react";
+import {lazy, useEffect} from "react";
 import IntroContent from "../../content/HomePage/IntroContent.json";
 import About from "../../content/HomePage/AboutContent.json";
 import IndustrySolutions from "../../content/HomePage/IndustrySolutionsContent.json";
 import ServicesProducts from "../../content/HomePage/ServicesProductsContent.json";
 import TailoredSolutions from "../../content/HomePage/TailoredSolutionsContent.json";
 import FrequentlyAskedQuestions from "../../content/HomePage/FaqContent.json";
-import {tailoredSolutions} from "./TailoredSolutions";
+import {tailoredSolutionsContent} from "../TailoredSolutions/TailoredSolutionsContent";
 import {ConfigProvider} from "antd";
+import {scrollUp} from "../../common/ScrollToTop";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
@@ -21,8 +22,16 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 //          nested collapse (accordion mode)
 //              title
 //              content
+const TailorSolutionButtonContent = [
+    {
+        "title": "See Here"
+    }
+]
 
 const Home = () => {
+    useEffect(() => {
+        scrollUp()
+    }, []);
   return (
       <>
           <ConfigProvider
@@ -44,7 +53,6 @@ const Home = () => {
                     direction="right"
                     title={IntroContent.title}
                     content={IntroContent.text}
-                    button={IntroContent.button}
                     icon="developer.svg"
                     id="intro"
                   />
@@ -60,7 +68,8 @@ const Home = () => {
                     direction="right"
                     title={TailoredSolutions.title}
                     content={TailoredSolutions.content}
-                    collapseItems={tailoredSolutions}
+                    button={TailorSolutionButtonContent}
+                    destination="/tailored-solutions"
                     icon="graphs.svg"
                     cardSection={false}
                     id="faq"
