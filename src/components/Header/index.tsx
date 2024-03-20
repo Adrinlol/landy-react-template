@@ -40,6 +40,14 @@ const Header = ({ t }: { t: TFunction }) => {
           </CustomNavLinkSmall>
         </Link>
 
+        <Link to={"/who-is-raya"}>
+          <CustomNavLinkSmall>
+            <Span>
+              <Span>{t("Who is Raya?")}</Span>
+            </Span>
+          </CustomNavLinkSmall>
+        </Link>
+
         <Link to={"/support"}>
           <CustomNavLinkSmall>
             <Span>

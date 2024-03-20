@@ -1,0 +1,81 @@
+{
+  "title": "Who is Raya?",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis convallis tellus id.",
+  "focusOnValue": {
+    "title": "Delivering Tangible Benefits to Our Clients",
+    "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results. Here's how we focus on delivering value to our clients: ",
+    "section": [
+      {
+        "title": "Strategic Partnership",
+        "content": "",
+        "icon": ""
+      },
+      {
+        "title": "Tailored Solutions",
+        "content": "",
+        "icon": ""
+      },
+      {
+        "title": "Industry Expertise",
+        "content": "",
+        "icon": ""
+      },
+      {
+        "title": "Technology Innovation",
+        "content": "",
+        "icon": ""
+      },
+      {
+        "title": "Measurable Results",
+        "content": "",
+        "icon": ""
+      },
+      {
+        "title": "Ongoing Support",
+        "content": "",
+        "icon": ""
+      }
+    ]
+  },
+  "clientCentric": {
+      "title": "Client-Centric Approach: Putting Your Success First ",
+      "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
+      "section": [
+        {
+          "title": "Understanding Your Needs",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Collaborative Partnership",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Customized Solutions",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Proactive Communication",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Empowering Our Clients",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Continuous Improvement",
+          "content": "",
+          "icon": ""
+        },
+        {
+          "title": "Measuring Success",
+          "content": "",
+          "icon": ""
+        }
+      ]
+  }
+}
