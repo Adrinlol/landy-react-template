@@ -3,6 +3,15 @@ import { SvgIcon } from "../SvgIcon";
 import { ScrollUpContainer } from "./styles";
 import { getScroll } from "../utils/getWindow";
 
+export const scrollUp = () => {
+  const element = document.getElementById("header") as HTMLDivElement;
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+};
+
 const ScrollToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
 
@@ -23,15 +32,6 @@ const ScrollToTop = () => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const scrollUp = () => {
-    const element = document.getElementById("intro") as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
 
   return (
     <ScrollUpContainer onClick={scrollUp} show={showScroll}>
