@@ -71,7 +71,7 @@ const Header = ({ t }: { t: TFunction }) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" id="header">
           <LogoContainer to="/" aria-label="homepage">
             <PngIcon src="logo.jpg" width="96px" height="96px"/>
           </LogoContainer>
