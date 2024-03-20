@@ -37,6 +37,7 @@ const ServicesProducts = () => {
               button={Overview.button}/>
             <ContentBlock
                 direction="right"
+                cardSection={false}
                 icon="product-launch.svg"
                 title={ProductCategories.title}
                 content={ProductCategories.description}
@@ -44,6 +45,7 @@ const ServicesProducts = () => {
                 id="product-categories"/>
             <ContentBlock
                 direction="left"
+                cardSection={false}
                 title={IndividualProducts.title}
                 content={IndividualProducts.text}
                 section={IndividualProducts.section}
@@ -65,6 +67,7 @@ const ServicesProducts = () => {
                 section={Testimonials.testimonials}/>
             <ContentBlock
                 direction="right"
+                cardSection={false}
                 title={Faq.title}
                 content={Faq.description}
                 section={Faq.questions}
