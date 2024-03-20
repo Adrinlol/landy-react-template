@@ -63,7 +63,7 @@ const MiddleBlock = ({ title, content, button, collapseItems, destination, desti
                         id: number
                     ) => {
                       return (
-                          <Col key={id} span={11}>
+                          <Col key={id} xs={24} lg={11} xl={11}>
                             <SvgIcon
                                 src={item.icon}
                                 width="60px"
