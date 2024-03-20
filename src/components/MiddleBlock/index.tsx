@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import {Row, Col, CollapseProps, Collapse} from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
@@ -13,6 +13,7 @@ interface MiddleBlockProps {
   button?: string;
   destination?: string;
   destinationType?: string;
+  collapseItems?: CollapseProps['items'];
   section?: {
     title: string,
     content: string,
@@ -21,7 +22,7 @@ interface MiddleBlockProps {
   t: TFunction;
 }
 
-const MiddleBlock = ({ title, content, button, destination, destinationType, section, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, button, collapseItems, destination, destinationType, section, t }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -75,6 +76,7 @@ const MiddleBlock = ({ title, content, button, destination, destinationType, sec
                     }
                 )}
           </Row>
+              {typeof collapseItems === "object" && <Collapse size="large" accordion ghost items={collapseItems} style={{ minWidth: "100%" }}/>}
         </Row>
       </Slide>
     </MiddleBlockSection>

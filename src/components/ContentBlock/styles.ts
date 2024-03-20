@@ -43,6 +43,10 @@ export const MinTitle = styled("h6")`
   font-family: "Motiva Sans Light", sans-serif;
 `;
 
+export const MinDesc = styled("p")`
+    font-size: 16px;
+`;
+
 export const MinPara = styled("p")`
   font-size: 13px;
 `;

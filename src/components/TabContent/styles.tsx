@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Heading = styled("p")`
     font-weight: bolder;
     font-size: large;
