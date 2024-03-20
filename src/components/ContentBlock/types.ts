@@ -6,12 +6,8 @@ export interface ContentBlockProps {
   title: string;
   content?: string;
   collapseItems?: CollapseProps['items'];
+  destination?: string;
   cardSection: boolean
-  // collapseItems?: {
-  //     key: string,
-  //     content: string,
-  //     children: ReactNode
-  // }[]
   section?: {
     title: string;
     content: string;

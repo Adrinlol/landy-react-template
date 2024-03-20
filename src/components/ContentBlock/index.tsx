@@ -16,6 +16,7 @@ import {
   ButtonWrapper, MinDesc,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
+import {Link} from "react-router-dom";
 
 const ContentBlock = ({
   collapseItems,
@@ -25,6 +26,7 @@ const ContentBlock = ({
   section,
   cardSection = false,
   button,
+  destination,
   t,
   id,
   direction,
@@ -52,67 +54,53 @@ const ContentBlock = ({
             <ContentWrapper>
               <h6>{t(title)}</h6>
               <Content>{content}</Content>
-              {direction === "right" &&
-                  <>
-                    <ServiceWrapper>
-                      <Row justify="space-between">
-                        {typeof section === "object" &&
-                            section.map(
-                                (
-                                    item: {
-                                      title: string;
-                                      content: string;
-                                      icon: string;
-                                    },
-                                    id: number
-                                ) => {
-                                  return (
-                                      <Col key={id} xl={11} lg={11} xs={24}>
-                                        {item.icon !== "" && <SvgIcon
-                                            src={item.icon}
-                                            width="60px"
-                                            height="60px"
-                                        />}
-                                        {
-                                          cardSection &&
-                                              <Card bordered hoverable
-                                                    style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
-                                                <SubHeading> {t(item.title)}</SubHeading>
-                                              </Card>
-                                        }
-                                      </Col>
-                                  );
-                                }
-                            )}
-                      </Row>
-                    </ServiceWrapper>
-                </>
-              }
               {direction === "right" ? (
-                <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo("about")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
-
-
+                  <>
+                    <Link to={destination ?? ""}>
+                      <ButtonWrapper>
+                        {typeof button === "object" &&
+                          button.map(
+                            (
+                              item: {
+                                color?: string;
+                                title: string;
+                              },
+                              id: number
+                            ) => {
+                              return (
+                                    <Button
+                                        key={id}
+                                        color={item.color}
+                                    >
+                                      {t(item.title)}
+                                    </Button>
+                              );
+                            }
+                          )}
+                      </ButtonWrapper>
+                    </Link>
+                  <Row justify="space-between">
+                    {typeof section === "object" &&
+                        section.map(
+                            (
+                                item: {
+                                  title: string;
+                                  content: string;
+                                  icon: string;
+                                },
+                                id: number
+                            ) => {
+                              return (
+                                  <Col key={id} xl={11} lg={11} xs={24}>
+                                        <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
+                                          <SubHeading> {t(item.title)}</SubHeading>
+                                        </Card>
+                                  </Col>
+                              );
+                            }
+                        )}
+                  </Row>
+                  </>
               ) : (
                 <ServiceWrapper>
                   <Row justify="space-between">
