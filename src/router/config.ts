@@ -24,7 +24,12 @@ const routes = [
     path: "/services-products",
     exact: true,
     component: "ServicesProducts"
-  }
+  },
+  {
+    path: "/who-is-raya",
+    exact: true,
+    component: "WhoIsRaya"
+  },
 ];
 
 export default routes;
