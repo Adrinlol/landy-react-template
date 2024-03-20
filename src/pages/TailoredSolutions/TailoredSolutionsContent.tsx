@@ -1,9 +1,13 @@
 import {Collapse, CollapseProps} from "antd";
-import {MinDesc} from "../../components/ContentBlock/styles";
-import React from "react";
+import {MinDesc, MinPara} from "../../components/ContentBlock/styles";
+import React, {JSX} from "react";
+import {Heading, SubHeading} from "../../components/TabContent/styles";
+import {Button} from "../../common/Button";
+import {Span} from "../../components/Header/styles";
+import {Link} from "react-router-dom";
 
 
-const RetailSolutions: CollapseProps['items'] = [
+const RetailSolutions = [
     {
         key: '1',
         label: 'Omnichannel Retailing',
@@ -44,7 +48,7 @@ const RetailSolutions: CollapseProps['items'] = [
     },
 ]
 
-const ManufacturingSolutions: CollapseProps['items'] = [
+const ManufacturingSolutions = [
     {
         key: '1',
         label: 'Production Planning and Scheduling',
@@ -72,7 +76,7 @@ const ManufacturingSolutions: CollapseProps['items'] = [
     }
 ]
 
-const ConstructionSolutions: CollapseProps['items'] = [
+const ConstructionSolutions = [
     {
         key: '1',
         label: 'Project Management',
@@ -100,7 +104,7 @@ const ConstructionSolutions: CollapseProps['items'] = [
     }
 ]
 
-const HospitalitySolutions: CollapseProps['items'] = [
+const HospitalitySolutions = [
     {
         key: '1',
         label: 'Property Management System (PMS) Integration',
@@ -128,7 +132,7 @@ const HospitalitySolutions: CollapseProps['items'] = [
     }
 ]
 
-const ServicesSolutions : CollapseProps['items'] = [
+const ServicesSolutions = [
     {
         key: '1',
         label: 'Project and Engagement Management',
@@ -157,7 +161,7 @@ const ServicesSolutions : CollapseProps['items'] = [
 ]
 
 
-export const tailoredSolutions: CollapseProps['items'] = [
+export const tailoredSolutionsContent = [
     {
         key: '1',
         label: 'Raya for Retail',
@@ -167,7 +171,25 @@ export const tailoredSolutions: CollapseProps['items'] = [
                 With Microsoft Dynamics 365 and ERPNext, Raya for Retail offers retailers a unified platform to manage all aspects of their operations,
                 including inventory management, sales tracking, customer relationship management, and financial management. Key features include:
             </MinDesc>
-            <Collapse accordion items={RetailSolutions}/>
+            {RetailSolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="/results/retail">
+                <Button> Results</Button>
+            </Link>
         </>
     },
     {
@@ -177,7 +199,25 @@ export const tailoredSolutions: CollapseProps['items'] = [
             <MinDesc>
                 Raya for Manufacturing is a robust solution designed to address the complex needs of manufacturing businesses. Powered by Microsoft Dynamics 365 and ERPNext, Raya for Manufacturing enables manufacturers to streamline their operations, optimize production processes, and drive efficiency and innovation. Key features include:
             </MinDesc>
-            <Collapse accordion items={ManufacturingSolutions}/>
+            {ManufacturingSolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="">
+                <Button> Results</Button>
+            </Link>
         </>
     },
     {
@@ -187,7 +227,25 @@ export const tailoredSolutions: CollapseProps['items'] = [
             <MinDesc>
                 Raya for Construction is a comprehensive solution tailored to meet the unique needs of construction firms. Leveraging the power of Microsoft Dynamics 365 and ERPNext, Raya for Construction enables construction companies to manage projects more efficiently, optimize resource allocation, and improve collaboration and communication across project teams. Key features include:
             </MinDesc>
-            <Collapse accordion items={ConstructionSolutions}/>
+            {ConstructionSolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="results/construction">
+                <Button> Results</Button>
+            </Link>
         </>
     },
     {
@@ -197,7 +255,25 @@ export const tailoredSolutions: CollapseProps['items'] = [
             <MinDesc>
                 Raya for Hospitality is a tailored solution designed to address the unique needs of hospitality businesses, including hotels, restaurants, and resorts. Built on Microsoft Dynamics 365 and ERPNext, Raya for Hospitality offers hospitality companies a comprehensive platform to streamline operations, enhance guest experiences, and drive revenue growth. Key features include:
             </MinDesc>
-            <Collapse accordion items={HospitalitySolutions}/>
+            {HospitalitySolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="results/hospitality">
+                <Button> Results</Button>
+            </Link>
         </>
     },
     {
@@ -207,7 +283,25 @@ export const tailoredSolutions: CollapseProps['items'] = [
             <MinDesc>
                 Raya for Services is a tailored solution designed to meet the unique needs of service-based businesses, including consulting firms, professional services firms, and service contractors. Powered by Microsoft Dynamics 365 and ERPNext, Raya for Services enables service providers to streamline service delivery, optimize resource allocation, and improve client satisfaction and retention. Key features include:
             </MinDesc>
-            <Collapse accordion items={ServicesSolutions}/>
+            {ServicesSolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="results/services">
+                <Button> Results</Button>
+            </Link>
         </>
     },
 ]
