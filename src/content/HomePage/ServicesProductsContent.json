@@ -3,13 +3,33 @@
   "text": "If you offer a variety of services or products, organize them into categories for easy navigation. Each category can have a brief description and a link to view more details.",
   "section": [
     {
-      "title": "Construction",
-      "content": "How RAYA products can help Construction industry",
+      "title": "Custom Business Applications",
+      "content": "Tailored software solutions to fit unique business needs across industries",
       "icon": "notes.svg"
     },
     {
-      "title": "Retail and Distribution",
-      "content": "How RAYA products can help Retail and Distribution industry",
+      "title": "Supply Chain Optimization",
+      "content": "Streamline inventory and logistics for maximum efficiency, ideal for Manufacturing and Retail sectors",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "CRM Solutions",
+      "content": "Elevate customer relationships with advanced CRM systems, benefiting Retail, Hospitality, and Health Services.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Financial Management Tools",
+      "content": "Keep finances in check with comprehensive accounting software, crucial for Manufacturing and Retail.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Project Management Platforms",
+      "content": "Bring projects to successful completion on time and within budget, vital for Construction and Engineering.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "E-commerce and Booking Systems",
+      "content": "Expand sales and reservations with integrated online solutions, benefiting Retail, Hospitality, and Tourism.",
       "icon": "notes.svg"
     }
   ]
