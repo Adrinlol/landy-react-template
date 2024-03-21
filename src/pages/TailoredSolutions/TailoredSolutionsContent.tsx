@@ -4,12 +4,12 @@ import {Heading} from "../../components/TabContent/styles";
 import {Button} from "../../common/Button";
 import {Link} from "react-router-dom";
 
-
 const RetailSolutions = [
     {
         key: '1',
         label: 'Omnichannel Retailing',
         children: <MinDesc> Seamlessly integrate online and offline sales channels to provide a unified shopping experience for customers. </MinDesc>,
+
     },
     {
         key: '2',
@@ -185,7 +185,7 @@ export const tailoredSolutionsContent = [
                     </>
                 )
             })}
-            <Link to="/results/retail">
+            <Link to="/results?activeKey=1">
                 <Button> Results</Button>
             </Link>
         </>
@@ -213,7 +213,7 @@ export const tailoredSolutionsContent = [
                     </>
                 )
             })}
-            <Link to="">
+            <Link to="/results">
                 <Button> Results</Button>
             </Link>
         </>
@@ -241,41 +241,13 @@ export const tailoredSolutionsContent = [
                     </>
                 )
             })}
-            <Link to="results/construction">
+            <Link to="/results?activeKey=2">
                 <Button> Results</Button>
             </Link>
         </>
     },
     {
         key: '4',
-        label: 'Raya for Hospitality',
-        children: <>
-            <MinDesc>
-                Raya for Hospitality is a tailored solution designed to address the unique needs of hospitality businesses, including hotels, restaurants, and resorts. Built on Microsoft Dynamics 365 and ERPNext, Raya for Hospitality offers hospitality companies a comprehensive platform to streamline operations, enhance guest experiences, and drive revenue growth. Key features include:
-            </MinDesc>
-            {HospitalitySolutions.map((
-                item : {
-                    key: string,
-                    label: string,
-                    children: JSX.Element
-                }
-            ) => {
-                return (
-                    <>
-                        <Heading>
-                            {item.label}
-                        </Heading>
-                        {item.children}
-                    </>
-                )
-            })}
-            <Link to="results/hospitality">
-                <Button> Results</Button>
-            </Link>
-        </>
-    },
-    {
-        key: '5',
         label: 'Raya for Services',
         children: <>
             <MinDesc>
@@ -297,7 +269,35 @@ export const tailoredSolutionsContent = [
                     </>
                 )
             })}
-            <Link to="results/services">
+            <Link to="/results?activeKey=3">
+                <Button> Results</Button>
+            </Link>
+        </>
+    },
+    {
+        key: '5',
+        label: 'Raya for Hospitality',
+        children: <>
+            <MinDesc>
+                Raya for Hospitality is a tailored solution designed to address the unique needs of hospitality businesses, including hotels, restaurants, and resorts. Built on Microsoft Dynamics 365 and ERPNext, Raya for Hospitality offers hospitality companies a comprehensive platform to streamline operations, enhance guest experiences, and drive revenue growth. Key features include:
+            </MinDesc>
+            {HospitalitySolutions.map((
+                item : {
+                    key: string,
+                    label: string,
+                    children: JSX.Element
+                }
+            ) => {
+                return (
+                    <>
+                        <Heading>
+                            {item.label}
+                        </Heading>
+                        {item.children}
+                    </>
+                )
+            })}
+            <Link to="/results?activeKey=4">
                 <Button> Results</Button>
             </Link>
         </>

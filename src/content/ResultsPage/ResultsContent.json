@@ -1,0 +1,76 @@
+{
+    "content": [
+        {
+            "clientIndustry": "retail",
+            "description": "Raya Solutions collaborated with a diverse range of retail brands, including Nature to Nurture, Traders Choice, YCD Autoparts and Convenience Stores in Metro Manila, and Mermaid Manila Trading, to streamline their retail operations, optimize inventory management, and enhance customer experiences across both physical and online sales channels. By implementing a tailored ERPNext, these retail brands were able to improve inventory visibility, increase sales, and provide personalized service to their customers, resulting in improved operational efficiency and sustainable growth. ",
+            "clients": [
+                {
+                    "name": "Nature to Nurture",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Traders Choice",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "YCD Autoparts and Convenience Stores",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Mermaid Manila Trading",
+                    "icon": "graphs.svg"
+                }
+            ]
+        },
+        {
+            "clientIndustry": "construction",
+            "description": "Raya Solutions partnered with Sta Clara International, an international Construction and Engineering firm, to streamline their project management processes, optimize resource allocation, and improve collaboration across project teams. By implementing Raya for Construction, a custom ERP developed by Raya Solutions, Sta Clara International was able to enhance project visibility, control costs, and deliver projects on time and within budget, resulting in increased client satisfaction and improved project profitability.",
+            "clients": [
+                {
+                    "name": "Sta Clara International",
+                    "icon": "graphs.svg"
+                }
+            ]
+        },
+        {
+            "clientIndustry": "services",
+            "description": "Raya Solutions partnered with a diverse range of service-based businesses, including YCD Autocare, Reyes Bookkeeping Services, Physiolab PT and Performance Clinic, and Kintab Mobile Car Care, to streamline their service delivery, optimize resource allocation, and enhance client satisfaction. By implementing Raya for Services, our tailored solution built on ERPNext, these service providers were able to improve project management, optimize resource utilization, and provide personalized service to their clients, resulting in improved operational efficiency and customer retention.",
+            "clients": [
+                {
+                    "name": "YCD Autocare",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Reyes Bookkeeping Services",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Physiolab PT and Performance Clinic",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Kintab Mobile Car Care",
+                    "icon": "graphs.svg"
+                }
+            ]
+        },
+        {
+            "clientIndustry": "hospitality",
+            "description": "Raya Solutions collaborated with leading hospitality establishments, including Bai Resort, Camp Paraiso, and JAPI Hotel, to streamline their operations, enhance guest experiences, and drive revenue growth. By implementing Raya for Hospitality, our tailored solution powered by ERPNext, these hospitality firms were able to improve reservation management, optimize room allocations, and provide personalized service to their guests, resulting in improved guest satisfaction and increased revenue.",
+            "clients": [
+                {
+                    "name": "Bai Resort",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "Camp Paraiso",
+                    "icon": "graphs.svg"
+                },
+                {
+                    "name": "JAPI Hotel",
+                    "icon": "graphs.svg"
+                }
+            ]
+        }
+    ]
+}
