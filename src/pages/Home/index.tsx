@@ -46,7 +46,6 @@ const Home = () => {
             <Container>
                   <ScrollToTop />
                   <ContentBlock
-                    cardSection={false}
                     direction="right"
                     title={IntroContent.title}
                     content={IntroContent.text}
@@ -68,7 +67,6 @@ const Home = () => {
                     button={TailorSolutionButtonContent}
                     destination="/tailored-solutions"
                     icon="graphs.svg"
-                    cardSection={false}
                     id="faq"
                   />
             </Container>

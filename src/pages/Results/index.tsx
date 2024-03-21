@@ -2,10 +2,10 @@ import results from "../../content/ResultsPage/ResultsContent.json"
 import React, {lazy} from "react";
 import {Card, Col, Flex, Row, Tabs, TabsProps} from "antd";
 import {MinDesc} from "../../components/ContentBlock/styles";
-import {Heading, SubHeading} from "../../components/TabContent/styles";
+import {Heading} from "../../components/TabContent/styles";
 import {SvgIcon} from "../../common/SvgIcon";
 import Container from "../../common/Container";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"))
 

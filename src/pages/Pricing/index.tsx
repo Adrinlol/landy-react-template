@@ -49,7 +49,7 @@ const items: TabsProps['items'] = [
 const Pricing = () => {
     return (
         <Container>
-            <MiddleBlock title={Overview.title} content={Overview.description} />
+            <MiddleBlock title={Overview.title} content=""/>
             <Tabs defaultActiveKey="1" items={items} centered/>
         </Container>
     );
