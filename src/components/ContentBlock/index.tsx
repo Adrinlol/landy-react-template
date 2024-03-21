@@ -68,6 +68,7 @@ const ContentBlock = ({
                   <Row justify="space-between">
                     {typeof cardSection === "object" &&
                         cardSection.map(
+
                             (
                                 item: {
                                   title: string;

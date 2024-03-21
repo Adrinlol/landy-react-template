@@ -9,7 +9,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const WhoIsRaya = () => {
     return (
         <Container>
-            <MiddleBlock title={WhoIsRayaContent.title} content={WhoIsRayaContent.description}/>
+            <MiddleBlock title={WhoIsRayaContent.title} content=""/>
             <ContentBlock
                 id="focus-on-value"
                 icon=""
