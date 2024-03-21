@@ -14,6 +14,7 @@ import {
   MinPara,
   StyledRow,
   ButtonWrapper,
+  MinDesc,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
@@ -24,7 +25,7 @@ const ContentBlock = ({
   title,
   content,
   section,
-  cardSection = false,
+  cardSection,
   button,
   destination,
   t,
@@ -74,13 +75,11 @@ const ContentBlock = ({
                       </ButtonWrapper>
                     </Link>
                   <Row justify="space-between">
-                    {typeof section === "object" &&
-                        section.map(
+                    {typeof cardSection === "object" &&
+                        cardSection.map(
                             (
                                 item: {
                                   title: string;
-                                  content: string;
-                                  icon: string;
                                 },
                                 id: number
                             ) => {
@@ -116,10 +115,6 @@ const ContentBlock = ({
                                 height="60px"
                               />}
                               {
-                                cardSection ?
-                                    <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
-                                      <SubHeading> {t(item.title)}</SubHeading>
-                                    </Card> :
                                   <>
                                     <MinTitle>{t(item.title)}</MinTitle>
                                     <MinPara>{t(item.content)}</MinPara>
@@ -129,6 +124,21 @@ const ContentBlock = ({
                           );
                         }
                       )}
+                    {typeof cardSection === "object" &&
+                        cardSection.map((item: {title: string}) => {
+                          return (
+                              <Col key={id} xl={11} lg={11} xs={24}>
+                                  <Card bordered hoverable size="small" style={{
+                                    marginBottom: "1em",
+                                    borderColor: "#349ade",
+                                    textAlign: "center"}}
+                                  >
+                                    <MinDesc> {t(item.title)}</MinDesc>
+                                  </Card>
+                              </Col>
+                          )
+                        })
+                    }
                   </Row>
                 </ServiceWrapper>
               )}
