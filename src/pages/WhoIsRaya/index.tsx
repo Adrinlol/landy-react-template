@@ -15,8 +15,7 @@ const WhoIsRaya = () => {
                 icon=""
                 title={WhoIsRayaContent.focusOnValue.title}
                 content={WhoIsRayaContent.focusOnValue.description}
-                section={WhoIsRayaContent.focusOnValue.section}
-                cardSection={true}
+                cardSection={WhoIsRayaContent.focusOnValue.cardSection}
                 direction="right"
             />
             <ContentBlock
@@ -24,8 +23,23 @@ const WhoIsRaya = () => {
                 icon=""
                 title={WhoIsRayaContent.clientCentric.title}
                 content={WhoIsRayaContent.clientCentric.description}
-                section={WhoIsRayaContent.clientCentric.section}
-                cardSection={true}
+                cardSection={WhoIsRayaContent.clientCentric.cardSection}
+                direction="left"
+            />
+            <ContentBlock
+                id="future-ready"
+                icon=""
+                title={WhoIsRayaContent.futureReady.title}
+                content={WhoIsRayaContent.futureReady.description}
+                cardSection={WhoIsRayaContent.futureReady.cardSection}
+                direction="right"
+            />
+            <ContentBlock
+                id="trust-and-reliability"
+                icon=""
+                title={WhoIsRayaContent.trustAndReliability.title}
+                content={WhoIsRayaContent.trustAndReliability.description}
+                cardSection={WhoIsRayaContent.trustAndReliability.cardSection}
                 direction="left"
             />
         </Container>

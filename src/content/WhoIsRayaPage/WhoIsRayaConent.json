@@ -4,78 +4,94 @@
   "focusOnValue": {
     "title": "Delivering Tangible Benefits to Our Clients",
     "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results. Here's how we focus on delivering value to our clients: ",
-    "section": [
+    "cardSection": [
       {
-        "title": "Strategic Partnership",
-        "content": "",
-        "icon": ""
+        "title": "Strategic Partnership"
       },
       {
-        "title": "Tailored Solutions",
-        "content": "",
-        "icon": ""
+        "title": "Tailored Solutions"
       },
       {
-        "title": "Industry Expertise",
-        "content": "",
-        "icon": ""
+        "title": "Industry Expertise"
       },
       {
-        "title": "Technology Innovation",
-        "content": "",
-        "icon": ""
+        "title": "Technology Innovation"
       },
       {
-        "title": "Measurable Results",
-        "content": "",
-        "icon": ""
+        "title": "Measurable Results"
       },
       {
-        "title": "Ongoing Support",
-        "content": "",
-        "icon": ""
+        "title": "Ongoing Support"
       }
     ]
   },
   "clientCentric": {
-      "title": "Client-Centric Approach: Putting Your Success First ",
+      "title": "Putting Your Success First ",
       "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
-      "section": [
+      "cardSection": [
         {
-          "title": "Understanding Your Needs",
-          "content": "",
-          "icon": ""
+          "title": "Understanding Your Needs"
         },
         {
-          "title": "Collaborative Partnership",
-          "content": "",
-          "icon": ""
+          "title": "Collaborative Partnership"
         },
         {
-          "title": "Customized Solutions",
-          "content": "",
-          "icon": ""
+          "title": "Customized Solutions"
         },
         {
-          "title": "Proactive Communication",
-          "content": "",
-          "icon": ""
+          "title": "Proactive Communication"
         },
         {
-          "title": "Empowering Our Clients",
-          "content": "",
-          "icon": ""
+          "title": "Empowering Our Clients"
         },
         {
-          "title": "Continuous Improvement",
-          "content": "",
-          "icon": ""
+          "title": "Continuous Improvement"
         },
         {
-          "title": "Measuring Success",
-          "content": "",
-          "icon": ""
+          "title": "Measuring Success"
         }
       ]
+  },
+  "futureReady": {
+    "title": "Empowering Your Business for Tomorrow",
+    "description": "At Raya Solutions, we understand that the business landscape is constantly evolving, and we are committed to helping our clients stay ahead of the curve with future-ready solutions. By leveraging cutting-edge technologies, embracing innovation, and anticipating future trends, we empower our clients to thrive in an ever-changing world. Here's how we ensure that our solutions are future-ready: ",
+    "cardSection": [
+      {
+        "title": "Innovation and Technology Leadership"
+      },
+      {
+        "title": "Continuous Innovation and Improvement"
+      },
+      {
+        "title": "Scalability and Flexibility"
+      },
+      {
+        "title": "Future-Proofing Strategies"
+      },
+      {
+        "title": "Thought Leadership and Industry Insights"
+      }
+    ]
+  },
+  "trustAndReliability": {
+    "title": "Building Strong Partnerships Based on Trust",
+    "description": "At Raya Solutions, trust and reliability are the foundation of our client relationships. We understand that trust is earned through transparency, integrity, and consistent delivery of results. That's why we prioritize building strong partnerships based on trust and reliability with our clients. Here's how we ensure that our clients can trust us to deliver:",
+    "cardSection": [
+      {
+        "title": "Commitment to Excellence"
+      },
+      {
+        "title": "Reliability and Consistency"
+      },
+      {
+        "title": "Proven Track Record"
+      },
+      {
+        "title": "Customer-Centric Approach"
+      },
+      {
+        "title": "Transparency and Open Communication"
+      }
+    ]
   }
 }
