@@ -11,6 +11,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"))
 
 function demoResultChildren(items: {
     clientIndustry: string,
+    industryName: string
     description: string,
     clients: {
         name: string,
@@ -21,6 +22,7 @@ function demoResultChildren(items: {
         items.map((item: {
             clientIndustry: string,
             description: string,
+            industryName: string,
             clients: {
                 name: string,
                 icon: string
@@ -48,7 +50,7 @@ function demoResultChildren(items: {
                     </Row>
                     <Row justify="center">
                         <Heading>
-                            {`Demonstrating Results Raya for ${item.clientIndustry[0].toUpperCase() + item.clientIndustry.slice(1)}`}
+                            {`Demonstrating Results Raya for ${item.industryName}`}
                         </Heading>
                         <MinDesc> {item.description} </MinDesc>
                     </Row>
@@ -62,7 +64,6 @@ const DemoResultTabs: TabsProps['items'] = [
     {
         key: "1",
         label: "Retail",
-        // card grid containing clients and description
         children: demoResultChildren(results.content, "retail")
     },
     {
@@ -79,6 +80,11 @@ const DemoResultTabs: TabsProps['items'] = [
         key: "4",
         label: "Hospitality",
         children: demoResultChildren(results.content, "hospitality")
+    },
+    {
+        key: "5",
+        label: "Food and Services",
+        children: demoResultChildren(results.content, "foodAndBeverages")
     },
 ]
 

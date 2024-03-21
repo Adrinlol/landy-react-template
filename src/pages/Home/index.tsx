@@ -63,7 +63,7 @@ const Home = () => {
                   <ContentBlock
                     direction="right"
                     title={TailoredSolutions.title}
-                    content=""
+                    content={TailoredSolutions.content}
                     button={TailorSolutionButtonContent}
                     destination="/tailored-solutions"
                     icon="graphs.svg"
