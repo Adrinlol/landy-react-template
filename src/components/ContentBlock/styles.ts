@@ -64,3 +64,8 @@ export const ButtonWrapper = styled("div")`
         margin-left: 20px;
     }
 `;
+
+export const PopoverContainer = styled("div")`
+    width: 100%;
+    max-width: 500px
+`

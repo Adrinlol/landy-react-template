@@ -1,4 +1,4 @@
-import {Card, Col, Collapse, Row} from "antd";
+import {Card, Col, Collapse, Popover, Row} from "antd";
 import {Fade} from "react-awesome-reveal";
 import {withTranslation} from "react-i18next";
 
@@ -9,9 +9,8 @@ import {
   Content,
   ContentSection,
   ContentWrapper,
-  MinDesc,
   MinPara,
-  MinTitle,
+  MinTitle, PopoverContainer,
   ServiceWrapper,
   StyledRow,
 } from "./styles";
@@ -72,14 +71,18 @@ const ContentBlock = ({
                             (
                                 item: {
                                   title: string;
+                                  description: string;
                                 },
                                 id: number
                             ) => {
+                              const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
                               return (
                                   <Col key={id} xl={11} lg={11} xs={24}>
+                                    <Popover placement="bottom" content={popOverContent}>
                                         <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
                                           <SubHeading> {t(item.title)}</SubHeading>
                                         </Card>
+                                    </Popover>
                                   </Col>
                               );
                             }
@@ -117,16 +120,15 @@ const ContentBlock = ({
                         }
                       )}
                     {typeof cardSection === "object" &&
-                        cardSection.map((item: {title: string}) => {
+                        cardSection.map((item: {title: string, description: string}) => {
+                          const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
                           return (
                               <Col key={id} xl={11} lg={11} xs={24}>
-                                  <Card bordered hoverable size="small" style={{
-                                    marginBottom: "1em",
-                                    borderColor: "#349ade",
-                                    textAlign: "center"}}
-                                  >
-                                    <MinDesc> {t(item.title)}</MinDesc>
+                                <Popover placement="bottom" content={popOverContent}>
+                                  <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
+                                    <SubHeading> {t(item.title)}</SubHeading>
                                   </Card>
+                                </Popover>
                               </Col>
                           )
                         })

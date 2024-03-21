@@ -7,7 +7,8 @@ export interface ContentBlockProps {
   collapseItems?: CollapseProps['items'];
   destination?: string;
   cardSection?: {
-    title: string
+    title: string;
+    description: string;
   }[];
   section?: {
     title: string;
