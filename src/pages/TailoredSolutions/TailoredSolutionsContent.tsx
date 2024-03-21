@@ -1,9 +1,7 @@
-import {Collapse, CollapseProps} from "antd";
-import {MinDesc, MinPara} from "../../components/ContentBlock/styles";
+import {MinDesc} from "../../components/ContentBlock/styles";
 import React, {JSX} from "react";
-import {Heading, SubHeading} from "../../components/TabContent/styles";
+import {Heading} from "../../components/TabContent/styles";
 import {Button} from "../../common/Button";
-import {Span} from "../../components/Header/styles";
 import {Link} from "react-router-dom";
 
 

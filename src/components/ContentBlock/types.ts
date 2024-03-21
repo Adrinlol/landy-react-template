@@ -1,6 +1,5 @@
 import { TFunction } from "react-i18next";
 import {CollapseProps} from "antd";
-import React, {ReactNode, RefAttributes} from "react";
 export interface ContentBlockProps {
   icon: string;
   title: string;

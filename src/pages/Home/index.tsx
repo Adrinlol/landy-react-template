@@ -1,11 +1,8 @@
 import {lazy, useEffect} from "react";
 import IntroContent from "../../content/HomePage/IntroContent.json";
 import About from "../../content/HomePage/AboutContent.json";
-import IndustrySolutions from "../../content/HomePage/IndustrySolutionsContent.json";
 import ServicesProducts from "../../content/HomePage/ServicesProductsContent.json";
 import TailoredSolutions from "../../content/HomePage/TailoredSolutionsContent.json";
-import FrequentlyAskedQuestions from "../../content/HomePage/FaqContent.json";
-import {tailoredSolutionsContent} from "../TailoredSolutions/TailoredSolutionsContent";
 import {ConfigProvider} from "antd";
 import {scrollUp} from "../../common/ScrollToTop";
 

@@ -1,4 +1,4 @@
-import {Row, Col, Collapse, ConfigProvider, Card} from "antd";
+import {Row, Col, Collapse, Card} from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -13,7 +13,7 @@ import {
   MinTitle,
   MinPara,
   StyledRow,
-  ButtonWrapper, MinDesc,
+  ButtonWrapper,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
@@ -31,12 +31,6 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
 
   return (
     <ContentSection>
