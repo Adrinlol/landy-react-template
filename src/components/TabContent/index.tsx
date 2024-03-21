@@ -54,7 +54,9 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                             <Col xs={24} lg={colSpanFromItemsLength} xl={colSpanFromItemsLength} style={{
                                 marginBottom: "20px"
                             }}>
-                                <Card title={item.name} hoverable>
+                                <Card title={item.name} hoverable style={{
+                                    height: "100%"
+                                }}>
                                     {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
                                     {
                                         <>

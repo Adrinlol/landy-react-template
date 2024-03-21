@@ -1,14 +1,11 @@
 import { Content } from "../Block/styles";
 import { Col, Row, Space } from "antd";
-import { lazy } from "react";
 import ImageCardLink from "../../components/ImageCardLink";
 import Container from "../../common/Container";
 
 import {
   ContentWrapper,
-} from "../../components/ContentBlock/styles";
-
-const Contact = lazy(() => import("../../components/ContactForm"));
+} from "../ContentBlock/styles";
 
 interface Props {
   fb: string;
