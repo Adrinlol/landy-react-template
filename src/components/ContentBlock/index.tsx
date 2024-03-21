@@ -1,20 +1,19 @@
-import {Row, Col, Collapse, Card} from "antd";
-import { Fade } from "react-awesome-reveal";
-import { withTranslation } from "react-i18next";
+import {Card, Col, Collapse, Row} from "antd";
+import {Fade} from "react-awesome-reveal";
+import {withTranslation} from "react-i18next";
 
-import { ContentBlockProps } from "./types";
-import { Button } from "../../common/Button";
-import { SvgIcon } from "../../common/SvgIcon";
+import {ContentBlockProps} from "./types";
+import {ConditionalButtonWrapper} from "../../common/Button";
+import {SvgIcon} from "../../common/SvgIcon";
 import {
-  ContentSection,
   Content,
+  ContentSection,
   ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
-  StyledRow,
-  ButtonWrapper,
   MinDesc,
+  MinPara,
+  MinTitle,
+  ServiceWrapper,
+  StyledRow,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
@@ -52,7 +51,6 @@ const ContentBlock = ({
               {direction === "right" ? (
                   <>
                     <Link to={destination ?? ""}>
-                      <ButtonWrapper>
                         {typeof button === "object" &&
                           button.map(
                             (
@@ -60,19 +58,12 @@ const ContentBlock = ({
                                 color?: string;
                                 title: string;
                               },
-                              id: number
                             ) => {
                               return (
-                                    <Button
-                                        key={id}
-                                        color={item.color}
-                                    >
-                                      {t(item.title)}
-                                    </Button>
+                                 <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
                               );
                             }
                           )}
-                      </ButtonWrapper>
                     </Link>
                   <Row justify="space-between">
                     {typeof cardSection === "object" &&

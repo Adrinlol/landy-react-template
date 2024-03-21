@@ -52,15 +52,15 @@ export const MinPara = styled("p")`
 `;
 
 export const ButtonWrapper = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    max-width: 80%;
-  }
+    @media screen and (min-width: 1024px) {
+        max-width: 80%;
+    }
 
-  button:last-child {
-    margin-left: 20px;
-  }
+    button:last-child {
+        margin-left: 20px;
+    }
 `;

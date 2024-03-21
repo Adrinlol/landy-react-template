@@ -27,25 +27,33 @@ function demoResultChildren(items: {
             }[]
         }) => {
             return (item.clientIndustry === industryFilter &&
-                <Row justify="center" gutter={24}>
-                    {
-                        item.clients.map((client: {name: string, icon: string}) => {
-                            return (
-                                <Col span={11} style={{
-                                    marginBottom: "2em"
-                                }}>
-                                    <Card size="small">
-                                        <Flex vertical align="center">
-                                            <SvgIcon src={client.icon} width="75px" height="75px"/>
-                                            <Heading> {client.name} </Heading>
-                                        </Flex>
-                                    </Card>
-                                </Col>
-                            )
-                        })
-                    }
-                    <MinDesc> {item.description} </MinDesc>
-                </Row>)
+                <>
+                    <Row justify="center" gutter={24}>
+                        {
+                            item.clients.map((client: {name: string, icon: string}) => {
+                                return (
+                                    <Col span={11} style={{
+                                        marginBottom: "2em"
+                                    }}>
+                                        <Card size="small">
+                                            <Flex vertical align="center">
+                                                <SvgIcon src={client.icon} width="75px" height="75px"/>
+                                                <Heading> {client.name} </Heading>
+                                            </Flex>
+                                        </Card>
+                                    </Col>
+                                )
+                            })
+                        }
+                    </Row>
+                    <Row justify="center">
+                        <Heading>
+                            {`Demonstrating Results Raya for ${item.clientIndustry[0].toUpperCase() + item.clientIndustry.slice(1)}`}
+                        </Heading>
+                        <MinDesc> {item.description} </MinDesc>
+                    </Row>
+                </>
+            )
         })
     )
 }
@@ -80,9 +88,11 @@ const Results = () => {
     const activeKey = searchParams.get('activeKey');
 
     return (
-        <Container>
+        <Container >
             <MiddleBlock title="Demonstrating Results" content=""/>
-            <Tabs centered defaultActiveKey={activeKey ?? "1"} items={DemoResultTabs}/>
+            <Tabs centered defaultActiveKey={activeKey ?? "1"} items={DemoResultTabs} style={{
+                marginBottom: "2em"
+            }}/>
         </Container>
     )
 }

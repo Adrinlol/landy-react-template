@@ -4,6 +4,7 @@ import {Button} from "../../common/Button";
 import React from "react";
 import {ContentWrapper} from "../MiddleBlock/styles";
 import {Content} from "../Block/styles";
+import {Link} from "react-router-dom";
 
 interface CardGridProps {
     items: {
@@ -75,7 +76,9 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                                     }
                                     <Divider/>
                                     <SubHeading>{item.priceRange}</SubHeading>
-                                    <Button> Request Quotation </Button>
+                                    <Link to="/contact">
+                                        <Button> Request Quotation </Button>
+                                    </Link>
                                 </Card>
                             </Col>
                         )
