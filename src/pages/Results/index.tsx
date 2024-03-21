@@ -21,8 +21,8 @@ function demoResultChildren(items: {
     return (
         items.map((item: {
             clientIndustry: string,
-            description: string,
             industryName: string,
+            description: string,
             clients: {
                 name: string,
                 icon: string
