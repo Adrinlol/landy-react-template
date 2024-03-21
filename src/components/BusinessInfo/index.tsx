@@ -49,7 +49,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
         </Row>
         <Row gutter={4} align="middle" justify="space-between">
             <Col xs={24} md={12} >
-                <ImageCardLink
+                 <ImageCardLink
                     image="svgrepo_phone.svg"
                     link="tel:09088180855"
                     title="Phone number"
@@ -75,7 +75,7 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
                 {/* Content for the second column containing the iframe */}
                 <ContentWrapper>
                     <Content>
-                        <iframe width="100%" height={350}
+                        <iframe title="map" width="100%" height={350}
                         src="https://www.openstreetmap.org/export/embed.html?bbox=121.06013327836992%2C14.588865828256386%2C121.0610988736153%2C14.589634162876383&amp;layer=mapnik"
                         />
                     </Content>
