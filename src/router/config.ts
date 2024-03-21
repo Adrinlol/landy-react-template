@@ -36,24 +36,9 @@ const routes = [
     component: "TailoredSolutions"
   },
   {
-    path: "/results/construction",
+    path: "/results",
     exact: true,
-    component: "Results/Construction"
-  },
-  {
-    path: "/results/hospitality",
-    exact: true,
-    component: "Results/Hospitality"
-  },
-  {
-    path: "/results/Retail",
-    exact: true,
-    component: "Results/Retail"
-  },
-  {
-    path: "/results/Services",
-    exact: true,
-    component: "Results/Services"
+    component: "Results"
   },
 ];
 
