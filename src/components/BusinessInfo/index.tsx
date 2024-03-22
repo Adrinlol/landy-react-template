@@ -1,11 +1,12 @@
 import { Content } from "../Block/styles";
-import { Col, Row, Space } from "antd";
+import {Col, Flex, Row, Space} from "antd";
 import ImageCardLink from "../../components/ImageCardLink";
 import Container from "../../common/Container";
 
 import {
-  ContentWrapper,
+    ContentWrapper, MinDesc
 } from "../ContentBlock/styles";
+import {Heading} from "../TabContent/styles";
 
 interface Props {
   fb: string;
@@ -67,9 +68,12 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
         </Row>
         <Row align="middle" justify="space-between">
             <Col md={12} xs={24}>
-                {line1}<br/>
-                {line2}<br/>
-                {line3}
+                <Flex vertical>
+                    <Heading> Our Address </Heading>
+                    <MinDesc>{line1}</MinDesc>
+                    <MinDesc>{line2}</MinDesc>
+                    <MinDesc>{line3}</MinDesc>
+                </Flex>
             </Col>
             <Col md={12} xs={24}>
                 {/* Content for the second column containing the iframe */}

@@ -45,8 +45,10 @@ const ContentBlock = ({
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{content}</Content>
+              <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
+                <h6>{t(title)}</h6>
+              </Flex>
+                <Content>{content}</Content>
               {direction === "right" ? (
                   <>
                     <Link to={destination ?? ""}>
@@ -146,7 +148,9 @@ const ContentBlock = ({
                     ) => {
                       return (
                           <Link to={destination ?? ""}>
-                            <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
+                            <Flex justify={window.innerWidth < 684 ? "center" : ""}>
+                              <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
+                            </Flex>
                           </Link>
                       );
                     }
