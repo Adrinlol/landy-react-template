@@ -1,4 +1,4 @@
-import {Card, Col, Collapse, Popover, Row} from "antd";
+import {Card, Col, Collapse, Flex, Popover, Row} from "antd";
 import {Fade} from "react-awesome-reveal";
 import {withTranslation} from "react-i18next";
 
@@ -103,18 +103,17 @@ const ContentBlock = ({
                           id: number
                         ) => {
                           return (
-                            <Col key={id} xl={11} lg={11} xs={24}>
+                            <Col key={id} xl={12} lg={12} xs={24}>
+                              <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
                               {item.icon !== "" && <SvgIcon
                                 src={item.icon}
                                 width="60px"
                                 height="60px"
                               />}
-                              {
-                                  <>
+
                                     <MinTitle>{t(item.title)}</MinTitle>
                                     <MinPara>{t(item.content)}</MinPara>
-                                  </>
-                              }
+                                  </Flex>
                             </Col>
                           );
                         }
@@ -137,6 +136,21 @@ const ContentBlock = ({
                 </ServiceWrapper>
               )}
             </ContentWrapper>
+            {typeof button === "object" &&
+                button.map(
+                    (
+                        item: {
+                          color?: string;
+                          title: string;
+                        },
+                    ) => {
+                      return (
+                          <Link to={destination ?? ""}>
+                            <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
+                          </Link>
+                      );
+                    }
+                )}
           </Col>
           {typeof collapseItems === "object" &&
               <Collapse size="large" accordion items={collapseItems}

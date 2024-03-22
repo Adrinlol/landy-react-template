@@ -21,7 +21,7 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 //              content
 const TailorSolutionButtonContent = [
     {
-        "title": "See Here"
+        "title": "See More"
     }
 ]
 
@@ -58,16 +58,20 @@ const Home = () => {
                   />
                 <MiddleBlock
                     title={ServicesProducts.title}
-                    content={ServicesProducts.text}
+                    // content={ServicesProducts.text}
+                    content=""
                     section={ServicesProducts.section}/>
                   <ContentBlock
-                    direction="right"
+                    direction="left"
+                    icon="graphs.svg"
+                    id="tailored-solutions"
+                    content=""
                     title={TailoredSolutions.title}
-                    content={TailoredSolutions.content}
+                    section={TailoredSolutions.section}
                     button={TailorSolutionButtonContent}
                     destination="/tailored-solutions"
-                    icon="graphs.svg"
-                    id="faq"
+                    // icon="graphs.svg"
+                    // id="faq"
                   />
             </Container>
           </ConfigProvider>

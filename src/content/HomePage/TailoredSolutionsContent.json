@@ -1,5 +1,34 @@
 {
   "title": "Tailored Solutions",
-  "content": "At Raya Solutions, we understand that no two businesses are alike. That's why we specialize in crafting bespoke solutions that are as unique as our clients. Whether you're in Retail, Manufacturing, or Construction, our team works closely with you to understand your specific challenges and objectives. By leveraging our deep industry knowledge and technical expertise, we design and implement Microsoft Dynamics 365 and ERPNext solutions that are perfectly aligned with your business needs, ensuring maximum efficiency, productivity, and ROI."
+  "content": "At Raya Solutions, we understand that no two businesses are alike. That's why we specialize in crafting bespoke solutions that are as unique as our clients. Whether you're in Retail, Manufacturing, or Construction, our team works closely with you to understand your specific challenges and objectives. By leveraging our deep industry knowledge and technical expertise, we design and implement Microsoft Dynamics 365 and ERPNext solutions that are perfectly aligned with your business needs, ensuring maximum efficiency, productivity, and ROI.",
+  "section": [
+    {
+      "title": "Retail",
+      "content": "",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Manufacturing",
+      "content": "",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Construction",
+      "content": "",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Hospitality",
+      "content": "",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Services",
+      "content": "",
+      "icon": "notes.svg"
+    }
+
+
+  ]
 
 }
