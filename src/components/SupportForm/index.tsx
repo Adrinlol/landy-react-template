@@ -32,7 +32,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
             <Block title={title} content={content} />
           </Slide>
         </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
+        <Col lg={12} md={12} sm={18} xs={18}>
           <Slide direction="right" triggerOnce>
             <FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
