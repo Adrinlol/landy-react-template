@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledContainer = styled("div")`
   display: inline-block;
   width: 100%;
-  padding: 10px 5px;
+  padding: 10px 0;
   margin-bottom: -0.625rem;
 `;
 
@@ -15,6 +15,7 @@ export const StyledTextArea = styled("textarea")`
 
 export const Label = styled("label")`
   display: block;
+    width: 100%;
   padding-bottom: 10px;
   text-transform: capitalize;
 `;

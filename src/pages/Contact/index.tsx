@@ -14,7 +14,7 @@ const Contact = () => {
         <Container>
             <MiddleBlock title={Overview.title} content={Overview.description}/>
             <BusinessInfo
-                fb={ContactInfo.facebook}
+                 fb={ContactInfo.facebook}
                 x={ContactInfo.twitterx}
                 email={ContactInfo.email}
                 phone={ContactInfo.phone}

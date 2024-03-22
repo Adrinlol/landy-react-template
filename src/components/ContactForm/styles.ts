@@ -27,10 +27,10 @@ export const Span = styled("span")`
 `;
 
 export const ButtonContainer = styled("div")`
-  text-align: end;
-  position: relative;
+    display: flex;
+    justify-content: start;
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
-  }
+   }
 `;

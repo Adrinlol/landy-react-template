@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import {Row, Col, Form} from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -8,7 +8,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
@@ -24,7 +24,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
+      <Row justify="space-between">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
@@ -32,8 +32,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
+            <Form autoComplete="off" onFinish={handleSubmit}>
                 <Input
                   type="text"
                   name="name"
@@ -42,8 +41,6 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
                 <Input
                   type="email"
                   name="email"
@@ -51,9 +48,8 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   value={values.email || ""}
                   onChange={handleChange}
                 />
-              </Col>
+
               <ValidationType type="email" />
-              <Col span={24}>
                 <Input
                   type="phone"
                   name="phone"
@@ -61,9 +57,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   value={values.phone || ""}
                   onChange={handleChange}
                 />
-              </Col>
               <ValidationType type="phone" />
-              <Col span={24}>
                 <Input
                   type="text"
                   name="category"
@@ -71,8 +65,6 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   value={values.category || ""}
                   onChange={handleChange}
                 />
-              </Col>
-              <Col span={24}>
                 <TextArea
                   placeholder="Describe your inquiry"
                   value={values.description || ""}
@@ -80,11 +72,11 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="description" />
-              </Col>
+
               <ButtonContainer>
                 <Button name="submit">{t("Submit a ticket")}</Button>
               </ButtonContainer>
-            </FormGroup>
+            </Form>
           </Slide>
         </Col>
       </Row>
