@@ -3,7 +3,6 @@ import IntroContent from "../../content/HomePage/IntroContent.json";
 import About from "../../content/HomePage/AboutContent.json";
 import ServicesProducts from "../../content/HomePage/ServicesProductsContent.json";
 import TailoredSolutions from "../../content/HomePage/TailoredSolutionsContent.json";
-import {ConfigProvider} from "antd";
 import {scrollUp} from "../../common/ScrollToTop";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -31,18 +30,6 @@ const Home = () => {
     }, []);
   return (
       <>
-          <ConfigProvider
-            theme={{
-                components: {
-                    Collapse: {
-                        headerBg: "#349ade",
-                        contentBg: "#FFFFFF"
-                    }
-                },
-                token: {
-                    colorTextHeading: "#FFFFFF"
-                }
-            }}>
             <Container>
                   <ScrollToTop />
                   <ContentBlock
@@ -58,7 +45,6 @@ const Home = () => {
                   />
                 <MiddleBlock
                     title={ServicesProducts.title}
-                    // content={ServicesProducts.text}
                     content=""
                     section={ServicesProducts.section}/>
                   <ContentBlock
@@ -70,11 +56,8 @@ const Home = () => {
                     section={TailoredSolutions.section}
                     button={TailorSolutionButtonContent}
                     destination="/tailored-solutions"
-                    // icon="graphs.svg"
-                    // id="faq"
                   />
             </Container>
-          </ConfigProvider>
       </>
   );
 };

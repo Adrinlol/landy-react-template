@@ -2,25 +2,31 @@ import { Row } from "antd";
 import styled from "styled-components";
 
 export const ContentSection = styled("section")`
-  position: relative;
+    //display: flex;
+    //justify-content: center;
   padding: 10rem 0 8rem;
+    width: 100%;
 
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 4rem;
+       
   }
 `;
 
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
+     
 `;
 
 export const StyledRow = styled(Row)`
   flex-direction: ${({ direction }: { direction: string }) =>
     direction === "left" ? "row" : "row-reverse"};
+     
 `;
 
 export const ContentWrapper = styled("div")`
   position: relative;
+  width: 100%;
   max-width: 540px;
 
   @media only screen and (max-width: 575px) {
@@ -32,6 +38,7 @@ export const ServiceWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+     
 `;
 
 export const MinTitle = styled("h6")`
@@ -49,6 +56,7 @@ export const MinDesc = styled("p")`
 
 export const MinPara = styled("p")`
   font-size: 13px;
+     
 `;
 
 export const ButtonWrapper = styled("div")`
