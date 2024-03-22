@@ -8,7 +8,7 @@ export const ContentSection = styled("section")`
     width: 100%;
 
   @media only screen and (max-width: 1024px) {
-    padding: 4rem 0 4rem;
+    //padding: 4rem 0 4rem;
        
   }
 `;
@@ -39,6 +39,15 @@ export const ServiceWrapper = styled("div")`
   justify-content: space-between;
   max-width: 100%;
      
+`;
+
+export const Title = styled("h6")`
+  //line-height: 1rem;
+  padding: 0.5rem 0;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  color: #000;
+  font-family: "Motiva Sans Bold", sans-serif;
 `;
 
 export const MinTitle = styled("h6")`

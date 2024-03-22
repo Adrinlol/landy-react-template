@@ -12,7 +12,7 @@ import {
   MinPara,
   MinTitle, PopoverContainer,
   ServiceWrapper,
-  StyledRow,
+  StyledRow, Title,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
@@ -46,7 +46,7 @@ const ContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
-                <h6>{t(title)}</h6>
+                <Title>{t(title)}</Title>
               </Flex>
                 <Content>{content}</Content>
               {direction === "right" ? (
