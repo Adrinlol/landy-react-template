@@ -1,4 +1,4 @@
-import {Row, Col, Form} from "antd";
+import { Row, Col, Select } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -7,8 +7,9 @@ import validateSupport from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
+import SelectInput from "../../common/Select";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, Span, ButtonContainer } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
@@ -24,15 +25,16 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between">
+      <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
             <Block title={title} content={content} />
           </Slide>
         </Col>
-        <Col lg={12} md={12} sm={18} xs={18}>
+        <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <Form autoComplete="off" onFinish={handleSubmit}>
+            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+              <Col span={24}>
                 <Input
                   type="text"
                   name="name"
@@ -41,6 +43,8 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
+              </Col>
+              <Col span={24}>
                 <Input
                   type="email"
                   name="email"
@@ -48,8 +52,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   value={values.email || ""}
                   onChange={handleChange}
                 />
-
+              </Col>
               <ValidationType type="email" />
+              <Col span={24}>
                 <Input
                   type="phone"
                   name="phone"
@@ -57,14 +62,21 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   value={values.phone || ""}
                   onChange={handleChange}
                 />
+              </Col>
               <ValidationType type="phone" />
-                <Input
-                  type="text"
-                  name="category"
-                  placeholder="Choose a category"
-                  value={values.category || ""}
-                  onChange={handleChange}
-                />
+              <Col span={24}>
+                <SelectInput
+                    name="category"
+                    onChange={handleChange}
+                    defaultValue="account">
+                    {/** TODO: make this dynamic. **/ }
+                    <Select.Option value="account">Account assistance</Select.Option>
+                    <Select.Option value="billing">Billing inquiries</Select.Option>
+                    <Select.Option value="product">Product feedback</Select.Option>
+                    <Select.Option value="technical">Technical support</Select.Option>
+                </SelectInput>
+              </Col>
+              <Col span={24}>
                 <TextArea
                   placeholder="Describe your inquiry"
                   value={values.description || ""}
@@ -72,11 +84,11 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="description" />
-
+              </Col>
               <ButtonContainer>
                 <Button name="submit">{t("Submit a ticket")}</Button>
               </ButtonContainer>
-            </Form>
+            </FormGroup>
           </Slide>
         </Col>
       </Row>
