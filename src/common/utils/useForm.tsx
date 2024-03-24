@@ -127,6 +127,7 @@ export const useSupportForm = (validate: any) => {
     files: "",
     description: ""
   });
+  console.log(values);
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
@@ -142,6 +143,7 @@ export const useSupportForm = (validate: any) => {
     setErrors(validate(values));
     // Your url for API
     const url = "";
+    console.log("Submit: " + values);
     if (Object.values(values).every((x) => x !== "")) {
       axios
         .post(url, {

@@ -35,6 +35,17 @@ export interface InputProps {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
 }
+export interface SelectProps {
+  name: string;
+  defaultValue: string;
+  t: TFunction;
+  onChange: (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void;
+  children: React.ReactNode;
+}
 export interface validateProps {
   name: string;
   message: string;
