@@ -8,6 +8,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import SelectInput from "../../common/Select";
+import UploadInput from "../../common/UploadDragger";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
@@ -77,13 +78,19 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 </SelectInput>
               </Col>
               <Col span={24}>
+                <UploadInput
+                    name="attachment"
+                    onChange={handleChange}
+                    multiple={false} />
+              </Col>
+              <Col span={24}>
                 <TextArea
                   placeholder="Describe your inquiry"
-                  value={values.description || ""}
-                  name="description"
+                  value={values.message || ""}
+                  name="message"
                   onChange={handleChange}
                 />
-                <ValidationType type="description" />
+                <ValidationType type="message" />
               </Col>
               <ButtonContainer>
                 <Button name="submit">{t("Submit a ticket")}</Button>

@@ -119,13 +119,14 @@ export const useFeedbackForm = (validate: any) => {
 };
 
 export const useSupportForm = (validate: any) => {
+  // TODO: handle upload.
   const [values, setValues] = useState({
     name: "",
     email: "",
     phone: "",
     category: "",
     files: "",
-    description: ""
+    message: ""
   });
   console.log(values);
   const [errors, setErrors] = useState({});
@@ -157,7 +158,8 @@ export const useSupportForm = (validate: any) => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues((values) => (values = { name: "", email: "", phone: "", category: "", files: "", description: "" }));
+      setValues((values) => (values = { name: "", email: "", phone: "",
+      category: "", files: "", message: "" }));
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);
