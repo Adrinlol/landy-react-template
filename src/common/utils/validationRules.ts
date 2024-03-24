@@ -32,6 +32,7 @@ export function validateFeedback (values: feedbackProps) {
 
 export function validateSupport (values: supportProps) {
     let errors = {} as supportProps;
+    console.log(values.message);
     
     if (!values.name) {
         errors.name = "Name is required";
@@ -44,8 +45,8 @@ export function validateSupport (values: supportProps) {
       if (!values.phone) {
           errors.phone = "Phone number is invalid";
       } // TODO: Create regex for contact.
-      if (!values.description) {
-        errors.description = "Description is required";
+      if (!values.message) {
+        errors.message = "Description is required";
       }
     
     return errors;

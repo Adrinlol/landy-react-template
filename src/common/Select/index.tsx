@@ -6,7 +6,7 @@ import { Select } from "antd";
 
 const SelectInput = ({ name, defaultValue, onChange, t, children, ...rest }: SelectProps) => (
   <Container>
-    <Label htmlFor={name}>{t(name)}</Label>
+      <Label htmlFor={name}>{t(name)}</Label>
     <StyledSelect
       id={name}
       defaultValue={defaultValue}

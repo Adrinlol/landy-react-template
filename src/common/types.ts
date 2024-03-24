@@ -1,4 +1,7 @@
 import { TFunction } from "react-i18next";
+import Antd from "antd";
+import { UploadFile } from 'antd/lib/upload/interface';
+
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
@@ -46,6 +49,18 @@ export interface SelectProps {
   ) => void;
   children: React.ReactNode;
 }
+export interface UploadProps {
+  name: string;
+  multiple: boolean;
+  t: TFunction;
+  onChange: (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | any
+  ) => void;
+  children?: React.ReactNode;
+}
 export interface validateProps {
   name: string;
   message: string;
@@ -62,5 +77,5 @@ export interface supportProps {
     phone: string;
     category: string;
     files: string;
-    description: string;
+    message: string;
 }
