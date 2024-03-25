@@ -19,6 +19,7 @@ export interface ContentBlockProps {
     | {
         title: string;
         color?: undefined;
+        key?: string;
       }
     | {
         title: string;

@@ -42,9 +42,9 @@ const TailorSolutionButtonContent = [
 ]
 
 const Home = () => {
-    // useEffect(() => {
-    //     scrollUp()
-    // }, []);
+    useEffect(() => {
+        scrollUp()
+    }, []);
   return (
       <>
             <Container>

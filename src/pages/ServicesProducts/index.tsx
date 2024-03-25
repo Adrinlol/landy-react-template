@@ -24,8 +24,8 @@ const ServicesProducts = () => {
         <Container>
             <MiddleBlock
               title={ProductCategories.title}
-              content={ProductCategories.description}
-              section={ProductCategories.categories}/>
+              content={ProductCategories.text}
+              section={ProductCategories.section}/>
         </Container>
     );
 };

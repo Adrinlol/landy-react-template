@@ -14,7 +14,6 @@ import {
   Outline,
   Span,
 } from "./styles";
-import {PngIcon} from "../../common/PngIcon";
 import {Link} from "react-router-dom";
 import {SvgIcon} from "../../common/SvgIcon";
 
