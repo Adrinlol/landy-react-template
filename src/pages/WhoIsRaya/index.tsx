@@ -12,34 +12,34 @@ const WhoIsRaya = () => {
             <ContentBlock
                 id="focus-on-value"
                 icon=""
+                direction="right"
                 title={WhoIsRayaContent.focusOnValue.title}
                 content={WhoIsRayaContent.focusOnValue.description}
                 cardSection={WhoIsRayaContent.focusOnValue.cardSection}
-                direction="right"
             />
             <ContentBlock
                 id="client-centric"
                 icon=""
+                direction="left"
                 title={WhoIsRayaContent.clientCentric.title}
                 content={WhoIsRayaContent.clientCentric.description}
                 cardSection={WhoIsRayaContent.clientCentric.cardSection}
-                direction="left"
             />
             <ContentBlock
                 id="future-ready"
+                direction="right"
                 icon=""
                 title={WhoIsRayaContent.futureReady.title}
                 content={WhoIsRayaContent.futureReady.description}
                 cardSection={WhoIsRayaContent.futureReady.cardSection}
-                direction="right"
             />
             <ContentBlock
                 id="trust-and-reliability"
                 icon=""
+                direction="left"
                 title={WhoIsRayaContent.trustAndReliability.title}
                 content={WhoIsRayaContent.trustAndReliability.description}
                 cardSection={WhoIsRayaContent.trustAndReliability.cardSection}
-                direction="left"
             />
         </Container>
     )

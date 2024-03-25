@@ -50,13 +50,11 @@ export const Title = styled("h6")`
   font-family: "Motiva Sans Bold", sans-serif;
 `;
 
-export const MinTitle = styled("h6")`
-  font-size: 15px;
+export const MinTitle = styled("p")`
+  font-size: 16px;
   line-height: 1rem;
-  padding: 0.5rem 0;
-  text-transform: uppercase;
   color: #000;
-  font-family: "Motiva Sans Light", sans-serif;
+  font-family: "Motiva Sans Bold", sans-serif;
 `;
 
 export const MinDesc = styled("p")`
@@ -70,17 +68,43 @@ export const MinPara = styled("p")`
 
 export const ButtonWrapper = styled("div")`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 100%;
+    gap: 1em;
+    width: 100%;
 
-    @media screen and (min-width: 1024px) {
-        max-width: 80%;
+    @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
     }
 
     button:last-child {
         margin-left: 20px;
     }
 `;
+
+export const ServiceContainer = styled("div")`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
+export const ServiceContentContainer = styled("div")`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 export const PopoverContainer = styled("div")`
     width: 100%;

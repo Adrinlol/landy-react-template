@@ -20,14 +20,31 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 //              content
 const TailorSolutionButtonContent = [
     {
-        "title": "See More"
-    }
+        title: "Retail",
+        key: "1"
+    },
+    {
+        title: "Manufacturing",
+        key: "2"
+    },
+    {
+        title: "Construction",
+        key: "3"
+    },
+    {
+        title: "Services",
+        key: "4"
+    },
+    {
+        title: "Hospitality",
+        key: "5"
+    },
 ]
 
 const Home = () => {
-    useEffect(() => {
-        scrollUp()
-    }, []);
+    // useEffect(() => {
+    //     scrollUp()
+    // }, []);
   return (
       <>
             <Container>
@@ -40,7 +57,8 @@ const Home = () => {
                     id="intro"
                   />
                   <MiddleBlock
-                    title={About.title}
+                    title=""
+                    border="#37e7e1"
                     content={About.description}
                   />
                 <MiddleBlock
@@ -48,12 +66,11 @@ const Home = () => {
                     content=""
                     section={ServicesProducts.section}/>
                   <ContentBlock
-                    direction="left"
-                    icon="graphs.svg"
+                    direction="right"
+                    icon=""
                     id="tailored-solutions"
-                    content=""
+                    content={TailoredSolutions.content}
                     title={TailoredSolutions.title}
-                    section={TailoredSolutions.section}
                     button={TailorSolutionButtonContent}
                     destination="/tailored-solutions"
                   />

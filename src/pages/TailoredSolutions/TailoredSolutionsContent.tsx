@@ -1,8 +1,8 @@
-import {MinDesc} from "../../components/ContentBlock/styles";
 import React, {JSX} from "react";
 import {Heading} from "../../components/TabContent/styles";
 import {Button} from "../../common/Button";
 import {Link} from "react-router-dom";
+import {MinTitle, MinDesc, MinSubtitle} from "./styles";
 
 const RetailSolutions = [
     {
@@ -162,13 +162,16 @@ const ServicesSolutions = [
 export const tailoredSolutionsContent = [
     {
         key: '1',
-        label: 'Raya for Retail',
+        label: 'Retail',
         children: <>
-            <MinDesc>
+            <MinSubtitle>
                 Raya for Retail is a comprehensive solution tailored to meet the unique needs of retail businesses.
                 With Microsoft Dynamics 365 and ERPNext, Raya for Retail offers retailers a unified platform to manage all aspects of their operations,
-                including inventory management, sales tracking, customer relationship management, and financial management. Key features include:
-            </MinDesc>
+                including inventory management, sales tracking, customer relationship management, and financial management.
+            </MinSubtitle>
+            <MinTitle>
+                Key Features
+            </MinTitle>
             {RetailSolutions.map((
                 item : {
                     key: string,
@@ -192,11 +195,16 @@ export const tailoredSolutionsContent = [
     },
     {
         key: '2',
-        label: 'Raya for Manufacturing',
+        label: 'Manufacturing',
         children: <>
-            <MinDesc>
-                Raya for Manufacturing is a robust solution designed to address the complex needs of manufacturing businesses. Powered by Microsoft Dynamics 365 and ERPNext, Raya for Manufacturing enables manufacturers to streamline their operations, optimize production processes, and drive efficiency and innovation. Key features include:
-            </MinDesc>
+            <MinSubtitle>
+                Raya for Manufacturing is a robust solution designed to address the complex needs of manufacturing
+                businesses. Powered by Microsoft Dynamics 365 and ERPNext, Raya for Manufacturing enables manufacturers
+                to streamline their operations, optimize production processes, and drive efficiency and innovation.
+            </MinSubtitle>
+            <MinTitle>
+                Key Features
+            </MinTitle>
             {ManufacturingSolutions.map((
                 item : {
                     key: string,
@@ -220,11 +228,17 @@ export const tailoredSolutionsContent = [
     },
     {
         key: '3',
-        label: 'Raya for Construction',
+        label: 'Construction',
         children: <>
-            <MinDesc>
-                Raya for Construction is a comprehensive solution tailored to meet the unique needs of construction firms. Leveraging the power of Microsoft Dynamics 365 and ERPNext, Raya for Construction enables construction companies to manage projects more efficiently, optimize resource allocation, and improve collaboration and communication across project teams. Key features include:
-            </MinDesc>
+            <MinSubtitle>
+                Raya for Construction is a comprehensive solution tailored to meet the unique needs of construction
+                firms. Leveraging the power of Microsoft Dynamics 365 and ERPNext, Raya for Construction enables
+                construction companies to manage projects more efficiently, optimize resource allocation, and
+                improve collaboration and communication across project teams.
+            </MinSubtitle>
+            <MinTitle>
+                Key Features
+            </MinTitle>
             {ConstructionSolutions.map((
                 item : {
                     key: string,
@@ -248,11 +262,17 @@ export const tailoredSolutionsContent = [
     },
     {
         key: '4',
-        label: 'Raya for Services',
+        label: 'Services',
         children: <>
-            <MinDesc>
-                Raya for Services is a tailored solution designed to meet the unique needs of service-based businesses, including consulting firms, professional services firms, and service contractors. Powered by Microsoft Dynamics 365 and ERPNext, Raya for Services enables service providers to streamline service delivery, optimize resource allocation, and improve client satisfaction and retention. Key features include:
-            </MinDesc>
+            <MinSubtitle>
+                Raya for Services is a tailored solution designed to meet the unique needs of service-based businesses,
+                including consulting firms, professional services firms, and service contractors.
+                Powered by Microsoft Dynamics 365 and ERPNext, Raya for Services enables service providers to streamline service delivery,
+                optimize resource allocation, and improve client satisfaction and retention.
+            </MinSubtitle>
+            <MinTitle>
+                Key Features
+            </MinTitle>
             {ServicesSolutions.map((
                 item : {
                     key: string,
@@ -276,11 +296,17 @@ export const tailoredSolutionsContent = [
     },
     {
         key: '5',
-        label: 'Raya for Hospitality',
+        label: 'Hospitality',
         children: <>
-            <MinDesc>
-                Raya for Hospitality is a tailored solution designed to address the unique needs of hospitality businesses, including hotels, restaurants, and resorts. Built on Microsoft Dynamics 365 and ERPNext, Raya for Hospitality offers hospitality companies a comprehensive platform to streamline operations, enhance guest experiences, and drive revenue growth. Key features include:
-            </MinDesc>
+            <MinSubtitle>
+                Raya for Hospitality is a tailored solution designed to address the unique needs of hospitality businesses,
+                including hotels, restaurants, and resorts. Built on Microsoft Dynamics 365 and ERPNext,
+                Raya for Hospitality offers hospitality companies a comprehensive platform to streamline operations,
+                enhance guest experiences, and drive revenue growth. Key features include:
+            </MinSubtitle>
+            <MinTitle>
+                Key Features
+            </MinTitle>
             {HospitalitySolutions.map((
                 item : {
                     key: string,
