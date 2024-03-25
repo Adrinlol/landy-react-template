@@ -1,11 +1,10 @@
-import {Card, Col, Collapse, Flex, Popover, Row} from "antd";
+import {Card, Col, Flex, Popover, Row} from "antd";
 import {Fade} from "react-awesome-reveal";
 import {withTranslation} from "react-i18next";
 import {ContentBlockProps} from "./types";
-import {Button, ConditionalButtonWrapper} from "../../common/Button";
+import {Button} from "../../common/Button";
 import {SvgIcon} from "../../common/SvgIcon";
 import {
-  ButtonWrapper,
   Content,
   ContentSection,
   ContentWrapper,
@@ -15,7 +14,7 @@ import {
   StyledRow, Title,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 interface QualitiesPopoverProps  {
   items: {

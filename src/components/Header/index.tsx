@@ -16,6 +16,7 @@ import {
 } from "./styles";
 import {PngIcon} from "../../common/PngIcon";
 import {Link} from "react-router-dom";
+import {SvgIcon} from "../../common/SvgIcon";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -73,7 +74,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between" id="header">
           <LogoContainer to="/" aria-label="homepage">
-            <PngIcon src="logo.jpg" width="96px" height="96px"/>
+            <SvgIcon src="logo.svg" width="96px" height="96px"/>
           </LogoContainer>
           <NotHidden>
             <MenuItem />
