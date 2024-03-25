@@ -1,36 +1,36 @@
 {
   "title": "Services and Products",
-  "description": "",
-  "categories": [
+  "text": "",
+  "section": [
     {
       "title": "Custom Business Applications",
-      "content": "Tailored software solutions to fit unique business needs across industries. ",
-      "icon": "notes.svg"
+      "content": "Tailored software solutions to fit unique business needs across industries",
+      "icon": "custom-business.svg"
     },
     {
       "title": "Supply Chain Optimization",
       "content": "Streamline inventory and logistics for maximum efficiency, ideal for Manufacturing and Retail sectors",
-      "icon": "notes.svg"
+      "icon": "supply-chain.svg"
     },
     {
       "title": "CRM Solutions",
-      "content": "Elevate customer relationships with advanced CRM systems, benefiting Retail, Hospitality, and Health Services",
-      "icon": "notes.svg"
+      "content": "Elevate customer relationships with advanced CRM systems, benefiting Retail, Hospitality, and Health Services.",
+      "icon": "crm.svg"
     },
     {
       "title": "Financial Management Tools",
-      "content": "Keep finances in check with comprehensive accounting software, crucial for Manufacturing and Retail",
-      "icon": "notes.svg"
+      "content": "Keep finances in check with comprehensive accounting software, crucial for Manufacturing and Retail.",
+      "icon": "finance.svg"
     },
     {
       "title": "Project Management Platforms",
-      "content": "Bring projects to successful completion on time and within budget, vital for Construction and Engineering",
-      "icon": "notes.svg"
+      "content": "Bring projects to successful completion on time and within budget, vital for Construction and Engineering.",
+      "icon": "project-mngmt.svg"
     },
     {
       "title": "E-commerce and Booking Systems",
-      "content": "Expand sales and reservations with  integrated online solutions, benefiting Retail, Hospitality, and Tourism",
-      "icon": "notes.svg"
+      "content": "Expand sales and reservations with integrated online solutions, benefiting Retail, Hospitality, and Tourism.",
+      "icon": "e-commerce.svg"
     }
   ]
 }
