@@ -1,4 +1,4 @@
-import {Row, Col, CollapseProps, Flex} from "antd";
+import {Row, Col, CollapseProps} from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
