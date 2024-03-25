@@ -1,11 +1,11 @@
 import {Card, Col, Collapse, Flex, Popover, Row} from "antd";
 import {Fade} from "react-awesome-reveal";
 import {withTranslation} from "react-i18next";
-
 import {ContentBlockProps} from "./types";
-import {ConditionalButtonWrapper} from "../../common/Button";
+import {Button, ConditionalButtonWrapper} from "../../common/Button";
 import {SvgIcon} from "../../common/SvgIcon";
 import {
+  ButtonWrapper,
   Content,
   ContentSection,
   ContentWrapper,
@@ -15,7 +15,91 @@ import {
   StyledRow, Title,
 } from "./styles";
 import {SubHeading} from "../TabContent/styles";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+
+interface QualitiesPopoverProps  {
+  items: {
+    title: string
+    description: string
+  }[] | undefined
+}
+
+interface TailoredSolutionsNavProps {
+  buttons: {
+    title: string
+    key?: string
+    color?: string
+  }[] | undefined
+}
+
+interface SectionItemsBlockProps {
+  items: {
+    title: string;
+    content: string;
+    icon: string;
+  }[] | undefined
+}
+const QualitiesPopover = ({items} : QualitiesPopoverProps) => {
+  return (
+      <>
+        {items?.map((item: {title: string, description: string}) => {
+          const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
+          return (
+              <Col xl={11} lg={11} xs={24}>
+                <Popover placement="bottom" content={popOverContent}>
+                  <Card bordered hoverable style={{marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}}
+                        size="small">
+                    <SubHeading> {item.title}</SubHeading>
+                  </Card>
+                </Popover>
+              </Col>)
+        })
+        }
+      </>
+  )
+}
+
+const TailoredSolutionsNav = ({buttons} : TailoredSolutionsNavProps) => {
+  return (
+        <>
+          {
+            buttons?.map((item: { color?: string; title: string; key?: string; }) => {
+              const url = `/tailored-solutions?activeKey=${item.key ?? ""}`;
+                  return (
+                      <Link to={url}>
+                        <Button color={item.color}>
+                            {item.title}
+                        </Button>
+                      </Link>
+                  )
+                })
+          }
+        </>
+  )
+}
+
+const SectionItemsBlock = ({items}: SectionItemsBlockProps) => {
+  return (
+      <>
+        {
+          items?.map((item: { title: string; content: string; icon: string; }) => {
+          return (
+                <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
+                  {item.icon !== "" && <SvgIcon
+                      src={item.icon}
+                      width="60px"
+                      height="60px"
+                  />}
+                  <MinTitle>{item.title}</MinTitle>
+                  <MinPara>{item.content}</MinPara>
+                </Flex>
+          );
+        })
+        }
+      </>
+  )
+}
+
 
 const ContentBlock = ({
   collapseItems,
@@ -31,6 +115,7 @@ const ContentBlock = ({
   direction,
 }: ContentBlockProps) => {
 
+
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -38,130 +123,37 @@ const ContentBlock = ({
           justify="space-between"
           align="middle"
           id={id}
-          direction={direction}
-        >
-          <Col lg={11} md={11} sm={12} xs={24}>
+          direction={direction}>
+          {
+            icon !== "" &&
+            <Col lg={11} md={11} sm={12} xs={24}>
             <SvgIcon src={icon} width="100%" height="100%" />
           </Col>
+          }
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
-                <Title>{t(title)}</Title>
+                <Title>{title}</Title>
               </Flex>
                 <Content>{content}</Content>
-              {direction === "right" ? (
+              {direction === "right" && icon === "" &&
                   <>
-                    <Link to={destination ?? ""}>
-                        {typeof button === "object" &&
-                          button.map(
-                            (
-                              item: {
-                                color?: string;
-                                title: string;
-                              },
-                            ) => {
-                              return (
-                                 <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
-                              );
-                            }
-                          )}
-                    </Link>
-                  <Row justify="space-between">
-                    {typeof cardSection === "object" &&
-                        cardSection.map(
-
-                            (
-                                item: {
-                                  title: string;
-                                  description: string;
-                                },
-                                id: number
-                            ) => {
-                              const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
-                              return (
-                                  <Col key={id} xl={11} lg={11} xs={24}>
-                                    <Popover placement="bottom" content={popOverContent}>
-                                        <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
-                                          <SubHeading> {t(item.title)}</SubHeading>
-                                        </Card>
-                                    </Popover>
-                                  </Col>
-                              );
-                            }
-                        )}
-                  </Row>
+                    <Row justify="space-between">
+                      <QualitiesPopover items={cardSection}/>
+                    </Row>
                   </>
-              ) : (
-                <ServiceWrapper>
-                  <Row justify="space-between">
-                    {typeof section === "object" &&
-                      section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
-                          return (
-                            <Col key={id} xl={12} lg={12} xs={24}>
-                              <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
-                              {item.icon !== "" && <SvgIcon
-                                src={item.icon}
-                                width="60px"
-                                height="60px"
-                              />}
-
-                                    <MinTitle>{t(item.title)}</MinTitle>
-                                    <MinPara>{t(item.content)}</MinPara>
-                                  </Flex>
-                            </Col>
-                          );
-                        }
-                      )}
-                    {typeof cardSection === "object" &&
-                        cardSection.map((item: {title: string, description: string}) => {
-                          const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
-                          return (
-                              <Col key={id} xl={11} lg={11} xs={24}>
-                                <Popover placement="bottom" content={popOverContent}>
-                                  <Card bordered hoverable style={{ marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}} size="small">
-                                    <SubHeading> {t(item.title)}</SubHeading>
-                                  </Card>
-                                </Popover>
-                              </Col>
-                          )
-                        })
-                    }
-                  </Row>
-                </ServiceWrapper>
-              )}
+              }
+              <ServiceWrapper>
+                <Row justify="space-between">
+                  <SectionItemsBlock items={section}/>
+                  {direction === "left" && <QualitiesPopover items={cardSection}/>}
+                </Row>
+              </ServiceWrapper>
             </ContentWrapper>
-            {typeof button === "object" &&
-                button.map(
-                    (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                    ) => {
-                      return (
-                          <Link to={destination ?? ""}>
-                            <Flex justify={window.innerWidth < 684 ? "center" : ""}>
-                              <ConditionalButtonWrapper title={item.title} buttonCount={button.length}/>
-                            </Flex>
-                          </Link>
-                      );
-                    }
-                )}
           </Col>
-          {typeof collapseItems === "object" &&
-              <Collapse size="large" accordion items={collapseItems}
-                        style={{
-                          minWidth: "100%",
-                          }}/>
-          }
+          <Col lg={11} md={11} sm={11} xs={24}>
+            <TailoredSolutionsNav buttons={button}/>
+          </Col>
         </StyledRow>
       </Fade>
     </ContentSection>
