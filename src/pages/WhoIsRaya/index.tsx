@@ -1,46 +1,55 @@
-import {lazy} from "react";
+import "./styles.css"
+import React, {lazy} from "react";
 import WhoIsRayaContent from "../../content/WhoIsRayaPage/WhoIsRayaConent.json"
 import ContentBlock from "../../components/ContentBlock";
+import {MinSubtitle, MinTitle} from "../TailoredSolutions/styles";
+import {Button, Carousel} from "antd";
+import {LeftCircleFilled, LeftCircleTwoTone, RightCircleFilled, RightCircleTwoTone} from "@ant-design/icons";
+import {MinPara} from "../../components/ContentBlock/styles";
 
 
 const Container = lazy(() => import("../../common/Container"));
+const styleDefaults = {
+    height: 300,
+    color: "white",
+    fontSize: 100,
+    textAlign: "center"
+};
 
 const WhoIsRaya = () => {
+    let settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     return (
         <Container>
-            {/*<MiddleBlock title={WhoIsRayaContent.title} content={WhoIsRayaContent.description}/>*/}
-            <ContentBlock
-                id="focus-on-value"
-                icon=""
-                direction="right"
-                title={WhoIsRayaContent.focusOnValue.title}
-                content={WhoIsRayaContent.focusOnValue.description}
-                cardSection={WhoIsRayaContent.focusOnValue.cardSection}
-            />
-            <ContentBlock
-                id="client-centric"
-                icon=""
-                direction="left"
-                title={WhoIsRayaContent.clientCentric.title}
-                content={WhoIsRayaContent.clientCentric.description}
-                cardSection={WhoIsRayaContent.clientCentric.cardSection}
-            />
-            <ContentBlock
-                id="future-ready"
-                direction="right"
-                icon=""
-                title={WhoIsRayaContent.futureReady.title}
-                content={WhoIsRayaContent.futureReady.description}
-                cardSection={WhoIsRayaContent.futureReady.cardSection}
-            />
-            <ContentBlock
-                id="trust-and-reliability"
-                icon=""
-                direction="left"
-                title={WhoIsRayaContent.trustAndReliability.title}
-                content={WhoIsRayaContent.trustAndReliability.description}
-                cardSection={WhoIsRayaContent.trustAndReliability.cardSection}
-            />
+            <Carousel
+                arrows
+                prevArrow={<LeftCircleFilled/>}
+                nextArrow={<RightCircleFilled/>}
+            >
+                {
+                    WhoIsRayaContent.qualities.map((
+                        quality: {
+                            title: string,
+                            description: string,
+                            cardSection : {title: string,  description: string}[]
+                        }
+                    ) => {
+                        return (
+                            <div>
+                                <MinSubtitle>{quality.title}</MinSubtitle>
+                                <MinPara>{quality.description}</MinPara>
+                            </div>
+                        )
+                    })
+                }
+
+            </Carousel>
+
         </Container>
     )
 }

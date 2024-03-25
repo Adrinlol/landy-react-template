@@ -1,120 +1,122 @@
 {
   "title": "Who is Raya?",
   "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
-  "focusOnValue": {
-    "title": "Delivering Tangible Benefits to Our Clients",
-    "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results. Here's how we focus on delivering value to our clients: ",
-    "cardSection": [
-      {
-        "title": "Strategic Partnership",
-        "description": "We view our clients as strategic partners and work closely with them to understand their business objectives, challenges, and opportunities. By aligning our solutions with their strategic goals, we ensure that our clients derive maximum value from our partnership."
-      },
-      {
-        "title": "Tailored Solutions",
-        "description": "We don't believe in one-size-fits-all solutions. Instead, we tailor our solutions to meet the specific needs and requirements of each client. Whether it's streamlining operations, optimizing inventory management, or enhancing customer experiences, we design solutions that deliver real value and drive business growth"
-      },
-      {
-        "title": "Industry Expertise",
-        "description": " With years of experience and expertise in business application consulting, we bring deep industry knowledge and best practices to every project. By leveraging our industry insights and understanding of market trends, we help our clients stay ahead of the competition and capitalize on new opportunities"
-      },
-      {
-        "title": "Technology Innovation",
-        "description": "We are at the forefront of technology innovation, constantly exploring new tools and solutions to help our clients achieve their goals. Through our partnerships with leading technology providers like Microsoft Dynamics 365 and ERPNext, we deliver cutting-edge solutions that drive digital transformation and unlock new possibilities for our clients"
-      },
-      {
-        "title": "Measurable Results",
-        "description": "We believe in accountability and measurable results. From improved operational efficiency and cost savings to increased revenue and customer satisfaction, we measure our success by the tangible benefits our clients experience. By delivering measurable results, we ensure a positive return on investment for our clients"
-      },
-      {
-        "title": "Ongoing Support",
-        "description": "Our commitment to delivering value doesn't end with the implementation of a solution. We provide ongoing support and guidance to help our clients maximize the value of their investment. Whether it's training, troubleshooting, or optimizing processes, we are here to support our clients every step of the way"
-      }
-    ]
-  },
-  "clientCentric": {
-      "title": "Putting Your Success First",
-      "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
+  "qualities": [
+    {
+      "title": "Delivering Tangible Benefits to Our Clients",
+      "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results. Here's how we focus on delivering value to our clients: ",
       "cardSection": [
         {
-          "title": "Understanding Your Needs",
-          "description": "We take the time to truly understand our clients' needs, challenges, and aspirations. Through in-depth consultations and discussions, we gain valuable insights into our clients' businesses, allowing us to tailor our solutions to meet their specific requirements and objectives"
+          "title": "Strategic Partnership",
+          "description": "We view our clients as strategic partners and work closely with them to understand their business objectives, challenges, and opportunities. By aligning our solutions with their strategic goals, we ensure that our clients derive maximum value from our partnership."
         },
         {
-          "title": "Collaborative Partnership",
-          "description": "We view our clients as strategic partners and collaborators, not just customers. We believe in building long-lasting relationships based on trust, transparency, and mutual respect. By working closely with our clients throughout the project lifecycle, we ensure alignment, communication, and shared accountability for success"
+          "title": "Tailored Solutions",
+          "description": "We don't believe in one-size-fits-all solutions. Instead, we tailor our solutions to meet the specific needs and requirements of each client. Whether it's streamlining operations, optimizing inventory management, or enhancing customer experiences, we design solutions that deliver real value and drive business growth"
         },
         {
-          "title": "Customized Solutions",
-          "description": "We recognize that every client is unique, with their own set of goals, constraints, and preferences. That's why we offer customized solutions tailored to each client's specific needs and requirements. Whether it's configuring workflows, designing custom reports, or integrating third-party applications, we ensure that our solutions align perfectly with our clients' business objectives"
+          "title": "Industry Expertise",
+          "description": " With years of experience and expertise in business application consulting, we bring deep industry knowledge and best practices to every project. By leveraging our industry insights and understanding of market trends, we help our clients stay ahead of the competition and capitalize on new opportunities"
         },
         {
-          "title": "Proactive Communication",
-          "description": "Communication is key to a successful partnership. We keep our clients informed and engaged throughout the project, providing regular updates, progress reports, and opportunities for feedback. By maintaining open lines of communication, we foster collaboration, trust, and transparency, ensuring that our clients feel informed and empowered every step of the way"
+          "title": "Technology Innovation",
+          "description": "We are at the forefront of technology innovation, constantly exploring new tools and solutions to help our clients achieve their goals. Through our partnerships with leading technology providers like Microsoft Dynamics 365 and ERPNext, we deliver cutting-edge solutions that drive digital transformation and unlock new possibilities for our clients"
         },
         {
-          "title": "Empowering Our Clients",
-          "description": "We believe in empowering our clients with the knowledge, skills, and resources they need to succeed. Through comprehensive training programs, educational resources, and ongoing support, we equip our clients with the tools and confidence to take ownership of their solutions and drive their own success"
+          "title": "Measurable Results",
+          "description": "We believe in accountability and measurable results. From improved operational efficiency and cost savings to increased revenue and customer satisfaction, we measure our success by the tangible benefits our clients experience. By delivering measurable results, we ensure a positive return on investment for our clients"
         },
         {
-          "title": "Continuous Improvement",
-          "description": "We are committed to continuous improvement and excellence in everything we do. We actively seek feedback from our clients, listen to their concerns and suggestions, and use this feedback to refine and enhance our services. By continually striving to improve and evolve, we ensure that we are always delivering the highest quality solutions and service to our clients"
-        },
-        {
-          "title": "Measuring Success",
-          "description": "Ultimately, our success is measured by the success of our clients. We measure our performance based on the tangible results and outcomes achieved by our clients, whether it's increased efficiency, improved customer satisfaction, or accelerated growth. By focusing on delivering value and driving positive outcomes for our clients, we ensure a win-win partnership for everyone involved"
+          "title": "Ongoing Support",
+          "description": "Our commitment to delivering value doesn't end with the implementation of a solution. We provide ongoing support and guidance to help our clients maximize the value of their investment. Whether it's training, troubleshooting, or optimizing processes, we are here to support our clients every step of the way"
         }
       ]
-  },
-  "futureReady": {
-    "title": "Empowering Your Business for Tomorrow",
-    "description": "At Raya Solutions, we understand that the business landscape is constantly evolving, and we are committed to helping our clients stay ahead of the curve with future-ready solutions. By leveraging cutting-edge technologies, embracing innovation, and anticipating future trends, we empower our clients to thrive in an ever-changing world. Here's how we ensure that our solutions are future-ready: ",
-    "cardSection": [
-      {
-        "title": "Innovation and Technology Leadership",
-        "description": "We are at the forefront of innovation, constantly exploring new technologies and methodologies to drive digital transformation and unlock new opportunities for our clients. Whether it's adopting emerging technologies like AI, IoT, or blockchain, or reimagining traditional business processes, we help our clients harness the power of technology to drive growth and innovation"
-      },
-      {
-        "title": "Continuous Innovation and Improvement",
-        "description": "Innovation is not a one-time event – it's an ongoing process. That's why we are committed to continuous innovation and improvement, constantly refining and enhancing our solutions to meet the evolving needs of our clients. By staying agile and responsive to change, we ensure that our clients are always equipped with the latest tools and technologies to succeed."
-      },
-      {
-        "title": "Scalability and Flexibility",
-        "description": "Our solutions are designed to be scalable and flexible, allowing our clients to adapt and grow with ease. Whether you're a small startup or a large enterprise, our solutions can scale to meet your needs, from initial implementation to future expansion. With modular architectures and customizable features, we ensure that our solutions can evolve alongside your business"
-      },
-      {
-        "title": "Future-Proofing Strategies",
-        "description": "We help our clients future-proof their businesses by anticipating future trends and challenges and developing proactive strategies to address them. From preparing for regulatory changes to embracing new market opportunities, we help our clients navigate uncertainty and position themselves for long-term success"
-      },
-      {
-        "title": "Thought Leadership and Industry Insights",
-        "description": "As thought leaders in the business application consulting space, we provide our clients with valuable industry insights, trends, and best practices to help them stay informed and ahead of the competition. Whether it's sharing industry reports, hosting webinars, or providing personalized consultations, we empower our clients with the knowledge and resources they need to thrive in a rapidly changing world"
-      }
-    ]
-  },
-  "trustAndReliability": {
-    "title": "Building Strong Partnerships Based on Trust",
-    "description": "At Raya Solutions, trust and reliability are the foundation of our client relationships. We understand that trust is earned through transparency, integrity, and consistent delivery of results. That's why we prioritize building strong partnerships based on trust and reliability with our clients. Here's how we ensure that our clients can trust us to deliver:",
-    "cardSection": [
-      {
-        "title": "Commitment to Excellence",
-        "description": "We are committed to excellence in everything we do. From the quality of our solutions to the professionalism of our team, we hold ourselves to the highest standards of performance and accountability. By consistently delivering exceptional results and exceeding our clients' expectations, we earn their trust and confidence in our abilities"
-      },
-      {
-        "title": "Reliability and Consistency",
-        "description": "We are committed to excellence in everything we do. From the quality of our solutions to the professionalism of our team, we hold ourselves to the highest standards of performance and accountability. By consistently delivering exceptional results and exceeding our clients' expectations, we earn their trust and confidence in our abilities"
-      },
-      {
-        "title": "Proven Track Record",
-        "description": "With a proven track record of success and satisfied clients, we have earned a reputation for trustworthiness and reliability in the industry. Our clients can trust us to deliver results based on our history of successful projects, positive testimonials, and long-term client relationships"
-      },
-      {
-        "title": "Customer-Centric Approach",
-        "description": "With a proven track record of success and satisfied clients, we have earned a reputation for trustworthiness and reliability in the industry. Our clients can trust us to deliver results based on our history of successful projects, positive testimonials, and long-term client relationships"
-      },
-      {
-        "title": "Transparency and Open Communication",
-        "description": "We believe in transparent and open communication with our clients. From the initial consultation to project delivery and beyond, we keep our clients informed and engaged every step of the way. By providing clear expectations, honest feedback, and proactive updates, we foster trust and confidence in our clients"
-      }
-    ]
-  }
+    },
+    {
+        "title": "Putting Your Success First",
+        "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
+        "cardSection": [
+          {
+            "title": "Understanding Your Needs",
+            "description": "We take the time to truly understand our clients' needs, challenges, and aspirations. Through in-depth consultations and discussions, we gain valuable insights into our clients' businesses, allowing us to tailor our solutions to meet their specific requirements and objectives"
+          },
+          {
+            "title": "Collaborative Partnership",
+            "description": "We view our clients as strategic partners and collaborators, not just customers. We believe in building long-lasting relationships based on trust, transparency, and mutual respect. By working closely with our clients throughout the project lifecycle, we ensure alignment, communication, and shared accountability for success"
+          },
+          {
+            "title": "Customized Solutions",
+            "description": "We recognize that every client is unique, with their own set of goals, constraints, and preferences. That's why we offer customized solutions tailored to each client's specific needs and requirements. Whether it's configuring workflows, designing custom reports, or integrating third-party applications, we ensure that our solutions align perfectly with our clients' business objectives"
+          },
+          {
+            "title": "Proactive Communication",
+            "description": "Communication is key to a successful partnership. We keep our clients informed and engaged throughout the project, providing regular updates, progress reports, and opportunities for feedback. By maintaining open lines of communication, we foster collaboration, trust, and transparency, ensuring that our clients feel informed and empowered every step of the way"
+          },
+          {
+            "title": "Empowering Our Clients",
+            "description": "We believe in empowering our clients with the knowledge, skills, and resources they need to succeed. Through comprehensive training programs, educational resources, and ongoing support, we equip our clients with the tools and confidence to take ownership of their solutions and drive their own success"
+          },
+          {
+            "title": "Continuous Improvement",
+            "description": "We are committed to continuous improvement and excellence in everything we do. We actively seek feedback from our clients, listen to their concerns and suggestions, and use this feedback to refine and enhance our services. By continually striving to improve and evolve, we ensure that we are always delivering the highest quality solutions and service to our clients"
+          },
+          {
+            "title": "Measuring Success",
+            "description": "Ultimately, our success is measured by the success of our clients. We measure our performance based on the tangible results and outcomes achieved by our clients, whether it's increased efficiency, improved customer satisfaction, or accelerated growth. By focusing on delivering value and driving positive outcomes for our clients, we ensure a win-win partnership for everyone involved"
+          }
+        ]
+    },
+    {
+      "title": "Empowering Your Business for Tomorrow",
+      "description": "At Raya Solutions, we understand that the business landscape is constantly evolving, and we are committed to helping our clients stay ahead of the curve with future-ready solutions. By leveraging cutting-edge technologies, embracing innovation, and anticipating future trends, we empower our clients to thrive in an ever-changing world. Here's how we ensure that our solutions are future-ready: ",
+      "cardSection": [
+        {
+          "title": "Innovation and Technology Leadership",
+          "description": "We are at the forefront of innovation, constantly exploring new technologies and methodologies to drive digital transformation and unlock new opportunities for our clients. Whether it's adopting emerging technologies like AI, IoT, or blockchain, or reimagining traditional business processes, we help our clients harness the power of technology to drive growth and innovation"
+        },
+        {
+          "title": "Continuous Innovation and Improvement",
+          "description": "Innovation is not a one-time event – it's an ongoing process. That's why we are committed to continuous innovation and improvement, constantly refining and enhancing our solutions to meet the evolving needs of our clients. By staying agile and responsive to change, we ensure that our clients are always equipped with the latest tools and technologies to succeed."
+        },
+        {
+          "title": "Scalability and Flexibility",
+          "description": "Our solutions are designed to be scalable and flexible, allowing our clients to adapt and grow with ease. Whether you're a small startup or a large enterprise, our solutions can scale to meet your needs, from initial implementation to future expansion. With modular architectures and customizable features, we ensure that our solutions can evolve alongside your business"
+        },
+        {
+          "title": "Future-Proofing Strategies",
+          "description": "We help our clients future-proof their businesses by anticipating future trends and challenges and developing proactive strategies to address them. From preparing for regulatory changes to embracing new market opportunities, we help our clients navigate uncertainty and position themselves for long-term success"
+        },
+        {
+          "title": "Thought Leadership and Industry Insights",
+          "description": "As thought leaders in the business application consulting space, we provide our clients with valuable industry insights, trends, and best practices to help them stay informed and ahead of the competition. Whether it's sharing industry reports, hosting webinars, or providing personalized consultations, we empower our clients with the knowledge and resources they need to thrive in a rapidly changing world"
+        }
+      ]
+    },
+    {
+      "title": "Building Strong Partnerships Based on Trust",
+      "description": "At Raya Solutions, trust and reliability are the foundation of our client relationships. We understand that trust is earned through transparency, integrity, and consistent delivery of results. That's why we prioritize building strong partnerships based on trust and reliability with our clients. Here's how we ensure that our clients can trust us to deliver:",
+      "cardSection": [
+        {
+          "title": "Commitment to Excellence",
+          "description": "We are committed to excellence in everything we do. From the quality of our solutions to the professionalism of our team, we hold ourselves to the highest standards of performance and accountability. By consistently delivering exceptional results and exceeding our clients' expectations, we earn their trust and confidence in our abilities"
+        },
+        {
+          "title": "Reliability and Consistency",
+          "description": "We are committed to excellence in everything we do. From the quality of our solutions to the professionalism of our team, we hold ourselves to the highest standards of performance and accountability. By consistently delivering exceptional results and exceeding our clients' expectations, we earn their trust and confidence in our abilities"
+        },
+        {
+          "title": "Proven Track Record",
+          "description": "With a proven track record of success and satisfied clients, we have earned a reputation for trustworthiness and reliability in the industry. Our clients can trust us to deliver results based on our history of successful projects, positive testimonials, and long-term client relationships"
+        },
+        {
+          "title": "Customer-Centric Approach",
+          "description": "With a proven track record of success and satisfied clients, we have earned a reputation for trustworthiness and reliability in the industry. Our clients can trust us to deliver results based on our history of successful projects, positive testimonials, and long-term client relationships"
+        },
+        {
+          "title": "Transparency and Open Communication",
+          "description": "We believe in transparent and open communication with our clients. From the initial consultation to project delivery and beyond, we keep our clients informed and engaged every step of the way. By providing clear expectations, honest feedback, and proactive updates, we foster trust and confidence in our clients"
+        }
+      ]
+    }
+  ]
 }
