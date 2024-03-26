@@ -1,10 +1,16 @@
 .slick-arrow.slick-prev {
     font-size: 32px;
     color: black;
+    @media screen and (max-width: 1024px) {
+        visibility: hidden;
+    }
 }
 .slick-arrow.slick-next {
     font-size: 32px;
     color: black;
+    @media screen and (max-width: 1024px) {
+        visibility: hidden;
+    }
 }
 
 .ant-carousel .slick-prev,
@@ -18,8 +24,16 @@
 }
 .ant-carousel .slick-next:hover {
     color: #00b0f0;
+    @media screen and (max-width: 1024px) {
+        visibility: hidden;
+    }
 }
 
 .ant-carousel .slick-prev:hover {
     color: #00b0f0;
+
+    @media screen and (max-width: 1024px) {
+        visibility: hidden;
+    }
 }
+

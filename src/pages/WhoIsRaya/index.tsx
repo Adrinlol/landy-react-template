@@ -2,17 +2,45 @@ import "./styles.css"
 import React, {lazy} from "react";
 import WhoIsRayaContent from "../../content/WhoIsRayaPage/WhoIsRayaConent.json"
 import {MinSubtitle} from "../TailoredSolutions/styles";
-import {Carousel} from "antd";
+import {Card, Carousel, Col, Flex, Popover} from "antd";
 import {LeftCircleFilled, RightCircleFilled} from "@ant-design/icons";
-import {MinPara} from "../../components/ContentBlock/styles";
-
+import {MinPara, PopoverContainer} from "../../components/ContentBlock/styles";
+import {QualitySlide, StyledCarousel} from "./styles";
+import {SvgIcon} from "../../common/SvgIcon";
+import {SubHeading} from "../../components/TabContent/styles";
 
 const Container = lazy(() => import("../../common/Container"));
 
+interface QualitiesPopoverProps  {
+    items: {
+        title: string
+        description: string
+    }[] | undefined
+}
+export const QualitiesPopover = ({items} : QualitiesPopoverProps) => {
+    return (
+        <>
+            {items?.map((item: {title: string, description: string}) => {
+                const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
+                return (
+                    <Col xl={11} lg={11} xs={24}>
+                        <Popover placement="bottom" content={popOverContent}>
+                            <Card bordered hoverable style={{margin: "1em", borderColor: "#349ade", textAlign: "center"}}
+                                  size="small">
+                                <SubHeading> {item.title}</SubHeading>
+                            </Card>
+                        </Popover>
+                    </Col>)
+            })
+            }
+        </>
+    )
+}
+
 const WhoIsRaya = () => {
     return (
-        <Container>
-            <Carousel
+        <Flex justify="center">
+            <StyledCarousel
                 arrows
                 prevArrow={<LeftCircleFilled/>}
                 nextArrow={<RightCircleFilled/>}
@@ -22,21 +50,30 @@ const WhoIsRaya = () => {
                         quality: {
                             title: string,
                             description: string,
+                            qualityIntro: string,
+                            icon: string,
                             cardSection : {title: string,  description: string}[]
                         }
                     ) => {
                         return (
-                            <div>
-                                <MinSubtitle>{quality.title}</MinSubtitle>
-                                <MinPara>{quality.description}</MinPara>
-                            </div>
+                            <QualitySlide>
+                                <Flex vertical justify="center" align="center">
+                                    <SvgIcon src={quality.icon} width="100px" height="100px"/>
+                                    <MinSubtitle>{quality.title}</MinSubtitle>
+                                    <MinPara>{quality.description}</MinPara>
+                                    <MinSubtitle>{quality.qualityIntro}</MinSubtitle>
+                                    <Flex wrap="wrap" justify="center" align="center">
+                                        <QualitiesPopover items={quality.cardSection}/>
+                                    </Flex>
+                                </Flex>
+                            </QualitySlide>
                         )
                     })
                 }
 
-            </Carousel>
+            </StyledCarousel>
 
-        </Container>
+        </Flex>
     )
 }
 
