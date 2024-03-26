@@ -53,7 +53,7 @@ const Home = () => {
                     direction="right"
                     title={IntroContent.title}
                     content={IntroContent.text}
-                    icon="developer.svg"
+                    icon="logo.svg"
                     id="intro"
                   />
                   <MiddleBlock

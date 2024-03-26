@@ -16,6 +16,7 @@ export const ButtonText = styled("p")`
 
 export const PriceText= styled("p")`
     font-size: medium;
+    font-weight: bolder;
 `;
 
 export const TableTitle = styled("h6")`
