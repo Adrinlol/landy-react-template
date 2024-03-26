@@ -1,6 +1,11 @@
-import { Row } from "antd";
+import {Flex, Row} from "antd";
 import styled from "styled-components";
 
+export const StyledFlex = styled(Flex)`
+    @media only screen and (max-width: 1024px) {
+       align-items: center; 
+    }
+`
 export const ContentSection = styled("section")`
     //display: flex;
     //justify-content: center;
