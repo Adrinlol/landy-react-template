@@ -42,7 +42,7 @@ export const ServiceWrapper = styled("div")`
 `;
 
 export const Title = styled("h6")`
-  //line-height: 1rem;
+  width: 100%;
   padding: 0.5rem 0;
   margin-bottom: 2rem;
   margin-top: 2rem;
