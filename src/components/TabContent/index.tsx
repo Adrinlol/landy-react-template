@@ -1,4 +1,4 @@
-import {Col, Row, Card, Table, List, Divider, Flex, ConfigProvider, Button} from 'antd';
+import { Row, Card, Table, List, Divider, Flex, ConfigProvider, Button} from 'antd';
 import {Heading, PriceText, SubHeading, TableTitle} from "./styles";
 import React from "react";
 import {ContentWrapper} from "../MiddleBlock/styles";
@@ -38,82 +38,71 @@ const addOnTableColumns = [
 ];
 
 const TabContent = ({items, itemsAddOns} : CardGridProps) => {
-    const colSpanFromItemsLength = items.length < 3 ? 12 : 8
     return (
         <ConfigProvider theme={{
             components: {
                 Button: {
                     defaultBg: "#349ade",
                     colorText: "#FFFFFF"
+                },
+                List: {
+                    colorBorder: "#000000",
                 }
             },
             token: {
                 colorBorderSecondary: "#000000"
             }
         }}>
+            <Flex wrap="wrap" justify="space-evenly" style={{
+                width: "100%"
+            }}>
+                    {
+                        items.map((item : {
+                            target?: string,
+                            name: string,
+                            includedServices: string[],
+                            includedFeatures?: string[],
+                            priceRange: string,
+                        }) => {
+                            return (
+                                <Flex vertical>
+                                    <Card title={item.name.toUpperCase()} hoverable style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        minWidth: "350px",
+                                        maxWidth: "350px"
+                                    }}>
+                                        {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
+                                        {
+                                            <>
+                                                <List bordered size="small" dataSource={item.includedServices}
+                                                      renderItem={(item) => <List.Item>{item}</List.Item>}/>
+                                            </>
+                                        }
+                                        {typeof item.includedFeatures === "object" &&
+                                            <>
+                                                <Divider/>
+                                                <Heading>Features</Heading>
+                                                <List bordered size="small" dataSource={item.includedFeatures}
+                                                      renderItem={(item) => <List.Item>{item}</List.Item>}/>
+                                            </>
+                                        }
+                                        {/*{ window.innerWidth <= 684 &&*/}
+                                        {/*}*/}
+                                    </Card>
+                                    <Flex vertical justify="center" align="center" style={{ padding: "2em"}}>
+                                        <PriceText>{item.priceRange}</PriceText>
+                                        <Link to="/contact">
+                                            <Button> Request Quotation</Button>
+                                        </Link>
+                                    </Flex>
+                                </Flex>
+                            )
+                        })
+                    }
+            </Flex>
+
             <Row gutter={16} justify="center">
-                {
-                    items.map((item : {
-                        target?: string,
-                        name: string,
-                        includedServices: string[],
-                        includedFeatures?: string[],
-                        priceRange: string,
-                    }) => {
-                        return (
-                            <Col xs={24} lg={colSpanFromItemsLength} xl={colSpanFromItemsLength} style={{
-                                padding: "20px"
-                            }}>
-                                <Card title={item.name.toUpperCase()} hoverable style={{
-                                    height: "100%"
-                                }}>
-                                    {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
-                                    {
-                                        <>
-                                            <List bordered size="small" dataSource={item.includedServices}
-                                                  renderItem={(item) => <List.Item>{item}</List.Item>}/>
-                                        </>
-                                    }
-                                    {typeof item.includedFeatures === "object" &&
-                                        <>
-                                            <Divider/>
-                                            <Heading>Features</Heading>
-                                            <List bordered size="small" dataSource={item.includedFeatures}
-                                                  renderItem={(item) => <List.Item>{item}</List.Item>}/>
-                                        </>
-                                    }
-                                    { window.innerWidth <= 684 &&
-                                                <Flex vertical justify="center" align="center">
-                                                    <PriceText>{item.priceRange}</PriceText>
-                                                    <Link to="/contact">
-                                                        <Button> Request Quotation</Button>
-                                                    </Link>
-                                                </Flex>
-                                    }
-                                </Card>
-                            </Col>
-                        )
-                    })
-                }
-                </Row>
-            <Row justify="space-around" style={{ }}>
-                { window.innerWidth > 684 &&
-                    items.map((item : {
-                        target?: string,
-                        name: string,
-                        includedServices: string[],
-                        includedFeatures?: string[],
-                        priceRange: string}) => {
-                        return (
-                            <Flex vertical justify="center" align="center" style={{paddingBottom: "3em"}}>
-                                <PriceText>{item.priceRange}</PriceText>
-                                <Link to="/contact">
-                                    <Button size="large"> Request Quotation</Button>
-                                </Link>
-                            </Flex>
-                        )
-                    })
-                }
             </Row>
 
             <Row gutter={16}>
