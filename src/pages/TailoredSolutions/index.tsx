@@ -2,7 +2,6 @@ import React, {lazy, useEffect} from "react";
 import {Col, ConfigProvider, Flex, Row, Tabs} from "antd";
 import {tailoredSolutionsContent} from "./TailoredSolutionsContent";
 import {scrollUp} from "../../common/ScrollToTop";
-import {useLocation} from "react-router-dom";
 
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 
@@ -11,9 +10,9 @@ const TailoredSolutions = () => {
         scrollUp();
     }, []);
 
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const activeKey = searchParams.get('key');
+    // const location = useLocation();
+    // const searchParams = new URLSearchParams(location.search);
+    // const activeKey = searchParams.get('key');
     return (
         <ConfigProvider
             theme={{
