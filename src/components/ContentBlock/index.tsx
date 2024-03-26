@@ -1,4 +1,4 @@
-import {Card, Col, Flex, Popover, Row} from "antd";
+import {Col, Flex, Row} from "antd";
 import {Fade} from "react-awesome-reveal";
 import {withTranslation} from "react-i18next";
 import {ContentBlockProps} from "./types";
@@ -9,11 +9,10 @@ import {
   ContentSection,
   ContentWrapper,
   MinPara,
-  MinTitle, PopoverContainer,
+  MinTitle,
   ServiceWrapper,
   StyledRow, Title,
 } from "./styles";
-import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
 
 
