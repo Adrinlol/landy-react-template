@@ -236,7 +236,7 @@
           "Compliance and audit support.",
           "Financial analysis and insights."
         ],
-        "priceRange": "₱100,000 - ₱200,000 per month, depending on transaction volume and complexity."
+        "priceRange": "₱100,000 - ₱200,000 per month"
       },
       {
         "name": "HR and Payroll Outsourcing Package",
@@ -247,7 +247,7 @@
           "Recruitment, onboarding, and offboarding processes.",
           "HR reports and analytics."
         ],
-        "priceRange": "₱90,000 - ₱180,000 per month, based on the number of employees and service scope."
+        "priceRange": "₱90,000 - ₱180,000 per month"
       },
       {
         "name": "Supply Chain Management Outsourcing Package",
@@ -258,7 +258,7 @@
           "Supplier and procurement management.",
           "Demand planning and forecasting."
         ],
-        "priceRange": "₱120,000 - ₱250,000 per month, depending on the complexity of the supply chain."
+        "priceRange": "₱120,000 - ₱250,000 per month"
       }],
     "addOns": [
       {
