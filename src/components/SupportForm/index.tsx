@@ -10,7 +10,8 @@ import Input from "../../common/Input";
 import SelectInput from "../../common/Select";
 import UploadInput from "../../common/UploadDragger";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, Span, ButtonContainer } from "./styles";
+import {FormGroup} from "../ContactForm/styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
