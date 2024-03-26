@@ -28,6 +28,7 @@ export const ContentWrapper = styled("div")`
   position: relative;
   width: 100%;
   max-width: 540px;
+  text-align: justify;
 
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
@@ -37,6 +38,7 @@ export const ContentWrapper = styled("div")`
 export const ServiceWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
+  text-align: justify;
   max-width: 100%;
      
 `;
