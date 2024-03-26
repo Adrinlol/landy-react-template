@@ -2,7 +2,6 @@ import { withTranslation } from "react-i18next";
 import { Container, StyledSelect } from "./styles";
 import { Label } from "../TextArea/styles";
 import { SelectProps } from "../types";
-import { Select } from "antd";
 
 const SelectInput = ({ name, defaultValue, onChange, t, children, ...rest }: SelectProps) => (
   <Container>
