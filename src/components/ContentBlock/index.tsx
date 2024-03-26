@@ -105,10 +105,10 @@ const ContentBlock = ({
           </Col>
           }
           <Col lg={11} md={11} sm={11} xs={24}>
+            <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
+              <Title>{title}</Title>
+            </Flex>
             <ContentWrapper>
-              <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
-                <Title>{title}</Title>
-              </Flex>
                 <Content>{content}</Content>
               {direction === "right" && icon === "" &&
                   <>

@@ -87,8 +87,6 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                                                       renderItem={(item) => <List.Item>{item}</List.Item>}/>
                                             </>
                                         }
-                                        {/*{ window.innerWidth <= 684 &&*/}
-                                        {/*}*/}
                                     </Card>
                                     <Flex vertical justify="center" align="center" style={{ padding: "2em"}}>
                                         <PriceText>{item.priceRange}</PriceText>
