@@ -2,14 +2,12 @@ import "./styles.css"
 import React, {lazy} from "react";
 import WhoIsRayaContent from "../../content/WhoIsRayaPage/WhoIsRayaConent.json"
 import {MinSubtitle} from "../TailoredSolutions/styles";
-import {Card, Carousel, Col, Flex, Popover} from "antd";
+import {Card, Col, Flex, Popover} from "antd";
 import {LeftCircleFilled, RightCircleFilled} from "@ant-design/icons";
 import {MinPara, PopoverContainer} from "../../components/ContentBlock/styles";
 import {QualitySlide, StyledCarousel} from "./styles";
 import {SvgIcon} from "../../common/SvgIcon";
 import {SubHeading} from "../../components/TabContent/styles";
-
-const Container = lazy(() => import("../../common/Container"));
 
 interface QualitiesPopoverProps  {
     items: {

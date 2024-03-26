@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Carousel, Flex} from "antd";
+import {Carousel} from "antd";
 
 export const QualitySlide = styled("div")`
     display: flex;

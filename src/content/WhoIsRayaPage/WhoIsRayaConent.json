@@ -4,7 +4,9 @@
   "qualities": [
     {
       "title": "Delivering Tangible Benefits to Our Clients",
-      "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results. Here's how we focus on delivering value to our clients: ",
+      "icon": "delivering-tangible.svg",
+      "description": "At Raya Solutions, we are committed to delivering tangible value to our clients by providing innovative solutions tailored to their unique needs and challenges. Through our partnership with leading businesses across various industries, we have consistently demonstrated our ability to drive efficiency, optimize processes, and achieve meaningful results.  ",
+      "qualityIntro": "Here's how we focus on delivering value to our clients",
       "cardSection": [
         {
           "title": "Strategic Partnership",
@@ -34,7 +36,9 @@
     },
     {
         "title": "Putting Your Success First",
-        "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make. Here's how we put our clients first: ",
+        "icon": "putting-success.svg",
+        "description": "At Raya Solutions, we believe that our clients are the cornerstone of our success. That's why we prioritize a client-centric approach in everything we do, ensuring that our clients' needs, goals, and preferences are at the forefront of every decision we make",
+        "qualityIntro": "Here's how we put our clients first",
         "cardSection": [
           {
             "title": "Understanding Your Needs",
@@ -68,7 +72,9 @@
     },
     {
       "title": "Empowering Your Business for Tomorrow",
-      "description": "At Raya Solutions, we understand that the business landscape is constantly evolving, and we are committed to helping our clients stay ahead of the curve with future-ready solutions. By leveraging cutting-edge technologies, embracing innovation, and anticipating future trends, we empower our clients to thrive in an ever-changing world. Here's how we ensure that our solutions are future-ready: ",
+      "icon": "empowering-biz.svg",
+      "description": "At Raya Solutions, we understand that the business landscape is constantly evolving, and we are committed to helping our clients stay ahead of the curve with future-ready solutions. By leveraging cutting-edge technologies, embracing innovation, and anticipating future trends, we empower our clients to thrive in an ever-changing world. ",
+      "qualityIntro": "Here's how we ensure that our solutions are future-ready",
       "cardSection": [
         {
           "title": "Innovation and Technology Leadership",
@@ -94,7 +100,9 @@
     },
     {
       "title": "Building Strong Partnerships Based on Trust",
-      "description": "At Raya Solutions, trust and reliability are the foundation of our client relationships. We understand that trust is earned through transparency, integrity, and consistent delivery of results. That's why we prioritize building strong partnerships based on trust and reliability with our clients. Here's how we ensure that our clients can trust us to deliver:",
+      "icon": "build-rel.svg",
+      "description": "At Raya Solutions, trust and reliability are the foundation of our client relationships. We understand that trust is earned through transparency, integrity, and consistent delivery of results. That's why we prioritize building strong partnerships based on trust and reliability with our clients. ",
+      "qualityIntro": "Here's how we ensure that our clients can trust us to deliver",
       "cardSection": [
         {
           "title": "Commitment to Excellence",

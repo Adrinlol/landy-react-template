@@ -44,17 +44,17 @@ export const ServiceWrapper = styled("div")`
 export const Title = styled("h6")`
   //line-height: 1rem;
   padding: 0.5rem 0;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   color: #000;
-  font-family: "Motiva Sans Bold", sans-serif;
+  font-family: "Poppins Bold"
 `;
 
 export const MinTitle = styled("p")`
   font-size: 16px;
   line-height: 1rem;
   color: #000;
-  font-family: "Motiva Sans Bold", sans-serif;
+  font-family: "Poppins Regular", sans-serif;
 `;
 
 export const MinDesc = styled("p")`
