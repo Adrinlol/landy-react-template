@@ -29,7 +29,7 @@ const middleBlockContentStyles = (border : string | undefined) => {
     borderStyle: "solid",
     width: "100%",
     padding: typeof border === "string" ? "3em" : "",
-    borderRadius: "20px"
+    borderRadius: "20px",
   }
 }
 
@@ -55,7 +55,7 @@ const MiddleBlock = (
       <Slide triggerOnce>
         <Row justify="center" align="middle">
           <ContentWrapper>
-              <Title>{t(title)}</Title>
+              <Title>{title}</Title>
             <Col lg={24} md={24} sm={24} xs={24} style={middleBlockContentStyles(border)}>
               <Content>
                 {t(content)}
