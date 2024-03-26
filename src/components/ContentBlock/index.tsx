@@ -10,7 +10,7 @@ import {
   ContentWrapper,
   MinPara,
   MinTitle,
-  ServiceWrapper,
+  ServiceWrapper, StyledFlex,
   StyledRow, Title,
 } from "./styles";
 import {Link} from "react-router-dom";
@@ -58,7 +58,7 @@ const SectionItemsBlock = ({items}: SectionItemsBlockProps) => {
         {
           items?.map((item: { title: string; content: string; icon: string; }) => {
           return (
-                <Flex vertical align={window.innerWidth < 684 ? "center" : ""}>
+                <StyledFlex vertical>
                   {item.icon !== "" && <SvgIcon
                       src={item.icon}
                       width="60px"
@@ -66,7 +66,7 @@ const SectionItemsBlock = ({items}: SectionItemsBlockProps) => {
                   />}
                   <MinTitle>{item.title}</MinTitle>
                   <MinPara>{item.content}</MinPara>
-                </Flex>
+                </StyledFlex>
           );
         })
         }
@@ -76,15 +76,11 @@ const SectionItemsBlock = ({items}: SectionItemsBlockProps) => {
 
 
 const ContentBlock = ({
-  collapseItems,
   icon,
   title,
   content,
   section,
-  cardSection,
   button,
-  destination,
-  t,
   id,
   direction,
 }: ContentBlockProps) => {
