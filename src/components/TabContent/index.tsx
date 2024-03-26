@@ -1,6 +1,5 @@
-import {Col, Row, Card, Table, List, Divider} from 'antd';
-import {Heading, SubHeading, TableTitle} from "./styles";
-import {Button} from "../../common/Button";
+import {Col, Row, Card, Table, List, Divider, Flex, ConfigProvider, Button} from 'antd';
+import {Heading, PriceText, SubHeading, TableTitle} from "./styles";
 import React from "react";
 import {ContentWrapper} from "../MiddleBlock/styles";
 import {Content} from "../Block/styles";
@@ -41,7 +40,17 @@ const addOnTableColumns = [
 const TabContent = ({items, itemsAddOns} : CardGridProps) => {
     const colSpanFromItemsLength = items.length < 3 ? 12 : 8
     return (
-        <>
+        <ConfigProvider theme={{
+            components: {
+                Button: {
+                    defaultBg: "#349ade",
+                    colorText: "#FFFFFF"
+                }
+            },
+            token: {
+                colorBorderSecondary: "#000000"
+            }
+        }}>
             <Row gutter={16} justify="center">
                 {
                     items.map((item : {
@@ -53,15 +62,14 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                     }) => {
                         return (
                             <Col xs={24} lg={colSpanFromItemsLength} xl={colSpanFromItemsLength} style={{
-                                marginBottom: "20px"
+                                padding: "20px"
                             }}>
-                                <Card title={item.name} hoverable style={{
+                                <Card title={item.name.toUpperCase()} hoverable style={{
                                     height: "100%"
                                 }}>
                                     {typeof item.target === "string" && <SubHeading>For {item.target}</SubHeading>}
                                     {
                                         <>
-                                            <Heading> Includes </Heading>
                                             <List bordered size="small" dataSource={item.includedServices}
                                                   renderItem={(item) => <List.Item>{item}</List.Item>}/>
                                         </>
@@ -74,18 +82,40 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                                                   renderItem={(item) => <List.Item>{item}</List.Item>}/>
                                         </>
                                     }
-                                    <Divider/>
-                                    <SubHeading>{item.priceRange}</SubHeading>
-                                    <Link to="/contact">
-                                        <Button> Request Quotation </Button>
-                                    </Link>
+                                    { window.innerWidth <= 684 &&
+                                                <Flex vertical justify="center" align="center">
+                                                    <PriceText>{item.priceRange}</PriceText>
+                                                    <Link to="/contact">
+                                                        <Button> Request Quotation</Button>
+                                                    </Link>
+                                                </Flex>
+                                    }
                                 </Card>
                             </Col>
                         )
                     })
                 }
-
+                </Row>
+            <Row justify="space-around" style={{ }}>
+                { window.innerWidth > 684 &&
+                    items.map((item : {
+                        target?: string,
+                        name: string,
+                        includedServices: string[],
+                        includedFeatures?: string[],
+                        priceRange: string}) => {
+                        return (
+                            <Flex vertical justify="center" align="center" style={{paddingBottom: "3em"}}>
+                                <PriceText>{item.priceRange}</PriceText>
+                                <Link to="/contact">
+                                    <Button size="large"> Request Quotation</Button>
+                                </Link>
+                            </Flex>
+                        )
+                    })
+                }
             </Row>
+
             <Row gutter={16}>
                 {typeof itemsAddOns === "object" &&
                     (
@@ -94,7 +124,11 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                             <ContentWrapper>
                                 <Content title="Add On Deals" content="Add-on Services for ERP Implementation "/>
                             </ContentWrapper>
-                            <Table title={() => (
+                            <Table
+                                style={{
+                                    width: "100%"
+                                }}
+                                title={() => (
                                 <TableTitle>
                                     Add-on Deals to Cater Your Specialized Needs
                                 </TableTitle>
@@ -104,7 +138,7 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                     )
                 }
             </Row>
-        </>
+        </ConfigProvider>
     )
 }
 

@@ -1,5 +1,5 @@
 import "./styles.css"
-import React, {lazy} from "react";
+import React from "react";
 import WhoIsRayaContent from "../../content/WhoIsRayaPage/WhoIsRayaConent.json"
 import {MinSubtitle} from "../TailoredSolutions/styles";
 import {Card, Col, Flex, Popover} from "antd";

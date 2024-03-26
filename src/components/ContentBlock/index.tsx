@@ -16,12 +16,6 @@ import {
 import {SubHeading} from "../TabContent/styles";
 import {Link} from "react-router-dom";
 
-interface QualitiesPopoverProps  {
-  items: {
-    title: string
-    description: string
-  }[] | undefined
-}
 
 interface TailoredSolutionsNavProps {
   buttons: {
@@ -38,25 +32,7 @@ interface SectionItemsBlockProps {
     icon: string;
   }[] | undefined
 }
-const QualitiesPopover = ({items} : QualitiesPopoverProps) => {
-  return (
-      <>
-        {items?.map((item: {title: string, description: string}) => {
-          const popOverContent = <PopoverContainer>{item.description}</PopoverContainer>
-          return (
-              <Col xl={11} lg={11} xs={24}>
-                <Popover placement="bottom" content={popOverContent}>
-                  <Card bordered hoverable style={{marginBottom: "10px", borderColor: "#349ade", textAlign: "center"}}
-                        size="small">
-                    <SubHeading> {item.title}</SubHeading>
-                  </Card>
-                </Popover>
-              </Col>)
-        })
-        }
-      </>
-  )
-}
+
 
 const TailoredSolutionsNav = ({buttons} : TailoredSolutionsNavProps) => {
   return (
@@ -138,14 +114,12 @@ const ContentBlock = ({
               {direction === "right" && icon === "" &&
                   <>
                     <Row justify="space-between">
-                      <QualitiesPopover items={cardSection}/>
                     </Row>
                   </>
               }
               <ServiceWrapper>
                 <Row justify="space-between">
                   <SectionItemsBlock items={section}/>
-                  {direction === "left" && <QualitiesPopover items={cardSection}/>}
                 </Row>
               </ServiceWrapper>
             </ContentWrapper>

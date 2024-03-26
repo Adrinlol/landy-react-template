@@ -7,10 +7,34 @@ export const Styles = createGlobalStyle`
         src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
         font-style: normal;
     }
-
+    
     @font-face {
         font-family: "Motiva Sans Bold";
         src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Poppins Bold";
+        src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Poppins Regular";
+        src: url("/fonts/Poppins-Black.ttf") format("truetype");
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Lato Bold";
+        src: url("/fonts/Lato-Bold.ttf") format("truetype");
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Lato Regular";
+        src: url("/fonts/Lato-Black.ttf") format("truetype");
         font-style: normal;
     }
 

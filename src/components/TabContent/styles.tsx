@@ -5,6 +5,16 @@ export const Heading = styled("p")`
     font-size: large;
 `;
 export const SubHeading = styled("p")`
+    font-size: smaller;
+`;
+export const ButtonText = styled("p")`
+    padding: 0;
+    font-size: smaller;
+    font-weight: bolder;
+    color: white;
+`;
+
+export const PriceText= styled("p")`
     font-size: medium;
 `;
 
