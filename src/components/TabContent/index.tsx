@@ -113,7 +113,8 @@ const TabContent = ({items, itemsAddOns} : CardGridProps) => {
                             </ContentWrapper>
                             <Table
                                 style={{
-                                    width: "100%"
+                                    width: "100%",
+                                    paddingBottom: "5em"
                                 }}
                                 title={() => (
                                 <TableTitle>

@@ -11,6 +11,7 @@ export const ContentSection = styled("section")`
     //justify-content: center;
   padding: 10rem 0 8rem;
     width: 100%;
+    height: 100vh;
 
   @media only screen and (max-width: 1024px) {
     //padding: 4rem 0 4rem;
