@@ -2,6 +2,7 @@
     font-size: 32px;
     color: black;
     @media screen and (max-width: 1024px) {
+        font-size: 24px;
         visibility: hidden;
     }
 }
@@ -9,6 +10,7 @@
     font-size: 32px;
     color: black;
     @media screen and (max-width: 1024px) {
+        font-size: 24px;
         visibility: hidden;
     }
 }

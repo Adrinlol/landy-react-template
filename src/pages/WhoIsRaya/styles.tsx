@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Carousel} from "antd";
+import {Carousel, Flex} from "antd";
 
 export const QualitySlide = styled("div")`
     display: flex;
@@ -8,11 +8,19 @@ export const QualitySlide = styled("div")`
     text-align: center;
 `
 
+export const StyledFlex = styled(Flex)`
+    text-align: center;
+    padding: 2em;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+`
+
 export const StyledCarousel = styled(Carousel)`
     max-width: 600px;
     padding: 2em;
     
     @media screen and (max-width: 1024px) {
-        margin: 3em
+        padding: 0
     }
 `
