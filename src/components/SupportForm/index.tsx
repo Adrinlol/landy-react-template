@@ -8,7 +8,6 @@ import validateSupport from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
-import SelectInput from "../../common/Select";
 import UploadInput from "../../common/UploadDragger";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, Span, ButtonContainer } from "./styles";
@@ -17,10 +16,6 @@ import {FormGroup} from "../ContactForm/styles";
 //const { Option } = Select;
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
-  
-  const handleSelectChange = (value: string) => {
-      values.category = value;
-  }
   
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
