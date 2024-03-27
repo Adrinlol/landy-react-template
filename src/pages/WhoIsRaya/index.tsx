@@ -3,7 +3,7 @@ import React from "react";
 import WhoIsRayaContent from "../../content/WhoIsRayaPage/WhoIsRayaConent.json"
 import {MinSubtitle} from "../TailoredSolutions/styles";
 import {Card, Col, Flex, Popover} from "antd";
-import {LeftCircleFilled, RightCircleFilled} from "@ant-design/icons";
+import {FullscreenExitOutlined, LeftCircleFilled, RightCircleFilled} from "@ant-design/icons";
 import {MinPara, PopoverContainer} from "../../components/ContentBlock/styles";
 import {QualitySlide, StyledCarousel, StyledFlex} from "./styles";
 import {SvgIcon} from "../../common/SvgIcon";

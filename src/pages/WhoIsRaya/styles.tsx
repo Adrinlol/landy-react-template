@@ -11,7 +11,8 @@ export const QualitySlide = styled("div")`
 export const StyledFlex = styled(Flex)`
     text-align: center;
     padding: 2em;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 624px) {
+        justify-content: center;
         flex-direction: column;
     }
 `
