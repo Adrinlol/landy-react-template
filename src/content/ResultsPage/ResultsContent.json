@@ -37,7 +37,7 @@
         {
             "clientIndustry": "services",
             "industryName": "Services",
-            "description": "Raya Solutions partnered with a diverse range of service-based businesses, including YCD Autocare, Reyes Bookkeeping Services, Physiolab PT and Performance Clinic, and Kintab Mobile Car Care, to streamline their service delivery, optimize resource allocation, and enhance client satisfaction. By implementing Raya for Services, our tailored solution built on ERPNext, these service providers were able to improve project management, optimize resource utilization, and provide personalized service to their clients, resulting in improved operational efficiency and customer retention.",
+            "description": "Raya Solutions partnered with a diverse range of service-based businesses, including YCD Autocare, Reyes Bookkeeping Services, and Kintab Mobile Car Care, to streamline their service delivery, optimize resource allocation, and enhance client satisfaction. By implementing Raya for Services, our tailored solution built on ERPNext, these service providers were able to improve project management, optimize resource utilization, and provide personalized service to their clients, resulting in improved operational efficiency and customer retention.",
             "clients": [
                 {
                     "name": "YCD Autocare",
@@ -45,10 +45,6 @@
                 },
                 {
                     "name": "Reyes Bookkeeping Services",
-                    "icon": "graphs.svg"
-                },
-                {
-                    "name": "Physiolab PT and Performance Clinic",
                     "icon": "graphs.svg"
                 },
                 {
