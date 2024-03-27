@@ -1,5 +1,6 @@
 import { TFunction } from "react-i18next";
-import Antd from "antd";
+import { Select } from "antd";
+import { SelectValue } from "antd/lib/select";
 import { UploadFile } from 'antd/lib/upload/interface';
 
 export interface ContainerProps {
@@ -41,13 +42,13 @@ export interface InputProps {
 export interface SelectProps {
   name: string;
   defaultValue: string;
+  value: string | SelectValue;
   t: TFunction;
   onChange: (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
-  children: React.ReactNode;
+      name: string,
+      value: string,
+    ) => void;
+  children?: React.ReactNode;
 }
 export interface UploadProps {
   name: string;

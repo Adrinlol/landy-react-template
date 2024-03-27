@@ -1,4 +1,5 @@
 import { Row, Col, Select } from "antd";
+import { SelectValue } from "antd/lib/select";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -13,9 +14,14 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, Span, ButtonContainer } from "./styles";
 import {FormGroup} from "../ContactForm/styles";
 
+//const { Option } = Select;
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useSupportForm(validateSupport);
-
+  
+  const handleSelectChange = (value: string) => {
+      values.category = value;
+  }
+  
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return (
@@ -42,7 +48,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   name="name"
                   placeholder="Your Name"
                   value={values.name || ""}
-                  onChange={handleChange}
+                  onChange={(e) => (handleChange(e.target.name, e.target.value))}
                 />
                 <ValidationType type="name" />
               </Col>
@@ -52,7 +58,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   name="email"
                   placeholder="Your Email"
                   value={values.email || ""}
-                  onChange={handleChange}
+                  onChange={(e) => (handleChange(e.target.name, e.target.value))}
                 />
               </Col>
               <ValidationType type="email" />
@@ -62,34 +68,34 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   name="phone"
                   placeholder="Phone number"
                   value={values.phone || ""}
-                  onChange={handleChange}
+                  onChange={(e) => (handleChange(e.target.name, e.target.value))}
                 />
               </Col>
               <ValidationType type="phone" />
               <Col span={24}>
-                <SelectInput
-                    name="category"
-                    onChange={handleChange}
-                    defaultValue="account">
+                <Select
+                    onChange={(value) => {handleChange("category", value.toString());}}
+                    defaultValue="account"
+                    value={values.category as SelectValue}>
                     {/** TODO: make this dynamic. **/ }
                     <Select.Option value="account">Account assistance</Select.Option>
                     <Select.Option value="billing">Billing inquiries</Select.Option>
                     <Select.Option value="product">Product feedback</Select.Option>
                     <Select.Option value="technical">Technical support</Select.Option>
-                </SelectInput>
+                </Select>
               </Col>
               <Col span={24}>
                 <UploadInput
                     name="attachment"
-                    onChange={handleChange}
+                    onChange={(e) => (handleChange(e.target.name, e.target.value))}
                     multiple={false} />
               </Col>
               <Col span={24}>
                 <TextArea
                   placeholder="Describe your inquiry"
-                  value={values.message || ""}
-                  name="message"
-                  onChange={handleChange}
+                  value={values.description || ""}
+                  name="description"
+                  onChange={(e) => (handleChange(e.target.name, e.target.value))}
                 />
                 <ValidationType type="message" />
               </Col>

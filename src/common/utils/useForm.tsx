@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { notification } from "antd";
+import { notification, Select } from "antd";
+import { SelectValue } from "antd/lib/select";
 import axios from "axios";
 
 export const useForm = (validate: any) => {
@@ -124,11 +125,9 @@ export const useSupportForm = (validate: any) => {
     name: "",
     email: "",
     phone: "",
-    category: "",
-    files: "",
-    message: ""
+    category: "account",
+    description: ""
   });
-  console.log(values);
   const [errors, setErrors] = useState({});
   const [shouldSubmit, setShouldSubmit] = useState(false);
 
@@ -143,15 +142,24 @@ export const useSupportForm = (validate: any) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
-    const url = "";
-    console.log("Submit: " + values);
+    const apikey = process.env.REACT_APP_AUTH_KEY;
+    const url = "https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.contact_response";
+    const headers = { 
+        headers: {
+            'Authorization': `Token ${apikey}`,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }};
+    console.log("Submit: " + values); // testing lang
+    /**axios.post(url, {alues}, headers).then((res) => {
+        console.log(res);
+    })**/
     if (Object.values(values).every((x) => x !== "")) {
       axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
+        .post(url, {values}, headers)
+        .then((response) => {
+            console.log(response);
+            setShouldSubmit(true);
         });
     }
   };
@@ -159,20 +167,21 @@ export const useSupportForm = (validate: any) => {
   useEffect(() => {
     if (Object.keys(errors).length === 0 && shouldSubmit) {
       setValues((values) => (values = { name: "", email: "", phone: "",
-      category: "", files: "", message: "" }));
+      category: "", description: "" }));
       openNotificationWithIcon();
     }
   }, [errors, shouldSubmit]);
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    //event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | { value: SelectValue } >
+    name: string,
+    value: string
   ) => {
-    event.persist();
-    setValues((values) => ({
-      ...values,
-      [event.target.name]: event.target.value,
+    setValues(values => ({
+        ...values,
+        [name]: value
     }));
-    setErrors((errors) => ({ ...errors, [event.target.name]: "" }));
+    console.log(values);
   };
 
   return {
