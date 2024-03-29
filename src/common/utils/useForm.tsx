@@ -169,13 +169,7 @@ export const useSupportForm = (validate: any) => {
         formData.append('description', description);
 
         console.log({values})
-        const response = axios.post('https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.handle_webhook', formData, {
-          headers: {
-              'Content-Type': 'multipart/form-data'
-          }
-      })
-      .then(response => console.log(response.data))
-      .catch(error => console.error(error));
+     
     // const response = await axios.post('https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.handle_webhook', {
     //   ...values
     // }, {
@@ -188,14 +182,24 @@ export const useSupportForm = (validate: any) => {
     /**axios.post(url, {alues}, headers).then((res) => {
         console.log(res);
     })**/
-    // if (Object.values(values).every((x) => x !== "")) {
-    //   axios
-    //     .post(url, {values}, headers)
-    //     .then((response) => {
-    //         console.log(response);
-    //         setShouldSubmit(true);
-    //     });
-    // }
+    if (Object.values(values).every((x) => x !== "")) {
+      // axios
+      //   .post(url, {values}, headers)
+      //   .then((response) => {
+      //       console.log(response);
+      //       setShouldSubmit(true);
+      //   });
+
+        const response = axios.post('https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.handle_webhook', formData, {
+          headers: {
+              'Content-Type': 'multipart/form-data'
+          }
+      })
+      .then((response) => {
+        console.log(response);
+        setShouldSubmit(true);
+    }).catch(error => console.error(error));
+    }
   };
 
   useEffect(() => {
