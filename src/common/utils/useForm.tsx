@@ -137,7 +137,7 @@ export const useSupportForm = (validate: any) => {
     });
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
@@ -145,22 +145,57 @@ export const useSupportForm = (validate: any) => {
     const url = "https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.contact_response";
     const headers = { 
         headers: {
-            'Authorization': `Token ${apikey}`,
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }};
-    console.log("Submit: " + values); // testing lang
+
+        //
+
+      //   {
+      //     "name": "Ranzelle Manalo",
+      //     "email": "ranz@rayasolutionsph.com",
+      //     "phone": "09171758812",
+      //     "category": "billing",
+      //     "description": "klhdkl"
+      // }
+
+      const {name,email,phone,category,description} = values
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('category', category);
+        formData.append('description', description);
+
+        console.log({values})
+        const response = axios.post('https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.handle_webhook', formData, {
+          headers: {
+              'Content-Type': 'multipart/form-data'
+          }
+      })
+      .then(response => console.log(response.data))
+      .catch(error => console.error(error));
+    // const response = await axios.post('https://rayaerp.rayasolutions.store/api/method/rayaerp_app.api.handle_webhook', {
+    //   ...values
+    // }, {
+    //   headers: {
+    //     // Add any necessary headers here
+    //     'Content-Type': 'application/json',
+    //   },}).catch(e=>console.log({e}))
+    // console.log({response})
+    // console.log("Submit: " + values); // testing lang
     /**axios.post(url, {alues}, headers).then((res) => {
         console.log(res);
     })**/
-    if (Object.values(values).every((x) => x !== "")) {
-      axios
-        .post(url, {values}, headers)
-        .then((response) => {
-            console.log(response);
-            setShouldSubmit(true);
-        });
-    }
+    // if (Object.values(values).every((x) => x !== "")) {
+    //   axios
+    //     .post(url, {values}, headers)
+    //     .then((response) => {
+    //         console.log(response);
+    //         setShouldSubmit(true);
+    //     });
+    // }
   };
 
   useEffect(() => {
