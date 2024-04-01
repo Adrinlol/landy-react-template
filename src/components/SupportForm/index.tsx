@@ -1,5 +1,4 @@
-import { Row, Col, Select } from "antd";
-import { SelectValue } from "antd/lib/select";
+import { Row, Col} from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -8,7 +7,6 @@ import validateSupport from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
-import UploadInput from "../../common/UploadDragger";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, Span, ButtonContainer } from "./styles";
 import {FormGroup} from "../ContactForm/styles";
