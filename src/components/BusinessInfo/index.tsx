@@ -52,9 +52,9 @@ const BusinessInfo = ({ fb, x, email, phone, line1, line2, line3 }: Props) => {
             <Col xs={24} md={12} >
                  <ImageCardLink
                     image="svgrepo_phone.svg"
-                    link="tel:09088180855"
+                    link="tel:09088182059"
                     title="Phone number"
-                    subtitle="(+63)908-818-0855"
+                    subtitle="+63 908 818 2059"
                 />
             </Col>
             <Col xs={24} md={12} >
