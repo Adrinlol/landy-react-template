@@ -68,24 +68,6 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <ValidationType type="phone" />
               <Col span={24}>
-                <Select
-                    onChange={(value) => {handleChange("category", value.toString());}}
-                    defaultValue="account"
-                    value={values.category as SelectValue}>
-                    {/** TODO: make this dynamic. **/ }
-                    <Select.Option value="account">Account assistance</Select.Option>
-                    <Select.Option value="billing">Billing inquiries</Select.Option>
-                    <Select.Option value="product">Product feedback</Select.Option>
-                    <Select.Option value="technical">Technical support</Select.Option>
-                </Select>
-              </Col>
-              <Col span={24}>
-                <UploadInput
-                    name="attachment"
-                    onChange={(e) => (handleChange(e.target.name, e.target.value))}
-                    multiple={false} />
-              </Col>
-              <Col span={24}>
                 <TextArea
                   placeholder="Describe your inquiry"
                   value={values.description || ""}
