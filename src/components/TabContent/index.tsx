@@ -4,6 +4,7 @@ import React from "react";
 import {ContentWrapper} from "../MiddleBlock/styles";
 import {Content} from "../Block/styles";
 import {Link} from "react-router-dom";
+import {ColumnsType} from "antd/es/table";
 
 interface CardGridProps {
     items: {
@@ -19,7 +20,11 @@ interface CardGridProps {
         pricingModel?: string
     }[]
 }
-const addOnTableColumns = [
+const addOnTableColumns : ColumnsType<{
+    name: string;
+    description: string;
+    pricingModel?: string;
+}> = [
     {
         title: 'Add-on',
         dataIndex: 'name',
