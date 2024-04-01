@@ -7,19 +7,27 @@
             "clients": [
                 {
                     "name": "Nature to Nurture",
-                    "icon": "graphs.svg"
+                    "icon": "n2n.svg"
+                },
+                {
+                    "name": "Feminism PH",
+                    "icon": "feminism.svg"
+                },
+                {
+                    "name": "Poptopia PH",
+                    "icon": "poptopia.svg"
                 },
                 {
                     "name": "Traders Choice",
-                    "icon": "graphs.svg"
+                    "icon": "traders.svg"
                 },
                 {
                     "name": "YCD Autoparts and Convenience Stores",
-                    "icon": "graphs.svg"
+                    "icon": "ycd.svg"
                 },
                 {
                     "name": "Mermaid Manila Trading",
-                    "icon": "graphs.svg"
+                    "icon": "mermaid.svg"
                 }
             ]
         },
@@ -30,7 +38,11 @@
             "clients": [
                 {
                     "name": "Sta Clara International",
-                    "icon": "graphs.svg"
+                    "icon": "scic.svg"
+                },
+                {
+                    "name": "JJY Construction",
+                    "icon": "jjy.svg"
                 }
             ]
         },
@@ -41,15 +53,15 @@
             "clients": [
                 {
                     "name": "YCD Autocare",
-                    "icon": "graphs.svg"
+                    "icon": "ycd.svg"
                 },
                 {
                     "name": "Reyes Bookkeeping Services",
-                    "icon": "graphs.svg"
+                    "icon": "reyes.svg"
                 },
                 {
                     "name": "Kintab Mobile Car Care",
-                    "icon": "graphs.svg"
+                    "icon": "kintab.svg"
                 }
             ]
         },
@@ -60,15 +72,15 @@
             "clients": [
                 {
                     "name": "Bai Resort",
-                    "icon": "graphs.svg"
+                    "icon": "bai.svg"
                 },
                 {
                     "name": "Camp Paraiso",
-                    "icon": "graphs.svg"
+                    "icon": "camp.svg"
                 },
                 {
                     "name": "JAPI Hotel",
-                    "icon": "graphs.svg"
+                    "icon": "japi.svg"
                 }
             ]
         },
@@ -79,11 +91,11 @@
             "clients": [
                 {
                     "name": "Lola Idangs",
-                    "icon": "graphs.svg"
+                    "icon": "idangs.svg"
                 },
                 {
                     "name": "Tita Letty's",
-                    "icon": "graphs.svg"
+                    "icon": "tita-letty.svg"
                 }
             ]
         }
