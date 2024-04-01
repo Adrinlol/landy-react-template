@@ -3,33 +3,33 @@
       {
         "name": "Starter Package",
         "includedServices": ["Basic setup and configuration", "Training for up to 10 users", "1 month post-launch support"],
-        "priceRange": "₱499,000 - ₱1,000,000"
+        "priceRange": "₱499,000 to ₱1,000,000"
       },
       {
         "name": "Standard Package",
         "includedServices": ["Advanced configuration", "Training for up to 25 users", "Data migration support", "3 months post-launch support"],
-        "priceRange": "₱1,000,000 - ₱1,925,000"
+        "priceRange": "₱1,000,000 to ₱1,925,000"
       },
       {
         "name": "Enterprise Package",
         "includedServices": ["Comprehensive implementation", "Extensive customizations", "Training for an unlimited number of users", "Data migration", "6 months post-launch support"],
-        "priceRange": "₱1,925,000 - ₱3,850,000"
+        "priceRange": "₱1,925,000 to ₱3,850,000"
       }],
   "erpnextDeals": [
     {
       "name": "Basic Package",
       "includedServices": ["Setup and configuration of core modules", "Basic training for staff", "1 month of support"],
-      "priceRange": "₱250,000 - ₱660,000"
+      "priceRange": "₱250,000 to ₱660,000"
     },
     {
       "name": "Professional Package",
       "includedServices": ["Extended setup including customizations", "Training for up to 20 users", "Data migration assistance", "3 months of support"],
-      "priceRange": "₱660,000 - ₱1,320,000"
+      "priceRange": "₱660,000 to ₱1,320,000"
     },
     {
       "name": "Premium Package",
       "includedServices": ["Full deployment with all modules", "Advanced customizations", "System integrations", "Comprehensive training for staff", "Data migration", "6 months of ongoing support"],
-      "priceRange": "₱1,320,000 - ₱2,640,000"
+      "priceRange": "₱1,320,000 to ₱2,640,000"
     }
   ],
   "rayaERPDeals": {
@@ -37,17 +37,17 @@
       {
         "name": "Basic Package",
         "includedServices": ["Core setup and configuration", "Basic staff training", "1 month of support"],
-        "priceRange": "₱150,000 - ₱300,000"
+        "priceRange": "₱150,000 to ₱300,000"
       },
       {
         "name": "Professional Package",
         "includedServices": ["Extended setup with customizations", "Training for up to 20 users", "Data migration assistance", "3 months of support"],
-        "priceRange": "₱300,000 - ₱1,056,000"
+        "priceRange": "₱300,000 to ₱1,056,000"
       },
       {
         "name": "Premium Package",
         "includedServices": ["Full deployment including all modules", "Advanced customizations", "Comprehensive training for staff", "Data migration", "6 months of ongoing support"],
-        "priceRange": "₱1,056,000 - ₱3,112,000"
+        "priceRange": "₱1,056,000 to ₱3,112,000"
       }
     ],
     "addOns": [
@@ -99,7 +99,7 @@
         "name": "Entry-Level Package",
         "target": "Startups and small businesses looking to automate core business functions.",
         "includedServices": ["Basic ERP system setup with essential modules (e.g., Finance and Sales)", "User training for up to 5 users", "Basic data migration support", "2 weeks of post-launch support"],
-        "priceRange": "₱80,000 - ₱120,000"
+        "priceRange": "₱80,000 to ₱120,000"
       },
       {
         "name": "Growth Package",
@@ -111,7 +111,7 @@
           "Basic customization",
           "1 month of post-launch support"
         ],
-        "priceRange": "₱100,000 - ₱150,000"
+        "priceRange": "₱100,000 to ₱150,000"
       }],
       "addOns": [
         {
@@ -135,21 +135,21 @@
         "target": "Very small businesses, startups, or those new to using POS systems.",
         "includedFeatures": ["Basic POS software with essential sales processing features", "Inventory management", "Reporting capabilities"],
         "includedServices": ["Basic setup and configuration", "Training for up to 2 users", "1 month of post-launch support"],
-        "priceRange": "₱50,000 - ₱75,000"
+        "priceRange": "₱50,000 to ₱75,000"
       },
       {
         "name": "Standard POS Package",
         "target": "Growing small businesses needing more functionality and flexibility.",
         "includedFeatures": ["Advanced POS software with additional features such as customer management", "Employee management", "Loyalty programs"],
         "includedServices": ["Advanced setup and configuration", "Data migration assistance", "Training for up to 5 users", "3 months of post-launch support"],
-        "priceRange": "₱75,000 - ₱100,000"
+        "priceRange": "₱75,000 to ₱100,000"
       },
       {
         "name": "Complete Business POS Package",
         "target": "Established small to medium-sized businesses looking for comprehensive POS solutions.",
         "includedFeatures": ["Full-featured POS software with multi-store support", "Advanced inventory management", "Ecommerce integration", "Detailed analytics"],
         "includedServices": ["Comprehensive setup and customization", "Integration with existing systems (e-commerce, accounting, etc.)", "Comprehensive training program", "6 months of post-launch support"],
-        "priceRange": "₱100,000 - ₱150,000"
+        "priceRange": "₱100,000 to ₱150,000"
       }
     ],
     "addOns": [
@@ -178,21 +178,21 @@
         "target": "Very small businesses or startups taking their first step into formal customer relationship management.",
         "includedFeatures": ["Contact management", "Lead tracking", "Sales pipeline visualization", "Basic reporting tools"],
         "includedServices": ["System setup", "Basic customization to align with local business practices", "Initial user training for up to 5 users", "1 month of post-launch support"],
-        "priceRange": "₱50,000 - ₱75,000"
+        "priceRange": "₱50,000 to ₱75,000"
       },
       {
         "name": "Professional CRM Package",
         "target": "Small businesses looking to deepen customer engagement and streamline sales processes.",
         "includedFeatures": ["Advanced contact and lead management", "Email marketing integration", "Sales forecasting", "Custom reports", "Dashboards"],
         "includedServices": ["Advanced system setup", "Data migration from existing systems", "Custom reports setup", "Training for up to 10 users", "3 months of post-launch support"],
-        "priceRange": "₱75,000 - ₱100,000"
+        "priceRange": "₱75,000 to ₱100,000"
       },
       {
         "name": "Enterprise CRM Package",
-        "target": "Medium-sized businesses seeking a comprehensive CRM solution to support complex sales cycles and marketing strategies.",
+        "target": "Mediumtosized businesses seeking a comprehensive CRM solution to support complex sales cycles and marketing strategies.",
         "includedFeatures": ["Complete CRM functionalities including marketing automation", "Service and support modules", "Advanced analytics", "Integration capabilities with other business systems (ERP, POS, etc.)"],
         "includedServices": ["Comprehensive system setup and customization", "Complex data migration", "API integrations", "Extensive user training", "6 months of post-launch support"],
-        "priceRange": "₱100,000 - ₱150,000"
+        "priceRange": "₱100,000 to ₱150,000"
       }
     ],
     "addOns": [
@@ -225,7 +225,7 @@
           "User access management and security monitoring.",
           "First-level support for all ERP-related queries and issues."
         ],
-        "priceRange": "₱75,000 - ₱150,000 per month"
+        "priceRange": "₱75,000 to ₱150,000 per month"
       },
       {
         "name": "Financial Processes Outsourcing Package",
@@ -236,7 +236,7 @@
           "Compliance and audit support.",
           "Financial analysis and insights."
         ],
-        "priceRange": "₱100,000 - ₱200,000 per month"
+        "priceRange": "₱100,000 to ₱200,000 per month"
       },
       {
         "name": "HR and Payroll Outsourcing Package",
@@ -247,7 +247,7 @@
           "Recruitment, onboarding, and offboarding processes.",
           "HR reports and analytics."
         ],
-        "priceRange": "₱90,000 - ₱180,000 per month"
+        "priceRange": "₱90,000 to ₱180,000 per month"
       },
       {
         "name": "Supply Chain Management Outsourcing Package",
@@ -258,7 +258,7 @@
           "Supplier and procurement management.",
           "Demand planning and forecasting."
         ],
-        "priceRange": "₱120,000 - ₱250,000 per month"
+        "priceRange": "₱120,000 to ₱250,000 per month"
       }],
     "addOns": [
       {
@@ -271,7 +271,7 @@
       },
       {
         "name": "Strategic ERP Consulting",
-        "description": "High-level strategic consulting services to optimize ERP deployment and utilization for business growth and transformation."
+        "description": "Hightolevel strategic consulting services to optimize ERP deployment and utilization for business growth and transformation."
       }
     ]
   }
