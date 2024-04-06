@@ -43,20 +43,21 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
         if (!response.ok) {
           notification["error"]({
             message: "Error",
-            description: "There was an error sending your message, please try again later.",
+            description:
+              "There was an error sending your message, please try again later.",
+          });
+        } else {
+          event.target.reset();
+          setFormState(() => ({
+            values: { ...initialValues },
+            errors: { ...initialValues },
+          }));
+
+          notification["success"]({
+            message: "Success",
+            description: "Your message has been sent!",
           });
         }
-
-        event.target.reset();
-        setFormState(() => ({
-          values: { ...initialValues },
-          errors: { ...initialValues },
-        }));
-
-        notification["success"]({
-          message: "Success",
-          description: "Your message has been sent!",
-        });
       }
     } catch (error) {
       notification["error"]({
