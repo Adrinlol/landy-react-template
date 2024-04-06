@@ -80,15 +80,7 @@ You’ll need to have Node 10.16.0 or later version on your local development ma
 
 To create a new app, you have to:
 
-### npx
-
-Use the following command 
-
-```sh
-npx create-react-app my-app --template adrinlol
-cd my-app
-npm start
-```
+Begin by cloning this repository to establish your own local copy. This process is straightforward and ensures you have all the necessary files and resources at your fingertips. You can find step-by-step instructions in this helpful article: Cloning a [repository on GitHub.com](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
 
 ## What's included
 
