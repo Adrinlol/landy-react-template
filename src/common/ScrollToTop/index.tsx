@@ -1,28 +1,26 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SvgIcon } from "../SvgIcon";
 import { ScrollUpContainer } from "./styles";
-import { getScroll } from "../utils/getWindow";
 
 const ScrollToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
 
-  const checkScrollTop = (event: any) => {
-    const offsetFromTop = getScroll(event.target, true);
+  const checkScrollTop = useCallback(() => {
+    const offsetFromTop = window.scrollY;
 
     if (!showScroll && offsetFromTop > 350) {
       setShowScroll(true);
     } else if (offsetFromTop <= 350) {
       setShowScroll(false);
     }
-  };
+  }, [showScroll]);
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop);
     return () => {
       window.removeEventListener("scroll", checkScrollTop);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [checkScrollTop]);
 
   const scrollUp = () => {
     const element = document.getElementById("intro") as HTMLDivElement;

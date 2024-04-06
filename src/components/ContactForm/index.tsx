@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Slide, Zoom } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
@@ -15,11 +15,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
-    return (
-      <Zoom direction="left">
-        <Span>{ErrorMessage}</Span>
-      </Zoom>
-    );
+    return <Span>{ErrorMessage}</Span>;
   };
 
   return (
