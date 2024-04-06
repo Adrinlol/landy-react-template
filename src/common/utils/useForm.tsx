@@ -1,61 +1,94 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { notification } from "antd";
-import axios from "axios";
 
-export const useForm = (validate: any) => {
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    message: "",
+interface IValues {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const initialValues: IValues = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+export const useForm = (validate: { (values: IValues): IValues }) => {
+  const [formState, setFormState] = useState<{
+    values: IValues;
+    errors: IValues;
+  }>({
+    values: { ...initialValues },
+    errors: { ...initialValues },
   });
-  const [errors, setErrors] = useState({});
-  const [shouldSubmit, setShouldSubmit] = useState(false);
 
-  const openNotificationWithIcon = () => {
-    notification["success"]({
-      message: "Success",
-      description: "Your message has been sent!",
-    });
-  };
-
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setErrors(validate(values));
-    // Your url for API
-    const url = "";
-    if (Object.values(values).every((x) => x !== "")) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
+    const values = formState.values;
+    const errors = validate(values);
+    setFormState((prevState) => ({ ...prevState, errors }));
+
+    const url = ""; // Fill in your API URL here
+
+    try {
+      if (Object.values(errors).every((error) => error === "")) {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
         });
+
+        if (!response.ok) {
+          notification["error"]({
+            message: "Error",
+            description:
+              "There was an error sending your message, please try again later.",
+          });
+        } else {
+          event.target.reset();
+          setFormState(() => ({
+            values: { ...initialValues },
+            errors: { ...initialValues },
+          }));
+
+          notification["success"]({
+            message: "Success",
+            description: "Your message has been sent!",
+          });
+        }
+      }
+    } catch (error) {
+      notification["error"]({
+        message: "Error",
+        description: "Failed to submit form. Please try again later.",
+      });
     }
   };
-
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues((values) => (values = { name: "", email: "", message: "" }));
-      openNotificationWithIcon();
-    }
-  }, [errors, shouldSubmit]);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     event.persist();
-    setValues((values) => ({
-      ...values,
-      [event.target.name]: event.target.value,
+    const { name, value } = event.target;
+    setFormState((prevState) => ({
+      ...prevState,
+      values: {
+        ...prevState.values,
+        [name]: value,
+      },
+      errors: {
+        ...prevState.errors,
+        [name]: "",
+      },
     }));
-    setErrors((errors) => ({ ...errors, [event.target.name]: "" }));
   };
 
   return {
     handleChange,
     handleSubmit,
-    values,
-    errors,
+    values: formState.values,
+    errors: formState.errors,
   };
 };

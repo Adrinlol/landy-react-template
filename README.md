@@ -84,7 +84,6 @@ Begin by cloning this repository to establish your own local copy. This process 
 
 ## What's included
 
-- [axios][axios] - Promise based HTTP client for the browser and Node.js.
 - [antd][antd] - React UI library that contains a set of high quality components.
 - [react-awesome-reveal][react-awesome-reveal] - High performance library that adds reveal animations using the Intersection Observer API.
 - [styled-componets][styled-componets] - Variant on “CSS-in-JS”—which solves many of the problems with traditional CSS.
@@ -103,7 +102,6 @@ Use it for whatever you want, and be sure to reach out to me on [Twitter](https:
 Licensed under the MIT license.
 
 <!-- prettier-ignore-start -->
-[axios]: https://github.com/axios/axios
 [antd]: https://github.com/ant-design/ant-design
 [react-awesome-reveal]: https://www.npmjs.com/package/react-awesome-reveal
 [styled-componets]: https://github.com/styled-components/styled-components
