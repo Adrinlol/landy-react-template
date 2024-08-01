@@ -12,6 +12,7 @@
     "i18next": "^19.9.2",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-xhr-backend": "^3.2.2",
+    "my-app": "file:",
     "react": "^18.2.0",
     "react-awesome-reveal": "^3.8.1",
     "react-dom": "^18.2.0",

@@ -12,7 +12,7 @@ export const HeaderSection = styled("header")`
 `;
 
 export const LogoContainer = styled(Link)`
-  display: flex;
+  display: display;
 `;
 
 export const NavLink = styled("div")`

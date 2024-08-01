@@ -1,16 +1,25 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Quem somos",
+  "text": "Fundada em 2014 na cidade de Ananindeua, no estado do Pará, a Itacaiúnas tem como missão transformar ideias em realidades tangíveis. Desde o início, nos dedicamos a oferecer uma gama diversificada de serviços e produtos que atendam às necessidades dos nossos clientes com qualidade e inovação.",
   "section": [
     {
       "title": "Why Antd?",
       "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "icon": "notes.svg",
+      "button": {
+        "text": "Learn More",
+        "url": "/learn-more"
+      }
+      
     },
     {
       "title": "Why styled-components?",
       "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "icon": "notes.svg",
+      "button": {
+        "text": "Learn More",
+        "url": "/learn-more"
+      }
     }
   ]
 }

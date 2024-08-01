@@ -82,6 +82,7 @@ const ContentBlock = ({
                             title: string;
                             content: string;
                             icon: string;
+                            button?: { text: string; url: string };
                           },
                           id: number
                         ) => {
@@ -94,6 +95,15 @@ const ContentBlock = ({
                               />
                               <MinTitle>{t(item.title)}</MinTitle>
                               <MinPara>{t(item.content)}</MinPara>
+                              {item.button && (
+                                <ButtonWrapper>
+                                  <a href={item.button.url}>
+                                    <Button>
+                                      {t(item.button.text)}
+                                    </Button>
+                                  </a>
+                                </ButtonWrapper>
+                              )}
                             </Col>
                           );
                         }
