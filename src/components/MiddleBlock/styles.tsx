@@ -14,6 +14,8 @@ export const MiddleBlockSection = styled("section")`
 
 export const Content = styled("p")`
   padding: 0.75rem 0 0.75rem;
+  word-wrap: break-word;
+  max-width: 100%;
 `;
 
 export const ContentWrapper = styled("div")`
