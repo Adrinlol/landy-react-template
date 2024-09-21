@@ -3,14 +3,14 @@ import { createGlobalStyle } from "styled-components";
 export const Styles = createGlobalStyle`
 
     @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-family: "Urbanist Sans Light";
+        src: url("/fonts/Urbanist-Light.ttf") format("truetype");
         font-style: normal;
     }
 
     @font-face {
-        font-family: "Motiva Sans Bold";
-        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-family: "Urbanist Sans Bold";
+        src: url("/fonts/Urbanist-Bold.ttf") format("truetype");
         font-style: normal;
     }
 
@@ -18,7 +18,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'Urbanist Sans Light', sans-serif;
     }
 
 
@@ -57,7 +57,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
+        font-family: 'Urbanist Sans Bold', serif;
         color: #18216d;
         font-size: 56px;
         line-height: 1.18;
