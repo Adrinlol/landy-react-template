@@ -6,7 +6,6 @@ export interface ContentBlockProps {
   section?: {
     title: string;
     content: string;
-    icon: string;
   }[];
   button?: (
     | {
@@ -21,4 +20,5 @@ export interface ContentBlockProps {
   t: TFunction;
   id: string;
   direction: "left" | "right";
+  align?: "left" | "right";
 }

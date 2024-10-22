@@ -1,16 +1,18 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Software Development Services",
+  "text": "",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "title": "Software Development",
+      "content": "Wondercode delivers tailor-made custom software solutions designed to improve efficiency, drive growth, and scale with your business. Whether you need mobile apps, web platforms, or enterprise software, we build powerful, high-performance solutions to transform your business."
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "title": "Process Design",
+      "content": "Optimize your workflows with our comprehensive process design services. At Wondercode, we help businesses re-engineer their operations to increase productivity, reduce costs, and achieve streamlined processes through intelligent design and automation."
+    },
+    {
+      "title": "Quality Assurance",
+      "content": "Ensure your software performs flawlessly with our QA testing services. Our rigorous quality assurance processes, including functional, automated, and performance testing, ensure your software is secure, bug-free, and ready for the market."
     }
   ]
 }

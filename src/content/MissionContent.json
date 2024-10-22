@@ -1,4 +1,18 @@
 {
-  "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content."
+  "title": "Why Partner with Wondercode?",
+  "text": "",
+  "section": [
+    {
+      "title": "Experienced Software Developers",
+      "content": "Our team consists of skilled developers with expertise in the latest technologies, ensuring we deliver the most up-to-date solutions for your business."
+    },
+    {
+      "title": "Scalable and Future-Proof Solutions",
+      "content": "We develop software that's built to grow with your business, ensuring long-term success."
+    },
+    {
+      "title": "Comprehensive QA Testing",
+      "content": "We guarantee the highest standards of software quality with our thorough testing methods and industry best practices."
+    }
+  ]
 }

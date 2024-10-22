@@ -51,7 +51,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="How we can help you?"
                   value={values.message || ""}
                   name="message"
                   onChange={handleChange}

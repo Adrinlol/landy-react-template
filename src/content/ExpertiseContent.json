@@ -1,0 +1,18 @@
+{
+  "title": "Our Expertise",
+  "text": "As a leader in software development services, we excel in the following areas:",
+  "section": [
+    {
+      "title": "Mobile App Development",
+      "content": "Create user-friendly and highly functional mobile apps for iOS and Android."
+    },
+    {
+      "title": "Web Development",
+      "content": "Design and build responsive, SEO-friendly websites that engage and convert visitors."
+    },
+    {
+      "title": "Cloud Solutions",
+      "content": "Implement scalable, secure cloud infrastructures for seamless data management and accessibility."
+    }
+  ]
+}

@@ -47,6 +47,10 @@ export const MinPara = styled("p")`
   font-size: 13px;
 `;
 
+export const RowWithGap = styled(Row)`
+  gap: 10px 0;
+`;
+
 export const ButtonWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
