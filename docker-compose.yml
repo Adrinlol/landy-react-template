@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Порт 3000 на хосте будет перенаправлен на порт 80 внутри контейнера
+    restart: always
