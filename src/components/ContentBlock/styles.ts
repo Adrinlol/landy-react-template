@@ -14,9 +14,10 @@ export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
 `;
 
-export const StyledRow = styled(Row)`
-  flex-direction: ${({ direction }: { direction: string }) =>
-    direction === "left" ? "row" : "row-reverse"};
+export const StyledRow = styled(Row)<{
+  direction: "left" | "right";
+}>`
+  flex-direction: ${({ direction }: { direction: string }) => (direction === "left" ? "row" : "row-reverse")};
 `;
 
 export const ContentWrapper = styled("div")`
