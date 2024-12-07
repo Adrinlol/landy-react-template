@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+	<circle cx="256" cy="256" r="256" style="fill:#FFFFFF;" /> <!-- Белый фон круга -->
+	<g clip-path="url(#clip)">
+		<path style="fill:#FFFFFF;" d="M0,170.667h512V341.333H0V170.667z"/> <!-- Белая полоса -->
+		<path style="fill:#0039A6;" d="M0,170.667v170.667h512V170.667H0z"/> <!-- Синяя полоса -->
+		<path style="fill:#D52B1E;" d="M0,341.333h512V512H0V341.333z"/> <!-- Красная полоса -->
+	</g>
+	<defs>
+		<clipPath id="clip">
+			<circle cx="256" cy="256" r="256"/> <!-- Обрезка внутри круга -->
+		</clipPath>
+	</defs>
+</svg>

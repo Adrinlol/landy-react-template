@@ -1,12 +1,12 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Решения для записи и обработки видео",
+  "text": "VideoLab Studio – это универсальный инструмент для записи, трансляции и обработки видео. Убедитесь сами, как наши технологии упрощают вашу работу.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Попробовать бесплатно"
     },
     {
-      "title": "Learn more",
+      "title": "Узнать больше",
       "color": "#fff"
     }
   ]
