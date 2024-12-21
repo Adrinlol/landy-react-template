@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
@@ -19,6 +20,8 @@ import { getAssetPath } from "../../utils/paths";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const location = useLocation();
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -26,15 +29,22 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      if (location.pathname !== '/') {
+        window.location.href = `${publicUrl}/#${id}`;
+        return;
+      }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      const element = document.getElementById(id);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
       setVisibility(false);
     };
 
@@ -46,11 +56,11 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("programs")}>
           <Span>{t("Programs")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-        >
+        <CustomNavLinkSmall style={{ width: "180px" }}>
           <Span>
-            <Button onClick={() => window.location.href = '/register'}>{t("Register")}</Button>
+            <Button onClick={() => window.location.href = `${publicUrl}/register`}>
+              {t("Register")}
+            </Button>
           </Span>
         </CustomNavLinkSmall>
       </>

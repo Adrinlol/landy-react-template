@@ -22,10 +22,28 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
       setCurrentImageIndex((prevIndex) => 
         prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change image every 5 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
+
+  const handleClick = (link: string) => {
+    if (link.startsWith('#')) {
+      const element = document.getElementById(link.substring(1));
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    } else {
+      window.location.href = `${getAssetPath(link)}`;
+    }
+  };
 
   return (
     <HeroContainer>
@@ -50,7 +68,7 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
             <Button
               key={index}
               color={button.color}
-              onClick={() => window.location.href = button.link}
+              onClick={() => handleClick(button.link)}
             >
               {button.title}
             </Button>
