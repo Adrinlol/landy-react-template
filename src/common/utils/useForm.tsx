@@ -2,15 +2,39 @@ import { useState } from "react";
 import { notification } from "antd";
 
 interface IValues {
-  name: string;
-  email: string;
-  message: string;
+  name?: string;
+  email?: string;
+  message?: string;
+  age?: string;
+  standard?: string;
+  gender?: string;
+  subject?: string;
+  institution?: string;
+  yearOfStudy?: string;
+  yearOfCompletion?: string;
+  district?: string;
+  localBody?: string;
+  pinCode?: string;
+  contactNumber?: string;
+  whatsappNumber?: string;
 }
 
 const initialValues: IValues = {
   name: "",
   email: "",
   message: "",
+  age: "",
+  standard: "",
+  gender: "",
+  subject: "",
+  institution: "",
+  yearOfStudy: "",
+  yearOfCompletion: "",
+  district: "",
+  localBody: "",
+  pinCode: "",
+  contactNumber: "",
+  whatsappNumber: "",
 };
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
@@ -22,7 +46,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     errors: { ...initialValues },
   });
 
-  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const values = formState.values;
     const errors = validate(values);
@@ -43,11 +67,10 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
         if (!response.ok) {
           notification["error"]({
             message: "Error",
-            description:
-              "There was an error sending your message, please try again later.",
+            description: "There was an error sending your message, please try again later.",
           });
         } else {
-          event.target.reset();
+          event.currentTarget.reset();
           setFormState(() => ({
             values: { ...initialValues },
             errors: { ...initialValues },
@@ -68,9 +91,8 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { target: { name: string; value: string } }
   ) => {
-    event.persist();
     const { name, value } = event.target;
     setFormState((prevState) => ({
       ...prevState,
