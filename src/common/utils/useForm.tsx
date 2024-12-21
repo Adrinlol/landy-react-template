@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { notification } from "antd";
+import { db } from "../../config/firebase";
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { useHistory } from "react-router-dom";
 
 interface IValues {
   name?: string;
@@ -38,6 +41,7 @@ const initialValues: IValues = {
 };
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
+  const history = useHistory();
   const [formState, setFormState] = useState<{
     values: IValues;
     errors: IValues;
@@ -52,40 +56,38 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = ""; // Fill in your API URL here
-
     try {
       if (Object.values(errors).every((error) => error === "")) {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
+        // Add registration data to Firestore
+        const registrationsRef = collection(db, 'registrations');
+        await addDoc(registrationsRef, {
+          ...values,
+          timestamp: serverTimestamp()
         });
 
-        if (!response.ok) {
-          notification["error"]({
-            message: "Error",
-            description: "There was an error sending your message, please try again later.",
-          });
-        } else {
-          event.currentTarget.reset();
-          setFormState(() => ({
-            values: { ...initialValues },
-            errors: { ...initialValues },
-          }));
+        // Reset form state
+        setFormState({
+          values: { ...initialValues },
+          errors: { ...initialValues },
+        });
 
-          notification["success"]({
-            message: "Success",
-            description: "Your message has been sent!",
-          });
-        }
+        // Show success notification
+        notification["success"]({
+          message: "Registration Successful",
+          description: "Thank you for registering! We'll contact you soon.",
+          duration: 3,
+        });
+
+        // Redirect to home page after 2 seconds
+        setTimeout(() => {
+          history.push('/#hero');
+        }, 2000);
       }
     } catch (error) {
+      console.error('Registration error:', error);
       notification["error"]({
         message: "Error",
-        description: "Failed to submit form. Please try again later.",
+        description: "Failed to submit registration. Please try again later.",
       });
     }
   };

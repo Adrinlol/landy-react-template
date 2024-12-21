@@ -48,7 +48,7 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
   };
 
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <BackgroundSlider>
         {backgroundImages.map((image, index) => (
           <BackgroundImage 
