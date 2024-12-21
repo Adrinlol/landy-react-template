@@ -1,0 +1,21 @@
+{
+  "title": "കേരള സ്റ്റുഡന്റ്സ് കോൺഫറൻസ്",
+  "subtitle": "വിദ്യാർത്ഥികളുടെ സർവ്വതോന്മുഖ വികാസത്തിനായുള്ള മഹാ സംഗമം!",
+  "buttons": [
+    {
+      "title": "Explore",
+      "link": "/explore",
+      "color": "#005893"
+    },
+    {
+      "title": "Register",
+      "link": "/register",
+      "color": "transparent"
+    }
+  ],
+  "backgroundImages": [
+    "/img/hero/bg1.jpg",
+    "/img/hero/bg2.jpg",
+    "/img/hero/bg3.jpg"
+  ]
+}
