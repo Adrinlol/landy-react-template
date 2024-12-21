@@ -66,10 +66,24 @@ export const Title = styled.h1`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Description = styled.p`
   color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
+
+export const Subtitle = styled.p`
+  color: #ffffff;
+  font-size: 1.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: 768px) {
@@ -88,7 +102,7 @@ export const ButtonGroup = styled.div`
   
   button {
     color: #fff;
-    border: ${props => props.color === 'transparent' ? '1px solid #fff' : 'none'};
+    border: ${props => props.color === 'transparent' ? '2px solid #fff' : 'none'};
     
     &:hover {
       color: #fff;

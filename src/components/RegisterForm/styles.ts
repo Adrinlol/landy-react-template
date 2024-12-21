@@ -62,9 +62,13 @@ export const Span = styled("span")`
 `;
 
 export const ButtonContainer = styled("div")`
-  text-align: end;
+  text-align: center;
   position: relative;
   margin-top: 2rem;
+
+  button {
+    border: 2px solid white;
+  }
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;

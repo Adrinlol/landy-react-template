@@ -15,6 +15,7 @@ const Home = () => {
       <HeroBlock
         title={HeroContent.title}
         subtitle={HeroContent.subtitle}
+        description={HeroContent.description}
         buttons={HeroContent.buttons}
         backgroundImages={HeroContent.backgroundImages}
       />

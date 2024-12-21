@@ -9,12 +9,13 @@ import {
   ContentWrapper,
   Title,
   Subtitle,
+  Description,
   ButtonGroup
 } from "./styles";
 import { HeroBlockProps } from "./types";
 import { getAssetPath } from "../../utils/paths";
 
-const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProps) => {
+const HeroBlock = ({ title, subtitle, description, buttons, backgroundImages }: HeroBlockProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -65,6 +66,7 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
       <ContentWrapper>
         <Title>{title}</Title>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        {description && <Description>{description}</Description>}
         <ButtonGroup>
           {buttons.map((button, index) => (
             <Button

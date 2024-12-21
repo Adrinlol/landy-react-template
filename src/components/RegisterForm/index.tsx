@@ -57,7 +57,6 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                 >
                   <Option value="male">Male</Option>
                   <Option value="female">Female</Option>
-                  <Option value="other">Other</Option>
                 </Select>
                 <ValidationType type="gender" />
               </Col>
