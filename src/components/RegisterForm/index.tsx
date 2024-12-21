@@ -7,7 +7,7 @@ import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
-import { RegisterContainer, FormGroup, Span, ButtonContainer, LeftColumn, LeftColumnWrapper } from "./styles";
+import { RegisterContainer, FormGroup, Span, ButtonContainer, LeftColumn, LeftColumnWrapper, Label, StyledSelect } from "./styles";
 
 const { Option } = Select;
 
@@ -22,6 +22,47 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return <Span>{ErrorMessage}</Span>;
   };
+
+  const educationLevels = [
+    "High School",
+    "Higher Secondary",
+    "UG",
+    "PG",
+    "MPhil",
+    "PhD",
+    "Others"
+  ];
+
+  const shouldShowYearFields = (standard: string) => {
+    return ["UG", "PG", "MPhil", "PhD", "Others"].includes(standard);
+  };
+
+  const yearOfStudyOptions = [1, 2, 3, 4, 5];
+
+  const getYearSuffix = (year: number) => {
+    if (year === 1) return "st";
+    if (year === 2) return "nd";
+    if (year === 3) return "rd";
+    return "th";
+  };
+
+  const keralaDistricts = [
+    "Alappuzha",
+    "Ernakulam",
+    "Idukki",
+    "Kannur",
+    "Kasaragod",
+    "Kollam",
+    "Kottayam",
+    "Kozhikode",
+    "Malappuram",
+    "Palakkad",
+    "Pathanamthitta",
+    "Thiruvananthapuram",
+    "Thrissur",
+    "Wayanad",
+    "Others"
+  ];
 
   return (
     <RegisterContainer id={id}>
@@ -50,14 +91,14 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
               </Col>
               
               <Col span={24}>
-                <Select
-                  style={{ width: '100%', marginBottom: '15px' }}
+                <Label>Gender</Label>
+                <StyledSelect
                   placeholder="Select Gender"
                   onChange={(value) => handleChange({ target: { name: 'gender', value }})}
                 >
                   <Option value="male">Male</Option>
                   <Option value="female">Female</Option>
-                </Select>
+                </StyledSelect>
                 <ValidationType type="gender" />
               </Col>
 
@@ -73,13 +114,16 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                   <ValidationType type="age" />
                 </Col>
                 <Col span={12}>
-                  <Input
-                    type="text"
-                    name="standard"
+                  <Label>Standard/Course</Label>
+                  <StyledSelect
                     placeholder="Standard/Course"
-                    value={values.standard || ""}
-                    onChange={handleChange}
-                  />
+                    onChange={(value) => handleChange({ target: { name: 'standard', value }})}
+                    value={values.standard || undefined}
+                  >
+                    {educationLevels.map((level) => (
+                      <Option key={level} value={level}>{level}</Option>
+                    ))}
+                  </StyledSelect>
                 </Col>
               </Row>
 
@@ -103,36 +147,45 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                 />
               </Col>
 
-              <Row gutter={16}>
-                <Col span={12}>
-                  <Input
-                    type="text"
-                    name="yearOfStudy"
-                    placeholder="Year of Study"
-                    value={values.yearOfStudy || ""}
-                    onChange={handleChange}
-                  />
-                </Col>
-                <Col span={12}>
-                  <Input
-                    type="text"
-                    name="yearOfCompletion"
-                    placeholder="Year of Completion"
-                    value={values.yearOfCompletion || ""}
-                    onChange={handleChange}
-                  />
-                </Col>
-              </Row>
+              {values.standard && shouldShowYearFields(values.standard) && (
+                <Row gutter={16}>
+                  <Col span={12}>
+                    <Label>Year of Study</Label>
+                    <StyledSelect
+                      placeholder="Year of Study"
+                      onChange={(value) => handleChange({ target: { name: 'yearOfStudy', value }})}
+                      value={values.yearOfStudy || undefined}
+                    >
+                      {yearOfStudyOptions.map((year) => (
+                        <Option key={year} value={year}>{`${year}${getYearSuffix(year)} Year`}</Option>
+                      ))}
+                    </StyledSelect>
+                  </Col>
+                  <Col span={12}>
+                    <Input
+                      type="text"
+                      name="yearOfCompletion"
+                      placeholder="Year of Completion"
+                      value={values.yearOfCompletion || ""}
+                      onChange={handleChange}
+                    />
+                  </Col>
+                </Row>
+              )}
 
               <Row gutter={16}>
                 <Col span={12}>
-                  <Input
-                    type="text"
-                    name="district"
-                    placeholder="District"
-                    value={values.district || ""}
-                    onChange={handleChange}
-                  />
+                  <Label>District</Label>
+                  <StyledSelect
+                    placeholder="Select District"
+                    onChange={(value) => handleChange({ target: { name: 'district', value }})}
+                    value={values.district || undefined}
+                  >
+                    {keralaDistricts.map((district) => (
+                      <Option key={district} value={district}>{district}</Option>
+                    ))}
+                  </StyledSelect>
+                  <ValidationType type="district" />
                 </Col>
                 <Col span={12}>
                   <Input
@@ -166,6 +219,20 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                   />
                 </Col>
                 <Col span={12}>
+                  <Label>Is WhatsApp number different?</Label>
+                  <StyledSelect
+                    placeholder="Select Yes/No"
+                    onChange={(value) => handleChange({ target: { name: 'isDifferentWhatsApp', value }})}
+                    value={values.isDifferentWhatsApp || undefined}
+                  >
+                    <Option value="no">No</Option>
+                    <Option value="yes">Yes</Option>
+                  </StyledSelect>
+                </Col>
+              </Row>
+
+              {values.isDifferentWhatsApp === 'yes' && (
+                <Col span={24}>
                   <Input
                     type="tel"
                     name="whatsappNumber"
@@ -174,7 +241,7 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                     onChange={handleChange}
                   />
                 </Col>
-              </Row>
+              )}
 
               <Col span={24}>
                 <Input

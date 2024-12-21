@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Select } from "antd";
 
 export const RegisterContainer = styled("div")`
   padding: 7rem 0 5rem;
@@ -72,5 +73,30 @@ export const ButtonContainer = styled("div")`
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
+  }
+`;
+
+export const Label = styled("label")`
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+`;
+
+export const StyledSelect = styled(Select)`
+  width: 100%;
+  margin-top: 5px;
+  
+  .ant-select-selector {
+    border: 1px solid #dadada !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    height: auto !important;
+    
+    &:hover, &:focus {
+      border-color: rgb(0, 0, 0) !important;
+    }
   }
 `; 

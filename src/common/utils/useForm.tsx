@@ -19,6 +19,7 @@ interface IValues {
   pinCode?: string;
   contactNumber?: string;
   whatsappNumber?: string;
+  isDifferentWhatsApp?: string;
 }
 
 const initialValues: IValues = {
@@ -36,6 +37,7 @@ const initialValues: IValues = {
   pinCode: "",
   contactNumber: "",
   whatsappNumber: "",
+  isDifferentWhatsApp: 'no',
 };
 
 export const useForm = (validate: { (values: IValues): IValues }) => {

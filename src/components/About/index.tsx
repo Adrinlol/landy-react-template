@@ -24,7 +24,7 @@ interface AboutProps {
 
 const stats: StatProps[] = [
   {
-    number: "50+",
+    number: "100+",
     label: "Pre Events"
   },
   {
@@ -32,11 +32,11 @@ const stats: StatProps[] = [
     label: "Collaborating Institutions"
   },
   {
-    number: "10K+",
+    number: "100K+",
     label: "Student Community"
   },
   {
-    number: "1000+",
+    number: "50k+",
     label: "Event Participants"
   }
 ];
