@@ -6,6 +6,7 @@ import HeroContent from "../../content/HeroContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
+const About = lazy(() => import("../../components/About"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const HeroBlock = lazy(() => import("../../components/HeroBlock"));
 
@@ -20,13 +21,9 @@ const Home = () => {
       />
       <Container>
         <ScrollToTop />
-        <ContentBlock
-          direction="left"
+        <About
           title={AboutContent.title}
-          content={AboutContent.text}
-          section={AboutContent.section}
-          icon="graphs.svg"
-          id="about"
+          content={AboutContent.content}
         />
         <ContentBlock
           direction="right"
