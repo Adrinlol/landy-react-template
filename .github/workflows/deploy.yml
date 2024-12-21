@@ -6,11 +6,10 @@ on:
       - production
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,10 +21,12 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          CI: false
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to Production Branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: dist
-          branch: gh-pages
-          token: ${{ secrets.ACTION_SECRET }}
+          github_token: ${{ secrets.ACTION_SECRET }}
+          publish_dir: ./build
+          publish_branch: production
