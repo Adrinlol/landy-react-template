@@ -28,7 +28,11 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
   }, [backgroundImages.length]);
 
   const handleClick = (link: string) => {
-    if (link.startsWith('#')) {
+    if (link.startsWith('/')) {
+      // Route navigation
+      window.location.hash = link;
+    } else if (link.startsWith('#')) {
+      // Smooth scroll to section
       const element = document.getElementById(link.substring(1));
       if (element) {
         const headerOffset = 80;
@@ -40,8 +44,6 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
           behavior: "smooth"
         });
       }
-    } else {
-      window.location.href = link;
     }
   };
 

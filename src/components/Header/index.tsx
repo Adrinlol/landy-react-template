@@ -29,8 +29,14 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
+      if (id === "register") {
+        window.location.hash = "/register";
+        setVisibility(false);
+        return;
+      }
+
       if (location.pathname !== '/') {
-        window.location.href = `${publicUrl}/#${id}`;
+        window.location.hash = `/#${id}`;
         return;
       }
 
@@ -58,7 +64,7 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall>
         <CustomNavLinkSmall style={{ width: "180px" }}>
           <Span>
-            <Button onClick={() => window.location.href = "/register"}>
+            <Button onClick={() => scrollTo("register")}>
               {t("Register")}
             </Button>
           </Span>
