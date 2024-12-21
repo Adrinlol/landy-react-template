@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 interface IValues {
   name?: string;
   email?: string;
-  message?: string;
   age?: string;
   standard?: string;
   gender?: string;
@@ -25,7 +24,6 @@ interface IValues {
 const initialValues: IValues = {
   name: "",
   email: "",
-  message: "",
   age: "",
   standard: "",
   gender: "",
