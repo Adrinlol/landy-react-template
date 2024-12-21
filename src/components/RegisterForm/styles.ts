@@ -15,6 +15,11 @@ export const LeftColumnWrapper = styled("div")`
   height: calc(100vh - 120px);
   position: relative;
   padding-right: 2rem;
+
+  @media only screen and (max-width: 1024px) {
+    height: auto;
+    padding-right: 0;
+  }
 `;
 
 export const LeftColumn = styled("div")`
@@ -28,7 +33,6 @@ export const LeftColumn = styled("div")`
     position: relative;
     top: 0;
     width: 100%;
-    padding-right: 0;
   }
 `;
 
