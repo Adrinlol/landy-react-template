@@ -1,112 +1,74 @@
-![landy](https://user-images.githubusercontent.com/48876996/121569479-e179db80-ca31-11eb-8a48-9c3de9b142f3.gif)
+# Kerala Students Conference Registration Portal
 
-![Landy React Template License](https://img.shields.io/github/license/Adrinlol/landy-react-template)
-![Landy React Template Release Date](https://img.shields.io/github/release-date/Adrinlol/landy-react-template)
-![Landy React TemplateStars](https://img.shields.io/github/stars/Adrinlol/landy-react-template)
-![Landy React Template Language](https://img.shields.io/github/languages/top/Adrinlol/landy-react-template)
-![Landy React Template TypeScript](https://badgen.net/npm/types/tslib)
-
-## Free React landing page template
-
-[Landy][Landy] is an open-source React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
-
-This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
-
-## Table of contents
-
-- [Features](#features)
-- [Google Lighthouse](#google-lighthouse)
-  - [Performance](#performance)
-  - [Accessibility](#accessibility)
-  - [Best Practices](#best-practices)
-  - [SEO](#seo)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Special Thanks](#special-thanks)
-- [Usage](#usage)
-- [License](#license)
+A modern, responsive web application built with React for managing student registrations for the Kerala Students Conference.
 
 ## Features
 
-Your project will have everything you need to build a modern single-page React app:
+- **User-friendly Registration Form**
+  - Personal Details (Name, Age, Gender)
+  - Academic Information (Institution, Course, Year)
+  - Contact Information (Email, Phone, WhatsApp)
+  - Location Details (District, Local Body, PIN)
 
-- 🎁 **Modern** – Template created using the latest features of React (State management using Hooks, Code-Splitting to reduce the bundle size)
+- **Form Validation**
+  - Real-time input validation
+  - Error messaging
+  - Required field checks
 
-- 💻 **Responsive** – Highly responsive and reusable UI components, that change depending on the provided props
+- **Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts
+  - Cross-browser compatibility
 
-- 🚀 **Fast** – Buttery smooth experience thanks to the implementation of best practices and no third party dependencies, resulting in <b>PERFECT</b> Google Lighthouse scores
+## Technology Stack
 
-- 🏷 **TypeScript support** – Landy is written in TypeScript to improve the DX
+- React
+- TypeScript
+- Styled Components
+- Ant Design
+- i18next for internationalization
 
-- 🌍 **Internationalization** - Prebuilt standalone file that works in every environment and doesn't require reloading the page to translate the content
+## Getting Started
 
-- 🛸 **Routing** - Each file inside the src/pages directory will generate its own route, so you don't have to manually handle the routing
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
 
-- 🤙 **Contact Form** - Contact form written in React Hooks, with uncontrolled form validation to reduce unnecessary performance penalty. You just need to provide the endpoint
+2. Install dependencies:
+```bash
+npm install
+```
 
-- ⚙️ **Maintenance** - All of the content is stored in the JSON files, so that you can easily manage the content of the website
+3. Start the development server:
+```bash
+npm start
+```
 
-## Google Lighthouse
+4. Build for production:
+```bash
+npm run build
+```
 
-![1](https://user-images.githubusercontent.com/48876996/121569366-c313e000-ca31-11eb-940c-187f556ff0d6.png)
+## Project Structure
 
-[Google Lighthouse][Google Lighthouse] is an open-source, automated tool for measuring the quality of web pages. Google Lighthouse audits performance, accessibility and search engine optimization of web pages.
+```
+src/
+├── components/          # Reusable components
+├── common/             # Common utilities and components
+├── content/            # Static content
+├── styles/            # Global styles
+└── pages/             # Page components
+```
 
-### Performance
+## Contributing
 
-Audits for metrics like first paint and time to interactive to determine lag.
-
-### Accessibility
-
-Checks for common issues that may prevent users from accessing your content.
-
-### Best Practices
-
-Looks for everything from HTTPS usage to correct image aspect ratios.
-
-### SEO 
-
-Checks for best practices to ensure your site is discoverable.
-
-
-## Demo
-
-Check the live demo here 👉️ https://landy-web.netlify.app/
-
-
-### Installation
-
-You’ll need to have Node 10.16.0 or later version on your local development machine (but it’s not required on the server). I recommend using the latest LTS version.
-
-To create a new app, you have to:
-
-Begin by cloning this repository to establish your own local copy. This process is straightforward and ensures you have all the necessary files and resources at your fingertips. You can find step-by-step instructions in this helpful article: Cloning a [repository on GitHub.com](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
-
-## What's included
-
-- [antd][antd] - React UI library that contains a set of high quality components.
-- [react-awesome-reveal][react-awesome-reveal] - High performance library that adds reveal animations using the Intersection Observer API.
-- [styled-componets][styled-componets] - Variant on “CSS-in-JS”—which solves many of the problems with traditional CSS.
-- [i18next][i18next] - Internationalization-framework written in and for JavaScript.
-
-## Special thanks
-
-[whoooa][whoooa] - Use fantastic, handmade illustrations with easily changeable colors and different styles.
-
-## Usage
-
-Use it for whatever you want, and be sure to reach out to me on [Twitter](https://twitter.com/Adrinlolx) if you have any questions, or build something cool with it.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-Licensed under the MIT license.
-
-<!-- prettier-ignore-start -->
-[antd]: https://github.com/ant-design/ant-design
-[react-awesome-reveal]: https://www.npmjs.com/package/react-awesome-reveal
-[styled-componets]: https://github.com/styled-components/styled-components
-[i18next]: https://github.com/i18next/i18next
-[whoooa]: https://www.whoooa.rocks/
-[Landy]: https://www.npmjs.com/package/cra-template-adrinlol
-[Google Lighthouse]: https://developers.google.com/web/tools/lighthouse
-<!-- prettier-ignore-end -->
+This project is licensed under the MIT License - see the LICENSE file for details.
