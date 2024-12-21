@@ -10,6 +10,7 @@ import {
   Extra,
   LogoContainer,
   FooterContainer,
+  SocialLinksContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -24,7 +25,7 @@ const Footer = ({ t }: { t: TFunction }) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ margin: '0 10px', fontSize: '24px', color: '#005893' }}
+        style={{ fontSize: '24px', color: '#005893' }}
       >
         <FontAwesomeIcon icon={icon} />
       </a>
@@ -68,22 +69,24 @@ const Footer = ({ t }: { t: TFunction }) => {
               </LogoContainer>
             </NavLink>
             <FooterContainer>
-              <SocialLink
-                href="https://www.facebook.com/wisdomstudents/"
-                icon={faFacebook}
-              />
-              <SocialLink
-                href="https://www.instagram.com/wisdomstudents/"
-                icon={faInstagram}
-              />
-              <SocialLink
-                href="https://www.youtube.com/@WisdomGlobalTV"
-                icon={faYoutube}
-              />
-              <SocialLink
-                href="https://x.com/Wisdom_Students"
-                icon={faTwitter}
-              />
+              <SocialLinksContainer>
+                <SocialLink
+                  href="https://www.facebook.com/wisdomstudents/"
+                  icon={faFacebook}
+                />
+                <SocialLink
+                  href="https://www.instagram.com/wisdomstudents/"
+                  icon={faInstagram}
+                />
+                <SocialLink
+                  href="https://www.youtube.com/@WisdomGlobalTV"
+                  icon={faYoutube}
+                />
+                <SocialLink
+                  href="https://x.com/Wisdom_Students"
+                  icon={faTwitter}
+                />
+              </SocialLinksContainer>
             </FooterContainer>
           </Row>
         </Container>
