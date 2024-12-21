@@ -15,6 +15,7 @@ import {
   Outline,
   Span,
 } from "./styles";
+import { getAssetPath } from "../../utils/paths";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -64,7 +65,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="141px" height="104px" />
+            <SvgIcon src={getAssetPath("/img/svg/logo.svg")} width="141px" height="104px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

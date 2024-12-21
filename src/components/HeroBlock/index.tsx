@@ -12,6 +12,7 @@ import {
   ButtonGroup
 } from "./styles";
 import { HeroBlockProps } from "./types";
+import { getAssetPath } from "../../utils/paths";
 
 const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -32,7 +33,7 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
         {backgroundImages.map((image, index) => (
           <BackgroundImage 
             key={index}
-            src={image}
+            src={getAssetPath(image)}
             style={{
               opacity: index === currentImageIndex ? 1 : 0,
               transition: 'opacity 1s ease-in-out'

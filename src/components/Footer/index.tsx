@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
+import { getAssetPath } from "../../utils/paths";
 
 import i18n from "i18next";
 import {
@@ -120,7 +121,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             <NavLink to="/">
               <LogoContainer>
                 <SvgIcon
-                  src="logo.svg"
+                  src={getAssetPath("/img/svg/logo.svg")}
                   aria-label="homepage"
                   width="121px"
                   height="84px"
@@ -129,8 +130,8 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+                href="https://github.com/Wisdom-Islamic-Organization"
+                src={getAssetPath("/img/svg/github.svg")}
               />
               <SocialLink
                 href="https://twitter.com/Adrinlolx"
