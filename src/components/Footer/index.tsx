@@ -81,7 +81,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                 icon={faYoutube}
               />
               <SocialLink
-                href="https://twitter.com/wisdomstudents"
+                href="https://x.com/Wisdom_Students"
                 icon={faTwitter}
               />
             </FooterContainer>

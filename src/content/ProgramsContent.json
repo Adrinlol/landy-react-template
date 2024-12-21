@@ -1,0 +1,49 @@
+{
+  "title": "Programs",
+  "programs": [
+    {
+      "title": "Panel Discussions",
+      "icon": "faComments"
+    },
+    {
+      "title": "Debates & Deliberations",
+      "icon": "faUserGroup"
+    },
+    {
+      "title": "Unmasking Liberalism",
+      "icon": "faMask"
+    },
+    {
+      "title": "Leaders Assembly",
+      "icon": "faPeopleGroup"
+    },
+    {
+      "title": "Girls Gatherings",
+      "icon": "faUsers"
+    },
+    {
+      "title": "Streetlogue Campaigns",
+      "icon": "faStreetView"
+    },
+    {
+      "title": "Heritage Walks",
+      "icon": "faPersonWalking"
+    },
+    {
+      "title": "Academic Symposiums",
+      "icon": "faGraduationCap"
+    },
+    {
+      "title": "Idea Pitch Competitions",
+      "icon": "faLightbulb"
+    },
+    {
+      "title": "Teen Contests",
+      "icon": "faTrophy"
+    },
+    {
+      "title": "Wisdom Exhibitions",
+      "icon": "faDisplay"
+    }
+  ]
+} 

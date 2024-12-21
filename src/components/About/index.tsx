@@ -43,7 +43,7 @@ const stats: StatProps[] = [
 
 const About = ({ title, content }: AboutProps) => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <Fade direction="up" triggerOnce>
         <Row justify="center" align="middle">
           <ContentWrapper>

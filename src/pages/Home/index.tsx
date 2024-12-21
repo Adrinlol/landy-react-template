@@ -3,12 +3,14 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import HeroContent from "../../content/HeroContent.json";
+import ProgramsContent from "../../content/ProgramsContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const About = lazy(() => import("../../components/About"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const HeroBlock = lazy(() => import("../../components/HeroBlock"));
+const Programs = lazy(() => import("../../components/Programs"));
 
 const Home = () => {
   return (
@@ -25,19 +27,9 @@ const Home = () => {
           title={AboutContent.title}
           content={AboutContent.content}
         />
-        <ContentBlock
-          direction="right"
-          title={MissionContent.title}
-          content={MissionContent.text}
-          icon="product-launch.svg"
-          id="mission"
-        />
-        <ContentBlock
-          direction="left"
-          title={ProductContent.title}
-          content={ProductContent.text}
-          icon="waving.svg"
-          id="product"
+        <Programs
+          title={ProgramsContent.title}
+          programs={ProgramsContent.programs}
         />
       </Container>
     </>
