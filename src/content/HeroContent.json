@@ -1,6 +1,6 @@
 {
   "title": "കേരള സ്റ്റുഡന്റ്സ് കോൺഫറൻസ്",
-  "subtitle": "വിദ്യാർത്ഥികളുടെ സർവ്വതോന്മുഖ വികാസത്തിനായുള്ള മഹാ സംഗമം!",
+  "subtitle": "ധർമ സമരത്തിന്റെ വിദ്യാർത്ഥി കാലം",
   "buttons": [
     {
       "title": "Explore",
@@ -16,6 +16,7 @@
   "backgroundImages": [
     "/img/hero/bg1.jpg",
     "/img/hero/bg2.jpg",
-    "/img/hero/bg3.jpg"
+    "/img/hero/bg3.jpg",
+    "/img/hero/bg4.jpg"
   ]
 }

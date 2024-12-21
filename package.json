@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://wisdom-islamic-organization.github.io/kerala-students-conference-website",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.68",
     "@types/react-dom": "^17.0.21",
