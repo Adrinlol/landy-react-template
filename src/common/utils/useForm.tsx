@@ -48,6 +48,13 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     errors: { ...initialValues },
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const values = formState.values;
@@ -69,17 +76,22 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           errors: { ...initialValues },
         });
 
-        // Show success notification
-        notification["success"]({
-          message: "Registration Successful",
-          description: "Thank you for registering! We'll contact you soon.",
-          duration: 3,
-        });
+        // Scroll to top first
+        scrollToTop();
 
-        // Redirect to home page after 2 seconds
+        // Show success notification after scrolling
         setTimeout(() => {
-          history.push('/#hero');
-        }, 2000);
+          notification["success"]({
+            message: "Registration Successful",
+            description: "Thank you for registering! We'll contact you soon.",
+            duration: 3,
+          });
+        }, 500);
+
+        // Redirect to home page after notification
+        setTimeout(() => {
+          history.push('/');
+        }, 2500);
       }
     } catch (error) {
       console.error('Registration error:', error);
