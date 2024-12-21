@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Wisdom-Islamic-Organization/kerala-students-conference-website",
+  "homepage": "https://wisdom-islamic-organization.github.io/kerala-students-conference-website",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^17.0.68",
