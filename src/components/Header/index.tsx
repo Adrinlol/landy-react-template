@@ -58,7 +58,7 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall>
         <CustomNavLinkSmall style={{ width: "180px" }}>
           <Span>
-            <Button onClick={() => window.location.href = `${publicUrl}/register`}>
+            <Button onClick={() => window.location.href = "/register"}>
               {t("Register")}
             </Button>
           </Span>

@@ -41,7 +41,7 @@ const HeroBlock = ({ title, subtitle, buttons, backgroundImages }: HeroBlockProp
         });
       }
     } else {
-      window.location.href = `${getAssetPath(link)}`;
+      window.location.href = link;
     }
   };
 
