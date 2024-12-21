@@ -6,7 +6,7 @@ import routes from "./config";
 import { Styles } from "../styles/styles";
 
 const Router = () => {
-  const basename = '/kerala-students-conference-website';
+  const basename = process.env.PUBLIC_URL;
   
   return (
     <Suspense fallback={null}>
