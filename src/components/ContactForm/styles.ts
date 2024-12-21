@@ -21,7 +21,7 @@ export const FormGroup = styled("form")`
 export const Span = styled("span")`
   display: block;
   font-weight: 600;
-  color: rgb(255, 130, 92);
+  color: rgba(36,182,200,255);
   height: 0.775rem;
   padding: 0 0.675rem;
 `;

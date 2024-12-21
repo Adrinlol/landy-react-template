@@ -41,7 +41,7 @@ export const Burger = styled("div")`
   display: none;
 
   svg {
-    fill: #2e186a;
+    fill: #005893;
   }
 `;
 
@@ -88,8 +88,8 @@ export const Span = styled("span")`
   &:hover,
   &:active,
   &:focus {
-    color: rgb(255, 130, 92);
+    color: rgba(36,182,200,255);
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: rgba(36,182,200,255) wavy underline;
   }
 `;
