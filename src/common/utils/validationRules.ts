@@ -36,4 +36,17 @@ const validate = (values: RegisterValues): RegisterValues => {
   return errors;
 };
 
+export const validateContact = (values: any) => {
+  let errors: any = {};
+
+  if (!values.name) {
+    errors.name = "Name is required";
+  }
+  if (!values.contactNumber) {
+    errors.contactNumber = "Contact number is required";
+  }
+
+  return errors;
+};
+
 export default validate;

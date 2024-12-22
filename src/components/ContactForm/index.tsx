@@ -3,15 +3,14 @@ import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
-import validate from "../../common/utils/validationRules";
+import { validateContact } from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
-import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, handleContact } = useForm(validateContact, 'contact');
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
@@ -28,7 +27,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <FormGroup autoComplete="off" onSubmit={handleContact}>
               <Col span={24}>
                 <Input
                   type="text"
@@ -41,13 +40,13 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <Input
-                  type="text"
-                  name="email"
-                  placeholder="Your Email"
-                  value={values.email || ""}
+                  type="tel"
+                  name="contactNumber"
+                  placeholder="Your Contact"
+                  value={values.contactNumber || ""}
                   onChange={handleChange}
                 />
-                <ValidationType type="email" />
+                <ValidationType type="contactNumber" />
               </Col>
               <ButtonContainer>
                 <Button name="submit">{t("Submit")}</Button>

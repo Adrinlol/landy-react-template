@@ -13,7 +13,7 @@ import { RegisterContainer, FormGroup, Span, ButtonContainer, LeftColumn, LeftCo
 const { Option } = Select;
 
 const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
-  const { values, errors, handleChange: originalHandleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange: originalHandleChange, handleSubmit } = useForm(validate, 'registration');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { target: { name: string; value: any } }) => {
     originalHandleChange(e as React.ChangeEvent<HTMLInputElement>);

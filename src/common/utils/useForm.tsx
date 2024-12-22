@@ -4,7 +4,12 @@ import { db } from "../../config/firebase";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useHistory } from "react-router-dom";
 
-interface IValues {
+interface IContactValues {
+  name?: string;
+  contactNumber?: string;
+}
+
+interface IRegistrationValues {
   name?: string;
   email?: string;
   age?: string;
@@ -22,7 +27,7 @@ interface IValues {
   isDifferentWhatsApp?: string;
 }
 
-const initialValues: IValues = {
+const initialRegistrationValues: IRegistrationValues = {
   name: "",
   email: "",
   age: "",
@@ -40,14 +45,22 @@ const initialValues: IValues = {
   isDifferentWhatsApp: 'no',
 };
 
-export const useForm = (validate: { (values: IValues): IValues }) => {
+const initialContactValues: IContactValues = {
+  name: "",
+  contactNumber: "",
+};
+
+export const useForm = <T extends IRegistrationValues | IContactValues>(
+  validate: (values: T) => T,
+  formType: 'registration' | 'contact' = 'registration'
+) => {
   const history = useHistory();
   const [formState, setFormState] = useState<{
-    values: IValues;
-    errors: IValues;
+    values: T;
+    errors: T;
   }>({
-    values: { ...initialValues },
-    errors: { ...initialValues },
+    values: (formType === 'registration' ? initialRegistrationValues : initialContactValues) as T,
+    errors: (formType === 'registration' ? initialRegistrationValues : initialContactValues) as T,
   });
 
   const scrollToTop = () => {
@@ -74,8 +87,8 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
 
         // Reset form state
         setFormState({
-          values: { ...initialValues },
-          errors: { ...initialValues },
+          values: (formType === 'registration' ? { ...initialRegistrationValues } : { ...initialContactValues }) as T,
+          errors: (formType === 'registration' ? { ...initialRegistrationValues } : { ...initialContactValues }) as T,
         });
 
         // Scroll to top first
@@ -121,9 +134,48 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     }));
   };
 
+  const handleContact = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const values = formState.values;
+    const errors = validate(values);
+    setFormState((prevState) => ({ ...prevState, errors }));
+
+    try {
+      if (Object.values(errors).every((error) => error === "")) {
+        // Add contact message to Firestore
+        const contactsRef = collection(db, 'contacts');
+        await addDoc(contactsRef, {
+          name: values.name,
+          contactNumber: values.contactNumber,
+          timestamp: serverTimestamp()
+        });
+
+        // Reset form state
+        setFormState({
+          values: { ...initialContactValues } as T,
+          errors: { ...initialContactValues } as T,
+        });
+
+        // Show success notification
+        notification["success"]({
+          message: "Message Sent",
+          description: "Thank you for contacting us! We'll get back to you soon.",
+          duration: 3,
+        });
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      notification["error"]({
+        message: "Error",
+        description: "Failed to send message. Please try again later.",
+      });
+    }
+  };
+
   return {
     handleChange,
     handleSubmit,
+    handleContact,
     values: formState.values,
     errors: formState.errors,
   };
