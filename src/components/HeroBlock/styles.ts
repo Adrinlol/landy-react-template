@@ -119,3 +119,52 @@ export const ButtonGroup = styled.div`
     }
   }
 `;
+
+export const CountdownContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  
+  @media screen and (max-width: 768px) {
+    gap: 1rem;
+  }
+`;
+
+export const CountdownItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  min-width: 80px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 0.75rem;
+    min-width: 60px;
+  }
+`;
+
+export const CountdownNumber = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const CountdownLabel = styled.div`
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+`;

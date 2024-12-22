@@ -20,7 +20,6 @@ import { getAssetPath } from "../../utils/paths";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-  const publicUrl = process.env.PUBLIC_URL || '';
   const location = useLocation();
 
   const toggleButton = () => {

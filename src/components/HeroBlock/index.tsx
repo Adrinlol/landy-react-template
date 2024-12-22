@@ -10,23 +10,57 @@ import {
   Title,
   Subtitle,
   Description,
-  ButtonGroup
+  ButtonGroup,
+  CountdownContainer,
+  CountdownItem,
+  CountdownNumber,
+  CountdownLabel
 } from "./styles";
 import { HeroBlockProps } from "./types";
 import { getAssetPath } from "../../utils/paths";
 
 const HeroBlock = ({ title, subtitle, description, buttons, backgroundImages }: HeroBlockProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 3000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(imageInterval);
   }, [backgroundImages.length]);
+
+  useEffect(() => {
+    const targetDate = new Date('2025-05-11T10:30:00Z'); // 4:00 PM IST in UTC
+
+    const timer = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(timer);
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000)
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handleClick = (link: string) => {
     if (link.startsWith('/')) {
@@ -67,6 +101,24 @@ const HeroBlock = ({ title, subtitle, description, buttons, backgroundImages }: 
         <Title>{title}</Title>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {description && <Description>{description}</Description>}
+        <CountdownContainer>
+          <CountdownItem>
+            <CountdownNumber>{timeLeft.days}</CountdownNumber>
+            <CountdownLabel>Days</CountdownLabel>
+          </CountdownItem>
+          <CountdownItem>
+            <CountdownNumber>{timeLeft.hours}</CountdownNumber>
+            <CountdownLabel>Hours</CountdownLabel>
+          </CountdownItem>
+          <CountdownItem>
+            <CountdownNumber>{timeLeft.minutes}</CountdownNumber>
+            <CountdownLabel>Minutes</CountdownLabel>
+          </CountdownItem>
+          <CountdownItem>
+            <CountdownNumber>{timeLeft.seconds}</CountdownNumber>
+            <CountdownLabel>Seconds</CountdownLabel>
+          </CountdownItem>
+        </CountdownContainer>
         <ButtonGroup>
           {buttons.map((button, index) => (
             <Button
