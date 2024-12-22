@@ -51,11 +51,10 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
+  font-family: "ML TT Thunchan", "Manjari", "Noto Sans Malayalam", system-ui;
   color: #ffffff;
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
@@ -67,10 +66,10 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
+  font-family: "ML TT Thunchan", "Manjari", "Noto Sans Malayalam", system-ui;
   color: #ffffff;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
 
   @media screen and (max-width: 768px) {
     font-size: 1.25rem;
@@ -82,16 +81,17 @@ export const Description = styled.p`
 `;
 
 export const Subtitle = styled.p`
+  font-family: "ML TT Thunchan", "Manjari", "Noto Sans Malayalam", system-ui;
   color: #ffffff;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  font-weight: 700;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 

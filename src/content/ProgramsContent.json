@@ -44,6 +44,10 @@
     {
       "title": "Wisdom Exhibitions",
       "icon": "faDisplay"
+    },
+    {
+      "title": "Documentaries",
+      "icon": "faFile"
     }
   ]
 } 

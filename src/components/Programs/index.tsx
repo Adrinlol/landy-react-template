@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faComments, faUserGroup, faMask, faPeopleGroup, 
   faUsers, faStreetView, faPersonWalking, faGraduationCap,
-  faLightbulb, faTrophy, faDisplay 
+  faLightbulb, faTrophy, faDisplay, faFile
 } from '@fortawesome/free-solid-svg-icons';
 import {
   ProgramsSection,
@@ -19,7 +19,7 @@ import {
 const iconMap: { [key: string]: any } = {
   faComments, faUserGroup, faMask, faPeopleGroup, 
   faUsers, faStreetView, faPersonWalking, faGraduationCap,
-  faLightbulb, faTrophy, faDisplay
+  faLightbulb, faTrophy, faDisplay, faFile
 };
 
 interface ProgramProps {

@@ -14,6 +14,11 @@ export const Styles = createGlobalStyle`
         font-style: normal;
     }
 
+    @font-face {
+        font-family: "ML TT Thunchan";
+        src: url("${process.env.PUBLIC_URL}/fonts/ML_TT_Thunchan_Normal.ttf") format("truetype");
+        font-style: normal;
+    }
 
     body,
     html,
@@ -108,5 +113,9 @@ export const Styles = createGlobalStyle`
 
     .ant-drawer-content-wrapper {
         width: 300px !important;
+    }
+
+    [lang="ml"] {
+        font-family: 'ML TT Thunchan', sans-serif;
     }
 `;
