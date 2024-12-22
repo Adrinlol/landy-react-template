@@ -24,6 +24,7 @@ export const Title = styled("h2")`
 `;
 
 export const Content = styled("p")`
+  font-family: "ML TT Thunchan", "Manjari", "Noto Sans Malayalam", system-ui;
   padding: 0.75rem 0 2.5rem;
   text-align: center;
   max-width: 800px;
