@@ -33,12 +33,6 @@ const validate = (values: RegisterValues): RegisterValues => {
     errors.whatsappNumber = "Please enter a valid 10-digit number";
   }
 
-  if (!values.pinCode) {
-    errors.pinCode = "PIN code is required";
-  } else if (!/^\d{6}$/.test(values.pinCode)) {
-    errors.pinCode = "Please enter a valid 6-digit PIN code";
-  }
-
   return errors;
 };
 

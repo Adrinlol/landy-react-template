@@ -15,8 +15,8 @@ interface IValues {
   yearOfStudy?: string;
   yearOfCompletion?: string;
   district?: string;
+  otherDistrict?: string;
   localBody?: string;
-  pinCode?: string;
   contactNumber?: string;
   whatsappNumber?: string;
   isDifferentWhatsApp?: string;
@@ -33,8 +33,8 @@ const initialValues: IValues = {
   yearOfStudy: "",
   yearOfCompletion: "",
   district: "",
+  otherDistrict: "",
   localBody: "",
-  pinCode: "",
   contactNumber: "",
   whatsappNumber: "",
   isDifferentWhatsApp: 'no',

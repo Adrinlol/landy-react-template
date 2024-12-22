@@ -19,9 +19,10 @@ export interface RegisterValues {
   yearOfStudy?: string;
   yearOfCompletion?: string;
   district?: string;
+  otherDistrict?: string;
   localBody?: string;
-  pinCode?: string;
   contactNumber?: string;
   whatsappNumber?: string;
+  isDifferentWhatsApp?: string;
   email?: string;
 }

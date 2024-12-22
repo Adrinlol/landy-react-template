@@ -7,6 +7,7 @@ import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
+import DistrictCities from '../../content/DistrictCities.json';
 import { RegisterContainer, FormGroup, Span, ButtonContainer, LeftColumn, LeftColumnWrapper, Label, StyledSelect } from "./styles";
 
 const { Option } = Select;
@@ -46,23 +47,7 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
     return "th";
   };
 
-  const keralaDistricts = [
-    "Alappuzha",
-    "Ernakulam",
-    "Idukki",
-    "Kannur",
-    "Kasaragod",
-    "Kollam",
-    "Kottayam",
-    "Kozhikode",
-    "Malappuram",
-    "Palakkad",
-    "Pathanamthitta",
-    "Thiruvananthapuram",
-    "Thrissur",
-    "Wayanad",
-    "Others"
-  ];
+  const districts = [...Object.keys(DistrictCities), "Others"];
 
   return (
     <RegisterContainer id={id}>
@@ -181,32 +166,39 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                     onChange={(value) => handleChange({ target: { name: 'district', value }})}
                     value={values.district || undefined}
                   >
-                    {keralaDistricts.map((district) => (
+                    {districts.map((district) => (
                       <Option key={district} value={district}>{district}</Option>
                     ))}
                   </StyledSelect>
                   <ValidationType type="district" />
                 </Col>
                 <Col span={12}>
-                  <Input
-                    type="text"
-                    name="localBody"
-                    placeholder="Local Body"
-                    value={values.localBody || ""}
-                    onChange={handleChange}
-                  />
+                  {values.district === 'Others' ? (
+                    <div>
+                      <Input
+                        type="text"
+                        name="otherDistrict"
+                        placeholder="Enter District Name"
+                        value={values.otherDistrict || ""}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  ) : (
+                    <>
+                      <Label>Local Body</Label>
+                      <StyledSelect
+                        placeholder="Select Local Body"
+                        onChange={(value) => handleChange({ target: { name: 'localBody', value }})}
+                        value={values.localBody || undefined}
+                      >
+                        {values.district && DistrictCities[values.district as keyof typeof DistrictCities]?.map((city: string) => (
+                          <Option key={city} value={city}>{city}</Option>
+                        ))}
+                      </StyledSelect>
+                    </>
+                  )}
                 </Col>
               </Row>
-
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="pinCode"
-                  placeholder="Pin Code"
-                  value={values.pinCode || ""}
-                  onChange={handleChange}
-                />
-              </Col>
 
               <Row gutter={16}>
                 <Col span={12}>
@@ -217,6 +209,7 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                     value={values.contactNumber || ""}
                     onChange={handleChange}
                   />
+                  <ValidationType type="contactNumber" />
                 </Col>
                 <Col span={12}>
                   <Label>Is WhatsApp number different?</Label>
@@ -240,6 +233,7 @@ const RegisterForm = ({ title, content, id, t }: RegisterFormProps) => {
                     value={values.whatsappNumber || ""}
                     onChange={handleChange}
                   />
+                  {values.isDifferentWhatsApp === 'yes' && <ValidationType type="whatsappNumber" />}
                 </Col>
               )}
 

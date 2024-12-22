@@ -1,0 +1,167 @@
+{
+  "Alappuzha": [
+    "Naduvathu Nagar",
+    "Alappuzha",
+    "Kuthiyathodu",
+    "Kayamkulam"
+  ],
+  "Calicut North": [
+    "Balusserry",
+    "Poonur",
+    "Koyilandy",
+    "Payyoli",
+    "Vatakara",
+    "Nadapuram",
+    "Perambra"
+  ],
+  "Calicut South": [
+    "Atholi",
+    "Karapparamb",
+    "City",
+    "Farook",
+    "Koduvalli",
+    "Narikuni",
+    "Bepoor",
+    "Medical College",
+    "Thamarasseri",
+    "Mankav",
+    "Kallai",
+    "Mukkam",
+    "Nanmanda",
+    "Kodiyathoor"
+  ],
+  "Ernakulam": [
+    "Paravoor",
+    "Perumbavoor",
+    "Aluva",
+    "Kochi",
+    "Thripunithura",
+    "Kothamangalam",
+    "Ernakulam",
+    "Palluruthi",
+    "Kakkanad"
+  ],
+  "Idukki": [
+    "Thodupuzha",
+    "Adimaly",
+    "Peerumedu"
+  ],
+  "Kannur": [
+    "Valapattanam",
+    "Thaliparamb",
+    "Irikkoor",
+    "Pazhayangadi",
+    "Payyanur",
+    "Koothuparamb",
+    "Iritty",
+    "Kannur",
+    "Panoor",
+    "Thalassery"
+  ],
+  "Kasargod": [
+    "Manjeshwaram",
+    "Kasargode",
+    "Kumbala",
+    "Uduma",
+    "Kanhangad",
+    "Trikaripur",
+    "SP Nagar",
+    "Chauki",
+    "Choori",
+    "Mogral",
+    "Nayanmarmula",
+    "Patla"
+  ],
+  "Kollam": [
+    "Karunagappalli",
+    "Pathanapuram",
+    "Kollam"
+  ],
+  "Kottayam": [
+    "Kottayam"
+  ],
+  "Malappuram East": [
+    "Wandoor",
+    "Angaadipuram",
+    "Pandikkad",
+    "Perintalamnana",
+    "Karuvarakund",
+    "Edakkara",
+    "Aanamangad",
+    "Othayi",
+    "Moothedam",
+    "Edavanna",
+    "Nilamboor",
+    "Chungathara",
+    "Kalikavu",
+    "Mampad",
+    "Amarambalam"
+  ],
+  "Malappuram North": [
+    "Mankada",
+    "Areekode",
+    "Malappuram",
+    "Edavannappara",
+    "Kavanur",
+    "Pulpatta",
+    "Cherukavu",
+    "Pulikkal",
+    "Manjeri",
+    "Mongam",
+    "Kondotty",
+    "Trikkalangode",
+    "Anakkayam"
+  ],
+  "Malappuram West": [
+    "Abdurahman Nager",
+    "Kottakkal",
+    "University",
+    "Vengara",
+    "Randathani",
+    "Parappanagadi",
+    "Paravanna",
+    "Tirur",
+    "Thiroorangadi",
+    "Valavannur",
+    "Thanalur",
+    "Tanur",
+    "Ponnani",
+    "Changaramkulam",
+    "Maaranjeri",
+    "Koottanad",
+    "Alathiyoor",
+    "Valanjeri",
+    "Kuttippuram",
+    "Peruvallur"
+  ],
+  "Palakkad": [
+    "Mannarkkad",
+    "Edathanattukara",
+    "Alanallur",
+    "Ottapalam",
+    "Pattambi",
+    "Palakkad",
+    "Thachambara",
+    "Olavakkode",
+    "Alathur"
+  ],
+  "Pathanamthitta": [
+    "Pathanapuram"
+  ],
+  "Thrissur": [
+    "Pavaratty",
+    "Thrissur",
+    "Guruvayur",
+    "Kaipamangalam",
+    "Kunnamkulam",
+    "Kodungallur",
+    "Chavakkad"
+  ],
+  "Thiruvananthapuram": [
+    "Trivandrum  East",
+    "Trivandrum West",
+    "Kaniyapuram",
+    "Venjaramood",
+    "Attingal"
+  ]
+}
