@@ -1,6 +1,6 @@
 {
-    "title": "Introduce your product quickly & effectively",
-    "text": "Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.",
+    "title": "“Complexity is multiplicative” Rob Pike.",
+    "text": "Fixing a problem by making one part of the system more complex slowly but surely adds complexity to other parts. With constant pressure to add features and options and configurations, and to ship code quickly, it’s easy to neglect simplicity, even though in the long run simplicity is the key to good software.",
     "button": "Get started"
   }
   
