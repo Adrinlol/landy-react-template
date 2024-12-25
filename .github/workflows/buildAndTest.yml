@@ -1,0 +1,30 @@
+name: Build And Test
+on:
+  push:
+    branches:
+      - "*"
+      - '!master'
+      - '!main'
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [23.x]
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependendencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
