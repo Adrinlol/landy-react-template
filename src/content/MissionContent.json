@@ -1,4 +1,4 @@
 {
   "title": "Innovation in Problem Solving",
-  "text": "Deploy updates and features quickly in response to user needs. Break down applications into independent services that can be developed, deployed, and scaled separately. Develop APIs that allow seamless integration with other systems or third-party solutions."
+  "text": "Keep things simple by clearly defining what the system should do and how it should perform. Ensure quick feedback loops and make it easy to roll back if a faulty update is released."
 }
