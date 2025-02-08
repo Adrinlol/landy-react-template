@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Registration collection rules
+    match /registrations/{registrationId} {
+      allow read: if request.auth != null;  // Allow authenticated users to read
+      allow create: if true;
+    }
+    
+    // Contact collection rules
+    match /contacts/{registrationId} {
+      allow read: if request.auth != null;  // Allow authenticated users to read
+      allow create: if true;
+    }
+    
+    // Contact collection rules
+    match /subPrograms/{registrationId} {
+      allow create: if true;
+    }
+    
+    match /subPrograms/{program} {
+      allow read: if true;  // Anyone can read subPrograms
+      allow write: if request.auth != null && request.auth.token.admin == true;  // Only admins can modify
+    }
+    
+    match /subprogram-registrations/{registration} {
+      allow read: if request.auth != null && request.auth.token.admin == true;  // Only admins can read registrations
+      allow create: if true;  // Anyone can register
+      allow update, delete: if false;  // No one can modify or delete registrations
+    }
+    
+    // Deny access to all other collections by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
