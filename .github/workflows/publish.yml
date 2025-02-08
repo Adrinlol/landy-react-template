@@ -14,6 +14,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_GTM_ID: GTM-58NCKMFW
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
