@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Table, Tabs, message } from 'antd';
+import { Table, Tabs, message, Button } from 'antd';
 import { collection, query, getDocs, orderBy } from 'firebase/firestore';
 import { db } from '../../config/firebase';
 import Container from '../../common/Container';
 import styled from 'styled-components';
+import { downloadCSV } from '../../utils/csvExport';
 
 const { TabPane } = Tabs;
 
@@ -42,6 +43,7 @@ const Admin = () => {
   const [registrations, setRegistrations] = useState<Registration[]>([]);
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeKey, setActiveKey] = useState("1");
 
   const fetchData = async () => {
     try {
@@ -102,24 +104,30 @@ const Admin = () => {
     <AdminContainer>
       <h1>Admin Dashboard</h1>
       <TableContainer>
-        <Tabs defaultActiveKey="1">
+        <Tabs 
+          defaultActiveKey="1"
+          tabBarExtraContent={{
+            right: (
+              <>
+                {activeKey === "1" && (
+                  <Button onClick={() => downloadCSV(registrations, registrationColumns, 'registrations.csv')}>
+                    Download CSV
+                  </Button>
+                )}
+                {activeKey === "2" && (
+                  <Button onClick={() => downloadCSV(contacts, contactColumns, 'contacts.csv')}>
+                    Download CSV
+                  </Button>
+                )}
+              </>
+            )
+          }}
+        >
           <TabPane tab="Registrations" key="1">
-            <Table
-              dataSource={registrations}
-              columns={registrationColumns}
-              loading={loading}
-              rowKey="id"
-              scroll={{ x: true }}
-            />
+            <Table dataSource={registrations} columns={registrationColumns} loading={loading} rowKey="id" scroll={{ x: true }} />
           </TabPane>
           <TabPane tab="Contacts" key="2">
-            <Table
-              dataSource={contacts}
-              columns={contactColumns}
-              loading={loading}
-              rowKey="id"
-              scroll={{ x: true }}
-            />
+            <Table dataSource={contacts} columns={contactColumns} loading={loading} rowKey="id" scroll={{ x: true }} />
           </TabPane>
         </Tabs>
       </TableContainer>
