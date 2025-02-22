@@ -106,6 +106,8 @@ const Admin = () => {
       <TableContainer>
         <Tabs 
           defaultActiveKey="1"
+          activeKey={activeKey}
+          onChange={setActiveKey}
           tabBarExtraContent={{
             right: (
               <>

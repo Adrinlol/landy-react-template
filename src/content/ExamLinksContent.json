@@ -1,0 +1,17 @@
+{
+  "title": "Exam Registrations",
+  "exams": [
+    {
+      "title": "Al Bayan",
+      "description": "Register for Al Bayan Exam 2025",
+      "link": "/albayan",
+      "icon": "/img/icons/albayan.png"
+    },
+    {
+      "title": "Alif",
+      "description": "Register for Alif Exam 2025",
+      "link": "/alif",
+      "icon": "/img/icons/alifexam.png"
+    }
+  ]
+} 
