@@ -3,6 +3,7 @@ import { notification } from "antd";
 import { db } from "../../config/firebase";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useHistory } from "react-router-dom";
+import { submitRegistration } from "../../services/api";
 
 interface IContactValues {
   name?: string;
@@ -84,6 +85,27 @@ export const useForm = <T extends IRegistrationValues | IContactValues>(
           ...values,
           timestamp: serverTimestamp()
         });
+
+        // Submit to external API
+        if (formType === 'registration') {
+          await submitRegistration({
+            event_id: 84,
+            event_type: 'program',
+            country_code: '',
+            mobile: (values as IRegistrationValues).contactNumber || '',
+            name: values.name || '',
+            age: (values as IRegistrationValues).age || '',
+            sex: (values as IRegistrationValues).gender === 'male' ? 'Male' : 'Female',
+            whatsapp_country_code: '',
+            whatsapp: (values as IRegistrationValues).whatsappNumber || (values as IRegistrationValues).contactNumber || '',
+            email: (values as IRegistrationValues).email || '',
+            pin_code: '',
+            place: (values as IRegistrationValues).district !== 'Others' ? 
+              (values as IRegistrationValues).district || '' : 
+              (values as IRegistrationValues).otherDistrict || '',
+            job: ''
+          });
+        }
 
         // Reset form state
         setFormState({
