@@ -25,6 +25,7 @@ const ContentBlock = ({
   t,
   id,
   direction,
+  children, // Accept children as a prop
 }: ContentBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -48,7 +49,13 @@ const ContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              <Content>
+                {typeof content === "string"
+                  ? content.split("\n").map((line, index) => (
+                      <p key={index}>{line.trim()}</p>
+                    ))
+                  : content}
+              </Content>
               {direction === "right" ? (
                 <ButtonWrapper>
                   {typeof button === "object" &&
@@ -101,6 +108,8 @@ const ContentBlock = ({
                   </Row>
                 </ServiceWrapper>
               )}
+              {/* Render children here if provided */}
+              {children && <div>{children}</div>}
             </ContentWrapper>
           </Col>
         </StyledRow>

@@ -1,16 +1,17 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Who We Are",
+  "text": "We connect home cooks with customers who appreciate fresh, homemade food. Our platform allows talented home chefs to earn while sharing their love for cooking.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "title": "Our Vision",
+      "content": "To create a world where homemade meals are accessible to everyone while empowering home-makers with financial independence.",
+      "icon": "vision.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
-    }
+      "title": "Why Choose Us",
+      "text": "Experience the warmth of homemade food crafted by passionate home chefs. \n\nOur meals are fresh, nutritious, and prepared with care—bringing authentic flavors straight to your table. \n\nBy choosing us, you not only enjoy healthier meals but also support local home-makers, empowering them to share their culinary skills with the world.",
+      "icon": "home-heart.svg"
+  }
+  
   ]
 }

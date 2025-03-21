@@ -6,14 +6,8 @@ const ScrollToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = useCallback(() => {
-    const offsetFromTop = window.scrollY;
-
-    if (!showScroll && offsetFromTop > 350) {
-      setShowScroll(true);
-    } else if (offsetFromTop <= 350) {
-      setShowScroll(false);
-    }
-  }, [showScroll]);
+    setShowScroll(window.scrollY > 350);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop);
@@ -23,8 +17,7 @@ const ScrollToTop = () => {
   }, [checkScrollTop]);
 
   const scrollUp = () => {
-    const element = document.getElementById("intro") as HTMLDivElement;
-    element.scrollIntoView({
+    document.getElementById("intro")?.scrollIntoView({
       behavior: "smooth",
       block: "end",
       inline: "nearest",
@@ -32,7 +25,7 @@ const ScrollToTop = () => {
   };
 
   return (
-    <ScrollUpContainer onClick={scrollUp} show={showScroll}>
+    <ScrollUpContainer onClick={scrollUp} $show={showScroll}> {/* ✅ Use $show */}
       <SvgIcon src="scroll-top.svg" width="20px" height="20px" />
     </ScrollUpContainer>
   );

@@ -1,4 +1,5 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "i18next";
+
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
@@ -9,6 +10,7 @@ export interface ButtonProps {
   name?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  htmlType?: "button" | "submit" | "reset"; // Added property for button type
 }
 
 export interface SvgIconProps {
@@ -29,6 +31,7 @@ export interface InputProps {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
 }
+
 export interface validateProps {
   name: string;
   message: string;

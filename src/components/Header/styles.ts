@@ -4,7 +4,8 @@ import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
-
+  background: #FFF5E1;  /* Soft warm beige */
+  
   .ant-row-space-between {
     align-items: center;
     text-align: center;
@@ -41,7 +42,7 @@ export const Burger = styled("div")`
   display: none;
 
   svg {
-    fill: #2e186a;
+    fill: #D65A31;  /* Warm terracotta */
   }
 `;
 
@@ -55,22 +56,27 @@ export const Menu = styled("h5")`
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
+  color: #6A1B4D;  /* Deep berry for trust */
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1.2rem;
-  color: #18216d;
+  color: #823329;  /* Warm brownish-red */
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
   }
+
+  &:hover {
+    color: #D65A31; /* Warm highlight */
+  }
 `;
 
 export const Label = styled("span")`
   font-weight: 500;
-  color: #404041;
+  color: #5F3A2D;  /* Earthy brown */
   text-align: right;
   display: flex;
   justify-content: space-between;
@@ -79,6 +85,7 @@ export const Label = styled("span")`
 
 export const Outline = styled(MenuOutlined)`
   font-size: 22px;
+  color: #BF4E30; /* Earthy red */
 `;
 
 export const Span = styled("span")`
@@ -88,8 +95,8 @@ export const Span = styled("span")`
   &:hover,
   &:active,
   &:focus {
-    color: rgb(255, 130, 92);
+    color: #FF825C; /* Soft peach highlight */
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: #FF825C wavy underline;
   }
 `;

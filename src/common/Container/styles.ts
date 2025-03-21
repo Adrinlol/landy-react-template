@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledContainer = styled("div")<{
-  border?: boolean;
+  $border?: boolean;
 }>`
   position: relative;
   width: 100%;
@@ -10,7 +10,8 @@ export const StyledContainer = styled("div")<{
   margin-left: auto;
   padding: 0 60px;
   overflow: hidden;
-  border-top: ${(p) => (p.border ? "1px solid #CDD1D4" : "")};
+  background: #FFF5E1; /* Soft, warm beige for a homey feel */
+  border-top: ${(p) => (p.$border ? "1px solid #E8B89A" : "none")}; /* Gentle, earthy border */
 
   @media only screen and (max-width: 1024px) {
     max-width: calc(100% - 68px);

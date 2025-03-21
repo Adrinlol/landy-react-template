@@ -1,14 +1,16 @@
-import { TFunction } from "react-i18next";
+import { ReactNode } from "react";
+import { TFunction } from "i18next";
+
 export interface ContentBlockProps {
   icon: string;
   title: string;
   content: string;
-  section?: {
+  section?: Array<{
     title: string;
     content: string;
     icon: string;
-  }[];
-  button?: (
+  }>;
+  button?: Array<
     | {
         title: string;
         color?: undefined;
@@ -17,8 +19,9 @@ export interface ContentBlockProps {
         title: string;
         color: string;
       }
-  )[];
+  >;
   t: TFunction;
   id: string;
   direction: "left" | "right";
+  children?: ReactNode;
 }

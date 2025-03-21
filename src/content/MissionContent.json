@@ -1,4 +1,45 @@
 {
-  "title": "Ready made sections",
-  "text": "Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content."
+  "title": "Choose Your Plan",
+  "text": "Pick a meal subscription plan that suits you best.",
+  "plans": [
+    {
+      "id": "sub-001",
+      "name": "Basic Plan",
+      "price": 1799,
+      "currency": "INR",
+      "duration": "1 month",
+      "features": [
+        "30 meals per week",
+        "Standard delivery",
+        "Basic support"
+      ]
+    },
+    {
+      "id": "sub-002",
+      "name": "Premium Plan",
+      "price": 2299,
+      "currency": "INR",
+      "duration": "1 month",
+      "features": [
+        "30 meals with special items",
+        "Priority delivery",
+        "Customizable menu",
+        "24/7 support"
+      ]
+    },
+    {
+      "id": "sub-003",
+      "name": "Pro Plan",
+      "price": 2599,
+      "currency": "INR",
+      "duration": "1 month",
+      "features": [
+        "30 meals with exclusive combos",
+        "Exclusive discounts",
+        "Free delivery",
+        "Personalized diet plan"
+      ]
+    }
+  ]
 }
+

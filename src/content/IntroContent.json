@@ -1,13 +1,13 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Homemade Meals, Cooked with Love by Mothers!",
+  "text": "Experience the warmth of homemade food with our subscription-based meal service, lovingly prepared by mothers. Every meal is crafted with fresh, locally sourced ingredients, ensuring authentic taste, nutrition, and comfort—just like home!",
   "button": [
     {
       "title": "Explore"
     },
     {
       "title": "Learn more",
-      "color": "#fff"
+      "color": "light-blue"
     }
   ]
 }
