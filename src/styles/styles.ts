@@ -17,7 +17,10 @@ export const Styles = createGlobalStyle`
 
     body,
     html,
-    a {
+    a,
+    .ant-col,
+    .ant-row,
+    button {
         font-family: 'Motiva Sans Light', sans-serif;
     }
 
@@ -61,6 +64,7 @@ export const Styles = createGlobalStyle`
         color: #18216d;
         font-size: 56px;
         line-height: 1.18;
+        margin: 0;
 
         @media only screen and (max-width: 890px) {
           font-size: 47px;

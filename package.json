@@ -1,45 +1,39 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@types/node": "^15.14.9",
-    "@types/react": "^17.0.68",
-    "@types/react-dom": "^17.0.21",
-    "@types/react-router-dom": "^5.3.3",
-    "@types/styled-components": "^5.1.28",
-    "antd": "^4.24.14",
-    "i18next": "^19.9.2",
-    "i18next-browser-languagedetector": "^6.1.8",
-    "i18next-xhr-backend": "^3.2.2",
-    "react": "^18.2.0",
-    "react-awesome-reveal": "^3.8.1",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^11.18.6",
-    "react-router-dom": "^5.3.4",
-    "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.11",
-    "typescript": "^4.9.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "landy-react-latest",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "antd": "^5.24.6",
+        "i18next": "^24.2.3",
+        "i18next-browser-languagedetector": "^8.0.4",
+        "i18next-xhr-backend": "^3.2.2",
+        "react-awesome-reveal": "^4.3.1",
+        "react-i18next": "^15.4.1",
+        "react-router-dom": "^7.5.0",
+        "styled-components": "^6.1.17"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.21.0",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "@types/react-router-dom": "^5.3.3",
+        "@types/styled-components": "^5.1.34",
+        "@vitejs/plugin-react": "^4.3.4",
+        "eslint": "^9.21.0",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.19",
+        "globals": "^15.15.0",
+        "typescript": "~5.7.2",
+        "typescript-eslint": "^8.24.1",
+        "vite": "^6.2.0"
+    }
 }
