@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AccountInfo, InteractionStatus } from '@azure/msal-browser';
 import { useMsal } from '@azure/msal-react';
+import { config } from '../../services/config';
 
 const SSO: React.FC = () => {
     const { instance, accounts, inProgress } = useMsal();
@@ -14,9 +15,11 @@ const SSO: React.FC = () => {
     //TODO - this
     const handleLogin = async () => {
         try {
-            const loginResponse = await instance.loginPopup();
+            const loginResponse = await instance.loginPopup({
+                scopes: [config.scopes.USER]
+            });
             instance.setActiveAccount(loginResponse.account);
-            window.location.href = "/dashboard"
+            window.location.href = "/dashboard";
         } catch (error) {
             console.error("Login failed:", error);
         }

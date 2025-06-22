@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 import { useMsal } from "@azure/msal-react";
-import { InteractionStatus } from "@azure/msal-browser";
+import { InteractionRequiredAuthError, InteractionStatus } from "@azure/msal-browser";
 import { msalInstance } from "../services/msal";
 import { config } from "../services/config";
 import apiClient from "../apiClient";
@@ -11,27 +11,36 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const checkAndRedirect = async () => {
-      if (inProgress !== InteractionStatus.None) return;
-
-      try {
-        await msalInstance.acquireTokenSilent({
-          scopes: [config.scopes.USER],
-        });
-        setIsAuthorized(true);
-      } catch {
+    if (inProgress !== InteractionStatus.None) return;
+  
+    const timer = setTimeout(() => {
+      const checkAndRedirect = async () => {
         try {
-          const resp = await apiClient.get(`/auth/oauth`);
-          window.location.href = resp.data;
+          await msalInstance.acquireTokenSilent({ scopes: [config.scopes.USER] });
+          setIsAuthorized(true);
         } catch (err) {
-          console.error("Failed to get OAuth link", err);
-          setIsAuthorized(false);
+          if (err instanceof InteractionRequiredAuthError) {
+            try {
+              const resp = await apiClient.get(`/auth/oauth`);
+              window.location.href = resp.data;
+            } catch (err) {
+              console.error("Failed to get OAuth link", err);
+              setIsAuthorized(false);
+            }
+          } else {
+            console.error("Unknown token error", err);
+            setIsAuthorized(false);
+          }
         }
-      }
-    };
-
-    checkAndRedirect();
+      };
+  
+      checkAndRedirect();
+    }, 500);
+  
+    return () => clearTimeout(timer);
   }, [inProgress]);
+  
+  
 
   if (inProgress !== InteractionStatus.None || isAuthorized === null) {
     return <div>Loading...</div>;

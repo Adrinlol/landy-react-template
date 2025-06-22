@@ -14,6 +14,7 @@ import { CheckUserSubscription } from "../../requests/customer";
 import { SubscriptionTier } from "../../common/types";
 import { msalInstance } from "../../services/msal";
 import { config } from "../../services/config";
+
 export default function Dashboard() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [callData, setCallData] = useState<CallData>()
@@ -25,19 +26,19 @@ export default function Dashboard() {
   useEffect(() => {
     const getUserSubscriptionStatus = async () => {
       var response = await CheckUserSubscription()
-      console.log(response)
       setSubscriptionStatus(response as SubscriptionTier)
       if (response as SubscriptionTier == SubscriptionTier.None) {
         window.location.href = config.routes.subscriptionSignUp
+      } else {
+        requestCallData()
       }
     }
-    //if (searchParams.get("success") == "true") {
-    //  setOpen(true)
-    //}
+    if (searchParams.get("success") == "true") {
+      setOpen(true)
+    }
     var activeUser = instance.getActiveAccount()
     if (activeUser) {
       getUserSubscriptionStatus()
-      
     }
     if (inProgress === InteractionStatus.None && accounts.length > 0) {
       setUser(accounts[0]);
@@ -49,14 +50,7 @@ export default function Dashboard() {
     var response: CallData = await RetrieveCallData(accounts[0].tenantId)
     setCallData(response)
   }
-
   
-  const test = async () => {
-    const tokenResponse = await msalInstance.acquireTokenPopup({
-            scopes: [config.scopes.USER],
-          });
-          console.log(tokenResponse.accessToken)
-  }
   const requestOAuthLink = async () => {
     await apiClient.get(`/auth/oauth`)
       .then(resp => {
@@ -74,7 +68,6 @@ export default function Dashboard() {
             size="small"
             onClick={() => {
               setOpen(false);
-              window.location.href = "/dashboard"
             }}
           >
             <CloseIcon fontSize="inherit" />
@@ -83,11 +76,11 @@ export default function Dashboard() {
         style={{ width: "300px", margin: "0 auto" }}>App integration successful!</Alert>}
       {user && <p>Welcome, {user.name}</p>}
       <p>You are on the <b>{SubscriptionTier[subscriptionStatus!]}</b> subscription tier</p>
-      <Button onClick={test}>Test</Button>
       <Button onClick={requestCallData}>Retrieve Call Data</Button>
       <Button onClick={requestOAuthLink}>OAuth</Button>
       <div style={{ width: "60%", margin: "0 auto" }}>
         {callData && <CallDataTable data={callData} />}
+        {!callData && <p>fetching call logs...</p>}
       </div>
     </>
   )
