@@ -29,7 +29,7 @@ const routes = [
     path: [config.routes.subscriptionSignUp],
     exact: false,
     component: "SubscriptionSignUp",
-    protected: false,
+    protected: true,
   },
 ];
 

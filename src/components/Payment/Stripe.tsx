@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     Elements,
     CardElement,
@@ -6,32 +6,52 @@ import {
     useElements,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { CreateSubscription } from "../../requests/stripe";
+import { CreateFreeSubscription, CreateSubscription } from "../../requests/stripe";
 import { Button } from "antd";
 import { GetUserCount } from "../../requests/customer";
+import { Tier } from "../../data/pricingTiers";
 
 const stripePromise = loadStripe("pk_test_51RS99I2Us93KiirWj8LlqtPgglR9cQBCUF2O89XBoVkCPM1TWn2YGMdmgbjN0rdQLXwwzVFWAxCPslQTvSsxwoVM00QNvpXyf4");
 
 interface Props {
-    selectedTier: number;
+    selectedTier: Tier | undefined;
     displaySelectedTier: () => JSX.Element;
     displayTierSelector: () => JSX.Element;
 }
 
-function SubscriptionForm({ selectedTier, displaySelectedTier, displayTierSelector }: Props) {
+function SubscriptionForm({ selectedTier, displaySelectedTier, displayTierSelector, }: Props) {
     const stripe = useStripe();
     const elements = useElements();
     const [status, setStatus] = useState("");
     const [userCount, setUserCount] = useState<number>(0);
+    useEffect(() => {
+        const retrieveUserCount = async () => {
+            const count = await GetUserCount();
+            setUserCount(count);
+        };
+        retrieveUserCount()
+    }, [])
 
-    const handleClick = async () => {
-        const count = await GetUserCount();
-        setUserCount(count);
-    };
 
     const handleSubmit = async (e: React.FormEvent) => {
+        if (selectedTier && selectedTier.value == 0) {
+            await createFreeSubscriptionRequest(e)
+        } else {
+            await createPaidSubscription(e)
+        }
+    };
+    const createFreeSubscriptionRequest = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("Processing...");
+        try {
+            await CreateFreeSubscription();
+            setStatus(`✅ Subscription created!`);
+            setTimeout(() => window.location.href = "/dashboard", 3000)
+        } catch {
+            setStatus("❌ Server error");
+        }
+    }
+    const createPaidSubscription = async (e: React.FormEvent) => {
 
         if (!stripe || !elements) return;
 
@@ -47,24 +67,30 @@ function SubscriptionForm({ selectedTier, displaySelectedTier, displayTierSelect
             setStatus(error.message || "Failed to create payment method.");
             return;
         }
-
         try {
             const response = await CreateSubscription(
-                selectedTier,
+                selectedTier!.value,
                 paymentMethod.id,
                 userCount
             );
             console.log(response.status)
             if (response.status == "active") {
                 setStatus(`✅ Subscription created!`);
+                setTimeout(() => window.location.href = "/dashboard", 3000)
             } else {
                 setStatus(response.message || "❌ Subscription failed");
             }
         } catch {
             setStatus("❌ Server error");
         }
-    };
-
+    }
+    const displayCost = () => {
+        if (selectedTier && selectedTier.userInclusion < userCount) {
+            return userCount * selectedTier.additionalCostPerUser
+        } else {
+            return selectedTier?.costValue
+        }
+    }
     return (
         <form
             onSubmit={handleSubmit}
@@ -85,11 +111,8 @@ function SubscriptionForm({ selectedTier, displaySelectedTier, displayTierSelect
             {displayTierSelector()}
             {<>{displaySelectedTier()}</>}
 
-            <div style={{ width: "49%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <Button onClick={handleClick}>Get user count of organization</Button>
-                {userCount > 0 && <p>There are {userCount} users in your Microsoft 365 organization</p>}
-            </div>
-            <div
+            {userCount > 0 && <p>There are {userCount} users in your <b>Microsoft 365 organization</b></p>}
+            {selectedTier && selectedTier.value != 0 && <div
                 style={{
                     padding: "0.75rem",
                     border: "1px solid #ccc",
@@ -98,7 +121,8 @@ function SubscriptionForm({ selectedTier, displaySelectedTier, displayTierSelect
                 }}
             >
                 <CardElement />
-            </div>
+            </div>}
+            {selectedTier && userCount != 0 && <p>Monthly cost: ${displayCost()}</p>}
 
             <button
                 type="submit"

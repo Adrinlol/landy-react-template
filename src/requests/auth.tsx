@@ -7,6 +7,12 @@ export async function RequestOAuthLink() {
       window.location.href = resp.data;
     });
 };
+export async function RequestOAuthLinkTest(tenantId: string, email: string) {
+  await apiClient.get(`/auth/test?tenantId=${tenantId}&adminEmail=${email}`,)
+    .then(resp => {
+      window.location.href = resp.data;
+    });
+};
 
 export async function RetrieveTierSettings(): Promise<Tier[]> {
   return await apiClient.get(`/auth/subscription-tiers`)

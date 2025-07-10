@@ -12,7 +12,6 @@ import { RetrieveCallData } from "../../requests/calls";
 import apiClient from "../../apiClient";
 import { CheckUserSubscription } from "../../requests/customer";
 import { SubscriptionTier } from "../../common/types";
-import { msalInstance } from "../../services/msal";
 import { config } from "../../services/config";
 
 export default function Dashboard() {

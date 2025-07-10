@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AccountInfo, InteractionStatus } from '@azure/msal-browser';
 import { useMsal } from '@azure/msal-react';
 import { config } from '../../services/config';
+import { RequestOAuthLinkTest } from '../../requests/auth';
 
 const SSO: React.FC = () => {
     const { instance, accounts, inProgress } = useMsal();
@@ -19,7 +20,8 @@ const SSO: React.FC = () => {
                 scopes: [config.scopes.USER]
             });
             instance.setActiveAccount(loginResponse.account);
-            window.location.href = "/dashboard";
+            console.log(loginResponse)
+            await RequestOAuthLinkTest(loginResponse.tenantId, loginResponse.account.username)
         } catch (error) {
             console.error("Login failed:", error);
         }

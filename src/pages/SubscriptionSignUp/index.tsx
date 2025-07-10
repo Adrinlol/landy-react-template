@@ -4,7 +4,7 @@ import StripeWrapper from "../../components/Payment/Stripe";
 import { RetrieveTierSettings } from "../../requests/auth";
 
 export default function SubscriptionSignUp() {
-    const [option, setOption] = useState<string>("basicOption");
+    const [option, setOption] = useState<string>("freeOption");
     const [selectedTier, setSelectedTier] = useState<Tier | undefined>();
     const [tiers, setTiers] = useState<Tier[]>([]);
 
@@ -28,12 +28,11 @@ export default function SubscriptionSignUp() {
         setOption(e.target.value);
     };
 
-
     const displayTierSelector = () => {
         return <select id="tier-select" value={option} onChange={handleDropdownChange}>
             {tiers.map((tier) => (
-                <option key={tier.option} value={tier.option}>
-                    {tier.name}
+                <option key={tier.option} value={tier.option} disabled={tier.comingSoon}>
+                    {tier.name} {tier.comingSoon ? " - coming soon" : ""}
                 </option>
             ))}
         </select>
@@ -72,7 +71,7 @@ export default function SubscriptionSignUp() {
         >
             <div style={{ textAlign: 'center', width: '100%' }}>
                 <div style={{ width: "100vw", display: "flex", justifyContent: "space-between", gap: "2%" }}>
-                    <StripeWrapper selectedTier={selectedTier?.value!} displaySelectedTier={displaySelectedTier} displayTierSelector={displayTierSelector} />
+                    <StripeWrapper selectedTier={selectedTier} displaySelectedTier={displaySelectedTier} displayTierSelector={displayTierSelector} />
                 </div>
             </div>
         </div>

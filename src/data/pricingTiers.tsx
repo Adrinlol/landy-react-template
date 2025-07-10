@@ -8,4 +8,7 @@ export interface Tier {
     value: number;
     option: string;
     comingSoon?: boolean;
+    userInclusion: number;
+    additionalCostPerUser: number;
+    costValue: number;
 }
