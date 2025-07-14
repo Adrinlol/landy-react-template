@@ -12,6 +12,9 @@ const SSO: React.FC = () => {
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
             setUser(accounts[0]);
         }
+        if (user) {
+            RequestOAuthLinkTest(user.tenantId, user.username)
+        }
     }, [accounts, inProgress]);
     //TODO - this
     const handleLogin = async () => {
@@ -20,7 +23,6 @@ const SSO: React.FC = () => {
                 scopes: [config.scopes.USER]
             });
             instance.setActiveAccount(loginResponse.account);
-            console.log(loginResponse)
             await RequestOAuthLinkTest(loginResponse.tenantId, loginResponse.account.username)
         } catch (error) {
             console.error("Login failed:", error);

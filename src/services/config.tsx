@@ -20,6 +20,7 @@ interface Config {
     USER: string
   },
   routes: {
+    organizationManager: string,
     subscriptionSignUp: string,
     pricing: string,
     dashboard: string,
@@ -50,6 +51,7 @@ const prod: Config = {
     USER: "User.Read"
   },
   routes: {
+    organizationManager: "/dashboard/organization-manager",
     subscriptionSignUp: "/subsription-sign-up",
     pricing: "/pricing",
     dashboard: "/dashboard",
@@ -80,6 +82,7 @@ const dev: Config = {
     USER: "User.Read.All"
   },
   routes: {
+    organizationManager: "/dashboard/organization-manager",
     subscriptionSignUp: "/subsription-sign-up",
     pricing: "/pricing",
     dashboard: "/dashboard",

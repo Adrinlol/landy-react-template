@@ -21,7 +21,8 @@ export default function Dashboard() {
   const { instance, accounts, inProgress } = useMsal();
   const [user, setUser] = useState<AccountInfo | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionTier>()
-
+  const [failureState, setFailureState] = useState<boolean>(false)
+  const [countDownValue, setCountDownValue] = useState<number>()
   useEffect(() => {
     const getUserSubscriptionStatus = async () => {
       var response = await CheckUserSubscription()
@@ -29,7 +30,11 @@ export default function Dashboard() {
       if (response as SubscriptionTier == SubscriptionTier.None) {
         window.location.href = config.routes.subscriptionSignUp
       } else {
-        requestCallData()
+        if (failureState == true) {
+          countDown(5)
+        } else {
+          requestCallData()
+        }
       }
     }
     if (searchParams.get("success") == "true") {
@@ -43,19 +48,30 @@ export default function Dashboard() {
       setUser(accounts[0]);
     }
   }, [accounts, inProgress])
-  
+
   const requestCallData = async () => {
 
-    var response: CallData = await RetrieveCallData(accounts[0].tenantId)
+    var response: CallData = await RetrieveCallData(accounts[0].tenantId, accounts[0].username, searchParams.get("requiresAuth") == "true")
     setCallData(response)
   }
-  
+
   const requestOAuthLink = async () => {
     await apiClient.get(`/auth/oauth`)
       .then(resp => {
         console.log(resp)
         window.location.href = resp.data;
       }).catch(err => console.log(err));
+  };
+  const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+
+  const countDown = async (startTime: number) => {
+    for (var i = startTime; i > 0; i--) {
+      setCountDownValue(i)
+      await delay(1000);
+    }
+
+    setFailureState(false);
+    await requestCallData();
   };
   return (
     <>
@@ -75,12 +91,14 @@ export default function Dashboard() {
         style={{ width: "300px", margin: "0 auto" }}>App integration successful!</Alert>}
       {user && <p>Welcome, {user.name}</p>}
       <p>You are on the <b>{SubscriptionTier[subscriptionStatus!]}</b> subscription tier</p>
-      <Button onClick={requestCallData}>Retrieve Call Data</Button>
-      <Button onClick={requestOAuthLink}>OAuth</Button>
-      <div style={{ width: "60%", margin: "0 auto" }}>
+      {failureState == true && <>
+        <p>Apologies for the delay - we are setting up your account.</p>
+        <p>Trying again in {countDownValue}</p>
+      </>}
+      {failureState == false && <div style={{ width: "60%", margin: "0 auto" }}>
         {callData && <CallDataTable data={callData} />}
         {!callData && <p>fetching call logs...</p>}
-      </div>
+      </div>}
     </>
   )
 }

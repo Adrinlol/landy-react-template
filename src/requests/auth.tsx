@@ -8,7 +8,7 @@ export async function RequestOAuthLink() {
     });
 };
 export async function RequestOAuthLinkTest(tenantId: string, email: string) {
-  await apiClient.get(`/auth/test?tenantId=${tenantId}&adminEmail=${email}`,)
+  await apiClient.get(`/auth/oauth?tenantId=${tenantId}&adminEmail=${email}`,)
     .then(resp => {
       window.location.href = resp.data;
     });

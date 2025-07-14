@@ -31,6 +31,12 @@ const routes = [
     component: "SubscriptionSignUp",
     protected: true,
   },
+  {
+    path: [config.routes.organizationManager],
+    exact: false,
+    component: "OrganizationManager",
+    protected: true,
+  },
 ];
 
 export default routes;

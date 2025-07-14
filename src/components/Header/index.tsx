@@ -47,6 +47,9 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
+      {accounts[0] && inProgress == InteractionStatus.None && <CustomNavLinkSmall onClick={() => window.location.href = "/dashboard/organization-manager"}>
+      <Span>{t("Manage")}</Span>
+      </CustomNavLinkSmall>}
       <CustomNavLinkSmall onClick={() => window.location.href = "/pricing"}>
       <Span>{t("Pricing")}</Span>
       </CustomNavLinkSmall>
