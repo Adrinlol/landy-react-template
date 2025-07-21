@@ -18,6 +18,7 @@ const initialValues: IValues = {
 };
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
+  const [loading, setLoading] = useState(false)
   const [formState, setFormState] = useState<{
     values: IValues;
     errors: IValues;
@@ -36,7 +37,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
 
     try {
       if (Object.values(errors).every((error) => error === "")) {
-        
+        setLoading(true)
         const response = await axios.post(`${url}/email`, 
           values, 
           {
@@ -46,6 +47,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
               withCredentials: true,
           }
       ).then(resp => {
+        setLoading(false)
           if (resp.status != 200) {
             notification["error"]({
               message: "Error",
@@ -66,6 +68,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           }});
       }
     } catch (error) {
+      setLoading(false)
       notification["error"]({
         message: "Error",
         description: "Failed to submit form. Please try again later.",
@@ -96,5 +99,6 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     handleSubmit,
     values: formState.values,
     errors: formState.errors,
+    loading: loading
   };
 };

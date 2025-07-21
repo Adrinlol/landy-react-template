@@ -5,8 +5,10 @@ import Hook1 from "../../content/Hook1.json";
 import Hook2 from "../../content/Hook2.json";
 import Hook3 from "../../content/Hook3.json";
 import ContactContent from "../../content/ContactContent.json";
+import MailingListContent from "../../content/MailingListContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
+const MailingList = lazy(() => import("../../components/MailingList"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
@@ -51,6 +53,10 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
+      <MailingList
+        title={MailingListContent.title}
+        content={MailingListContent.text}
+        id="mailing" />
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}

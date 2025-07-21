@@ -36,6 +36,10 @@ export interface validateProps {
   employees: string;
   email: string;
 }
+export interface validateEmailProps {
+  email: string;
+  isMailingList: boolean;
+}
 export enum SubscriptionTier {
   Free,
   Basic,

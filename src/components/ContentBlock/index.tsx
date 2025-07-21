@@ -60,12 +60,12 @@ const ContentBlock = ({
                         },
                         id: number
                       ) => {
-                        if (item.title == "Get Started") {
+                        if (item.title == "Join Mailing List") {
                           return (
                             <Button
                               key={id}
                               color={item.color}
-                              onClick={() => scrollTo("contact")}
+                              onClick={() => scrollTo("mailing")}
                             >
                               {t(item.title)}
                             </Button>

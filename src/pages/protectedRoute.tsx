@@ -5,6 +5,7 @@ import { msalInstance } from "../services/msal";
 import { config } from "../services/config";
 import apiClient from "../apiClient";
 import { useEffect, useState } from "react";
+import { CircularProgress } from "@mui/material";
 
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const { accounts, inProgress } = useMsal();
@@ -43,7 +44,7 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   
 
   if (inProgress !== InteractionStatus.None || isAuthorized === null) {
-    return <div>Loading...</div>;
+    return <CircularProgress />;
   }
 
   if (accounts.length === 0 || isAuthorized === false) {

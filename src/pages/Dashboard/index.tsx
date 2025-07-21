@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import { useSearchParams } from "react-router-dom";
 import Alert from '@mui/material/Alert';
-import { IconButton } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import { CallData } from "../../interfaces/callData";
@@ -55,13 +55,6 @@ export default function Dashboard() {
     setCallData(response)
   }
 
-  const requestOAuthLink = async () => {
-    await apiClient.get(`/auth/oauth`)
-      .then(resp => {
-        console.log(resp)
-        window.location.href = resp.data;
-      }).catch(err => console.log(err));
-  };
   const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
   const countDown = async (startTime: number) => {
@@ -74,7 +67,7 @@ export default function Dashboard() {
     await requestCallData();
   };
   return (
-    <>
+    <div style={{ margin: "0 auto", width: "100%", textAlign: "center" }}>
       {open && <Alert
         action={
           <IconButton
@@ -95,10 +88,17 @@ export default function Dashboard() {
         <p>Apologies for the delay - we are setting up your account.</p>
         <p>Trying again in {countDownValue}</p>
       </>}
-      {failureState == false && <div style={{ width: "60%", margin: "0 auto" }}>
+      {failureState == false && <div style={{ margin: "0 auto" }}>
         {callData && <CallDataTable data={callData} />}
-        {!callData && <p>fetching call logs...</p>}
       </div>}
-    </>
+      {!callData && <div style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "2rem"
+      }}>
+        <CircularProgress />
+      </div>}
+    </div>
   )
 }

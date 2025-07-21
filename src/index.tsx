@@ -6,30 +6,31 @@ import Router from "./router";
 import { MsalProvider } from "@azure/msal-react";
 import { useEffect, useState } from "react";
 import { msalInstance } from "./services/msal";
+import { CircularProgress } from "@mui/material";
 
 const App = () => {
-  const [msalReady, setMsalReady] = useState(false);
+    const [msalReady, setMsalReady] = useState(false);
 
-  useEffect(() => {
-    const initializeMsal = async () => {
-      try {
-        await msalInstance.initialize();
-        const accounts = msalInstance.getAllAccounts();
-        if (accounts.length > 0) {
-          msalInstance.setActiveAccount(accounts[0]);
+    useEffect(() => {
+      const initializeMsal = async () => {
+        try {
+          await msalInstance.initialize();
+          const accounts = msalInstance.getAllAccounts();
+          if (accounts.length > 0) {
+            msalInstance.setActiveAccount(accounts[0]);
+          }
+          setMsalReady(true);
+        } catch (error) {
+          console.error("MSAL initialization failed:", error);
         }
-        setMsalReady(true);
-      } catch (error) {
-        console.error("MSAL initialization failed:", error);
-      }
-    };
+      };
 
-    initializeMsal();
-  }, []);
+      initializeMsal();
+    }, []);
 
   
   if (!msalReady) {
-    return <div>Loading...</div>;
+    return <CircularProgress />;
   }
   return (
     <MsalProvider instance={msalInstance}>

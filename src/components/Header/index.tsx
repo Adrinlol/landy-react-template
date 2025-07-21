@@ -38,13 +38,6 @@ const Header = ({ t }: { t: TFunction }) => {
 };
   
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
       {accounts[0] && inProgress == InteractionStatus.None && <CustomNavLinkSmall onClick={() => window.location.href = "/dashboard/organization-manager"}>
@@ -72,6 +65,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="teamSpend.png" width="151px" height="151px" />
+            <small style={{marginTop: "80px"}}>Beta</small>
           </LogoContainer>
           <NotHidden>
             <MenuItem />

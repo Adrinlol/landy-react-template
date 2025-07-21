@@ -6,7 +6,7 @@ export interface CallData {
     totalUniqueParticipants: number,
     calls: Call[]
 }
-interface Call {
+export interface Call {
     id: string,
     numberOfParticipants: number,
     estimatedCost: number,
@@ -14,7 +14,12 @@ interface Call {
     callDurationSeconds: number,
     callDurationMinutes: number,
     callDurationHours: number,
-    participants: User[]
+    participants: UserBreakdown[],
+    callType: string
+}
+interface UserBreakdown {
+    user: User,
+    cost: number
 }
 interface User {
     displayName: string,
@@ -23,4 +28,7 @@ interface User {
     jobTitle: string,
     mail: string,
     id: string,
+    wholeSeconds: number,
+    wholeMinutes: number,
+    wholeHours: number
 }
